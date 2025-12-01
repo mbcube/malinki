@@ -1,13 +1,24 @@
 ---
 import { useTranslations } from "../i18n/utils";
+import { getImage } from "astro:assets";
+import malinkiLogoBg from "../images/malinki-logo-bg.png";
 
 export function getStaticPaths() {
-	return [{ params: { lang: undefined } }, { params: { lang: "en" } }];
+  return [{ params: { lang: undefined } }, { params: { lang: "en" } }];
 }
 
 const { lang } = Astro.params;
 const currentLang = lang || "fr";
 const t = useTranslations(currentLang as "fr" | "en");
+
+const siteUrl = Astro.site?.href || "https://malinki.pages.dev";
+const currentUrl = `${siteUrl}${currentLang === "en" ? "/en" : ""}`;
+const ogImage = await getImage({
+  src: malinkiLogoBg,
+  width: 1200,
+  height: 630,
+});
+const ogImageUrl = new URL(ogImage.src, siteUrl).href;
 
 import "../styles/global.css";
 import Header from "../components/Header.astro";
@@ -23,26 +34,56 @@ import CtaSection2 from "../components/CtaSection2.astro";
 ---
 
 <html lang={currentLang} class="h-full">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Malinki</title>
-	</head>
-	<body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
-		<Header lang={currentLang as "fr" | "en"} />
-		<main class="px-6 w-full flex flex-col 2xl:max-w-[1600px] mx-auto">
-			<HeroVideo />
-			<AboutText />
-			<ProjectsGrid />
-			<CtaSection />
-			<ServicesSection />
-			<TeamSection />
-			<LogosSection />
-			<CtaSection2 />
-		</main>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Malinki</title>
+    <meta
+      name="description"
+      content="Malinki - Production vidéo créative et contenu de marque. Création de publicités, contenu de marque, contenu vertical et vidéoclips."
+    />
 
-	<Footer />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content="Malinki" />
+    <meta
+      property="og:description"
+      content="Malinki - Production vidéo créative et contenu de marque. Création de publicités, contenu de marque, contenu vertical et vidéoclips."
+    />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:locale"
+      content={currentLang === "en" ? "en_US" : "fr_CA"}
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={currentUrl} />
+    <meta name="twitter:title" content="Malinki" />
+    <meta
+      name="twitter:description"
+      content="Malinki - Production vidéo créative et contenu de marque. Création de publicités, contenu de marque, contenu vertical et vidéoclips."
+    />
+    <meta name="twitter:image" content={ogImageUrl} />
+  </head>
+  <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
+    <Header lang={currentLang as "fr" | "en"} />
+    <main class="px-6 w-full flex flex-col 2xl:max-w-[1600px] mx-auto">
+      <HeroVideo />
+      <AboutText />
+      <ProjectsGrid />
+      <CtaSection />
+      <ServicesSection />
+      <TeamSection />
+      <LogosSection />
+      <CtaSection2 />
+    </main>
+  </body>
+
+  <Footer />
 </html>
