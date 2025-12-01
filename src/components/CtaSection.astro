@@ -1,0 +1,41 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+const { lang } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+const t = useTranslations(currentLang);
+---
+
+<!-- CTA Section -->
+<section
+    class="relative w-full font-['Montserrat']"
+    data-section-type="cta-section"
+>
+    <div class="flex items-center justify-center">
+        <div
+            class="flex flex-col items-center justify-center w-full px-2 py-16 sm:px-4 md:px-8 md:py-20 lg:py-24 xl:py-32 bg-[#083D45] rounded-[48px]"
+        >
+            <div
+                class="flex flex-col items-center gap-5 sm:gap-6 md:gap-8 w-[80%] max-w-[920px]"
+            >
+                <h2
+                    class="font-['Montserrat'] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-none text-center uppercase text-white m-0 p-0 w-full"
+                >
+                    <span class="font-normal not-italic"
+                        >{t("sections.cta.heading_line1")}
+                    </span>
+                    <span class="font-semibold italic"
+                        >{t("sections.cta.heading_line2")}</span
+                    >
+                </h2>
+
+                <a
+                    href={`/${currentLang === "fr" ? "" : "en/"}contact`}
+                    class="inline-flex items-center justify-center px-6 py-[14px] sm:px-7 sm:py-4 md:px-8 md:py-5 font-['Montserrat'] text-sm md:text-base font-semibold leading-normal no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-white text-[#083D45] rounded-[8px] hover:bg-[#E6F5F7]"
+                >
+                    {t("sections.cta.button_text")}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

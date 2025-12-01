@@ -1,0 +1,645 @@
+{
+    "general": {
+        "404": {
+            "title": "THAT PAGE CAN'T BE FOUND.",
+            "button": "GO TO HOME",
+            "subtext": "It looks like nothing was found at this location."
+        },
+        "hero_video": {
+            "view_reel": "View reel"
+        },
+        "menu_icons": {
+            "new": "NEW",
+            "sale": "SALE"
+        },
+        "search": {
+            "title": "Search",
+            "no_results_title_html": "YOUR SEARCH RETURNS NO RESULTS.",
+            "no_results_html": "Search results for",
+            "results_title": "SEARCH RESULTS FOR",
+            "header_message": "What are you Looking for?",
+            "place_holder": "SEARCH PRODUCTS...",
+            "button_name_header_type_2": "SEARCH",
+            "see_all_results": "See all results"
+        },
+        "meta": {
+            "keywords": "Shopify Template",
+            "author": "p-themes",
+            "tags": "Tagged \"{{ tags }}\"",
+            "page": "Page {{ page }}"
+        },
+        "menu": {
+            "title": "MENU",
+            "button_close": "Close",
+            "button_back": "Back"
+        },
+        "countdown": {
+            "day": "Day",
+            "hour": "Hrs",
+            "minute": "Min",
+            "second": "Sec"
+        },
+        "pagination": {
+            "next": "NEXT"
+        },
+        "general": {
+            "portfolio_zoom_in": "ZOOM IN",
+            "to_top_button": "BACK TO TOP",
+            "subscribed_message_html": "You have successfully subscribed!",
+            "send_message_title": "Have a question?",
+            "sended_message": "Thanks for contacting us. We'll get back to you as soon as possible."
+        },
+        "tooltip_texts": {
+            "go_to_product": "Go to product {{ product_name }}",
+            "header_search": "Search",
+            "header_cart": "Cart",
+            "header_account": "My Account",
+            "header_settings": "Settings",
+            "quick_view": "Quick View",
+            "view_review": "Go to review",
+            "filter_remove": "Remove filter {{ filter_name }}",
+            "wishlist": "Wishlist",
+            "compare": "Compare",
+            "currency": "Currency"
+        },
+        "password_page": {
+            "opening_soon": "Opening Soon"
+        }
+    },
+    "layout": {
+        "customer": {
+            "close": "Close",
+            "account": "Account",
+            "checkout": "Checkout",
+            "sign_in": "Sign In",
+            "register": "Register",
+            "log_out": "Log Out",
+            "view_cart": "View Cart"
+        }
+    },
+    "header": {
+        "contact_button": "Contact Us"
+    },
+    "collections": {
+        "general": {
+            "empty": "EMPTY",
+            "sort_result": "There are no products matching the selection."
+        },
+        "sidebar": {
+            "filtres_title": "SHOPPING BY:",
+            "back": "CLOSE",
+            "clear_all": "CLEAR ALL",
+            "text_remove_parameter": "Remove",
+            "empty_search_parameter_html": "UNTYPED:"
+        },
+        "toolbar": {
+            "filter": "FILTER",
+            "sort_by_title": "Sort by: ",
+            "grid_amount_title": "Show: ",
+            "items": "Item(s)",
+            "button_show_more": "SHOW MORE",
+            "button_show_more_disabled": "NO MORE PRODUCTS",
+            "all": "ALL"
+        },
+        "sorting": {
+            "title": "Sort by",
+            "featured": "Featured",
+            "best_selling": "Best Selling",
+            "az": "Name Ascending",
+            "za": "Name Descending",
+            "price_ascending": "Price Ascending",
+            "price_descending": "Price Descending",
+            "date_ascending": "Date Ascending",
+            "date_descending": "Date Descending"
+        }
+    },
+    "products": {
+        "general": {
+            "view_all_variants": "ALL VARIANTS",
+            "add_to_cart": "ADD TO CART",
+            "add_to_cart_html": "<span class=\"icon icon-shopping_basket\"></span> <span>ADD TO CART</span>",
+            "preorder_html": "<span class=\"icon icon-f-47\"></span> <span>PREORDER</span>",
+            "added_html": "<span class=\"icon icon-shopping_basket\"></span> ADDED",
+            "error_html": "<span class=\"icon icon-shopping_basket\"></span> LIMIT PRODUCTS",
+            "wait_html": "<span class=\"icon icon-shopping_basket\"></span> WAIT",
+            "select_options_html": "SELECT THE OPTIONS ABOVE",
+            "unavailable": "Sold Out",
+            "unavailable_html": "<span>SOLD OUT</span>",
+            "quick_view": "Quick View",
+            "sale_html": "Sale",
+            "new": "New",
+            "related_products": "Related Products",
+            "featured": "Featured",
+            "view_review": "Go to review",
+            "buy_now_button": "BUY NOW",
+            "loading": "LOADING"
+        },
+        "product": {
+            "sold_out": "Out of stock",
+            "many_in_stock": "Many in stock",
+            "in_stock": "in stock",
+            "purchase_when_out_of_stock": "You can purchase this product but it's out of stock",
+            "availability": "Availability:",
+            "sku": "SKU:",
+            "vendor": "Vendor:",
+            "type": "Product Type:",
+            "barcode": "Barcode:",
+            "quantity": "QTY:",
+            "tags": "Tags:",
+            "include_taxes": "Tax included.",
+            "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+        }
+    },
+    "blogs": {
+        "general": {
+            "author_by_html": "by <a href=\"#\">{{ author }}</a>",
+            "on": "on",
+            "comment": "comment(s)"
+        },
+        "article": {
+            "by_author": "by",
+            "posted_in": "on",
+            "read_more": "READ MORE",
+            "back_to_blog": "Back to {{ title }}",
+            "title_result": "filter by"
+        },
+        "fields": {
+            "name": "Enter your name",
+            "email": "Enter your e-mail",
+            "message": "Write a Comment"
+        },
+        "comments": {
+            "title": "LEAVE A COMMENT",
+            "name": "YOUR NAME",
+            "email": "E-MAIL",
+            "message": "YOUR COMMENT",
+            "post": "POST COMMENT",
+            "moderated": "Please note, comments must be approved before they are published",
+            "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+            "success": "Your comment was posted successfully! Thank you!",
+            "comments_with_count": {
+                "one": "{{ count }} comment",
+                "other": "{{ count }} comments"
+            }
+        }
+    },
+    "cart": {
+        "general": {
+            "title": "SHOPPING CART",
+            "continue_shopping": "CONTINUE SHOPPING",
+            "clear_cart": "CLEAR SHOPPING CART",
+            "update": "UPDATE CART",
+            "subtotal": "SUBTOTAL",
+            "shipping_total": "SHIPPING",
+            "total": "GRAND TOTAL",
+            "checkout": "PROCEED TO CHECKOUT",
+            "empty": "SHOPPING CART IS EMPTY",
+            "empty_cart": "You have no items in your shopping cart.",
+            "shipping_heading": "ESTIMATE SHIPPING AND TAX",
+            "shipping_description": "Enter your destination to get a shipping estimate",
+            "shipping_country": "COUNTRY",
+            "shipping_state": "STATE/PROVINCE",
+            "shipping_zip": "ZIP/POSTAL CODE",
+            "shipping_variants": "Two Variants",
+            "shipping_button": "CALCULATE SHIPPING"
+        },
+        "label": {
+            "quantity": "Qty:",
+            "total": "Total",
+            "note": "NOTE",
+            "note_text": "Add special instructions for your order..."
+        },
+        "header": {
+            "title": "SHOPPING CART",
+            "close": "CLOSE",
+            "total": "TOTAL:",
+            "checkout": "PROCEED TO CHECKOUT",
+            "view_cart": "VIEW CART",
+            "view_cart_all": ". . .",
+            "button_delete": "Delete",
+            "empty_cart": "No Products in the Cart",
+            "view_product": "View Product"
+        },
+        "popup_product_added": {
+            "view_cart": "VIEW CART",
+            "continue_shopping": "CONTINUE SHOPPING",
+            "go_to_checkout": "PROCEED TO CHECKOUT",
+            "message_main": "Added to cart successfully!",
+            "message_mobile": "Added to cart successfully!",
+            "item_quantity": "QTY:",
+            "item_price": "TOTAL:",
+            "quantity_html": "There are {{ not_delete_variable }} items<br> in your cart",
+            "total_price": "TOTAL:",
+            "related_products_title": "With this product also buy:"
+        },
+        "shipping": {
+            "there_are": "There are ",
+            "shipping_rates": "shipping rates available for ",
+            "starting_at": ", starting at ",
+            "one_shipping_rate": "There is one shipping rate available for ",
+            "do_not_ship": "We do not ship to this destination."
+        }
+    },
+    "contact": {
+        "form": {
+            "name": "Your Name",
+            "email": "Your Email",
+            "phone": "Your Phone",
+            "message": "Your Message",
+            "send": "SEND MESSAGE",
+            "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+            "post_error": "Oops, sorry. We were unable to submit your inquiry. Please correct the following and submit again:",
+            "post_field_error_html": "The <strong>{{ field }}</strong> {{ error }}"
+        },
+        "placeholder": {
+            "name": "Your name",
+            "email": "Your e-mail",
+            "phone": "Your phone",
+            "message": "Write your message here"
+        }
+    },
+    "customer": {
+        "general": {
+            "or": "or",
+            "return": "RETURN TO ACCOUNT PAGE",
+            "link_back": "< Back",
+            "required_fields": "* Required Fields"
+        },
+        "account": {
+            "title_main": "ACCOUNT",
+            "title": "MY ACCOUNT",
+            "order_history": "ORDER HISTORY",
+            "account_details": "ACCOUNT DETAILS",
+            "view_addresses": "VIEW ADDRESSES",
+            "name": "NAME:",
+            "email": "E-MAIL:",
+            "address": "ADDRESS:",
+            "address_2": "ADDRESS 2:",
+            "country": "COUNTRY:",
+            "zip": "ZIP:",
+            "phone": "PHONE:",
+            "company": "COMPANY:"
+        },
+        "activate_account": {
+            "title_main": "Activate Account",
+            "title_form": "Activate Account",
+            "subtext": "Create your password to activate your account.",
+            "password": "Password",
+            "password_confirm": "Confirm Password",
+            "submit": "ACTIVATE ACCOUNT"
+        },
+        "addresses": {
+            "title": "YOUR ADDRESSES",
+            "default": "(Default Address)",
+            "add_new": "ADD A NEW ADDRESS",
+            "first_name": "FIRST NAME",
+            "last_name": "LAST NAME",
+            "company": "COMPANY NAME",
+            "address1": "ADDRESS 1",
+            "address2": "ADDRESS 2",
+            "city": "CITY",
+            "country": "COUNTRY",
+            "province": "PROVINCE",
+            "zip": "POSTCODE / ZIP",
+            "phone": "PHONE",
+            "set_default": "Set as default address?",
+            "add": "ADD ADDRESS",
+            "update": "UPDATE ADDRESS",
+            "cancel": "Cancel",
+            "edit": "EDIT",
+            "delete": "DELETE"
+        },
+        "login": {
+            "title": "ALREADY REGISTERED?",
+            "title_login": "LOGIN",
+            "description": "If you have an account with us, please log in.",
+            "email": "E-MAIL",
+            "password": "PASSWORD",
+            "email_field": "Enter E-mail",
+            "password_field": "Enter Password",
+            "forgot_password": "Lost your password?",
+            "reset_password": "RESET PASSWORD",
+            "reset_password_subtext": "We will send you an email to reset your password.",
+            "sign_in": "LOGIN",
+            "cancel": "Cancel",
+            "submit_recover": "SUBMIT",
+            "new_customer_continue": "CREATE AN ACCOUNT",
+            "new_customer": "NEW CUSTOMER",
+            "new_customer_description": "By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more."
+        },
+        "orders": {
+            "order_number": "ORDER",
+            "date": "DATE",
+            "payment_status": "PAYMENT STATUS",
+            "fulfillment_status": "FULFILLMENT STATUS",
+            "total": "TOTAL",
+            "none": "You haven't placed any orders yet."
+        },
+        "order": {
+            "title": "ORDER {{ name }}",
+            "cancelled": "Order Cancelled",
+            "cancelled_reason": "Reason: {{ reason }}",
+            "billing_address": "BILLING ADDRESS:",
+            "payment_status": "Payment status",
+            "shipping_address": "SHIPPING ADDRESS:",
+            "fulfillment_status": "Fulfillment Status",
+            "product": "PRODUCT",
+            "sku": "SKU",
+            "price": "PRICE",
+            "quantity": "QUANTITY",
+            "total": "TOTAL",
+            "subtotal": "SUBTOTAL",
+            "fulfilled": "Fulfilled"
+        },
+        "reset_password": {
+            "title_main": "RESET PASSWORD",
+            "password": "Password",
+            "password_confirm": "Confirm Password",
+            "submit": "Reset Password"
+        },
+        "register": {
+            "title_main": "CREATE AN ACCOUNT",
+            "title_form": "PERSONAL INFORMATION",
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "email": "Email",
+            "password": "Password",
+            "first_name_form": "Enter First Name",
+            "last_name_form": "Enter Last Name",
+            "email_form": "Enter Email",
+            "password_form": "Enter Password",
+            "submit": "CREATE",
+            "cancel": "Return to Store"
+        }
+    },
+    "gift_cards": {
+        "issued": {
+            "title_html": "Here's your {{ value }} gift card for {{ shop }}!",
+            "subtext": "YOUR GIFT CARD",
+            "disabled": "Disabled",
+            "expired": "Expired on {{ expiry }}",
+            "active": "Expires on {{ expiry }}",
+            "redeem_html": "Use this code at checkout to redeem your {{ value }} gift card",
+            "shop_link": "START SHOPPING",
+            "print": "PRINT THIS GIFT CARD",
+            "remaining_html": "{{ balance }} left",
+            "add_to_apple_wallet": "Add to Apple Wallet"
+        }
+    },
+    "popup_quick_view": {
+        "general": {
+            "sku": "SKU:",
+            "barcode": "Barcode:",
+            "availability": "Availability:",
+            "in_stock": "In Stock",
+            "sold_out": "Out of stock",
+            "many_in_stock": "Many in stock",
+            "purchase_when_out_of_stock": "You can purchase this product but it's out of stock",
+            "view_full_info": "View Full Info"
+        }
+    },
+    "wishlist": {
+        "header": {
+            "wishlist": "Wishlist"
+        },
+        "buttons_text": {
+            "tooltip_add": "Add to Wishlist",
+            "tooltip_remove": "Remove from Wishlist",
+            "tooltip_login": "You need to login",
+            "tooltop_load_text": "Be patient",
+            "page_text_add": "ADD TO WISHLIST",
+            "page_text_remove": "REMOVE FROM WISHLIST"
+        },
+        "modal_alert": {
+            "message": "Please login and you will add product to your wishlist",
+            "sign_in_button": "SIGN IN",
+            "register_button": "REGISTER"
+        },
+        "wishlist_page": {
+            "title": "WISHLIST",
+            "login_message": "Please login and you will add product to your wishlist",
+            "sign_in_button": "SIGN IN",
+            "register_button": "REGISTER",
+            "empty_wishlist": "No products were added to the wishlist",
+            "continue_shopping": "CONTINUE SHOPPING"
+        }
+    },
+    "compare": {
+        "header": {
+            "compare": "Compare"
+        },
+        "buttons_text": {
+            "tooltip_add": "Add to Compare",
+            "tooltip_remove": "Remove from Compare",
+            "page_text_add": "ADD TO COMPARE",
+            "page_text_remove": "REMOVE FROM COMPARE"
+        },
+        "compare_page": {
+            "title": "COMPARING PRODUCTS",
+            "empty_title": "COMPARE",
+            "empty_compare": "No products were added to the compare",
+            "continue_shopping": "CONTINUE SHOPPING",
+            "in_stock": "In Stock",
+            "soldout": "Sold Out",
+            "field_description": "Description",
+            "field_vendor": "Vendor"
+        }
+    },
+    "production_publicitaire": {
+        "title": "ADVERTISING CONTENT THAT CAPTURES ATTENTION",
+        "description": "At Malinki, we design and produce advertising content that captures attention in the first few seconds. Whether it's for a web campaign, television, or social media, we focus on clear ideas, strong visuals, and agile execution.",
+        "cta_text": "TAKE ACTION",
+        "testimonial_text": "Malinki was able to deliver an advertising campaign in record time, without sacrificing quality.",
+        "testimonial_author": "Laurence Gagnon Beaudoin",
+        "testimonial_role": "Marketing Director | OMY",
+        "headline_line1": "MORE THAN A BEAUTIFUL VISUAL",
+        "headline_line2": "AN AD THAT PACKS A PUNCH",
+        "paragraph1": "We work hand in hand with your team to ensure that each piece of content serves a specific purpose: to sell, raise awareness, launch, or mobilize.",
+        "paragraph2": "Our approach is simple: we ask the right questions, propose solid ideas, and deliver quickly, without compromising on quality.",
+        "button_text": "OUR DEMO",
+        "productions_title": "OUR PRODUCTIONS",
+        "behind_scenes_title": "BEHIND THE SCENES",
+        "clients_title": "THOSE WHO TRUSTED US",
+        "prods_title": "OUR AD PRODUCTIONS",
+        "prods_subtitle_1": "DIGITAL ADVERTISING",
+        "prods_text_1": "Short formats designed for web and social media, optimized to capture attention and generate action.",
+        "prods_subtitle_2": "TV ADVERTISING",
+        "prods_text_2": "6, 15, or 30-second content, effective narration and compliance with broadcasting standards, for high-reach campaigns.",
+        "prods_subtitle_3": "CAMPAIGN PHOTOGRAPHY",
+        "prods_text_3": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
+        "prods_button_text": "Take action",
+        "contact_cta_title": "VISUAL CREATIONS IN YOUR IMAGE",
+        "contact_cta_text": "OUR CREATIVITY, AT YOUR SERVICE",
+        "contact_cta_button_text": "GET STARTED",
+        "main_image_alt": "Craftsman working on a laptop",
+        "sidebar_image_alt": "Craftsman at computer",
+        "testimonial_image_alt": "Author's photo",
+        "row_image_1_alt": "Super Aqua Club campaign photo",
+        "row_image_2_alt": "Judith campaign photo",
+        "row_image_3_alt": "Cook it campaign photo",
+        "feature_image_alt": "Two men watching TV on a couch",
+        "bts_image_1_alt": "Behind the scenes: camera setup",
+        "bts_image_2_alt": "Behind the scenes: team discussion",
+        "bts_image_3_alt": "Behind the scenes: lighting adjustment",
+        "bts_image_4_alt": "Behind the scenes: director at work",
+        "clients_image_alt": "Client logos",
+        "prods_image_alt": "Clap Cook it campaign photo"
+    },
+    "contenu_de_marque": {
+        "title": "REAL CONTENT THAT TELLS, UNITES AND RESONATES",
+        "description_1": "Every brand has a unique identity. Our role is to make it shine with your clients, your employees, and the talent you want to attract.",
+        "description_2": "We create authentic content, based on real listening, an understanding of your challenges, and an ability to translate your values into stories that make an impact.",
+        "cta_text": "tell us about your brand",
+        "bts_title": "why malinki?",
+        "bts_description": "We don't make generic content. We dig into your brand DNA to create pieces that have meaning, that spark emotion, and build a real connection with your audience. At Malinki, every image carries intention.",
+        "bts_button_text": "our demo",
+        "testimonial_text": "Professional, efficient, and attentive from start to finish. The shoot went smoothly, structured, and well organized.",
+        "testimonial_author": "Érika Gagné",
+        "testimonial_role": "Senior Advisor | DDMG Communications",
+        "testimonial_text_2": "[...] and on top of being talented, they are kind, generous, and pleasant to work with. A valuable collaboration we recommend without hesitation!",
+        "testimonial_author_2": "Élaine Lehouiller",
+        "testimonial_role_2": "Strategist | Niché",
+        "productions_title": "OUR PRODUCTIONS",
+        "prods_title": "NOT JUST BEAUTIFUL, REAL!",
+        "prods_subtitle_1": "BRAND PORTRAITS",
+        "prods_text_1": "We highlight the people behind your company: founders, employees, clients, to create an authentic connection with your audience.",
+        "prods_subtitle_2": "EMPLOYER CAPSULES",
+        "prods_text_2": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
+        "prods_subtitle_3": "NARRATIVE CONTENT SERIES",
+        "prods_text_3": "We build consistent narrative formats, designed to build audience loyalty over the long term.",
+        "prods_subtitle_4": "CLIENT TESTIMONIALS",
+        "prods_text_4": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
+        "prods_button_text": "GET A QUOTE IN 24 HOURS",
+        "contact_cta_text": "Your brand has a story. We help you tell it.",
+        "contact_cta_button_text": "CONTACT US",
+        "main_image_alt": "Craftsman working on a computer",
+        "sidebar_image_alt": "Side view of a craftsman at his desk",
+        "testimonial_image_alt": "Portrait of Laurence Gagnon Beaudoin",
+        "testimonial_image_alt_2": "Portrait of Érika Gagné",
+        "row_image_1_alt": "Super Aqua Club campaign photo",
+        "row_image_2_alt": "Judith campaign photo",
+        "row_image_3_alt": "Cook it campaign photo",
+        "row_image_4_alt": "Super Aqua Club campaign photo",
+        "row_image_5_alt": "Judith campaign photo",
+        "row_image_6_alt": "Cook it campaign photo",
+        "row_image_7_alt": "Super Aqua Club campaign photo",
+        "feature_image_alt": "Two men watching television on a couch",
+        "clients_image_alt": "Client logos"
+    },
+    "contenu_vertical": {
+        "title": "SHORT-FORM CONTENT DESIGNED FOR THE LONG TERM",
+        "description": "Each platform has its own codes: format, tone, rhythm, visuals... Everything matters. Adapting your message is essential to reach the right people, in the right place, in the right way.",
+        "gifs_alt_1": "Gif 1",
+        "gifs_alt_2": "Gif 2",
+        "gifs_alt_3": "Gif 3",
+        "gifs_alt_4": "Gif 4",
+        "cta_text": "TAKE ACTION",
+        "testimonial_text": "We trust Malinki as a partner because they are agile and flexible. They always deliver quality content, often within tight deadlines.",
+        "testimonial_author": "Jessica Romito",
+        "testimonial_role": "Director | Meat & Produce",
+        "testimonial_image_alt": "Portrait of Jessica Romito",
+        "main_image_alt": "Vertical content image",
+        "vertical_image_alt": "Vertical content image",
+        "tiktoks_title": "CREATE TIKTOKS AND REELS",
+        "tiktoks_description": "On TikTok and Reels, everything happens in the first few seconds. You have to get straight to the point, grab attention, but above all, stay authentic. We create vertical content that's punchy and on-trend, without ever sacrificing your brand voice. Whether it's funny, educational, or moving, we know how to get your message across in a format that's shareable and memorable.",
+        "tiktoks_button_text": "Take action",
+        "productions_title": "OUR PRODUCTIONS",
+        "behind_scenes_title": "BEHIND THE SCENES",
+        "bts_image_1_alt": "Behind the scenes: camera setup",
+        "bts_image_2_alt": "Behind the scenes: team discussion",
+        "bts_image_3_alt": "Behind the scenes: lighting adjustment",
+        "bts_image_4_alt": "Behind the scenes: director at work",
+        "bts_image_5_alt": "Behind the scenes: camera setup",
+        "bts_image_6_alt": "Behind the scenes: team discussion",
+        "bts_image_7_alt": "Behind the scenes: lighting adjustment",
+        "bts_image_8_alt": "Behind the scenes: director at work",
+        "contact_cta_title": "LET'S CREATE TOGETHER",
+        "contact_cta_text": "We are ready to create a reel for you. Let's talk about your project and how we can help.",
+        "contact_cta_button_text": "CONTACT US",
+        "clients_image_alt": "Client logos"
+    },
+    "sections": {
+        "about_text": {
+            "heading": "Malinki offers a collaborative and quality service to bring your audiovisual project to life.",
+            "body": "By combining our expertise in audiovisual production with our in-depth knowledge of digital platforms, we create captivating and effective content that makes a real difference."
+        },
+        "cta": {
+            "heading_line1": "Our projects",
+            "heading_line2": "speak to you?",
+            "button_text": "Contact us"
+        },
+        "cta2": {
+            "heading": "Do you have a project in mind?",
+            "button_text": "Contact us"
+        },
+        "services": {
+            "heading": "OUR SERVICES",
+            "description": "We guide you through the entire creative process to bring your vision to life. From conception to post-production.",
+            "service_1": "ADVERTISING",
+            "service_2": "BRANDED CONTENT",
+            "service_3": "VERTICAL CONTENT",
+            "service_4": "MUSIC VIDEOS"
+        },
+        "team": {
+            "heading_left": "Our",
+            "heading_right": "team",
+            "mobile_heading": "Our team",
+            "tagline": "Over 70 years of combined production experience!",
+            "member_1": {
+                "name_line_1": "Andrew",
+                "name_line_2": "Tchernilevskii",
+                "role": "Executive Producer"
+            },
+            "member_2": {
+                "name": "Miroslav Dufresne",
+                "role": "Director of Photography & Technical Director"
+            },
+            "member_3": {
+                "name_line_1": "Jérémy",
+                "name_line_2": "Leblond",
+                "role": "Production Manager & Project Manager"
+            }
+        },
+        "logos": {
+            "heading": "They trusted us"
+        },
+        "footer": {
+            "copyright": "© MALINKI 2025. All rights reserved"
+        }
+    },
+    "video_clips": {
+        "title": "MUSIC VIDEO PRODUCTION",
+        "description": "Malinki produces music videos for artists working in various musical styles. The team works with several directors to offer the best rendering for the artist. We are deeply committed to supporting local artistic culture and offer productions adapted to each project scope.",
+        "cta_text": "CONTACT US",
+        "gallery_title": "OUR WORK",
+        "gif_1_alt": "Music Video - Ten Past Two",
+        "gif_2_alt": "Music Video - Alanna",
+        "gif_3_alt": "Music Video - Visrei",
+        "gif_4_alt": "Music Video - Junes",
+        "gif_5_alt": "Music Video - Amadouemoi",
+        "gif_6_alt": "Music Video - Raymond Est Mort",
+        "gif_7_alt": "Music Video - King Melrose",
+        "contact_cta_text": "Ready to create your next music video?",
+        "contact_cta_button_text": "LET'S DISCUSS YOUR PROJECT"
+    },
+    "contact": {
+        "title": "Contact",
+        "heading": "Let's Talk About Your Project",
+        "subheading": "We're excited to bring your vision to life. Get in touch to discuss your next audiovisual project.",
+        "form_title": "Send Us a Message",
+        "name_label": "Full Name",
+        "name_placeholder": "Your name",
+        "email_label": "Email",
+        "email_placeholder": "your@email.com",
+        "phone_label": "Phone",
+        "phone_placeholder": "(514) 555-1234",
+        "message_label": "Message",
+        "message_placeholder": "Tell us about your project, goals, and important dates...",
+        "submit_button": "Send Message",
+        "email_title": "Email",
+        "phone_title": "Phone",
+        "social_title": "Social Media",
+        "cta_title": "Ready to Get Started?",
+        "cta_text": "We typically respond within 24 hours. Let's discuss how we can help you!"
+    }
+}

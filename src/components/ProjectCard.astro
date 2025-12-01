@@ -1,0 +1,94 @@
+---
+interface Props {
+    imageFile: string;
+    videoUrl?: string;
+    altText: string;
+    clientName: string;
+    agencyName: string;
+    tagText?: string;
+    width: number;
+    height: number;
+    containerClasses?: string;
+}
+const {
+    imageFile,
+    videoUrl = "",
+    altText,
+    clientName,
+    agencyName,
+    tagText = "Contenu publicitaire",
+    width,
+    height,
+    containerClasses = "",
+} = Astro.props;
+---
+
+<!-- ProjectCard Component --><!-- Props: imageFile, videoUrl, altText, clientName, agencyName, tagText (optional), width, height, containerClasses -->
+<div
+    class={`group relative overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[48px] cursor-pointer ${containerClasses}`}
+    data-project-card
+>
+    {
+        videoUrl ? (
+            <video
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 block"
+                style={`aspect-ratio: ${width} / ${height};`}
+                poster={`/assets/${imageFile}`}
+                preload="metadata"
+                muted
+                loop
+                playsinline
+                width={width}
+                height={height}
+                data-video-hover
+            >
+                <source src={videoUrl} type="video/mp4" />
+            </video>
+        ) : (
+            <img
+                src={`/assets/${imageFile}`}
+                alt={altText}
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                width={width}
+                height={height}
+                loading="lazy"
+            />
+        )
+    }
+
+    <!-- Overlay content (visible on hover) -->
+    <div
+        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    >
+        <!-- Tag at top left -->
+        <div
+            class="absolute top-6 left-6 bg-white rounded-[32px] px-3 py-3 flex items-center justify-center"
+        >
+            <p
+                class="font-['Montserrat'] font-bold text-[16px] text-[#083d45] uppercase leading-none m-0"
+            >
+                {tagText}
+            </p>
+        </div>
+
+        <!-- Bottom gradient overlay -->
+        <div
+            class="absolute bottom-0 left-0 right-0 h-[172px] bg-gradient-to-t from-[rgba(1,12,18,0.7)] via-[rgba(1,12,18,0.4)] to-transparent"
+        >
+        </div>
+
+        <!-- Client and agency info at bottom left -->
+        <div class="absolute bottom-6 left-6 flex flex-col gap-2 text-white">
+            <p
+                class="font-['Montserrat'] font-bold text-[32px] uppercase leading-none"
+            >
+                {clientName}
+            </p>
+            <p
+                class="font-['Montserrat'] font-medium text-[16px] leading-[1.2]"
+            >
+                {agencyName}
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+// Get current language from Astro params
+const { lang } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+const t = useTranslations(currentLang);
+---
+
+<section
+    class="relative w-full flex items-center justify-center py-12 md:py-16 lg:py-20"
+    data-section-type="about-text"
+>
+    <div
+        class="content-stretch flex items-center justify-center w-full px-4 md:px-6 lg:px-8"
+    >
+        <div
+            class="font-['Montserrat'] text-[#083D45] w-full max-w-[343px] sm:max-w-[500px] md:max-w-[802px] lg:max-w-[1144px] text-left"
+        >
+            <p
+                class="text-[22px] leading-[1.3] md:text-[32px] md:leading-[1.26] lg:text-[36px] font-bold mb-4 md:mb-6"
+            >
+                {t("sections.about_text.heading")}
+            </p>
+            <p
+                class="text-[22px] leading-[1.3] md:text-[32px] md:leading-[1.26] lg:text-[36px] font-medium"
+            >
+                {t("sections.about_text.body")}
+            </p>
+        </div>
+    </div>
+</section>

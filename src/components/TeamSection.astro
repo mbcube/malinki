@@ -1,0 +1,188 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+const { lang } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+const t = useTranslations(currentLang);
+
+const teamMembers = [
+  {
+    id: "member_1",
+    image: "Andrew-Tchernilevskii.png",
+    hasSplitName: true,
+  },
+  {
+    id: "member_2",
+    image: "Miroslav-Dufresne_compressed.webp",
+    hasSplitName: false,
+  },
+  {
+    id: "member_3",
+    image: "Jeremy-Leblond.png",
+    hasSplitName: true,
+  },
+];
+---
+
+<!-- Team Section -->
+<section
+  class="relative w-full font-['Montserrat'] py-12 md:py-16 lg:py-20"
+  data-section-type="team-section"
+  id="equipe"
+>
+  <div class="w-full px-4 md:px-6 lg:px-8">
+    <!-- Heading -->
+    <div
+      class="border-[#083D45] border-[0px_0px_1px] border-solid flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-0 pb-8 lg:pb-8 mb-0"
+    >
+      <!-- Mobile/Tablet: Single Heading -->
+      <div class="flex flex-col gap-4 lg:hidden">
+        <h2
+          class="p-0 font-['Montserrat'] text-[44px] font-bold leading-none uppercase text-[#083D45]"
+        >
+          {t("sections.team.mobile_heading")}
+        </h2>
+        <p
+          class="m-0 font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45] max-w-[291px]"
+        >
+          {t("sections.team.tagline")}
+        </p>
+      </div>
+
+      <!-- Desktop: Split Heading -->
+      <h2
+        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] flex-shrink-0"
+      >
+        {t("sections.team.heading_left")}
+      </h2>
+      <p
+        class="m-0 hidden lg:block font-['Montserrat'] text-[20px] font-medium leading-[1.2] text-[#083D45] text-center max-w-[304px]"
+      >
+        {t("sections.team.tagline")}
+      </p>
+      <h2
+        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] text-right flex-shrink-0"
+      >
+        {t("sections.team.heading_right")}
+      </h2>
+    </div>
+
+    <!-- Team Members List -->
+    <div class="flex flex-col w-full group">
+      {
+        teamMembers.map((member) => (
+          <div class="team-member group/member border-[#083D45] border-[0px_0px_1px] border-solid py-8 transition-opacity duration-200 ease-in-out relative lg:group-hover:opacity-50 lg:hover:!opacity-100">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div class="team-member-header cursor-pointer lg:cursor-default flex flex-col gap-4 pl-4 transition-transform duration-200 ease-in-out lg:group-hover/member:translate-x-5">
+                <h3 class="p-0 font-['Montserrat'] text-[24px] md:text-[32px] font-bold leading-none uppercase text-[#083D45]">
+                  {member.hasSplitName ? (
+                    <>
+                      {t(`sections.team.${member.id}.name_line_1`)}
+                      <br />
+                      {t(`sections.team.${member.id}.name_line_2`)}
+                    </>
+                  ) : (
+                    t(`sections.team.${member.id}.name`)
+                  )}
+                </h3>
+                <p class="m-0 font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]">
+                  {t(`sections.team.${member.id}.role`)}
+                </p>
+              </div>
+
+              <!-- Desktop Photo (Shows on Hover) -->
+              <div class="hidden lg:flex items-center justify-end pr-4 absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                <img
+                  src={`/assets/${member.image}`}
+                  alt={
+                    member.hasSplitName
+                      ? `${t(`sections.team.${member.id}.name_line_1`)} ${t(`sections.team.${member.id}.name_line_2`)}`
+                      : t(`sections.team.${member.id}.name`)
+                  }
+                  class="rounded-[32px] object-cover w-[384px] h-[480px] scale-0 lg:group-hover/member:scale-100 transition-transform duration-200 ease-in-out origin-center"
+                  loading="lazy"
+                  width="384"
+                  height="480"
+                />
+              </div>
+            </div>
+
+            <!-- Mobile Photo (Accordion) -->
+            <div class="team-member-photo-mobile mt-4 max-h-0 overflow-hidden transition-all duration-200 ease-in-out lg:hidden">
+              <img
+                src={`/assets/${member.image}`}
+                alt={
+                  member.hasSplitName
+                    ? `${t(`sections.team.${member.id}.name_line_1`)} ${t(`sections.team.${member.id}.name_line_2`)}`
+                    : t(`sections.team.${member.id}.name`)
+                }
+                class="w-full h-auto rounded-lg object-cover"
+                loading="lazy"
+                width="384"
+                height="480"
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  // Mobile accordion with resize handling
+  function initAccordion() {
+    if (window.innerWidth < 1024) {
+      const teamMembers = document.querySelectorAll(".team-member");
+
+      teamMembers.forEach((member) => {
+        const header = member.querySelector(".team-member-header");
+        const photo = member.querySelector(
+          ".team-member-photo-mobile"
+        ) as HTMLElement;
+
+        if (header && photo) {
+          // Remove existing listeners to prevent duplicates if re-initialized
+          const newHeader = header.cloneNode(true);
+          header.parentNode?.replaceChild(newHeader, header);
+          
+          newHeader.addEventListener("click", function () {
+            const isExpanded = photo.classList.contains("active");
+
+            // Close all other accordions
+            document
+              .querySelectorAll(".team-member-photo-mobile")
+              .forEach((p) => {
+                p.classList.remove("active");
+                (p as HTMLElement).style.maxHeight = "0";
+              });
+
+            // Toggle current accordion
+            if (!isExpanded) {
+              photo.classList.add("active");
+              photo.style.maxHeight = "800px";
+            }
+          });
+        }
+      });
+    } else {
+        // Reset on desktop
+        document
+              .querySelectorAll(".team-member-photo-mobile")
+              .forEach((p) => {
+                p.classList.remove("active");
+                (p as HTMLElement).style.maxHeight = "0";
+              });
+    }
+  }
+
+  // Initialize on load
+  document.addEventListener("DOMContentLoaded", initAccordion);
+
+  // Re-initialize on resize
+  let resizeTimer: number;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(initAccordion, 250);
+  });
+</script>

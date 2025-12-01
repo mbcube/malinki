@@ -1,0 +1,645 @@
+{
+    "general": {
+        "404": {
+            "title": "Page non trouvée!",
+            "button": "Page d'accueil",
+            "subtext": "Essayez une des pages suivantes:"
+        },
+        "hero_video": {
+            "view_reel": "Voir le reel"
+        },
+        "menu_icons": {
+            "new": "NOUVEAU",
+            "sale": "VENTE"
+        },
+        "search": {
+            "title": "Chercher",
+            "no_results_title_html": "VOTRE RECHERCHE NE RENVOIE AUCUN RÉSULTAT.",
+            "no_results_html": "Résultats de recherche pour",
+            "results_title": "RÉSULTATS DE RECHERCHE POUR",
+            "header_message": "Que cherchez-vous?",
+            "place_holder": "RECHERCHE DE PRODUITS...",
+            "button_name_header_type_2": "SEARCH",
+            "see_all_results": "See all results"
+        },
+        "meta": {
+            "keywords": "Shopify Template",
+            "author": "p-themes",
+            "tags": "Marqué \"{{ tags }}\"",
+            "page": "Page {{ page }}"
+        },
+        "menu": {
+            "title": "MENU",
+            "button_close": "Fermer",
+            "button_back": "Arrière"
+        },
+        "countdown": {
+            "day": "Day",
+            "hour": "Hrs",
+            "minute": "Min",
+            "second": "Sec"
+        },
+        "pagination": {
+            "next": "PROCHAIN"
+        },
+        "general": {
+            "portfolio_zoom_in": "AGRANDIR",
+            "to_top_button": "RETOUR AU SOMMET",
+            "subscribed_message_html": "You have successfully subscribed!",
+            "send_message_title": "Have a question?",
+            "sended_message": "Thanks for contacting us. We'll get back to you as soon as possible."
+        },
+        "tooltip_texts": {
+            "go_to_product": "Aller au produit {{ product_name }}",
+            "header_search": "Search",
+            "header_cart": "Cart",
+            "header_account": "My Account",
+            "header_settings": "Settings",
+            "quick_view": "Quick View",
+            "view_review": "Go to review",
+            "filter_remove": "Remove filter {{ filter_name }}",
+            "wishlist": "Wishlist",
+            "compare": "Compare",
+            "currency": "Currency"
+        },
+        "password_page": {
+            "opening_soon": "Opening Soon"
+        }
+    },
+    "layout": {
+        "customer": {
+            "close": "Fermer",
+            "account": "Compte",
+            "checkout": "Check-out",
+            "sign_in": "Se connecter",
+            "register": "Registre",
+            "log_out": "Connectez - Out",
+            "view_cart": "Voir le Panier"
+        }
+    },
+    "header": {
+        "contact_button": "Contactez-nous"
+    },
+    "collections": {
+        "general": {
+            "empty": "VIDE",
+            "sort_result": "Aucun produit ne correspond à la sélection."
+        },
+        "sidebar": {
+            "filtres_title": "SHOPPING PAR:",
+            "back": "FERMER",
+            "clear_all": "TOUT EFFACER",
+            "text_remove_parameter": "Retirer",
+            "empty_search_parameter_html": "UNTYPED:"
+        },
+        "toolbar": {
+            "filter": "FILTRE",
+            "sort_by_title": "Trier par:",
+            "grid_amount_title": "Montrer:",
+            "items": "Item",
+            "button_show_more": "MONTRE PLUS",
+            "button_show_more_disabled": "PLUS DE PRODUITS",
+            "all": "TOUT"
+        },
+        "sorting": {
+            "title": "Trier par",
+            "featured": "En vedette",
+            "best_selling": "Best Selling",
+            "az": "Nom Ascendant",
+            "za": "Nom décroissant",
+            "price_ascending": "Prix croissant",
+            "price_descending": "Prix décroissant",
+            "date_ascending": "Date croissante",
+            "date_descending": "Date Descendant"
+        }
+    },
+    "products": {
+        "general": {
+            "view_all_variants": "TOUS VARIANTES",
+            "add_to_cart": "AJOUTER AU PANIER",
+            "add_to_cart_html": "<span class=\"icon icon-shopping_basket\"></span> <span>AJOUTER AU PANIER</span>",
+            "preorder_html": "<span class=\"icon icon-f-47\"></span> <span>PREORDER</span>",
+            "added_html": "<span class=\"icon icon-shopping_basket\"></span> AJOUTÉE",
+            "error_html": "<span class=\"icon icon-shopping_basket\"></span> LIMITER LES PRODUITS",
+            "wait_html": "<span class=\"icon icon-shopping_basket\"></span> ATTENDEZ",
+            "select_options_html": "CHOISISSEZ VOS OPTIONS",
+            "unavailable": "Épuisé",
+            "unavailable_html": "<span>ÉPUISÉ</span>",
+            "quick_view": "Aperçu rapide",
+            "sale_html": "Vente",
+            "new": "Nouveau",
+            "related_products": "Produits connexes",
+            "featured": "En vedette",
+            "view_review": "Aller à la revue",
+            "buy_now_button": "BUY NOW",
+            "loading": "LOADING"
+        },
+        "product": {
+            "sold_out": "En rupture de stock",
+            "many_in_stock": "Beaucoup en stock",
+            "in_stock": "en stock",
+            "purchase_when_out_of_stock": "You can purchase this product but it's out of stock",
+            "availability": "Disponibilité:",
+            "sku": "SKU:",
+            "vendor": "Vendeur:",
+            "type": "Type de produit:",
+            "barcode": "Code à barre:",
+            "quantity": "QTÉ:",
+            "tags": "Mots clés:",
+            "include_taxes": "Tax included.",
+            "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+        }
+    },
+    "blogs": {
+        "general": {
+            "author_by_html": "par <a href=\"#\">{{ author }}</a>",
+            "on": "sur",
+            "comment": "commentaires"
+        },
+        "article": {
+            "by_author": "par",
+            "posted_in": "sur",
+            "read_more": "LIRE LA SUITE",
+            "back_to_blog": "Retour à {{ title }}",
+            "title_result": "filtrer par"
+        },
+        "fields": {
+            "name": "Entrez votre nom",
+            "email": "Entrer votre Email",
+            "message": "Écrire un commentaire"
+        },
+        "comments": {
+            "title": "Laisser une réponse",
+            "name": "prénom",
+            "email": "Email",
+            "message": "Corps de revue (1500)",
+            "post": "ENVOYER UN COMMENTAIRE",
+            "moderated": "Les commentaires doivent être approuvés avant de s'afficher",
+            "success_moderated": "Vous avez posté votre commentaire avec succès. Il devra être approuvé par le propriétaire du blog avant d'apparaître.",
+            "success": "Vous avez posté votre commentaire avec succès.",
+            "comments_with_count": {
+                "one": "{{ count }} commentaire",
+                "other": "{{ count }} commentaires"
+            }
+        }
+    },
+    "cart": {
+        "general": {
+            "title": "Chariot",
+            "continue_shopping": "CONTINUER VOS ACHATS",
+            "clear_cart": "PANIER DE COMMANDE CLAIRE",
+            "update": "MISE À JOUR PANIER",
+            "subtotal": "TOTAL",
+            "shipping_total": "LIVRAISON",
+            "total": "SOMME FINALE",
+            "checkout": "PASSER À LA CAISSE",
+            "empty": "Le panier d'achat est vide",
+            "empty_cart": "Vous n'avez pas d'articles dans votre panier.",
+            "shipping_heading": "ESTIMATION DES FRAIS DE TRANSPORTS ET DE LA TVA",
+            "shipping_description": "Entrez votre destination pour obtenir une estimation d'expédition",
+            "shipping_country": "Pays",
+            "shipping_state": "État / Province",
+            "shipping_zip": "Zip / code postal",
+            "shipping_variants": "Deux variantes",
+            "shipping_button": "CALCULER FRAIS DE PORT"
+        },
+        "label": {
+            "quantity": "Qté:",
+            "total": "Total",
+            "note": "REMARQUE",
+            "note_text": "Ajoutez des instructions spéciales pour votre commande ..."
+        },
+        "header": {
+            "title": "CHARIOT",
+            "close": "FERMER",
+            "total": "TOTAL:",
+            "checkout": "PASSER À LA CAISSE",
+            "view_cart": "VOIR PANIER",
+            "view_cart_all": "...",
+            "button_delete": "Effacer",
+            "empty_cart": "Aucun produit dans le chariot",
+            "view_product": "Voir le produit"
+        },
+        "popup_product_added": {
+            "view_cart": "Voir le panier",
+            "continue_shopping": "CONTINUER VOS ACHATS",
+            "go_to_checkout": "PASSER À LA CAISSE",
+            "message_main": "Produit ajouté avec succès à votre panier",
+            "message_mobile": "Ajouté au panier avec succès!",
+            "item_quantity": "Qté:",
+            "item_price": "TOTAL:",
+            "quantity_html": "Il existe des  {{ not_delete_variable }} articles<br>dans votre panier",
+            "total_price": "TOTAL:",
+            "related_products_title": "With this product also buy:"
+        },
+        "shipping": {
+            "there_are": "There are ",
+            "shipping_rates": "shipping rates available for ",
+            "starting_at": ", starting at ",
+            "one_shipping_rate": "There is one shipping rate available for ",
+            "do_not_ship": "We do not ship to this destination."
+        }
+    },
+    "contact": {
+        "form": {
+            "name": "Prénom",
+            "email": "Email",
+            "phone": "Téléphone",
+            "message": "Message",
+            "send": "ENVOYER LE MESSAGE",
+            "post_success": "Merci de nous avoir contacté. Nous vous répondrons dans les plus brefs délais.",
+            "post_error": "Oops désolé. Nous n'avons pas pu soumettre votre demande. Veuillez corriger les éléments suivants et les soumettre à nouveau:",
+            "post_field_error_html": "<strong>{{ field }}</strong> {{ error }}"
+        },
+        "placeholder": {
+            "name": "Prénom",
+            "email": "Email",
+            "phone": "Téléphone",
+            "message": "Message"
+        }
+    },
+    "customer": {
+        "general": {
+            "or": "or",
+            "return": "RETOUR À LA PAGE DE COMPTE",
+            "link_back": "< Arrière",
+            "required_fields": "* Champs obligatoires"
+        },
+        "account": {
+            "title_main": "Compte",
+            "title": "Mon compte",
+            "order_history": "Historique des commandes",
+            "account_details": "details du compte",
+            "view_addresses": "VOIR LES ADRESSES",
+            "name": "Prénom",
+            "email": "Email:",
+            "address": "Adresse",
+            "address_2": "Adresse 2:",
+            "country": "Pays:",
+            "zip": "Zip *: français:",
+            "phone": "Téléphone:",
+            "company": "Compagnie:"
+        },
+        "activate_account": {
+            "title_main": "Activer le compte",
+            "title_form": "Activer le compte",
+            "subtext": "Créez votre mot de passe pour activer votre compte.",
+            "password": "Mot de passe",
+            "password_confirm": "Confirmez le mot de passe",
+            "submit": "Activer le compte"
+        },
+        "addresses": {
+            "title": "Vos adresses",
+            "default": "(Adresse par défaut)",
+            "add_new": "AJOUTER UNE NOUVELLE ADRESSE",
+            "first_name": "Prénom",
+            "last_name": "Nom de famille",
+            "company": "Compagnie",
+            "address1": "Adresse 1",
+            "address2": "Adresse 2",
+            "city": "Ville",
+            "country": "Pays",
+            "province": "Province",
+            "zip": "Code Postal",
+            "phone": "Téléphone",
+            "set_default": "Définir comme adresse par défaut?",
+            "add": "AJOUTEZ L'ADRESSE",
+            "update": "ADRESSE DE MISE À JOUR",
+            "cancel": "Annuler",
+            "edit": "MODIFIER",
+            "delete": "EFFACER"
+        },
+        "login": {
+            "title": "S'IDENTIFIER",
+            "title_login": "DÉJÀ CLIENT",
+            "description": "Si vous avez un compte avec nous, connectez-vous.",
+            "email": "Adresse e-mail",
+            "password": "Mot de passe",
+            "email_field": "Enter E-mail",
+            "password_field": "Entrer le mot de passe",
+            "forgot_password": "Mot de passe oublié?",
+            "reset_password": "RÉINITIALISER LE MOT DE PASSE",
+            "reset_password_subtext": "Nous vous enverrons un email pour réinitialiser votre mot de passe.",
+            "sign_in": "S'IDENTIFIER",
+            "cancel": "Annuler",
+            "submit_recover": "SOUMETTRE",
+            "new_customer_continue": "CRÉER UN COMPTE",
+            "new_customer": "NOUVEAU CLIENT",
+            "new_customer_description": "En créant un compte auprès de notre magasin, vous pourrez passer rapidement le processus de caisse, stocker plusieurs adresses d'expédition, afficher et suivre vos commandes dans votre compte et plus encore."
+        },
+        "orders": {
+            "order_number": "Commande",
+            "date": "Rendez-vous amoureux",
+            "payment_status": "Statut de paiement",
+            "fulfillment_status": "État de réalisation",
+            "total": "Total",
+            "none": "Vous n'avez pas encore effectué de commandes."
+        },
+        "order": {
+            "title": "Commande {{ name }}",
+            "cancelled": "Commande annulée",
+            "cancelled_reason": "Raison: {{ reason }}",
+            "billing_address": "Adresse de facturation",
+            "payment_status": "Statut de paiement",
+            "shipping_address": "Adresse de livraison",
+            "fulfillment_status": "État de réalisation",
+            "product": "Produit",
+            "sku": "SKU",
+            "price": "Prix",
+            "quantity": "Quantité",
+            "total": "Total",
+            "subtotal": "Subtotal",
+            "fulfilled": "Réalisé"
+        },
+        "reset_password": {
+            "title_main": "réinitialiser le mot de passe",
+            "password": "Mot de passe",
+            "password_confirm": "Confirmez le mot de passe",
+            "submit": "RÉINITIALISER LE MOT DE PASSE"
+        },
+        "register": {
+            "title_main": "CRÉER UN COMPTE",
+            "title_form": "INFORMATIONS PERSONNELLES",
+            "first_name": "Prénom",
+            "last_name": "Nom de famille",
+            "email": "Email",
+            "password": "Mot de passe",
+            "first_name_form": "Entrer le prénom",
+            "last_name_form": "Entrer le nom de famille",
+            "email_form": "Entrer l'email",
+            "password_form": "Entrer le mot de passe",
+            "submit": "CRÉER",
+            "cancel": "Retourner au magasin"
+        }
+    },
+    "gift_cards": {
+        "issued": {
+            "title_html": "Voici votre {{ value }} carte-cadeau pour {{ shop }}",
+            "subtext": "VOTRE CARTE CADEAU",
+            "disabled": "Désactivé",
+            "expired": "A expiré le {{ expiry }}",
+            "active": "Expire le {{ expiry }}",
+            "redeem_html": "Utilisez ce code à la caisse pour utiliser votre carte-cadeau {{ value }}",
+            "shop_link": "COMMENCEZ À ACHETER",
+            "print": "IMPRIMEZ CETTE CARTE CADEAU",
+            "remaining_html": "{{ balance }} la gauche",
+            "add_to_apple_wallet": "Ajouter au portefeuille Apple"
+        }
+    },
+    "popup_quick_view": {
+        "general": {
+            "sku": "SKU:",
+            "barcode": "Barcode:",
+            "availability": "Disponibilité:",
+            "in_stock": "En stock",
+            "sold_out": "En rupture de stock",
+            "many_in_stock": "Beaucoup en stock",
+            "purchase_when_out_of_stock": "You can purchase this product but it's out of stock",
+            "view_full_info": "Afficher les infos complètes"
+        }
+    },
+    "wishlist": {
+        "header": {
+            "wishlist": "Wishlist"
+        },
+        "buttons_text": {
+            "tooltip_add": "Add to Wishlist",
+            "tooltip_remove": "Remove from Wishlist",
+            "tooltip_login": "You need to login",
+            "tooltop_load_text": "Be patient",
+            "page_text_add": "ADD TO WISHLIST",
+            "page_text_remove": "REMOVE FROM WISHLIST"
+        },
+        "modal_alert": {
+            "message": "Please login and you will add product to your wishlist",
+            "sign_in_button": "SIGN IN",
+            "register_button": "REGISTER"
+        },
+        "wishlist_page": {
+            "title": "WISHLIST",
+            "login_message": "Please login and you will add product to your wishlist",
+            "sign_in_button": "SIGN IN",
+            "register_button": "REGISTER",
+            "empty_wishlist": "No products were added to the wishlist",
+            "continue_shopping": "CONTINUE SHOPPING"
+        }
+    },
+    "compare": {
+        "header": {
+            "compare": "Compare"
+        },
+        "buttons_text": {
+            "tooltip_add": "Add to Compare",
+            "tooltip_remove": "Remove from Compare",
+            "page_text_add": "ADD TO COMPARE",
+            "page_text_remove": "REMOVE FROM COMPARE"
+        },
+        "compare_page": {
+            "title": "COMPARING PRODUCTS",
+            "empty_title": "COMPARE",
+            "empty_compare": "No products were added to the compare",
+            "continue_shopping": "CONTINUE SHOPPING",
+            "in_stock": "In Stock",
+            "soldout": "Sold Out",
+            "field_description": "Description",
+            "field_vendor": "Vendor"
+        }
+    },
+    "production_publicitaire": {
+        "title": "DU CONTENU PUBLICITAIRE QUI CAPTE L'ATTENTION",
+        "description": "Chez Malinki, on conçoit et produit du contenu publicitaire qui capte l'attention dès les premières secondes. Que ce soit pour une campagne web, télé ou sociale, on mise sur des idées claires, des visuels forts et une exécution agile.",
+        "cta_text": "PASSEZ À L'ACTION",
+        "testimonial_text": "Je suis arrivée avec une demande impossible (délais hyper serrée, vision en développement), et l'équipe de Malinki a su relever le défi haut la main.",
+        "testimonial_author": "Laurence Gagnon Beaudoin",
+        "testimonial_role": "Directrice Marketing | OMY",
+        "headline_line1": "PLUS QU'UN BEAU VISUEL",
+        "headline_line2": "UNE PUB QUI FRAPPE",
+        "paragraph1": "On travaille main dans la main avec votre équipe pour s'assurer que chaque contenu serve un objectif précis : vendre, faire connaître, lancer, mobiliser.",
+        "paragraph2": "Notre approche est simple : on pose les bonnes questions, on propose des idées solides et on livre vite, sans compromis sur la qualité.",
+        "button_text": "NOTRE DÉMO",
+        "productions_title": "NOS PRODUCTIONS",
+        "behind_scenes_title": "DERRIÈRE LES COULISSES",
+        "clients_title": "CEUX QUI NOUS ONT FAIT CONFIANCE",
+        "prods_title": "NOS PRODS PUBS",
+        "prods_subtitle_1": "PUBLICITÉ NUMÉRIQUE",
+        "prods_text_1": "Formats courts pensés pour le web et les réseaux sociaux, optimisés pour capter l'attention et générer de l'action.",
+        "prods_subtitle_2": "PUBLICITÉ TÉLÉ",
+        "prods_text_2": "Contenu 6, 15 ou 30 secondes, narration efficace et respect des normes de diffusion, pour des campagnes à grande portée.",
+        "prods_subtitle_3": "PHOTO DE CAMPAGNES",
+        "prods_text_3": "Visuels forts et cohérents avec vos vidéos publicitaires, captés en studio ou sur le terrain, pour nourrir tous vos canaux.",
+        "prods_button_text": "Passez à l'action",
+        "contact_cta_title": "CREATIONS VISUELLES À VOTRE IMAGE",
+        "contact_cta_text": "NOTRE CRÉATIVITÉ, À VOTRE SERVICE",
+        "contact_cta_button_text": "COMMENCEZ",
+        "main_image_alt": "Artisan travaillant",
+        "sidebar_image_alt": "Artisan sur ordinateur",
+        "testimonial_image_alt": "Photo de l'auteur",
+        "row_image_1_alt": "Photo de campagne Super Aqua Club",
+        "row_image_2_alt": "Photo de campagne Judith",
+        "row_image_3_alt": "Photo de campagne Cook it",
+        "feature_image_alt": "Deux hommes regardant la télévision",
+        "bts_image_1_alt": "Dans les coulisses : installation de la caméra",
+        "bts_image_2_alt": "Dans les coulisses : discussion d'équipe",
+        "bts_image_3_alt": "Dans les coulisses : ajustement de l'éclairage",
+        "bts_image_4_alt": "Dans les coulisses : réalisateur au travail",
+        "clients_image_alt": "Logos des clients",
+        "prods_image_alt": "Photo de campagne Clap Cook it"
+    },
+    "contenu_de_marque": {
+        "title": "DU CONTENU VRAI QUI RACONTE, RASSEMBLE ET RÉSONNE",
+        "description_1": "Chaque marque a une identité unique. Notre rôle, c’est de la faire rayonner  auprès de vos clients, de vos employés et des talents que vous souhaitez attirer. ",
+        "description_2": "On crée du contenu authentique, basé sur une écoute réelle, une compréhension de vos enjeux et une capacité à traduire vos valeurs en récits qui marquent.",
+        "cta_text": "parlez nous de votre marque",
+        "bts_title": "pourquoi malinki?",
+        "bts_description": "On ne fait pas du contenu générique. On creuse votre ADN de marque pour créer des pièces qui ont du sens, qui suscitent l'émotion et bâtissent un vrai lien avec votre audience. Chez Malinki, chaque image est porteuse d'une intention.",
+        "bts_button_text": "notre démo",
+        "testimonial_text": "Professionnels, efficaces et à l’écoute du début à la fin. Le tournage s’est déroulé de manière fluide, structurée et bien organisée.",
+        "testimonial_author": "Érika Gagné",
+        "testimonial_role": "Conseillère principale | DDMG Communications",
+        "testimonial_text_2": "[...] en plus d'être talentueux, ils sont gentils, généreux et agréables à côtoyer. Une collaboration précieuse qu’on recommande sans hésiter!",
+        "testimonial_author_2": "Élaine Lehouiller",
+        "testimonial_role_2": "Stratège | Niché",
+        "productions_title": "NOS PRODUCTIONS",
+        "prods_title": "PAS JUSTE DU BEAU, DU VRAI!",
+        "prods_subtitle_1": "PORTRAITS DE LA MARQUE",
+        "prods_text_1": "On met en lumière les personnes derrière votre entreprise: fondateurs, employés, clients, pour créer un lien authentique avec votre public.",
+        "prods_subtitle_2": "CAPSULES EMPLOYEUR",
+        "prods_text_2": "Visuels forts et cohérents avec vos vidéos publicitaires, captés en studio ou sur le terrain, pour nourrir tous vos canaux.",
+        "prods_subtitle_3": "SÉRIES DE CONTENU NARRATIF",
+        "prods_text_3": "On construit des formats narratifs cohérents, pensés pour fidéliser une audience sur le long terme.",
+        "prods_subtitle_4": "TÉMOIGNAGES CLIENTS",
+        "prods_text_4": "Visuels forts et cohérents avec vos vidéos publicitaires, captés en studio ou sur le terrain, pour nourrir tous vos canaux.",
+        "prods_button_text": "OBTENEZ UN DEVIS EN 24 HEURES",
+        "contact_cta_text": "Votre marque a une histoire. On vous aide à la raconter.",
+        "contact_cta_button_text": "CONTACTEZ-NOUS",
+        "main_image_alt": "Artisan travaillant sur un ordinateur",
+        "sidebar_image_alt": "Vue latérale d'un artisan à son bureau",
+        "testimonial_image_alt": "Portrait de Laurence Gagnon Beaudoin",
+        "testimonial_image_alt_2": "Portrait de Érika Gagné",
+        "row_image_1_alt": "Photo de campagne Super Aqua Club",
+        "row_image_2_alt": "Photo de campagne Judith",
+        "row_image_3_alt": "Photo de campagne Cook it",
+        "row_image_4_alt": "Photo de campagne Super Aqua Club",
+        "row_image_5_alt": "Photo de campagne Judith",
+        "row_image_6_alt": "Photo de campagne Cook it",
+        "row_image_7_alt": "Photo de campagne Super Aqua Club",
+        "feature_image_alt": "Deux hommes regardant la télévision sur un canapé",
+        "clients_image_alt": "Logos des clients"
+    },
+    "contenu_vertical": {
+        "title": "DU CONTENU COURT PENSÉ POUR LE LONG TERME",
+        "description": "Chaque plateforme a ses propres codes : le format, le ton, le rythme, les visuels... Tout compte. Adapter son message, c'est essentiel pour rejoindre les bonnes personnes, au bon endroit, de la bonne façon.",
+        "gifs_alt_1": "Gif 1",
+        "gifs_alt_2": "Gif 2",
+        "gifs_alt_3": "Gif 3",
+        "gifs_alt_4": "Gif 4",
+        "cta_text": "PASSEZ À L'ACTION",
+        "main_image_alt": "Image de contenu vertical",
+        "testimonial_text": "On fait confiance à Malinki comme partenaire, car ils sont agiles et flexibles. Ils livrent toujours du contenu de qualité, souvent avec des limites de temps restreintes.",
+        "testimonial_author": "Jessica Romito",
+        "testimonial_role": "Directrice | Meat & Produce",
+        "testimonial_image_alt": "Portrait de Jessica Romito",
+        "vertical_image_alt": "Image de contenu vertical",
+        "tiktoks_title": "CRÉER DES TIKTOK ET REELS",
+        "tiktoks_description": "Sur TikTok et en Reels, tout se joue dans les premières secondes. Il faut aller droit au but, capter l'attention, mais surtout rester vrai. On crée du contenu vertical, punché, ancré dans les tendances sans jamais sacrifier votre voix de marque. Que ce soit drôle, éducatif ou touchant, on sait comment faire passer votre message dans un format qui se partage et qui se retient.",
+        "tiktoks_button_text": "Passer à l'action",
+        "productions_title": "NOS PRODUCTIONS",
+        "behind_scenes_title": "DERRIÈRE LES COULISSES",
+        "bts_image_1_alt": "Dans les coulisses : installation de la caméra",
+        "bts_image_2_alt": "Dans les coulisses : discussion d'équipe",
+        "bts_image_3_alt": "Dans les coulisses : ajustement de l'éclairage",
+        "bts_image_4_alt": "Dans les coulisses : réalisateur au travail",
+        "bts_image_5_alt": "Dans les coulisses : installation de la caméra",
+        "bts_image_6_alt": "Dans les coulisses : discussion d'équipe",
+        "bts_image_7_alt": "Dans les coulisses : ajustement de l'éclairage",
+        "bts_image_8_alt": "Dans les coulisses : réalisateur au travail",
+        "contact_cta_title": "CRÉONS ENSEMBLE",
+        "contact_cta_text": "Nous sommes prêts à créer un reel pour vous. Parlons de votre projet et de comment nous pouvons vous aider.",
+        "contact_cta_button_text": "CONTACTEZ-NOUS",
+        "clients_image_alt": "Logos des clients"
+    },
+    "sections": {
+        "about_text": {
+            "heading": "Malinki offre un service collaboratif et de qualité pour donner vie à votre projet audiovisuel.",
+            "body": "En combinant notre expertise en production audiovisuelle avec notre connaissance approfondie des plateformes numériques nous créons des contenus captivants et efficaces qui font une réelle différence."
+        },
+        "cta": {
+            "heading_line1": "Nos projets",
+            "heading_line2": "vous parlent?",
+            "button_text": "Contactez-nous"
+        },
+        "cta2": {
+            "heading": "Avez-vous un projet en tête?",
+            "button_text": "Contactez-nous"
+        },
+        "services": {
+            "heading": "NOS SERVICES",
+            "description": "Nous vous accompagnons tout au long du processus de création pour concrétiser votre vision. De la conception jusqu'à la post-production.",
+            "service_1": "PUBLICITÉS",
+            "service_2": "CONTENU DE MARQUE",
+            "service_3": "CONTENU VERTICAL",
+            "service_4": "VIDÉOCLIPS"
+        },
+        "team": {
+            "heading_left": "Notre",
+            "heading_right": "équipe",
+            "mobile_heading": "Notre équipe",
+            "tagline": "Plus de 70 ans d'expérience cumulée en production!",
+            "member_1": {
+                "name_line_1": "Andrew",
+                "name_line_2": "Tchernilevskii",
+                "role": "Producteur Éxecutif"
+            },
+            "member_2": {
+                "name": "Miroslav Dufresne",
+                "role": "Directeur photo & Directeur technique"
+            },
+            "member_3": {
+                "name_line_1": "Jérémy",
+                "name_line_2": "Leblond",
+                "role": "Chargé de productions & Chargé de projets"
+            }
+        },
+        "logos": {
+            "heading": "Ils nous ont fait confiance"
+        },
+        "footer": {
+            "copyright": "© MALINKI 2025. Tout les droits réservés"
+        }
+    },
+    "video_clips": {
+        "title": "PRODUCTION DE VIDÉOCLIPS",
+        "description": "Malinki produit des vidéoclips pour des artistes œuvrant dans divers styles musicaux. L'équipe travaille avec plusieurs réalisateurs·trices afin de proposer le meilleur rendu pour l'artiste. Nous avons beaucoup à cœur de soutenir la culture artistique d'ici et proposons des productions adaptées à chaque ampleur de projets.",
+        "cta_text": "CONTACTEZ-NOUS",
+        "gallery_title": "NOS RÉALISATIONS",
+        "gif_1_alt": "Vidéoclip - Ten Past Two",
+        "gif_2_alt": "Vidéoclip - Alanna",
+        "gif_3_alt": "Vidéoclip - Visrei",
+        "gif_4_alt": "Vidéoclip - Junes",
+        "gif_5_alt": "Vidéoclip - Amadouemoi",
+        "gif_6_alt": "Vidéoclip - Raymond Est Mort",
+        "gif_7_alt": "Vidéoclip - King Melrose",
+        "contact_cta_text": "Prêt à créer votre prochain vidéoclip?",
+        "contact_cta_button_text": "DISCUTONS DE VOTRE PROJET"
+    },
+    "contact": {
+        "title": "Contact",
+        "heading": "Parlons de votre projet",
+        "subheading": "Nous sommes impatients de donner vie à votre vision. Contactez-nous pour discuter de votre prochain projet audiovisuel.",
+        "form_title": "Envoyez-nous un message",
+        "name_label": "Nom complet",
+        "name_placeholder": "Votre nom",
+        "email_label": "Courriel",
+        "email_placeholder": "votre@courriel.com",
+        "phone_label": "Téléphone",
+        "phone_placeholder": "(514) 555-1234",
+        "message_label": "Message",
+        "message_placeholder": "Parlez-nous de votre projet, vos objectifs et vos dates importantes...",
+        "submit_button": "Envoyer le message",
+        "email_title": "Courriel",
+        "phone_title": "Téléphone",
+        "social_title": "Réseaux sociaux",
+        "cta_title": "Prêt à commencer?",
+        "cta_text": "Nous répondons généralement dans les 24 heures. Discutons de comment nous pouvons vous aider!"
+    }
+}

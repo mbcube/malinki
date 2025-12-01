@@ -1,0 +1,83 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+const { lang } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+const t = useTranslations(currentLang);
+
+const logos = [
+    {
+        image: "opera-de-montreal.png",
+        alt: "Opéra de Montréal",
+        width: 216,
+        height: 64,
+    },
+    { image: "cook-it.png", alt: "Cook it", width: 196, height: 48 },
+    { image: "omy.png", alt: "omy LAB", width: 216, height: 64 },
+    {
+        image: "quartier-des-spectacles.png",
+        alt: "Quartier des spectacles",
+        width: 216,
+        height: 64,
+    },
+    { image: "Maddle.png", alt: "Maddle", width: 238, height: 80 },
+    { image: "Air-transat.png", alt: "Air transat", width: 183, height: 40 },
+    { image: "St-Hubert.png", alt: "St-Hubert", width: 210, height: 40 },
+    {
+        image: "keywords-studios.png",
+        alt: "Keywords Studios",
+        width: 170,
+        height: 96,
+    },
+    { image: "Laval.png", alt: "Laval", width: 144, height: 96 },
+    { image: "Veritas.png", alt: "Veritas", width: 190, height: 48 },
+    {
+        image: "Meat-and-produce.png",
+        alt: "Meat & Produce",
+        width: 179,
+        height: 64,
+    },
+    {
+        image: "Maison-Jean-Lapointe.png",
+        alt: "Maison Jean Lapointe",
+        width: 199,
+        height: 64,
+    },
+    { image: "Bell.png", alt: "Bell", width: 74, height: 96 },
+    { image: "niche.png", alt: "niche", width: 182, height: 48 },
+    { image: "qolab.png", alt: "qolab", width: 143, height: 56 },
+];
+---
+
+<!-- Logos Section -->
+<section
+    class="relative w-full font-['Montserrat'] py-12 md:py-16 lg:py-20"
+    data-section-type="logos-section"
+>
+    <div class="w-full">
+        <!-- Heading -->
+        <h2
+            class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] text-center mb-12 md:mb-16 lg:mb-16"
+        >
+            {t("sections.logos.heading")}
+        </h2>
+
+        <!-- Logos Grid -->
+        <div class="flex flex-wrap gap-[16px] w-full justify-center">
+            {
+                logos.map((logo) => (
+                    <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)]">
+                        <img
+                            src={`/assets/${logo.image}`}
+                            alt={logo.alt}
+                            loading="lazy"
+                            width={logo.width}
+                            height={logo.height}
+                            class="max-w-full max-h-full object-contain"
+                        />
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

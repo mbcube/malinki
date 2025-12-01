@@ -1,0 +1,76 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+const { lang } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+const t = useTranslations(currentLang);
+---
+
+<!-- CTA Section 2 -->
+<section
+    class="w-full py-12 md:py-16 lg:py-20 px-0"
+    data-section-type="cta-section-2"
+>
+    <!-- Images Row -->
+    <div
+        class="grid grid-cols-2 md:grid-cols-4 w-[90%] mx-auto mb-10 md:mb-5 lg:mb-0"
+    >
+        <!-- Left image (desktop only) -->
+        <img
+            src="/assets/cta-2-red.jpg"
+            alt=""
+            width="400"
+            height="267"
+            loading="lazy"
+            class="hidden md:block object-cover rounded-[24px] md:rounded-[32px] shadow-lg -rotate-12 mt-25 scale-110"
+        />
+
+        <!-- Center left image -->
+        <img
+            src="/assets/cta-2-fizz.jpg"
+            alt=""
+            width="400"
+            height="267"
+            loading="lazy"
+            class="object-cover rounded-[24px] md:rounded-[32px] shadow-lg -rotate-[4deg] scale-110"
+        />
+
+        <!-- Center right image -->
+        <img
+            src="/assets/cta-2-lazy.jpg"
+            alt=""
+            width="400"
+            height="267"
+            loading="lazy"
+            class="object-cover rounded-[24px] md:rounded-[32px] shadow-lg rotate-[4deg] scale-110"
+        />
+
+        <!-- Right image (desktop only) -->
+        <img
+            src="/assets/cta-2-interview.jpg"
+            alt=""
+            width="400"
+            height="267"
+            loading="lazy"
+            class="hidden md:block object-cover rounded-[24px] md:rounded-[32px] shadow-lg rotate-12 mt-25 scale-110"
+        />
+    </div>
+
+    <!-- CTA Content -->
+    <div
+        class="flex flex-col items-center justify-center gap-[24px] md:gap-[32px] w-full max-w-[686px] mx-auto px-4"
+    >
+        <h2
+            class="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] font-medium leading-none text-center uppercase text-[#083D45] m-0 p-0 w-full"
+        >
+            {t("sections.cta2.heading")}
+        </h2>
+
+        <a
+            href={`/${currentLang === "fr" ? "" : "en/"}contact`}
+            class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
+        >
+            {t("sections.cta2.button_text")}
+        </a>
+    </div>
+</section>

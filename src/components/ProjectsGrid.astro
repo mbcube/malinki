@@ -1,0 +1,74 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import projectsData from "../data/projects-data.json";
+
+const { grids } = projectsData;
+---
+
+<!-- Projects Grid Section -->
+<section
+    class="relative w-full font-['Montserrat'] mt-12 md:mt-16 lg:mt-20 mb-3"
+    data-section-type="projects-grid"
+    id="projects"
+>
+    <div>
+        {
+            grids.map((grid) => (
+                <div class="grid grid-cols-3 gap-4 auto-rows-fr mb-3">
+                    {grid.projects.map((project) => (
+                        <ProjectCard
+                            imageFile={project.imageFile}
+                            videoUrl={project.videoUrl}
+                            altText={project.altText}
+                            clientName={project.clientName}
+                            agencyName={project.agencyName}
+                            width={project.width}
+                            height={project.height}
+                            containerClasses={project.containerClasses}
+                        />
+                    ))}
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all project cards with video
+        const projectCards = document.querySelectorAll("[data-project-card]");
+
+        projectCards.forEach((card) => {
+            const video = card.querySelector(
+                "[data-video-hover]",
+            ) as HTMLVideoElement;
+
+            if (video) {
+                // Preload metadata to prevent jump on first hover
+                video.load();
+
+                // Play video on hover
+                card.addEventListener("mouseenter", function () {
+                    video.currentTime = 0; // Reset to start
+                    const playPromise = video.play();
+
+                    // Handle play promise for better error handling
+                    if (playPromise !== undefined) {
+                        playPromise.catch((error) => {
+                            // Auto-play was prevented, video will show poster
+                            console.log("Video autoplay prevented:", error);
+                        });
+                    }
+                });
+
+                // Pause and reset video when hover ends
+                card.addEventListener("mouseleave", function () {
+                    video.pause();
+                    video.currentTime = 0;
+                    // Force reload to show poster image again
+                    video.load();
+                });
+            }
+        });
+    });
+</script>
