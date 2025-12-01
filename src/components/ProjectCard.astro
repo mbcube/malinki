@@ -1,94 +1,156 @@
 ---
+import { Image, getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
 interface Props {
-    imageFile: string;
-    videoUrl?: string;
-    altText: string;
-    clientName: string;
-    agencyName: string;
-    tagText?: string;
-    width: number;
-    height: number;
-    containerClasses?: string;
+  imageFile: string;
+  videoUrl?: string;
+  altText: string;
+  clientName: string;
+  agencyName: string;
+  tagText?: string;
+  width: number;
+  height: number;
+  containerClasses?: string;
 }
+
+// Import all project images
+import microsoftCherylleShyne from "../images/Malinki-Microsoft-Cherylle-Shyne_820x.jpg";
+import visreiLisonLux from "../images/Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg";
+import briviaImmobilier from "../images/Malinki-Brivia-immobilier_820x.jpg";
+import cookItPretACuisiner from "../images/Malinki-Cooki-it-pret-a-cuisiner_820x.jpg";
+import bonesAndWires from "../images/Malinki-Bones-and-Wires-musique_820x.jpg";
+import omyProduitsBeaute from "../images/Malinki-Omy-produits-beaute_820x.jpg";
+import defi28Jours from "../images/Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg";
+import greyGoose from "../images/Malinki-Grey-Goose_820x.jpg";
+import grandHeron from "../images/Malinki-Grand-Heron-musique_820x.jpg";
+import stHubertRestaurant from "../images/Malinki-St-Hubert-restaurant_820x.jpg";
+import operaDeMontreal3 from "../images/Malinki-Opera-de-Montreal-3_820x.jpg";
+import videoCapture6446 from "../images/video-capture-t0030.05seg-6446.png";
+import vdl2 from "../images/VDL-2.jpg";
+import videotronGamer from "../images/Videotron_Gamer_Remastered_compressed.webp";
+import videoCapture3990 from "../images/video-capture-t0000.00seg-3990.png";
+import videoCapture5766 from "../images/video-capture-t0000.00seg-5766.png";
+import videoCapture4212 from "../images/video-capture-t0141.86seg-4212.png";
+import fizzTelecommunication from "../images/Malinki-Fizz-telecommunication-2_820x.jpg";
+import simonLachance from "../images/Malinki-Simon-Lachance-Rosemarie-Records_820x.jpg";
+import videotronRivard from "../images/Malinki-Videotron-Rivard-Mailly-Pressoir_820x.jpg";
+import freddieOliver from "../images/Malinki-Freddie-Oliver-musique_694x.jpg";
+import nichePortrait from "../images/3300_NICHE_portrait_4x5_compressed.webp";
+import junesKartel from "../images/Malinki-Junes-Kartel-Musik-musique_694x.jpg";
+
+// Create image mapping
+const imageMap: Record<string, ImageMetadata> = {
+  "Malinki-Microsoft-Cherylle-Shyne_820x.jpg": microsoftCherylleShyne,
+  "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg": visreiLisonLux,
+  "Malinki-Brivia-immobilier_820x.jpg": briviaImmobilier,
+  "Malinki-Cooki-it-pret-a-cuisiner_820x.jpg": cookItPretACuisiner,
+  "Malinki-Bones-and-Wires-musique_820x.jpg": bonesAndWires,
+  "Malinki-Omy-produits-beaute_820x.jpg": omyProduitsBeaute,
+  "Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg": defi28Jours,
+  "Malinki-Grey-Goose_820x.jpg": greyGoose,
+  "Malinki-Grand-Heron-musique_820x.jpg": grandHeron,
+  "Malinki-St-Hubert-restaurant_820x.jpg": stHubertRestaurant,
+  "Malinki-Opera-de-Montreal-3_820x.jpg": operaDeMontreal3,
+  "video-capture-t0030.05seg-6446.png": videoCapture6446,
+  "VDL-2.jpg": vdl2,
+  "Videotron_Gamer_Remastered_compressed.webp": videotronGamer,
+  "video-capture-t0000.00seg-3990.png": videoCapture3990,
+  "video-capture-t0000.00seg-5766.png": videoCapture5766,
+  "video-capture-t0141.86seg-4212.png": videoCapture4212,
+  "Malinki-Fizz-telecommunication-2_820x.jpg": fizzTelecommunication,
+  "Malinki-Simon-Lachance-Rosemarie-Records_820x.jpg": simonLachance,
+  "Malinki-Videotron-Rivard-Mailly-Pressoir_820x.jpg": videotronRivard,
+  "Malinki-Freddie-Oliver-musique_694x.jpg": freddieOliver,
+  "3300_NICHE_portrait_4x5_compressed.webp": nichePortrait,
+  "Malinki-Junes-Kartel-Musik-musique_694x.jpg": junesKartel,
+};
+
 const {
-    imageFile,
-    videoUrl = "",
-    altText,
-    clientName,
-    agencyName,
-    tagText = "Contenu publicitaire",
-    width,
-    height,
-    containerClasses = "",
+  imageFile,
+  videoUrl = "",
+  altText,
+  clientName,
+  agencyName,
+  tagText = "Contenu publicitaire",
+  width,
+  height,
+  containerClasses = "",
 } = Astro.props;
+
+const imageSrc = imageMap[imageFile];
+// Scale up dimensions for better quality (3x for all images)
+const scaledWidth = width * 3;
+const scaledHeight = height * 3;
+const posterImage = imageSrc
+  ? await getImage({ src: imageSrc, width: scaledWidth, height: scaledHeight })
+  : null;
 ---
 
 <!-- ProjectCard Component --><!-- Props: imageFile, videoUrl, altText, clientName, agencyName, tagText (optional), width, height, containerClasses -->
 <div
-    class={`group relative overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[48px] cursor-pointer ${containerClasses}`}
-    data-project-card
+  class={`group relative overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[48px] cursor-pointer ${containerClasses}`}
+  data-project-card
 >
-    {
-        videoUrl ? (
-            <video
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 block"
-                style={`aspect-ratio: ${width} / ${height};`}
-                poster={`/assets/${imageFile}`}
-                preload="metadata"
-                muted
-                loop
-                playsinline
-                width={width}
-                height={height}
-                data-video-hover
-            >
-                <source src={videoUrl} type="video/mp4" />
-            </video>
-        ) : (
-            <img
-                src={`/assets/${imageFile}`}
-                alt={altText}
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                width={width}
-                height={height}
-                loading="lazy"
-            />
-        )
-    }
+  {
+    videoUrl ? (
+      <video
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 block"
+        style={`aspect-ratio: ${width} / ${height};`}
+        poster={posterImage?.src}
+        preload="metadata"
+        muted
+        loop
+        playsinline
+        width={width}
+        height={height}
+        data-video-hover
+      >
+        <source src={videoUrl} type="video/mp4" />
+      </video>
+    ) : imageSrc ? (
+      <Image
+        src={imageSrc}
+        alt={altText}
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        width={scaledWidth}
+        height={scaledHeight}
+        loading="lazy"
+      />
+    ) : null
+  }
 
-    <!-- Overlay content (visible on hover) -->
+  <!-- Overlay content (visible on hover) -->
+  <div
+    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+    <!-- Tag at top left -->
     <div
-        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      class="absolute top-6 left-6 bg-white rounded-[32px] px-3 py-3 flex items-center justify-center"
     >
-        <!-- Tag at top left -->
-        <div
-            class="absolute top-6 left-6 bg-white rounded-[32px] px-3 py-3 flex items-center justify-center"
-        >
-            <p
-                class="font-['Montserrat'] font-bold text-[16px] text-[#083d45] uppercase leading-none m-0"
-            >
-                {tagText}
-            </p>
-        </div>
-
-        <!-- Bottom gradient overlay -->
-        <div
-            class="absolute bottom-0 left-0 right-0 h-[172px] bg-gradient-to-t from-[rgba(1,12,18,0.7)] via-[rgba(1,12,18,0.4)] to-transparent"
-        >
-        </div>
-
-        <!-- Client and agency info at bottom left -->
-        <div class="absolute bottom-6 left-6 flex flex-col gap-2 text-white">
-            <p
-                class="font-['Montserrat'] font-bold text-[32px] uppercase leading-none"
-            >
-                {clientName}
-            </p>
-            <p
-                class="font-['Montserrat'] font-medium text-[16px] leading-[1.2]"
-            >
-                {agencyName}
-            </p>
-        </div>
+      <p
+        class="font-['Montserrat'] font-bold text-[16px] text-[#083d45] uppercase leading-none m-0"
+      >
+        {tagText}
+      </p>
     </div>
+
+    <!-- Bottom gradient overlay -->
+    <div
+      class="absolute bottom-0 left-0 right-0 h-[172px] bg-gradient-to-t from-[rgba(1,12,18,0.7)] via-[rgba(1,12,18,0.4)] to-transparent"
+    >
+    </div>
+
+    <!-- Client and agency info at bottom left -->
+    <div class="absolute bottom-6 left-6 flex flex-col gap-2 text-white">
+      <p
+        class="font-['Montserrat'] font-bold text-[32px] uppercase leading-none"
+      >
+        {clientName}
+      </p>
+      <p class="font-['Montserrat'] font-medium text-[16px] leading-[1.2]">
+        {agencyName}
+      </p>
+    </div>
+  </div>
 </div>

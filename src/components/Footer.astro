@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
+import malinkiLogo from "../images/malinki-logo-c.png";
 
 // Get current language from Astro params
 const { lang } = Astro.params;
@@ -8,74 +10,74 @@ const t = useTranslations(currentLang);
 
 // Inline settings (migrated from Shopify schema)
 const settings = {
-    instagram_url: "https://www.instagram.com/malinki.agence/",
+  instagram_url: "https://www.instagram.com/malinki.agence/",
 };
 ---
 
 <footer
-    class="flex-shrink-0 bg-[#083D45]! box-border p-[32px] w-full block!"
-    data-section-type="footer-template"
+  class="flex-shrink-0 bg-[#083D45]! box-border p-[32px] w-full block!"
+  data-section-type="footer-template"
 >
-    <div
-        class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[64px] lg:gap-0"
-    >
-        <!-- Logo -->
-        <div class="flex flex-col items-center lg:items-start">
-            <a href="/" class="tt-logo inline-block" itemprop="url">
-                <img
-                    src="/malinki-logo-c.png"
-                    alt="MALINKI"
-                    class="h-[80px]! w-[430px]! lg:h-[136px]! lg:w-auto! lg:max-w-[550px]! xl:max-w-[650px]! object-contain!"
-                    itemprop="logo"
-                    width="430"
-                    height="80"
-                />
-            </a>
-        </div>
-
-        <!-- Social Icon + Copyright -->
-        <div
-            class="flex flex-col gap-[32px] items-center lg:items-end justify-center"
-        >
-            <!-- Instagram Icon -->
-            {
-                settings.instagram_url && (
-                    <div class="tt-social-icon-wrapper">
-                        <a
-                            target="_blank"
-                            href={settings.instagram_url}
-                            aria-label="Instagram"
-                            class="block w-[40px]! h-[40px]! lg:w-[48px]! lg:h-[48px]!"
-                        >
-                            <img
-                                src="/instagram.svg"
-                                alt="Instagram"
-                                class="w-full! h-full! object-contain!"
-                                width="48"
-                                height="48"
-                            />
-                        </a>
-                    </div>
-                )
-            }
-
-            <!-- Copyright Text -->
-            <p
-                class="font-['Montserrat'] font-medium text-[16px] leading-[1.2] text-white text-center lg:text-right m-0 whitespace-pre"
-            >
-                {t("sections.footer.copyright")}
-            </p>
-        </div>
+  <div
+    class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[64px] lg:gap-0"
+  >
+    <!-- Logo -->
+    <div class="flex flex-col items-center lg:items-start">
+      <a href="/" class="tt-logo inline-block" itemprop="url">
+        <Image
+          src={malinkiLogo}
+          alt="MALINKI"
+          class="h-[80px]! w-[430px]! lg:h-[136px]! lg:w-auto! lg:max-w-[550px]! xl:max-w-[650px]! object-contain!"
+          itemprop="logo"
+          width={1290}
+          height={240}
+        />
+      </a>
     </div>
+
+    <!-- Social Icon + Copyright -->
+    <div
+      class="flex flex-col gap-[32px] items-center lg:items-end justify-center"
+    >
+      <!-- Instagram Icon -->
+      {
+        settings.instagram_url && (
+          <div class="tt-social-icon-wrapper">
+            <a
+              target="_blank"
+              href={settings.instagram_url}
+              aria-label="Instagram"
+              class="block w-[40px]! h-[40px]! lg:w-[48px]! lg:h-[48px]!"
+            >
+              <img
+                src="/instagram.svg"
+                alt="Instagram"
+                class="w-full! h-full! object-contain!"
+                width="48"
+                height="48"
+              />
+            </a>
+          </div>
+        )
+      }
+
+      <!-- Copyright Text -->
+      <p
+        class="font-['Montserrat'] font-medium text-[16px] leading-[1.2] text-white text-center lg:text-right m-0 whitespace-pre"
+      >
+        {t("sections.footer.copyright")}
+      </p>
+    </div>
+  </div>
 </footer>
 
 <style>
-    /* Social icon styling */
-    .tt-social-icon-wrapper a {
-        transition: opacity 0.2s ease;
-    }
+  /* Social icon styling */
+  .tt-social-icon-wrapper a {
+    transition: opacity 0.2s ease;
+  }
 
-    .tt-social-icon-wrapper a:hover {
-        opacity: 0.8;
-    }
+  .tt-social-icon-wrapper a:hover {
+    opacity: 0.8;
+  }
 </style>

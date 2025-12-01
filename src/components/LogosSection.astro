@@ -1,83 +1,99 @@
 ---
+import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
+import operaDeMontreal from "../images/opera-de-montreal.png";
+import cookIt from "../images/cook-it.png";
+import omy from "../images/omy.png";
+import quartierDesSpectacles from "../images/quartier-des-spectacles.png";
+import maddle from "../images/Maddle.png";
+import airTransat from "../images/Air-transat.png";
+import stHubert from "../images/St-Hubert.png";
+import keywordsStudios from "../images/keywords-studios.png";
+import laval from "../images/Laval.png";
+import veritas from "../images/Veritas.png";
+import meatAndProduce from "../images/Meat-and-produce.png";
+import maisonJeanLapointe from "../images/Maison-Jean-Lapointe.png";
+import bell from "../images/Bell.png";
+import niche from "../images/niche.png";
+import qolab from "../images/qolab.png";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
 const t = useTranslations(currentLang);
 
 const logos = [
-    {
-        image: "opera-de-montreal.png",
-        alt: "Opéra de Montréal",
-        width: 216,
-        height: 64,
-    },
-    { image: "cook-it.png", alt: "Cook it", width: 196, height: 48 },
-    { image: "omy.png", alt: "omy LAB", width: 216, height: 64 },
-    {
-        image: "quartier-des-spectacles.png",
-        alt: "Quartier des spectacles",
-        width: 216,
-        height: 64,
-    },
-    { image: "Maddle.png", alt: "Maddle", width: 238, height: 80 },
-    { image: "Air-transat.png", alt: "Air transat", width: 183, height: 40 },
-    { image: "St-Hubert.png", alt: "St-Hubert", width: 210, height: 40 },
-    {
-        image: "keywords-studios.png",
-        alt: "Keywords Studios",
-        width: 170,
-        height: 96,
-    },
-    { image: "Laval.png", alt: "Laval", width: 144, height: 96 },
-    { image: "Veritas.png", alt: "Veritas", width: 190, height: 48 },
-    {
-        image: "Meat-and-produce.png",
-        alt: "Meat & Produce",
-        width: 179,
-        height: 64,
-    },
-    {
-        image: "Maison-Jean-Lapointe.png",
-        alt: "Maison Jean Lapointe",
-        width: 199,
-        height: 64,
-    },
-    { image: "Bell.png", alt: "Bell", width: 74, height: 96 },
-    { image: "niche.png", alt: "niche", width: 182, height: 48 },
-    { image: "qolab.png", alt: "qolab", width: 143, height: 56 },
+  {
+    image: operaDeMontreal,
+    alt: "Opéra de Montréal",
+    width: 2592,
+    height: 768,
+  },
+  { image: cookIt, alt: "Cook it", width: 2352, height: 576 },
+  { image: omy, alt: "omy LAB", width: 2592, height: 768 },
+  {
+    image: quartierDesSpectacles,
+    alt: "Quartier des spectacles",
+    width: 2592,
+    height: 768,
+  },
+  { image: maddle, alt: "Maddle", width: 2856, height: 960 },
+  { image: airTransat, alt: "Air transat", width: 2196, height: 480 },
+  { image: stHubert, alt: "St-Hubert", width: 2520, height: 480 },
+  {
+    image: keywordsStudios,
+    alt: "Keywords Studios",
+    width: 2040,
+    height: 1152,
+  },
+  { image: laval, alt: "Laval", width: 1728, height: 1152 },
+  { image: veritas, alt: "Veritas", width: 2280, height: 576 },
+  {
+    image: meatAndProduce,
+    alt: "Meat & Produce",
+    width: 2148,
+    height: 768,
+  },
+  {
+    image: maisonJeanLapointe,
+    alt: "Maison Jean Lapointe",
+    width: 2388,
+    height: 768,
+  },
+  { image: bell, alt: "Bell", width: 888, height: 1152 },
+  { image: niche, alt: "niche", width: 2184, height: 576 },
+  { image: qolab, alt: "qolab", width: 1716, height: 672 },
 ];
 ---
 
 <!-- Logos Section -->
 <section
-    class="relative w-full font-['Montserrat'] py-12 md:py-16 lg:py-20"
-    data-section-type="logos-section"
+  class="relative w-full font-['Montserrat'] py-12 md:py-16 lg:py-20"
+  data-section-type="logos-section"
 >
-    <div class="w-full">
-        <!-- Heading -->
-        <h2
-            class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] text-center mb-12 md:mb-16 lg:mb-16"
-        >
-            {t("sections.logos.heading")}
-        </h2>
+  <div class="w-full">
+    <!-- Heading -->
+    <h2
+      class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] text-center mb-12 md:mb-16 lg:mb-16"
+    >
+      {t("sections.logos.heading")}
+    </h2>
 
-        <!-- Logos Grid -->
-        <div class="flex flex-wrap gap-[16px] w-full justify-center">
-            {
-                logos.map((logo) => (
-                    <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)]">
-                        <img
-                            src={`/assets/${logo.image}`}
-                            alt={logo.alt}
-                            loading="lazy"
-                            width={logo.width}
-                            height={logo.height}
-                            class="max-w-full max-h-full object-contain"
-                        />
-                    </div>
-                ))
-            }
-        </div>
+    <!-- Logos Grid -->
+    <div class="flex flex-wrap gap-[16px] w-full justify-center">
+      {
+        logos.map((logo) => (
+          <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)]">
+            <Image
+              src={logo.image}
+              alt={logo.alt}
+              loading="lazy"
+              width={logo.width}
+              height={logo.height}
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+        ))
+      }
     </div>
+  </div>
 </section>

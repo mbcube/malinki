@@ -1,5 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
+import andrewTchernilevskii from "../images/Andrew-Tchernilevskii.png";
+import miroslavDufresne from "../images/Miroslav-Dufresne_compressed.webp";
+import jeremyLeblond from "../images/Jeremy-Leblond.png";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
@@ -8,17 +12,17 @@ const t = useTranslations(currentLang);
 const teamMembers = [
   {
     id: "member_1",
-    image: "Andrew-Tchernilevskii.png",
+    image: andrewTchernilevskii,
     hasSplitName: true,
   },
   {
     id: "member_2",
-    image: "Miroslav-Dufresne_compressed.webp",
+    image: miroslavDufresne,
     hasSplitName: false,
   },
   {
     id: "member_3",
-    image: "Jeremy-Leblond.png",
+    image: jeremyLeblond,
     hasSplitName: true,
   },
 ];
@@ -92,8 +96,8 @@ const teamMembers = [
 
               <!-- Desktop Photo (Shows on Hover) -->
               <div class="hidden lg:flex items-center justify-end pr-4 absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
-                <img
-                  src={`/assets/${member.image}`}
+                <Image
+                  src={member.image}
                   alt={
                     member.hasSplitName
                       ? `${t(`sections.team.${member.id}.name_line_1`)} ${t(`sections.team.${member.id}.name_line_2`)}`
@@ -101,16 +105,16 @@ const teamMembers = [
                   }
                   class="rounded-[32px] object-cover w-[384px] h-[480px] scale-0 lg:group-hover/member:scale-100 transition-transform duration-200 ease-in-out origin-center"
                   loading="lazy"
-                  width="384"
-                  height="480"
+                  width={1152}
+                  height={1440}
                 />
               </div>
             </div>
 
             <!-- Mobile Photo (Accordion) -->
             <div class="team-member-photo-mobile mt-4 max-h-0 overflow-hidden transition-all duration-200 ease-in-out lg:hidden">
-              <img
-                src={`/assets/${member.image}`}
+              <Image
+                src={member.image}
                 alt={
                   member.hasSplitName
                     ? `${t(`sections.team.${member.id}.name_line_1`)} ${t(`sections.team.${member.id}.name_line_2`)}`
@@ -118,8 +122,8 @@ const teamMembers = [
                 }
                 class="w-full h-auto rounded-lg object-cover"
                 loading="lazy"
-                width="384"
-                height="480"
+                width={1152}
+                height={1440}
               />
             </div>
           </div>

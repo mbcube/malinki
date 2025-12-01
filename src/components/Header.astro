@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
+import malinkiLogo from "../images/malinki-logo-c.png";
 
 interface Props {
-    lang: "fr" | "en";
+  lang: "fr" | "en";
 }
 
 const { lang } = Astro.props;
@@ -10,17 +12,17 @@ const t = useTranslations(lang);
 
 // Inline settings as requested
 const settings = {
-    logo: "/malinki-logo-c.png", // Assuming asset will be moved to public
-    main_menu: "main-menu",
+  logo: malinkiLogo,
+  main_menu: "main-menu",
 };
 
 // Mock menu data (replacing linklists[item.main_menu].links)
 // Links navigate to home page sections with anchors
 const homeUrl = lang === "en" ? "/en" : "/";
 const menuLinks = [
-    { title: "Nos projets", url: `${homeUrl}#projects` },
-    { title: "Services", url: `${homeUrl}#services` },
-    { title: "Équipe", url: `${homeUrl}#equipe` },
+  { title: "Nos projets", url: `${homeUrl}#projects` },
+  { title: "Services", url: `${homeUrl}#services` },
+  { title: "Équipe", url: `${homeUrl}#equipe` },
 ];
 
 const contactUrl = lang === "en" ? "/en/contact" : "/contact";
@@ -28,253 +30,253 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
 
 <!-- Header Template 6 - Malinki Navbar -->
 <header
-    class="header-template-6 fixed top-0 left-0 right-0 z-100 w-full"
-    data-section-type="header"
+  class="header-template-6 fixed top-0 left-0 right-0 z-100 w-full"
+  data-section-type="header"
 >
-    <!-- Desktop & Mobile Navbar -->
-    <nav
-        class="bg-[#083D45] flex! flex-row items-center justify-between px-8 py-3 relative w-full transition-all duration-300 z-50"
-        data-header-nav
-    >
-        <!-- Logo -->
-        <div
-            class="flex flex-col items-start shrink-0 md:w-[172px] md:h-[32px] w-[129px] h-[24px] transition-all duration-300"
-            data-logo-container
-        >
-            <a
-                href={lang === "en" ? "/en" : "/"}
-                class="block w-full h-full relative"
-            >
-                <img
-                    src={settings.logo}
-                    alt="Malinki"
-                    width="172"
-                    height="32"
-                    class="h-full w-full object-contain"
-                />
-            </a>
-        </div>
-
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex gap-4 items-center">
-            {
-                menuLinks.map((link) => (
-                    <div class="flex items-center justify-center p-1">
-                        <a
-                            href={link.url}
-                            class="font-medium text-base text-white hover:opacity-50 transition-opacity whitespace-nowrap"
-                        >
-                            {link.title}
-                        </a>
-                    </div>
-                ))
-            }
-        </div>
-
-        <!-- Contact Button (Desktop) -->
-        <div class="hidden md:block">
-            <a
-                href={contactUrl}
-                class="bg-white flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
-            >
-                {t("header.contact_button")}
-            </a>
-        </div>
-
-        <!-- Mobile/Tablet Menu Toggle -->
-        <button
-            type="button"
-            class="md:hidden text-white p-2"
-            aria-label="Open menu"
-            data-mobile-menu-toggle
-        >
-            <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </nav>
-
-    <!-- Mobile/Tablet Menu (Hidden by default) -->
+  <!-- Desktop & Mobile Navbar -->
+  <nav
+    class="bg-[#083D45] flex! flex-row items-center justify-between px-8 py-3 relative w-full transition-all duration-300 z-50"
+    data-header-nav
+  >
+    <!-- Logo -->
     <div
-        class="fixed inset-0 bg-[#083d45] hidden z-40 overflow-y-auto"
-        data-mobile-menu
+      class="flex flex-col items-start shrink-0 md:w-[172px] md:h-[32px] w-[129px] h-[24px] transition-all duration-300"
+      data-logo-container
     >
-        <!-- Centered navigation content -->
-        <div
-            class="flex flex-col items-center justify-center min-h-screen gap-8 md:gap-16 px-4"
-        >
-            <!-- Navigation links -->
-            <div
-                class="flex flex-col items-center justify-center gap-4 md:gap-8 w-full"
-            >
-                {
-                    menuLinks.map((link) => (
-                        <div class="flex items-center justify-center p-1">
-                            <a
-                                href={link.url}
-                                class="font-bold text-white uppercase leading-none text-4xl sm:text-5xl hover:opacity-80 transition-opacity whitespace-nowrap"
-                                style="font-family: 'Montserrat', sans-serif;"
-                            >
-                                {link.title}
-                            </a>
-                        </div>
-                    ))
-                }
-            </div>
-
-            <!-- Contact button -->
-            <a
-                href={contactUrl}
-                class="bg-white text-[#083d45]! font-semibold text-base px-6 py-3 rounded-lg hover:bg-[#E6F5F7]! transition-all whitespace-nowrap inline-flex items-center justify-center gap-2"
-                style="font-family: 'Montserrat', sans-serif;"
-            >
-                {t("header.contact_button")}
-            </a>
-        </div>
+      <a
+        href={lang === "en" ? "/en" : "/"}
+        class="block w-full h-full relative"
+      >
+        <Image
+          src={settings.logo}
+          alt="Malinki"
+                    width={1032}
+                    height={192}
+          class="h-full w-full object-contain"
+        />
+      </a>
     </div>
+
+    <!-- Desktop Navigation Links -->
+    <div class="hidden md:flex gap-4 items-center">
+      {
+        menuLinks.map((link) => (
+          <div class="flex items-center justify-center p-1">
+            <a
+              href={link.url}
+              class="font-medium text-base text-white hover:opacity-50 transition-opacity whitespace-nowrap"
+            >
+              {link.title}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Contact Button (Desktop) -->
+    <div class="hidden md:block">
+      <a
+        href={contactUrl}
+        class="bg-white flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
+      >
+        {t("header.contact_button")}
+      </a>
+    </div>
+
+    <!-- Mobile/Tablet Menu Toggle -->
+    <button
+      type="button"
+      class="md:hidden text-white p-2"
+      aria-label="Open menu"
+      data-mobile-menu-toggle
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile/Tablet Menu (Hidden by default) -->
+  <div
+    class="fixed inset-0 bg-[#083d45] hidden z-40 overflow-y-auto"
+    data-mobile-menu
+  >
+    <!-- Centered navigation content -->
+    <div
+      class="flex flex-col items-center justify-center min-h-screen gap-8 md:gap-16 px-4"
+    >
+      <!-- Navigation links -->
+      <div
+        class="flex flex-col items-center justify-center gap-4 md:gap-8 w-full"
+      >
+        {
+          menuLinks.map((link) => (
+            <div class="flex items-center justify-center p-1">
+              <a
+                href={link.url}
+                class="font-bold text-white uppercase leading-none text-4xl sm:text-5xl hover:opacity-80 transition-opacity whitespace-nowrap"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                {link.title}
+              </a>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Contact button -->
+      <a
+        href={contactUrl}
+        class="bg-white text-[#083d45]! font-semibold text-base px-6 py-3 rounded-lg hover:bg-[#E6F5F7]! transition-all whitespace-nowrap inline-flex items-center justify-center gap-2"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        {t("header.contact_button")}
+      </a>
+    </div>
+  </div>
 </header>
 
 <script>
-    // Mobile menu toggle functionality
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggle = document.querySelector("[data-mobile-menu-toggle]");
-        const menu = document.querySelector("[data-mobile-menu]");
+  // Mobile menu toggle functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector("[data-mobile-menu-toggle]");
+    const menu = document.querySelector("[data-mobile-menu]");
 
-        // Function to close menu with animation
-        function closeMenu() {
-            if (!menu) return;
+    // Function to close menu with animation
+    function closeMenu() {
+      if (!menu) return;
 
-            // Add slide out animation
-            menu.classList.remove("animate-slide-in-down");
-            menu.classList.add("animate-slide-out-up");
+      // Add slide out animation
+      menu.classList.remove("animate-slide-in-down");
+      menu.classList.add("animate-slide-out-up");
 
-            // Wait for animation to complete before hiding
-            setTimeout(function () {
-                menu.classList.add("hidden");
-                menu.classList.remove("animate-slide-out-up");
-                document.body.style.overflow = "";
-            }, 250); // Match animate.css faster duration (2x speed)
+      // Wait for animation to complete before hiding
+      setTimeout(function () {
+        menu.classList.add("hidden");
+        menu.classList.remove("animate-slide-out-up");
+        document.body.style.overflow = "";
+      }, 250); // Match animate.css faster duration (2x speed)
 
-            // Change back to hamburger icon
-            if (toggle) {
-                const svg = toggle.querySelector("svg");
-                if (svg) {
-                    svg.innerHTML =
-                        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-                }
-            }
+      // Change back to hamburger icon
+      if (toggle) {
+        const svg = toggle.querySelector("svg");
+        if (svg) {
+          svg.innerHTML =
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
         }
+      }
+    }
 
-        // Toggle menu
-        if (toggle && menu) {
-            toggle.addEventListener("click", function () {
-                const isHidden = menu.classList.contains("hidden");
+    // Toggle menu
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        const isHidden = menu.classList.contains("hidden");
 
-                if (isHidden) {
-                    // Open menu with animation
-                    menu.classList.remove("hidden", "animate-slide-out-up");
-                    menu.classList.add("animate-slide-in-down");
-                    document.body.style.overflow = "hidden";
+        if (isHidden) {
+          // Open menu with animation
+          menu.classList.remove("hidden", "animate-slide-out-up");
+          menu.classList.add("animate-slide-in-down");
+          document.body.style.overflow = "hidden";
 
-                    // Change to X icon
-                    const svg = toggle.querySelector("svg");
-                    if (svg) {
-                        svg.innerHTML =
-                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-                    }
-                } else {
-                    // Close menu with animation
-                    closeMenu();
-                }
-            });
+          // Change to X icon
+          const svg = toggle.querySelector("svg");
+          if (svg) {
+            svg.innerHTML =
+              '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+          }
+        } else {
+          // Close menu with animation
+          closeMenu();
         }
+      });
+    }
 
-        // Close menu when clicking a link
-        if (menu) {
-            const menuLinks = menu.querySelectorAll("a");
-            menuLinks.forEach(function (link) {
-                link.addEventListener("click", function () {
-                    closeMenu();
-                });
-            });
-        }
-
-        // Header shrink on scroll
-        const header = document.querySelector('[data-section-type="header"]');
-        const nav = document.querySelector("[data-header-nav]");
-        const logoContainer = document.querySelector("[data-logo-container]");
-        let lastScrollTop = 0;
-
-        window.addEventListener("scroll", function () {
-            const scrollTop =
-                window.pageYOffset || document.documentElement.scrollTop;
-
-            if (header) {
-                if (scrollTop > 30) {
-                    header.classList.add("scrolled");
-                } else {
-                    header.classList.remove("scrolled");
-                }
-            }
-
-            lastScrollTop = scrollTop;
+    // Close menu when clicking a link
+    if (menu) {
+      const menuLinks = menu.querySelectorAll("a");
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          closeMenu();
         });
+      });
+    }
+
+    // Header shrink on scroll
+    const header = document.querySelector('[data-section-type="header"]');
+    const nav = document.querySelector("[data-header-nav]");
+    const logoContainer = document.querySelector("[data-logo-container]");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function () {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (header) {
+        if (scrollTop > 30) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      }
+
+      lastScrollTop = scrollTop;
     });
+  });
 </script>
 
 <style>
-    /* Header shrink styles */
-    .header-template-6 {
-        transition: all 0.3s ease-in-out;
-    }
+  /* Header shrink styles */
+  .header-template-6 {
+    transition: all 0.3s ease-in-out;
+  }
 
-    /* Shrink header when scrolled */
+  /* Shrink header when scrolled */
+  .header-template-6.scrolled [data-header-nav] {
+    padding-top: 0.175rem !important;
+    padding-bottom: 0.175rem !important;
+  }
+
+  .header-template-6.scrolled [data-logo-container] {
+    height: 20px !important;
+    width: 100px !important;
+  }
+
+  /* Shrink nav links text */
+  .header-template-6.scrolled [data-header-nav] a {
+    font-size: 0.875rem;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  /* Shrink contact button */
+  .header-template-6.scrolled [data-header-nav] .bg-white {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+    font-size: 0.875rem;
+  }
+
+  /* Mobile adjustments for scrolled state */
+  @media (max-width: 768px) {
     .header-template-6.scrolled [data-header-nav] {
-        padding-top: 0.175rem !important;
-        padding-bottom: 0.175rem !important;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
     }
 
     .header-template-6.scrolled [data-logo-container] {
-        height: 20px !important;
-        width: 100px !important;
+      height: 0.875rem;
+      width: 87.5px;
     }
-
-    /* Shrink nav links text */
-    .header-template-6.scrolled [data-header-nav] a {
-        font-size: 0.875rem;
-        transition: font-size 0.3s ease-in-out;
-    }
-
-    /* Shrink contact button */
-    .header-template-6.scrolled [data-header-nav] .bg-white {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.25rem !important;
-        padding-bottom: 0.25rem !important;
-        margin-top: 0.25rem !important;
-        margin-bottom: 0.25rem !important;
-        font-size: 0.875rem;
-    }
-
-    /* Mobile adjustments for scrolled state */
-    @media (max-width: 768px) {
-        .header-template-6.scrolled [data-header-nav] {
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-        }
-
-        .header-template-6.scrolled [data-logo-container] {
-            height: 0.875rem;
-            width: 87.5px;
-        }
-    }
+  }
 </style>

@@ -1,11 +1,25 @@
 ---
+import { Image } from "astro:assets";
 import { useTranslations } from "../../i18n/utils";
+import shortContentMain from "../../images/short-content-main_compressed.webp";
+import jessicaRomito from "../../images/Portait_Jessica_Romito_Malinki.jpg";
+import poiseBts from "../../images/poise-malinki-behind-the-scenes_compressed.webp";
+import clientsDesktopVertical from "../../images/Logos_Clients_Malinki_ContenuMarque_2025.png";
+import clientsMobileVertical from "../../images/Logos_Clients_Malinki_ContenuMarqueMobile_2025.png";
+import shortsBts1 from "../../images/shorts-bts-1_compressed.webp";
+import shortsBts2 from "../../images/shorts-bts-2_compressed.webp";
+import shortsBts3 from "../../images/shorts-bts-3_compressed.webp";
+import shortsBts4 from "../../images/shorts-bts-4_compressed.webp";
+import shortsBts5 from "../../images/shorts-bts-5.jpg";
+import shortsBts6 from "../../images/shorts-bts-6_compressed_compressed.webp";
+import shortsBts7 from "../../images/shorts-bts-7_compressed.webp";
+import shortsBts8 from "../../images/shorts-bts-8_compressed.webp";
 
 export function getStaticPaths() {
-    return [
-        { params: { lang: undefined } }, // French (default)
-        { params: { lang: "en" } }, // English
-    ];
+  return [
+    { params: { lang: undefined } }, // French (default)
+    { params: { lang: "en" } }, // English
+  ];
 }
 
 const { lang } = Astro.params;
@@ -14,32 +28,32 @@ const t = useTranslations(currentLang);
 
 // Page configuration
 const pageConfig = {
-    images: {
-        main: "short-content-main_compressed.webp",
-        testimonial: "Portait_Jessica_Romito_Malinki.jpg",
-        vertical: "poise-malinki-behind-the-scenes_compressed.webp",
-        clientsDesktop: "Logos_Clients_Malinki_ContenuMarque_2025.png",
-        clientsMobile: "Logos_Clients_Malinki_ContenuMarqueMobile_2025.png",
-        bts: [
-            "shorts-bts-1_compressed.webp",
-            "shorts-bts-2_compressed.webp",
-            "shorts-bts-3_compressed.webp",
-            "shorts-bts-4_compressed.webp",
-            "shorts-bts-5.jpg",
-            "shorts-bts-6_compressed_compressed.webp",
-            "shorts-bts-7_compressed.webp",
-            "shorts-bts-8_compressed.webp",
-        ],
-    },
-    youtubeVideos: [
-        "https://www.youtube.com/embed/9-1BZwGuTwI?playlist=9-1BZwGuTwI&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
-        "https://www.youtube.com/embed/CFWUxUzKtes?playlist=CFWUxUzKtes&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
-        "https://www.youtube.com/embed/v9pQyBkE6Ww?playlist=v9pQyBkE6Ww&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
-        "https://www.youtube.com/embed/PlxQSPRj2_0?playlist=PlxQSPRj2_0&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
+  images: {
+    main: shortContentMain,
+    testimonial: jessicaRomito,
+    vertical: poiseBts,
+    clientsDesktop: clientsDesktopVertical,
+    clientsMobile: clientsMobileVertical,
+    bts: [
+      shortsBts1,
+      shortsBts2,
+      shortsBts3,
+      shortsBts4,
+      shortsBts5,
+      shortsBts6,
+      shortsBts7,
+      shortsBts8,
     ],
-    links: {
-        cta: `/${currentLang === "fr" ? "" : "en/"}contact`,
-    },
+  },
+  youtubeVideos: [
+    "https://www.youtube.com/embed/9-1BZwGuTwI?playlist=9-1BZwGuTwI&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
+    "https://www.youtube.com/embed/CFWUxUzKtes?playlist=CFWUxUzKtes&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
+    "https://www.youtube.com/embed/v9pQyBkE6Ww?playlist=v9pQyBkE6Ww&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
+    "https://www.youtube.com/embed/PlxQSPRj2_0?playlist=PlxQSPRj2_0&controls=0&rel=0&playsinline=1&modestbranding=1&cc_load_policy=0&autoplay=1&vf=1&mute=1&loop=1&iv_load_policy=3",
+  ],
+  links: {
+    cta: `/${currentLang === "fr" ? "" : "en/"}contact`,
+  },
 };
 
 import "../../styles/global.css";
@@ -48,286 +62,278 @@ import Footer from "../../components/Footer.astro";
 ---
 
 <html lang={currentLang} class="h-full">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{t("contenu_vertical.title")} - Malinki</title>
-    </head>
-    <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
-        <Header lang={currentLang} />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{t("contenu_vertical.title")} - Malinki</title>
+  </head>
+  <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
+    <Header lang={currentLang} />
 
-        <div class="w-full flex flex-col 2xl:max-w-[1600px] mx-auto">
-            <div
-                class="mx-auto pt-5 lg:pt-20 text-[#135560]"
-                style="font-family: 'Rotunda Black', Montserrat, sans-serif;"
+    <div class="w-full flex flex-col 2xl:max-w-[1600px] mx-auto">
+      <div
+        class="mx-auto pt-5 lg:pt-20 text-[#135560]"
+        style="font-family: 'Rotunda Black', Montserrat, sans-serif;"
+      >
+        <!-- Title -->
+        <div
+          class="px-3 lg:px-10 animate__animated animate__fast animate__fadeIn"
+        >
+          <div class="w-full">
+            <p
+              class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#083e44] leading-tight"
             >
-                <!-- Title -->
-                <div
-                    class="px-3 lg:px-10 animate__animated animate__fast animate__fadeIn"
-                >
-                    <div class="w-full">
-                        <p
-                            class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#083e44] leading-tight"
-                        >
-                            {t("contenu_vertical.title")}
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Hero Section -->
-                <div
-                    class="px-3 lg:px-10 pt-10 lg:pt-16 animate__animated animate__fadeIn"
-                >
-                    <div class="w-full flex flex-col gap-8 md:flex-row">
-                        <div class="w-full md:w-1/2 flex justify-center">
-                            <img
-                                src={`/assets/${pageConfig.images.main}`}
-                                alt={t("contenu_vertical.main_image_alt")}
-                                width="600"
-                                height="600"
-                                class="w-full rounded-sm object-cover aspect-video"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div
-                            class="w-full md:w-1/2 flex flex-col items-start justify-evenly"
-                        >
-                            <div>
-                                <p
-                                    class="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-medium m-0"
-                                >
-                                    {t("contenu_vertical.description")}
-                                </p>
-                            </div>
-                            <div>
-                                <a
-                                    href={pageConfig.links.cta}
-                                    class="mt-5 inline-block text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
-                                    style="background-color: #083e44;"
-                                >
-                                    {t("contenu_vertical.tiktoks_button_text")}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial -->
-                <div
-                    class="px-3 lg:px-10 pt-16 lg:pt-28 animate__animated animate__fadeIn animate__fast flex flex-col lg:flex-row gap-8"
-                >
-                    <div
-                        class="w-full flex flex-col lg:flex-row items-center justify-center"
-                    >
-                        <div
-                            class="hidden lg:flex w-1/3 flex-col justify-center lg:justify-start items-center gap-4 mt-6"
-                        >
-                            <img
-                                src={`/assets/${pageConfig.images.testimonial}`}
-                                alt={t(
-                                    "contenu_vertical.testimonial_image_alt",
-                                )}
-                                width="160"
-                                height="160"
-                                class="w-20 h-20 2xl:w-40 2xl:h-40 object-cover rounded-full"
-                                loading="lazy"
-                            />
-                            <div
-                                class="mt-2 md:mt-0 text-lg md:text-xl xl:text-xl 2xl:text-2xl text-[#083e44] text-center md:text-left"
-                            >
-                                <p class="font-bold">
-                                    {t("contenu_vertical.testimonial_author")}
-                                </p>
-                                <p>{t("contenu_vertical.testimonial_role")}</p>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-2/3">
-                            <p
-                                class="text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl font-medium mb-6 mt-0"
-                            >
-                                {t("contenu_vertical.testimonial_text")}
-                            </p>
-                        </div>
-                        <div
-                            class="flex lg:hidden w-full flex-col justify-center lg:justify-start items-center gap-4 mt-6"
-                        >
-                            <img
-                                src={`/assets/${pageConfig.images.testimonial}`}
-                                alt={t(
-                                    "contenu_vertical.testimonial_image_alt",
-                                )}
-                                width="160"
-                                height="160"
-                                class="w-20 h-20 2xl:w-40 2xl:h-40 object-cover rounded-full md:ml-10"
-                                loading="lazy"
-                            />
-                            <div
-                                class="mt-2 md:mt-0 text-lg md:text-xl xl:text-xl 2xl:text-2xl text-[#083e44]"
-                            >
-                                <p class="font-bold">
-                                    {t("contenu_vertical.testimonial_author")}
-                                </p>
-                                <p>{t("contenu_vertical.testimonial_role")}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Client Logos -->
-                <div
-                    class="px-3 lg:px-10 pt-16 lg:pt-28 animate__animated animate__fadeIn"
-                >
-                    <img
-                        src={`/assets/${pageConfig.images.clientsDesktop}`}
-                        alt={t("production_publicitaire.clients_image_alt")}
-                        width="1200"
-                        height="1200"
-                        class="w-full hidden lg:block h-full rounded-sm"
-                        loading="lazy"
-                    />
-                    <img
-                        src={`/assets/${pageConfig.images.clientsMobile}`}
-                        alt={t("production_publicitaire.clients_image_alt")}
-                        width="1200"
-                        height="1200"
-                        class="w-full block lg:hidden h-full rounded-sm"
-                        loading="lazy"
-                    />
-                </div>
-
-                <!-- TikToks Section -->
-                <div
-                    class="px-3 lg:px-10 pt-10 lg:pt-28 animate__animated animate__fadeIn"
-                >
-                    <div class="w-full flex flex-col gap-8 md:flex-row">
-                        <div class="w-full md:w-1/2 flex justify-center">
-                            <img
-                                src={`/assets/${pageConfig.images.vertical}`}
-                                alt={t("contenu_vertical.vertical_image_alt")}
-                                width="600"
-                                height="600"
-                                class="w-full rounded-sm object-cover aspect-square"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div
-                            class="w-full md:w-1/2 flex flex-col items-start justify-evenly"
-                        >
-                            <div>
-                                <p
-                                    class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44] m-0 mb-6"
-                                >
-                                    {t("contenu_vertical.tiktoks_title")}
-                                </p>
-                                <p
-                                    class="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-medium mb-8"
-                                >
-                                    {t("contenu_vertical.tiktoks_description")}
-                                </p>
-                            </div>
-                            <a
-                                href={pageConfig.links.cta}
-                                class="mt-5 inline-block text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
-                                style="background-color: #083e44;"
-                            >
-                                {t("contenu_vertical.tiktoks_button_text")}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Productions (YouTube Videos - Vertical) -->
-                <div
-                    class="px-3 lg:px-10 pt-16 lg:pt-28 animate__animated animate__fadeIn"
-                >
-                    <p
-                        class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44] mb-6"
-                    >
-                        {t("contenu_vertical.productions_title")}
-                    </p>
-                    <div
-                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
-                    >
-                        {
-                            pageConfig.youtubeVideos.map((videoUrl) => (
-                                <div class="aspect-[9/16] w-full">
-                                    <iframe
-                                        class="rounded-lg w-full h-full"
-                                        frameborder="0"
-                                        allowfullscreen
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin"
-                                        src={videoUrl}
-                                    />
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-
-                <!-- Behind the Scenes -->
-                <div class="px-3 lg:px-10 pt-16 lg:pt-28">
-                    <p
-                        class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44]"
-                    >
-                        {t("contenu_vertical.behind_scenes_title")}
-                    </p>
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-                        {
-                            pageConfig.images.bts.map((image, index) => {
-                                // First 4 images are square, last 4 are 3:4 aspect ratio
-                                const aspectClass =
-                                    index < 4
-                                        ? "aspect-square"
-                                        : "aspect-[3/4]";
-                                return (
-                                    <img
-                                        src={`/assets/${image}`}
-                                        alt={t(
-                                            `contenu_vertical.bts_image_${index + 1}_alt`,
-                                        )}
-                                        width={index < 4 ? "1200" : "400"}
-                                        height={index < 4 ? "1200" : "400"}
-                                        class={`w-full h-full rounded-sm object-cover ${aspectClass}`}
-                                        loading="lazy"
-                                    />
-                                );
-                            })
-                        }
-                    </div>
-                </div>
-
-                <!-- Final CTA -->
-                <div
-                    class="px-3 lg:px-10 pt-16 lg:pt-28 mb-20 animate__animated animate__fadeIn"
-                >
-                    <div class="text-left">
-                        <p
-                            class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44] mb-6"
-                        >
-                            {t("contenu_vertical.contact_cta_title")}
-                        </p>
-                        <p
-                            class="text-base md:text-lg xl:text-xl 2xl:text-2xl mt-6 font-extrabold"
-                        >
-                            {t("contenu_vertical.contact_cta_text")}
-                        </p>
-                        <div class="mt-10">
-                            <a
-                                href={pageConfig.links.cta}
-                                class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl inline-block text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
-                                style="background-color: #083e44;"
-                            >
-                                {t("contenu_vertical.contact_cta_button_text")}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              {t("contenu_vertical.title")}
+            </p>
+          </div>
         </div>
 
-        <Footer />
-    </body>
+        <!-- Hero Section -->
+        <div
+          class="px-3 lg:px-10 pt-10 lg:pt-16 animate__animated animate__fadeIn"
+        >
+          <div class="w-full flex flex-col gap-8 md:flex-row">
+            <div class="w-full md:w-1/2 flex justify-center">
+              <Image
+                src={pageConfig.images.main}
+                alt={t("contenu_vertical.main_image_alt")}
+                width={1800}
+                height={1800}
+                class="w-full rounded-sm object-cover aspect-video"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="w-full md:w-1/2 flex flex-col items-start justify-evenly"
+            >
+              <div>
+                <p
+                  class="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-medium m-0"
+                >
+                  {t("contenu_vertical.description")}
+                </p>
+              </div>
+              <div>
+                <a
+                  href={pageConfig.links.cta}
+                  class="mt-5 inline-block text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
+                  style="background-color: #083e44;"
+                >
+                  {t("contenu_vertical.tiktoks_button_text")}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div
+          class="px-3 lg:px-10 pt-16 lg:pt-28 animate__animated animate__fadeIn animate__fast flex flex-col lg:flex-row gap-8"
+        >
+          <div
+            class="w-full flex flex-col lg:flex-row items-center justify-center"
+          >
+            <div
+              class="hidden lg:flex w-1/3 flex-col justify-center lg:justify-start items-center gap-4 mt-6"
+            >
+              <Image
+                src={pageConfig.images.testimonial}
+                alt={t("contenu_vertical.testimonial_image_alt")}
+                width={960}
+                height={960}
+                class="w-20 h-20 2xl:w-40 2xl:h-40 object-cover rounded-full"
+                loading="lazy"
+              />
+              <div
+                class="mt-2 md:mt-0 text-lg md:text-xl xl:text-xl 2xl:text-2xl text-[#083e44] text-center md:text-left"
+              >
+                <p class="font-bold">
+                  {t("contenu_vertical.testimonial_author")}
+                </p>
+                <p>{t("contenu_vertical.testimonial_role")}</p>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/3">
+              <p
+                class="text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl font-medium mb-6 mt-0"
+              >
+                {t("contenu_vertical.testimonial_text")}
+              </p>
+            </div>
+            <div
+              class="flex lg:hidden w-full flex-col justify-center lg:justify-start items-center gap-4 mt-6"
+            >
+              <Image
+                src={pageConfig.images.testimonial}
+                alt={t("contenu_vertical.testimonial_image_alt")}
+                width={960}
+                height={960}
+                class="w-20 h-20 2xl:w-40 2xl:h-40 object-cover rounded-full md:ml-10"
+                loading="lazy"
+              />
+              <div
+                class="mt-2 md:mt-0 text-lg md:text-xl xl:text-xl 2xl:text-2xl text-[#083e44]"
+              >
+                <p class="font-bold">
+                  {t("contenu_vertical.testimonial_author")}
+                </p>
+                <p>{t("contenu_vertical.testimonial_role")}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Logos -->
+        <div
+          class="px-3 lg:px-10 pt-16 lg:pt-28 animate__animated animate__fadeIn"
+        >
+          <Image
+            src={pageConfig.images.clientsDesktop}
+            alt={t("production_publicitaire.clients_image_alt")}
+            width={2400}
+            height={2400}
+            class="w-full hidden lg:block h-full rounded-sm"
+            loading="lazy"
+          />
+          <Image
+            src={pageConfig.images.clientsMobile}
+            alt={t("production_publicitaire.clients_image_alt")}
+            width={2400}
+            height={2400}
+            class="w-full block lg:hidden h-full rounded-sm"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- TikToks Section -->
+        <div
+          class="px-3 lg:px-10 pt-10 lg:pt-28 animate__animated animate__fadeIn"
+        >
+          <div class="w-full flex flex-col gap-8 md:flex-row">
+            <div class="w-full md:w-1/2 flex justify-center">
+              <Image
+                src={pageConfig.images.vertical}
+                alt={t("contenu_vertical.vertical_image_alt")}
+                width={1800}
+                height={1800}
+                class="w-full rounded-sm object-cover aspect-square"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="w-full md:w-1/2 flex flex-col items-start justify-evenly"
+            >
+              <div>
+                <p
+                  class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44] m-0 mb-6"
+                >
+                  {t("contenu_vertical.tiktoks_title")}
+                </p>
+                <p
+                  class="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-medium mb-8"
+                >
+                  {t("contenu_vertical.tiktoks_description")}
+                </p>
+              </div>
+              <a
+                href={pageConfig.links.cta}
+                class="mt-5 inline-block text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
+                style="background-color: #083e44;"
+              >
+                {t("contenu_vertical.tiktoks_button_text")}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Productions (YouTube Videos - Vertical) -->
+        <div
+          class="px-3 lg:px-10 pt-16 lg:pt-28 animate__animated animate__fadeIn"
+        >
+          <p
+            class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44] mb-6"
+          >
+            {t("contenu_vertical.productions_title")}
+          </p>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
+          >
+            {
+              pageConfig.youtubeVideos.map((videoUrl) => (
+                <div class="aspect-[9/16] w-full">
+                  <iframe
+                    class="rounded-lg w-full h-full"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    src={videoUrl}
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Behind the Scenes -->
+        <div class="px-3 lg:px-10 pt-16 lg:pt-28">
+          <p
+            class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44]"
+          >
+            {t("contenu_vertical.behind_scenes_title")}
+          </p>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+            {
+              pageConfig.images.bts.map((image, index) => {
+                // First 4 images are square, last 4 are 3:4 aspect ratio
+                const aspectClass =
+                  index < 4 ? "aspect-square" : "aspect-[3/4]";
+                return (
+                  <Image
+                    src={image}
+                    alt={t(`contenu_vertical.bts_image_${index + 1}_alt`)}
+                    width={index < 4 ? 2400 : 1200}
+                    height={index < 4 ? 2400 : 1200}
+                    class={`w-full h-full rounded-sm object-cover ${aspectClass}`}
+                    loading="lazy"
+                  />
+                );
+              })
+            }
+          </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div
+          class="px-3 lg:px-10 pt-16 lg:pt-28 mb-20 animate__animated animate__fadeIn"
+        >
+          <div class="text-left">
+            <p
+              class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44] mb-6"
+            >
+              {t("contenu_vertical.contact_cta_title")}
+            </p>
+            <p
+              class="text-base md:text-lg xl:text-xl 2xl:text-2xl mt-6 font-extrabold"
+            >
+              {t("contenu_vertical.contact_cta_text")}
+            </p>
+            <div class="mt-10">
+              <a
+                href={pageConfig.links.cta}
+                class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl inline-block text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
+                style="background-color: #083e44;"
+              >
+                {t("contenu_vertical.contact_cta_button_text")}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <Footer />
+  </body>
 </html>
