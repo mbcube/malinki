@@ -68,7 +68,7 @@ const imageMap: Record<string, ImageMetadata> = {
 
 const {
   imageFile,
-  videoUrl = "",
+  videoUrl,
   altText,
   clientName,
   agencyName,
@@ -85,6 +85,10 @@ const scaledHeight = height * 3;
 const posterImage = imageSrc
   ? await getImage({ src: imageSrc, width: scaledWidth, height: scaledHeight })
   : null;
+
+// Remove time fragment from video URL to preserve poster image
+// The JavaScript will parse the original URL from data attribute
+const cleanVideoUrl = videoUrl ? videoUrl.split("#")[0] : null;
 ---
 
 <!-- ProjectCard Component --><!-- Props: imageFile, videoUrl, altText, clientName, agencyName, tagText (optional), width, height, containerClasses -->
@@ -93,9 +97,9 @@ const posterImage = imageSrc
   data-project-card
 >
   {
-    videoUrl ? (
+    cleanVideoUrl ? (
       <video
-        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 block"
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 block z-10"
         style={`aspect-ratio: ${width} / ${height};`}
         poster={posterImage?.src}
         preload="metadata"
@@ -105,14 +109,15 @@ const posterImage = imageSrc
         width={width}
         height={height}
         data-video-hover
+        data-video-url={videoUrl}
       >
-        <source src={videoUrl} type="video/mp4" />
+        <source src={cleanVideoUrl} type="video/mp4" />
       </video>
     ) : imageSrc ? (
       <Image
         src={imageSrc}
         alt={altText}
-        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 z-20"
         width={scaledWidth}
         height={scaledHeight}
         loading="lazy"
@@ -144,7 +149,7 @@ const posterImage = imageSrc
     <!-- Client and agency info at bottom left -->
     <div class="absolute bottom-6 left-6 flex flex-col gap-2 text-white">
       <p
-        class="font-['Montserrat'] font-bold text-[32px] uppercase leading-none"
+        class="font-['Montserrat'] font-bold text-[24px] md:text-[32px] uppercase leading-none"
       >
         {clientName}
       </p>

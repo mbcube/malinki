@@ -1,0 +1,486 @@
+---
+alwaysApply: true
+---
+
+### Body Text Styles
+
+#### Body L (Large)
+
+**Lead Paragraphs, Introductions**
+
+```html
+<p
+  class="font-['Montserrat'] text-[18px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Large body text for important content
+</p>
+```
+
+- Font: **18px** (Desktop/Laptop/Tablet: 20px)
+- Weight: Medium (500)
+- Line Height: 120% (leading-[1.2])
+- ⚠️ Figma shows pink, use turquoise
+
+#### Body M (Medium)
+
+**Standard Body Copy**
+
+```html
+<p
+  class="font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Standard body text
+</p>
+
+<!-- With bold emphasis -->
+<p class="font-['Montserrat'] text-[16px] leading-[1.2] text-[#083D45]">
+  Regular text with <span class="font-bold uppercase">bold emphasis</span>
+</p>
+```
+
+- Font: **16px** (Same across all devices)
+- Weight: Medium (500) or Bold (700) for emphasis
+- Line Height: 120% (leading-[1.2])
+- ✅ Figma shows correct turquoise color
+
+#### Body S (Small)
+
+**Captions, Labels, Small Text**
+
+```html
+<p
+  class="font-['Montserrat'] text-[12px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Small text for captions
+</p>
+```
+
+- Font: **12px** (Same across all devices)
+- Weight: Medium (500)
+- Line Height: 120% (leading-[1.2])
+- ✅ Figma shows correct turquoise color
+
+---
+
+### CTA (Call to Action)
+
+**Buttons, Links, Interactive Elements**
+
+```html
+<button
+  class="font-['Montserrat'] text-[16px] font-semibold leading-none text-[#083D45]"
+>
+  Call to Action
+</button>
+```
+
+- Font: **16px** (Same across all devices)
+- Weight: SemiBold (600)
+- Line Height: 100% (leading-none)
+- ✅ Figma shows correct turquoise color
+
+---
+
+## 🖥️ Complete Cross-Device Comparison
+
+| Style         | Desktop | Laptop | Tablet | **Mobile** | Change from Desktop     |
+| ------------- | ------- | ------ | ------ | ---------- | ----------------------- |
+| **Display L** | 96px    | 72px   | 64px   | **48px**   | ⬇️ -48px (50% smaller!) |
+| **Display M** | 64px    | 64px   | 48px   | **32px**   | ⬇️ -32px (50% smaller!) |
+| **Display S** | 36px    | 36px   | 32px   | **22px**   | ⬇️ -14px                |
+| **H1**        | 64px    | 64px   | 56px   | **32px**   | ⬇️ -32px (50% smaller!) |
+| **H2**        | 44px    | 44px   | 36px   | **28px**   | ⬇️ -16px                |
+| **H3**        | 32px    | 32px   | 32px   | **24px**   | ⬇️ -8px                 |
+| **Body L**    | 20px    | 20px   | 20px   | **18px**   | ⬇️ -2px                 |
+| **Body M**    | 16px    | 16px   | 16px   | 16px       | ✅ Same                 |
+| **Body S**    | 12px    | 12px   | 12px   | 12px       | ✅ Same                 |
+| **CTA**       | 16px    | 16px   | 16px   | 16px       | ✅ Same                 |
+
+### Line Height Differences (Mobile Unique)
+
+| Style         | Desktop/Laptop/Tablet | **Mobile** | Note                          |
+| ------------- | --------------------- | ---------- | ----------------------------- |
+| **Display M** | 100%                  | **110%**   | More breathing room on mobile |
+| **Display S** | 126%                  | **130%**   | Slightly more spacing         |
+| **H1**        | 100%                  | **110%**   | Better readability on mobile  |
+
+**Key Takeaways**:
+
+- Major size reductions for mobile (Display L & M at 50% of desktop!)
+- Body M, Body S, and CTA remain consistent across ALL devices
+- Mobile uses slightly larger line heights for Display M, S, and H1
+
+---
+
+## 📱 Complete Responsive Implementation
+
+### Full Mobile-First Responsive Patterns
+
+#### Display L - Complete Responsive Scale
+
+```html
+<h1
+  class="font-['Montserrat'] text-[48px] md:text-[64px] lg:text-[72px] xl:text-[96px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Fully Responsive Display L
+</h1>
+```
+
+#### Display M - Complete Responsive Scale
+
+```html
+<h2
+  class="font-['Montserrat'] text-[32px] leading-[1.1] md:text-[48px] md:leading-none lg:text-[64px] font-medium uppercase text-[#083D45]"
+>
+  Fully Responsive Display M
+</h2>
+```
+
+#### Display S - Complete Responsive Scale
+
+```html
+<h3
+  class="font-['Montserrat'] text-[22px] leading-[1.3] md:text-[32px] md:leading-[1.26] lg:text-[36px] font-medium text-[#083D45]"
+>
+  Fully Responsive Display S
+</h3>
+```
+
+#### H1 - Complete Responsive Scale
+
+```html
+<h1
+  class="font-['Montserrat'] text-[32px] leading-[1.1] md:text-[56px] md:leading-none lg:text-[64px] font-bold uppercase text-[#083D45]"
+>
+  Fully Responsive H1
+</h1>
+```
+
+#### H2 - Complete Responsive Scale
+
+```html
+<h2
+  class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Fully Responsive H2
+</h2>
+```
+
+#### H3 - Complete Responsive Scale
+
+```html
+<h3
+  class="font-['Montserrat'] text-[24px] md:text-[32px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Fully Responsive H3
+</h3>
+```
+
+#### Body L - Complete Responsive Scale
+
+```html
+<p
+  class="font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Fully responsive body large text
+</p>
+```
+
+#### Body M - Consistent Across Devices
+
+```html
+<p
+  class="font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Body M stays 16px across all devices
+</p>
+```
+
+---
+
+## 🎯 Common Patterns for Mobile
+
+### Hero Section Title
+
+```html
+<h1
+  class="font-['Montserrat'] text-[48px] md:text-[64px] lg:text-[72px] xl:text-[96px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Hero Title
+</h1>
+```
+
+### Section Header with Subtitle
+
+```html
+<div>
+  <h2
+    class="font-['Montserrat'] text-[32px] leading-[1.1] md:text-[48px] md:leading-none lg:text-[64px] font-medium uppercase text-[#083D45] mb-4"
+  >
+    Section Title
+  </h2>
+  <p
+    class="font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45]"
+  >
+    Subtitle or description text
+  </p>
+</div>
+```
+
+### Card Title + Body
+
+```html
+<div>
+  <h3
+    class="font-['Montserrat'] text-[24px] md:text-[32px] font-bold leading-none uppercase text-[#083D45] mb-3"
+  >
+    Card Title
+  </h3>
+  <p
+    class="font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]"
+  >
+    Card description text
+  </p>
+</div>
+```
+
+### Button / CTA
+
+```html
+<button
+  class="font-['Montserrat'] text-[16px] font-semibold leading-none text-[#083D45] px-4 py-2 md:px-6 md:py-3 border-2 border-[#083D45] hover:bg-[#083D45] hover:text-white transition-colors"
+>
+  Learn More
+</button>
+```
+
+---
+
+## 📋 Copy-Paste Classes (Mobile Specific)
+
+### Display Styles
+
+```
+display-l: font-['Montserrat'] text-[48px] font-bold leading-none uppercase text-[#083D45]
+display-m: font-['Montserrat'] text-[32px] font-medium leading-[1.1] uppercase text-[#083D45]
+display-s: font-['Montserrat'] text-[22px] font-medium leading-[1.3] text-[#083D45]
+```
+
+### Headings
+
+```
+h1: font-['Montserrat'] text-[32px] font-bold leading-[1.1] uppercase text-[#083D45]
+h2: font-['Montserrat'] text-[28px] font-bold leading-none uppercase text-[#083D45]
+h3: font-['Montserrat'] text-[24px] font-bold leading-none uppercase text-[#083D45]
+```
+
+### Body Text
+
+```
+body-l: font-['Montserrat'] text-[18px] font-medium leading-[1.2] text-[#083D45]
+body-m: font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]
+body-s: font-['Montserrat'] text-[12px] font-medium leading-[1.2] text-[#083D45]
+```
+
+### CTA
+
+```
+cta: font-['Montserrat'] text-[16px] font-semibold leading-none text-[#083D45]
+```
+
+---
+
+## 🛠️ Tailwind Config Extension
+
+Complete configuration including mobile values:
+
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        turquoise: "#083D45",
+        primary: "#083D45",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      fontSize: {
+        // Mobile-specific (base/default)
+        "display-l-mobile": "48px",
+        "display-m-mobile": "32px",
+        "display-s-mobile": "22px",
+        "h1-mobile": "32px",
+        "h2-mobile": "28px",
+        "h3-mobile": "24px",
+        "body-l-mobile": "18px",
+
+        // Tablet-specific
+        "display-l-tablet": "64px",
+        "display-m-tablet": "48px",
+        "display-s-tablet": "32px",
+        "h1-tablet": "56px",
+        "h2-tablet": "36px",
+
+        // Laptop-specific
+        "display-l-laptop": "72px",
+
+        // Desktop
+        "display-l-desktop": "96px",
+        "display-m-desktop": "64px",
+        "display-s-desktop": "36px",
+        "h1-desktop": "64px",
+        "h2-desktop": "44px",
+
+        // Shared across all devices
+        h3: "32px",
+        "body-l": "20px",
+        "body-m": "16px",
+        "body-s": "12px",
+        cta: "16px",
+      },
+      lineHeight: {
+        display: "1",
+        "display-mobile": "1.1",
+        "display-s-mobile": "1.3",
+        "display-s": "1.26",
+        body: "1.2",
+      },
+    },
+  },
+};
+```
+
+---
+
+## ✅ Implementation Checklist (Mobile)
+
+- [ ] Display L uses 48px (50% of desktop size)
+- [ ] Display M uses 32px with 110% line height
+- [ ] Display S uses 22px with 130% line height
+- [ ] H1 uses 32px with 110% line height
+- [ ] H2 uses 28px
+- [ ] H3 uses 24px
+- [ ] Body L uses 18px
+- [ ] Body M stays at 16px (same as all devices)
+- [ ] Body S stays at 12px (same as all devices)
+- [ ] CTA stays at 16px (same as all devices)
+- [ ] Use turquoise (#083D45) for all text (ignore pink in Figma)
+- [ ] Montserrat loaded with weights: 500, 600, 700
+- [ ] All headings use `uppercase` class
+- [ ] Mobile uses `leading-[1.1]` for Display M and H1
+- [ ] Mobile uses `leading-[1.3]` for Display S
+- [ ] Test on actual mobile devices (320px - 767px)
+
+---
+
+## 🎨 Design Tokens Reference
+
+```json
+{
+  "colors": {
+    "primary": "#083D45"
+  },
+  "typography": {
+    "fontFamily": "Montserrat",
+    "weights": {
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "sizes": {
+      "mobile": {
+        "display-l": "48px",
+        "display-m": "32px",
+        "display-s": "22px",
+        "h1": "32px",
+        "h2": "28px",
+        "h3": "24px",
+        "body-l": "18px"
+      },
+      "shared": {
+        "body-m": "16px",
+        "body-s": "12px",
+        "cta": "16px"
+      }
+    },
+    "lineHeights": {
+      "mobile": {
+        "display-m": 1.1,
+        "display-s": 1.3,
+        "h1": 1.1
+      },
+      "shared": {
+        "tight": 1,
+        "body": 1.2
+      }
+    }
+  }
+}
+```
+
+---
+
+## 📝 Usage Guidelines
+
+### When to Use Each Style (Mobile Context)
+
+1. **Display L** (48px): Hero sections on mobile screens
+2. **Display M** (32px): Large section headers
+3. **Display S** (22px): Medium section headers
+4. **H1** (32px): Page titles
+5. **H2** (28px): Section titles
+6. **H3** (24px): Subsections
+7. **Body L** (18px): Lead paragraphs
+8. **Body M** (16px): Standard content
+9. **Body S** (12px): Captions, labels
+10. **CTA** (16px): Buttons, links
+
+### Font Weight Guidelines
+
+- **Medium (500)**: Body text, Display M/S
+- **SemiBold (600)**: CTAs only
+- **Bold (700)**: Headings, Display L, emphasis
+
+### Text Transform
+
+- **UPPERCASE**: Display L, Display M, H1, H2, H3, bold emphasis
+- **Normal case**: Display S, body text, CTAs
+
+### Mobile-Specific Considerations
+
+- **Generous line-height**: H1 and Display M use 110% instead of 100% for better mobile readability
+- **Spacing**: Display S uses 130% line height (vs 126% on larger screens)
+- **Touch targets**: Ensure buttons/CTAs have adequate spacing (min 44px height)
+- **Viewport width**: Test on actual devices, not just browser resize
+
+---
+
+## 🔄 Cross-Reference
+
+- **Desktop Version**: See `design-system-desktop.md`
+- **Laptop Version**: See `design-system-laptop.md`
+- **Tablet Version**: See `design-system-tablet.md`
+- **This is the BASE**: Mobile-first approach - start with these sizes
+- **Scale up progressively**: Use breakpoints to increase sizes for larger screens
+
+---
+
+## 📊 Visual Size Reduction Summary
+
+From Desktop to Mobile:
+
+- **Display L**: 96px → 48px (⬇️ **50%** reduction)
+- **Display M**: 64px → 32px (⬇️ **50%** reduction)
+- **Display S**: 36px → 22px (⬇️ **39%** reduction)
+- **H1**: 64px → 32px (⬇️ **50%** reduction)
+- **H2**: 44px → 28px (⬇️ **36%** reduction)
+- **H3**: 32px → 24px (⬇️ **25%** reduction)
+- **Body L**: 20px → 18px (⬇️ **10%** reduction)
+- **Body M**: 16px → 16px (✅ **No change**)
+- **Body S**: 12px → 12px (✅ **No change**)
+- **CTA**: 16px → 16px (✅ **No change**)
+
+---
+
+_This is your reference document for implementing Malinki Studio design system on Mobile screens using Tailwind CSS._

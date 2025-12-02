@@ -15,7 +15,7 @@
                 },
                 {
                     "imageFile": "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg",
-                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/105a15ee3cac4911a2b66666d1f0c1a0.mp4",
+                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/105a15ee3cac4911a2b66666d1f0c1a0.mp4#t=10",
                     "altText": "Visrei Lison Lux Records",
                     "clientName": "Visrei",
                     "agencyName": "Lux Records",
@@ -25,7 +25,7 @@
                 },
                 {
                     "imageFile": "Malinki-Brivia-immobilier_820x.jpg",
-                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/a715b44f80574abe83715762785fa459.mp4",
+                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/a715b44f80574abe83715762785fa459.mp4#t=1",
                     "altText": "Brivia Immobilier",
                     "clientName": "Brivia",
                     "agencyName": "Wellington",
@@ -66,7 +66,7 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "col-span-2 row-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
                 },
                 {
                     "imageFile": "Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg",
@@ -90,7 +90,7 @@
                 },
                 {
                     "imageFile": "Malinki-Grand-Heron-musique_820x.jpg",
-                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/dde87e0d18ce47bbb4783d65a6f68006.mp4",
+                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/dde87e0d18ce47bbb4783d65a6f68006.mp4#t=5",
                     "altText": "Grand Heron",
                     "clientName": "Grand Héron",
                     "agencyName": "Malinki Studio",
@@ -141,7 +141,7 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "col-span-2 row-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
                 },
                 {
                     "imageFile": "Videotron_Gamer_Remastered_compressed.webp",
@@ -205,7 +205,7 @@
                     "agencyName": "Rosemarie Records",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "col-span-2 row-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
                 },
                 {
                     "imageFile": "Malinki-Videotron-Rivard-Mailly-Pressoir_820x.jpg",
@@ -215,7 +215,7 @@
                     "agencyName": "Rivard Mailly Pressoir",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "col-span-2 row-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
                 },
                 {
                     "imageFile": "Malinki-Freddie-Oliver-musique_694x.jpg",
@@ -239,7 +239,7 @@
                 },
                 {
                     "imageFile": "Malinki-Junes-Kartel-Musik-musique_694x.jpg",
-                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/e9191485f2a845d5b306bfa2dda69ac1.mp4",
+                    "videoUrl": "https://cdn.shopify.com/videos/c/o/v/e9191485f2a845d5b306bfa2dda69ac1.mp4#t=2",
                     "altText": "Junes Kartel Musik",
                     "clientName": "Junes",
                     "agencyName": "Kartel Musik",

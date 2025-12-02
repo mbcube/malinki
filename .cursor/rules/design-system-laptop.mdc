@@ -1,0 +1,504 @@
+---
+alwaysApply: true
+---
+
+# Malinki Studio Design System - Laptop (Tailwind CSS)
+
+> **Implementation Stack**: Tailwind CSS  
+> **Extracted from**: Figma Design System (Node ID: 95:658)  
+> **Screen Size**: Laptop (typically 1024px - 1440px)  
+> **Date**: November 10, 2025
+
+⚠️ **Note**: Some colors in the Figma design (Display L shown in pink) are design errors. All text should use Turquoise (#083D45).
+
+---
+
+## 🎨 Quick Reference
+
+### Primary Color
+
+- **Turquoise**: `#083D45`
+- **Tailwind**: `text-[#083D45]`
+
+### Font Family
+
+- **Montserrat**: Use `font-['Montserrat']` in Tailwind
+
+### Font Weights
+
+- **Medium**: `font-medium` (500)
+- **SemiBold**: `font-semibold` (600)
+- **Bold**: `font-bold` (700)
+
+---
+
+## 📐 Typography System - Laptop Tailwind Classes
+
+### Display Styles
+
+#### Display L
+
+**Laptop Hero Titles** (Reduced from 96px on Desktop)
+
+```html
+<h1
+  class="font-['Montserrat'] text-[72px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Display L
+</h1>
+```
+
+- Font: **72px** (Desktop: 96px)
+- Weight: Bold (700)
+- Line Height: 100% (leading-none)
+- Transform: UPPERCASE
+- ⚠️ Figma shows pink, use turquoise
+
+#### Display M
+
+**Large Section Headers**
+
+```html
+<h2
+  class="font-['Montserrat'] text-[64px] font-medium leading-none uppercase text-[#083D45]"
+>
+  Display M
+</h2>
+```
+
+- Font: **64px** (Same as Desktop)
+- Weight: Medium (500) or SemiBold (600)
+- Line Height: 100% (leading-none)
+- Transform: UPPERCASE
+
+#### Display S
+
+**Medium Section Headers**
+
+```html
+<h3
+  class="font-['Montserrat'] text-[36px] font-medium leading-[1.26] text-[#083D45]"
+>
+  Display S
+</h3>
+```
+
+- Font: **36px** (Same as Desktop)
+- Weight: Medium (500) or Bold (700) for emphasis
+- Line Height: 126% (leading-[1.26])
+- Transform: None
+
+---
+
+### Heading Styles
+
+#### H1
+
+**Primary Page Headings**
+
+```html
+<h1
+  class="font-['Montserrat'] text-[64px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Heading 1
+</h1>
+```
+
+- Font: **64px** (Same as Desktop)
+- Weight: Bold (700)
+- Line Height: 100%
+- Transform: UPPERCASE
+
+#### H2
+
+**Secondary Section Headings**
+
+```html
+<h2
+  class="font-['Montserrat'] text-[44px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Heading 2
+</h2>
+```
+
+- Font: **44px** (Same as Desktop)
+- Weight: Bold (700)
+- Line Height: 100%
+- Transform: UPPERCASE
+
+#### H3
+
+**Tertiary Section Headings**
+
+```html
+<h3
+  class="font-['Montserrat'] text-[32px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Heading 3
+</h3>
+```
+
+- Font: **32px** (Same as Desktop)
+- Weight: Bold (700)
+- Line Height: 100%
+- Transform: UPPERCASE
+
+---
+
+### Body Text Styles
+
+#### Body L (Large)
+
+**Lead Paragraphs, Introductions**
+
+```html
+<p
+  class="font-['Montserrat'] text-[20px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Large body text for important content
+</p>
+```
+
+- Font: **20px** (Same as Desktop)
+- Weight: Medium (500)
+- Line Height: 120%
+
+#### Body M (Medium)
+
+**Standard Body Copy**
+
+```html
+<p
+  class="font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Standard body text
+</p>
+
+<!-- With bold emphasis -->
+<p class="font-['Montserrat'] text-[16px] leading-[1.2] text-[#083D45]">
+  Regular text with <span class="font-bold uppercase">bold emphasis</span>
+</p>
+```
+
+- Font: **16px** (Same as Desktop)
+- Weight: Medium (500) or Bold (700) for emphasis
+- Line Height: 120%
+
+#### Body S (Small)
+
+**Captions, Labels, Small Text**
+
+```html
+<p
+  class="font-['Montserrat'] text-[12px] font-medium leading-[1.2] text-[#083D45]"
+>
+  Small text for captions
+</p>
+```
+
+- Font: **12px** (Same as Desktop)
+- Weight: Medium (500)
+- Line Height: 120%
+
+---
+
+### CTA (Call to Action)
+
+**Buttons, Links, Interactive Elements**
+
+```html
+<button
+  class="font-['Montserrat'] text-[16px] font-semibold leading-none text-[#083D45]"
+>
+  Call to Action
+</button>
+```
+
+- Font: **16px** (Same as Desktop)
+- Weight: SemiBold (600)
+- Line Height: 100%
+
+---
+
+## 🖥️ Desktop vs Laptop Comparison
+
+| Style         | Desktop | Laptop   | Change   |
+| ------------- | ------- | -------- | -------- |
+| **Display L** | 96px    | **72px** | ⬇️ -24px |
+| **Display M** | 64px    | 64px     | ✅ Same  |
+| **Display S** | 36px    | 36px     | ✅ Same  |
+| **H1**        | 64px    | 64px     | ✅ Same  |
+| **H2**        | 44px    | 44px     | ✅ Same  |
+| **H3**        | 32px    | 32px     | ✅ Same  |
+| **Body L**    | 20px    | 20px     | ✅ Same  |
+| **Body M**    | 16px    | 16px     | ✅ Same  |
+| **Body S**    | 12px    | 12px     | ✅ Same  |
+| **CTA**       | 16px    | 16px     | ✅ Same  |
+
+**Key Takeaway**: Only Display L changes for laptop screens (72px instead of 96px).
+
+---
+
+## 📱 Responsive Implementation
+
+### Recommended Breakpoint Strategy
+
+For responsive scaling between mobile → laptop → desktop:
+
+```html
+<!-- Display L: Scales from mobile to laptop to desktop -->
+<h1
+  class="font-['Montserrat'] text-[40px] sm:text-[56px] md:text-[72px] xl:text-[96px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Responsive Display L
+</h1>
+```
+
+### Tailwind Breakpoint Reference
+
+- `sm:` - 640px (mobile landscape / small tablet)
+- `md:` - 768px (tablet)
+- `lg:` - 1024px (laptop) ← **Laptop starts here**
+- `xl:` - 1280px (desktop)
+- `2xl:` - 1536px (large desktop)
+
+---
+
+## 🎯 Common Patterns for Laptop
+
+### Hero Section Title
+
+```html
+<h1
+  class="font-['Montserrat'] text-[40px] md:text-[56px] lg:text-[72px] xl:text-[96px] font-bold leading-none uppercase text-[#083D45]"
+>
+  Hero Title
+</h1>
+```
+
+### Section Header with Subtitle
+
+```html
+<div>
+  <h2
+    class="font-['Montserrat'] text-[28px] md:text-[38px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-4"
+  >
+    Section Title
+  </h2>
+  <p
+    class="font-['Montserrat'] text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-medium leading-[1.2] text-[#083D45]"
+  >
+    Subtitle or description text
+  </p>
+</div>
+```
+
+### Card Title + Body
+
+```html
+<div>
+  <h3
+    class="font-['Montserrat'] text-[20px] md:text-[26px] lg:text-[32px] font-bold leading-none uppercase text-[#083D45] mb-3"
+  >
+    Card Title
+  </h3>
+  <p
+    class="font-['Montserrat'] text-[14px] md:text-[15px] lg:text-[16px] font-medium leading-[1.2] text-[#083D45]"
+  >
+    Card description text
+  </p>
+</div>
+```
+
+### Button / CTA
+
+```html
+<button
+  class="font-['Montserrat'] text-[16px] font-semibold leading-none text-[#083D45] px-6 py-3 border-2 border-[#083D45] hover:bg-[#083D45] hover:text-white transition-colors"
+>
+  Learn More
+</button>
+```
+
+---
+
+## 📋 Copy-Paste Classes (Laptop Specific)
+
+### Display Styles
+
+```
+display-l: font-['Montserrat'] text-[72px] font-bold leading-none uppercase text-[#083D45]
+display-m: font-['Montserrat'] text-[64px] font-medium leading-none uppercase text-[#083D45]
+display-s: font-['Montserrat'] text-[36px] font-medium leading-[1.26] text-[#083D45]
+```
+
+### Headings
+
+```
+h1: font-['Montserrat'] text-[64px] font-bold leading-none uppercase text-[#083D45]
+h2: font-['Montserrat'] text-[44px] font-bold leading-none uppercase text-[#083D45]
+h3: font-['Montserrat'] text-[32px] font-bold leading-none uppercase text-[#083D45]
+```
+
+### Body Text
+
+```
+body-l: font-['Montserrat'] text-[20px] font-medium leading-[1.2] text-[#083D45]
+body-m: font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]
+body-s: font-['Montserrat'] text-[12px] font-medium leading-[1.2] text-[#083D45]
+```
+
+### CTA
+
+```
+cta: font-['Montserrat'] text-[16px] font-semibold leading-none text-[#083D45]
+```
+
+---
+
+## 🛠️ Tailwind Config Extension
+
+If you want to extend your `tailwind.config.js` for laptop-specific values:
+
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        turquoise: "#083D45",
+        primary: "#083D45",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      fontSize: {
+        // Laptop-specific
+        "display-l-laptop": "72px",
+        // Shared with desktop
+        "display-m": "64px",
+        "display-s": "36px",
+        h1: "64px",
+        h2: "44px",
+        h3: "32px",
+        "body-l": "20px",
+        "body-m": "16px",
+        "body-s": "12px",
+        cta: "16px",
+      },
+      lineHeight: {
+        display: "1",
+        "display-s": "1.26",
+        body: "1.2",
+      },
+      screens: {
+        laptop: "1024px",
+      },
+    },
+  },
+};
+```
+
+### Usage with Config:
+
+```html
+<!-- Display L with laptop breakpoint -->
+<h1
+  class="font-montserrat text-[40px] laptop:text-display-l-laptop font-bold leading-display uppercase text-turquoise"
+>
+  Display L
+</h1>
+```
+
+---
+
+## ✅ Implementation Checklist (Laptop)
+
+- [ ] Display L uses 72px at `lg:` breakpoint (1024px+)
+- [ ] Display L scales to 96px at `xl:` breakpoint for desktop
+- [ ] All other styles remain the same as desktop
+- [ ] Use turquoise (#083D45) for all text (ignore pink in Figma)
+- [ ] Montserrat loaded with weights: 500, 600, 700
+- [ ] All headings use `uppercase` class
+- [ ] Body text uses `leading-[1.2]`
+- [ ] CTAs use `font-semibold`
+
+---
+
+## 🎨 Design Tokens Reference
+
+```json
+{
+  "colors": {
+    "primary": "#083D45"
+  },
+  "typography": {
+    "fontFamily": "Montserrat",
+    "weights": {
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "sizes": {
+      "laptop": {
+        "display-l": "72px"
+      },
+      "shared": {
+        "display-m": "64px",
+        "display-s": "36px",
+        "h1": "64px",
+        "h2": "44px",
+        "h3": "32px",
+        "body-l": "20px",
+        "body-m": "16px",
+        "body-s": "12px",
+        "cta": "16px"
+      }
+    },
+    "lineHeights": {
+      "tight": 1,
+      "display-s": 1.26,
+      "body": 1.2
+    }
+  }
+}
+```
+
+---
+
+## 📝 Usage Guidelines
+
+### When to Use Each Style (Laptop Context)
+
+1. **Display L** (72px): Hero sections on laptop screens
+2. **Display M** (64px): Large section headers
+3. **Display S** (36px): Medium section headers
+4. **H1** (64px): Page titles
+5. **H2** (44px): Section titles
+6. **H3** (32px): Subsections
+7. **Body L** (20px): Lead paragraphs
+8. **Body M** (16px): Standard content
+9. **Body S** (12px): Captions, labels
+10. **CTA** (16px): Buttons, links
+
+### Font Weight Guidelines
+
+- **Medium (500)**: Body text, Display M
+- **SemiBold (600)**: CTAs only
+- **Bold (700)**: Headings, Display L, emphasis
+
+### Text Transform
+
+- **UPPERCASE**: Display L, Display M, H1, H2, H3, bold emphasis
+- **Normal case**: Display S, body text, CTAs
+
+---
+
+## 🔄 Cross-Reference
+
+- **Desktop Version**: See `design-system-desktop.md`
+- **Main Difference**: Display L is 72px (laptop) vs 96px (desktop)
+- **Everything Else**: Identical between laptop and desktop
+
+---
+
+_This is your reference document for implementing Malinki Studio design system on Laptop screens using Tailwind CSS._

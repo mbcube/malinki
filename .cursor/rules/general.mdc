@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+- if you're trying to implement something new look at existing code. don't halucinate
+
+translations
+
+- all text needs to come from translations en and fr only are supported.
+- always use tw 4, only use styles when absolutely necessary

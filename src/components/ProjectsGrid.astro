@@ -7,68 +7,83 @@ const { grids } = projectsData;
 
 <!-- Projects Grid Section -->
 <section
-    class="relative w-full font-['Montserrat'] mt-12 md:mt-16 lg:mt-20 mb-3"
-    data-section-type="projects-grid"
-    id="projects"
+  class="relative w-full font-['Montserrat'] mt-12 md:mt-16 lg:mt-20 mb-3"
+  data-section-type="projects-grid"
+  id="projects"
 >
-    <div>
-        {
-            grids.map((grid) => (
-                <div class="grid grid-cols-3 gap-4 auto-rows-fr mb-3">
-                    {grid.projects.map((project) => (
-                        <ProjectCard
-                            imageFile={project.imageFile}
-                            videoUrl={project.videoUrl}
-                            altText={project.altText}
-                            clientName={project.clientName}
-                            agencyName={project.agencyName}
-                            width={project.width}
-                            height={project.height}
-                            containerClasses={project.containerClasses}
-                        />
-                    ))}
-                </div>
-            ))
-        }
-    </div>
+  <div>
+    {
+      grids.map((grid) => (
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 auto-rows-fr mb-3">
+          {grid.projects.map((project) => (
+            <ProjectCard
+              imageFile={project.imageFile}
+              videoUrl={project.videoUrl}
+              altText={project.altText}
+              clientName={project.clientName}
+              agencyName={project.agencyName}
+              width={project.width}
+              height={project.height}
+              containerClasses={project.containerClasses}
+            />
+          ))}
+        </div>
+      ))
+    }
+  </div>
 </section>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get all project cards with video
-        const projectCards = document.querySelectorAll("[data-project-card]");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all project cards with video
+    const projectCards = document.querySelectorAll("[data-project-card]");
 
-        projectCards.forEach((card) => {
-            const video = card.querySelector(
-                "[data-video-hover]",
-            ) as HTMLVideoElement;
+    projectCards.forEach((card) => {
+      const video = card.querySelector(
+        "[data-video-hover]"
+      ) as HTMLVideoElement;
 
-            if (video) {
-                // Preload metadata to prevent jump on first hover
-                video.load();
+      if (video) {
+        // Extract start time from data attribute (original URL with time fragment)
+        const originalUrl = video.getAttribute("data-video-url");
+        let startTime = 0;
 
-                // Play video on hover
-                card.addEventListener("mouseenter", function () {
-                    video.currentTime = 0; // Reset to start
-                    const playPromise = video.play();
+        if (originalUrl && originalUrl.includes("#t=")) {
+          const timeFragment = originalUrl.split("#t=")[1];
+          // Handle formats like "10" (seconds) or "1:30" (minutes:seconds)
+          if (timeFragment.includes(":")) {
+            const parts = timeFragment.split(":");
+            startTime = parseInt(parts[0]) * 60 + parseFloat(parts[1]);
+          } else {
+            startTime = parseFloat(timeFragment);
+          }
+        }
 
-                    // Handle play promise for better error handling
-                    if (playPromise !== undefined) {
-                        playPromise.catch((error) => {
-                            // Auto-play was prevented, video will show poster
-                            console.log("Video autoplay prevented:", error);
-                        });
-                    }
-                });
+        // Preload metadata to prevent jump on first hover
+        video.load();
 
-                // Pause and reset video when hover ends
-                card.addEventListener("mouseleave", function () {
-                    video.pause();
-                    video.currentTime = 0;
-                    // Force reload to show poster image again
-                    video.load();
-                });
-            }
+        // Play video on hover
+        card.addEventListener("mouseenter", function () {
+          video.currentTime = startTime; // Start at specified time
+          const playPromise = video.play();
+
+          // Handle play promise for better error handling
+          if (playPromise !== undefined) {
+            playPromise.catch((error) => {
+              // Auto-play was prevented, video will show poster
+              console.log("Video autoplay prevented:", error);
+            });
+          }
         });
+
+        // Pause and reset video when hover ends
+        card.addEventListener("mouseleave", function () {
+          video.pause();
+          video.currentTime = startTime; // Reset to start time
+          // Force reload to show poster image again
+          video.load();
+        });
+      }
     });
+  });
 </script>
