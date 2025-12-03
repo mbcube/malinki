@@ -36,12 +36,15 @@ if (type === "youtube") {
 <div class={`w-full ${className}`}>
   {
     type === "mp4" ? (
-      <video controls class="w-full h-auto rounded-lg" preload="metadata">
+      <video controls class="w-full h-auto rounded-lg" preload="auto">
         <source src={url} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ) : (
-      <div class="relative w-full rounded-lg overflow-hidden" style="padding-bottom: 56.25%;">
+      <div
+        class="relative w-full rounded-lg overflow-hidden"
+        style="padding-bottom: 56.25%;"
+      >
         <iframe
           src={embedUrl}
           class="absolute top-0 left-0 w-full h-full"
