@@ -1,8 +1,13 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
-import projectsData from "../data/projects-data.json";
+import projectsGrid from "../data/projects-grid.json";
 
-const { grids } = projectsData;
+interface Props {
+  lang?: "fr" | "en";
+}
+
+const { lang = "fr" } = Astro.props;
+const { grids } = projectsGrid;
 ---
 
 <!-- Projects Grid Section -->
@@ -25,6 +30,8 @@ const { grids } = projectsData;
               width={project.width}
               height={project.height}
               containerClasses={project.containerClasses}
+              projectSlug={project.projectSlug}
+              lang={lang}
             />
           ))}
         </div>

@@ -11,7 +11,8 @@
                     "agencyName": "Cherylle Shyne",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "row-span-2 min-h-[356px]"
+                    "containerClasses": "row-span-2 min-h-[356px]",
+                    "projectSlug": "microsoft-cherylle-shyne"
                 },
                 {
                     "imageFile": "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg",
@@ -21,7 +22,8 @@
                     "agencyName": "Lux Records",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "visrei"
                 },
                 {
                     "imageFile": "Malinki-Brivia-immobilier_820x.jpg",
@@ -31,7 +33,8 @@
                     "agencyName": "Wellington",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "brivia"
                 },
                 {
                     "imageFile": "Malinki-Cooki-it-pret-a-cuisiner_820x.jpg",
@@ -41,7 +44,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "cook-it"
                 },
                 {
                     "imageFile": "Malinki-Bones-and-Wires-musique_820x.jpg",
@@ -51,7 +55,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "bones-and-wires"
                 }
             ]
         },
@@ -66,7 +71,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+                    "projectSlug": "omy"
                 },
                 {
                     "imageFile": "Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg",
@@ -76,7 +82,8 @@
                     "agencyName": "Fondation Jean Lapointe",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "defi-28-jours"
                 },
                 {
                     "imageFile": "Malinki-Grey-Goose_820x.jpg",
@@ -86,7 +93,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "row-span-2 min-h-[356px]"
+                    "containerClasses": "row-span-2 min-h-[356px]",
+                    "projectSlug": "grey-goose"
                 },
                 {
                     "imageFile": "Malinki-Grand-Heron-musique_820x.jpg",
@@ -96,7 +104,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "grand-heron"
                 },
                 {
                     "imageFile": "Malinki-St-Hubert-restaurant_820x.jpg",
@@ -106,7 +115,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "row-span-2 min-h-[356px]"
+                    "containerClasses": "row-span-2 min-h-[356px]",
+                    "projectSlug": "st-hubert"
                 },
                 {
                     "imageFile": "Malinki-Opera-de-Montreal-3_820x.jpg",
@@ -116,7 +126,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "opera-de-montreal"
                 },
                 {
                     "imageFile": "video-capture-t0030.05seg-6446.png",
@@ -126,7 +137,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "air-transat"
                 }
             ]
         },
@@ -141,7 +153,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+                    "projectSlug": "ville-de-laval"
                 },
                 {
                     "imageFile": "Videotron_Gamer_Remastered_compressed.webp",
@@ -150,7 +163,8 @@
                     "agencyName": "Rivard Mailly Pressoir",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "row-span-2 min-h-[356px]"
+                    "containerClasses": "row-span-2 min-h-[356px]",
+                    "projectSlug": "videotron-gamer"
                 },
                 {
                     "imageFile": "video-capture-t0000.00seg-3990.png",
@@ -160,7 +174,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "king-melrose"
                 },
                 {
                     "imageFile": "video-capture-t0000.00seg-5766.png",
@@ -170,7 +185,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "cadwork"
                 },
                 {
                     "imageFile": "video-capture-t0141.86seg-4212.png",
@@ -180,7 +196,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "niche-ste-justine"
                 }
             ]
         },
@@ -195,7 +212,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "row-span-2 min-h-[356px]"
+                    "containerClasses": "row-span-2 min-h-[356px]",
+                    "projectSlug": "fizz"
                 },
                 {
                     "imageFile": "Malinki-Simon-Lachance-Rosemarie-Records_820x.jpg",
@@ -205,7 +223,8 @@
                     "agencyName": "Rosemarie Records",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+                    "projectSlug": "simon-lachance"
                 },
                 {
                     "imageFile": "Malinki-Videotron-Rivard-Mailly-Pressoir_820x.jpg",
@@ -215,7 +234,8 @@
                     "agencyName": "Rivard Mailly Pressoir",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]"
+                    "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+                    "projectSlug": "videotron"
                 },
                 {
                     "imageFile": "Malinki-Freddie-Oliver-musique_694x.jpg",
@@ -225,7 +245,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 694,
                     "height": 390,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "freddie-oliver"
                 },
                 {
                     "imageFile": "3300_NICHE_portrait_4x5_compressed.webp",
@@ -235,7 +256,8 @@
                     "agencyName": "Qolab",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "row-span-2 min-h-[356px]"
+                    "containerClasses": "row-span-2 min-h-[356px]",
+                    "projectSlug": "tva-sports"
                 },
                 {
                     "imageFile": "Malinki-Junes-Kartel-Musik-musique_694x.jpg",
@@ -245,7 +267,8 @@
                     "agencyName": "Kartel Musik",
                     "width": 694,
                     "height": 390,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "junes"
                 },
                 {
                     "imageFile": "Malinki-Opera-de-Montreal-3_820x.jpg",
@@ -255,7 +278,8 @@
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "min-h-[178px]"
+                    "containerClasses": "min-h-[178px]",
+                    "projectSlug": "opera-de-montreal-2"
                 }
             ]
         }

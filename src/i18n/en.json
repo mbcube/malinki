@@ -638,8 +638,15 @@
         "submit_button": "Send Message",
         "email_title": "Email",
         "phone_title": "Phone",
-        "social_title": "Social Media",
+        "social_title": "Instagram",
         "cta_title": "Ready to Get Started?",
         "cta_text": "We typically respond within 24 hours. Let's discuss how we can help you!"
+    },
+    "project": {
+        "behind_the_scenes": "BEHIND THE SCENES",
+        "additional_videos": "ADDITIONAL CONTENT",
+        "back_to_projects": "Back to Projects",
+        "not_found": "Project not found",
+        "main_video": "Main Video"
     }
 }

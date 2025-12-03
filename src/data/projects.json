@@ -1,0 +1,209 @@
+{
+    "projects": [
+        {
+            "slug": "cook-it",
+            "title": {
+                "fr": "COOK IT - CAMPAGNE PUBLICITAIRE",
+                "en": "COOK IT - ADVERTISING CAMPAIGN"
+            },
+            "shortDescription": {
+                "fr": "Une série de publicités qui met en lumière les prêts-à-cuisiner Cook it dans un environnement familial authentique et chaleureux.",
+                "en": "A series of advertisements highlighting Cook it meal kits in an authentic and warm family environment."
+            },
+            "mainVideo": {
+                "url": "https://cdn.shopify.com/videos/c/o/v/c2ffb1262c504c849d435a6eab956a28.mp4",
+                "type": "mp4"
+            },
+            "details": [
+                {
+                    "label": {
+                        "fr": "Clients",
+                        "en": "Clients"
+                    },
+                    "value": "Pelra Azondekon (asterX)\nAndrée-Anne Gauthier (Qolab)\nLaurence Vézina (Qolab)"
+                },
+                {
+                    "label": {
+                        "fr": "Producteur",
+                        "en": "Producer"
+                    },
+                    "value": "Andrew Tchernilevskii"
+                },
+                {
+                    "label": {
+                        "fr": "Réalisation",
+                        "en": "Director"
+                    },
+                    "value": "Philippe Lupien"
+                },
+                {
+                    "label": {
+                        "fr": "DOP",
+                        "en": "DOP"
+                    },
+                    "value": "Thomas Leblanc-Murray"
+                },
+                {
+                    "label": {
+                        "fr": "Opérateur Caméra 1",
+                        "en": "Camera Operator 1"
+                    },
+                    "value": "Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Opérateur Caméra 2",
+                        "en": "Camera Operator 2"
+                    },
+                    "value": "François Haché"
+                },
+                {
+                    "label": {
+                        "fr": "Preneur de son",
+                        "en": "Sound Recordist"
+                    },
+                    "value": "Yohan Boudreault"
+                },
+                {
+                    "label": {
+                        "fr": "Éclairagiste 1",
+                        "en": "Gaffer 1"
+                    },
+                    "value": "Tom Halley"
+                },
+                {
+                    "label": {
+                        "fr": "Machino 1",
+                        "en": "Grip 1"
+                    },
+                    "value": "Hugo Klopp"
+                },
+                {
+                    "label": {
+                        "fr": "Machino 2",
+                        "en": "Grip 2"
+                    },
+                    "value": "Maxime Seguela"
+                },
+                {
+                    "label": {
+                        "fr": "Mixage sonore",
+                        "en": "Sound Mixing"
+                    },
+                    "value": "Alexey Fominskyi"
+                },
+                {
+                    "label": {
+                        "fr": "Coordinateur de production",
+                        "en": "Production Coordinator"
+                    },
+                    "value": "Jérémy Leblond"
+                },
+                {
+                    "label": {
+                        "fr": "Directrice de production",
+                        "en": "Production Manager"
+                    },
+                    "value": "Laurence Vézina"
+                },
+                {
+                    "label": {
+                        "fr": "Mixage Sonore",
+                        "en": "Sound Mixing"
+                    },
+                    "value": "François Del Fante (Reservoir Audio)"
+                }
+            ],
+            "additionalVideos": [
+                {
+                    "url": "https://cdn.shopify.com/videos/c/o/v/009debc237b845b59093174a98251881.mp4",
+                    "type": "mp4"
+                }
+            ],
+            "behindTheScenes": {
+                "portrait": [
+                    "https://malinki.ca/cdn/shop/files/2_554x.jpg?v=1662660414",
+                    "https://malinki.ca/cdn/shop/files/20220712_100752_554x.jpg?v=1662994663",
+                    "https://malinki.ca/cdn/shop/files/20220712_182435_0_554x.jpg?v=1662994209"
+                ],
+                "landscape": [
+                    "https://malinki.ca/cdn/shop/files/judith_2_554x.png?v=1662659657",
+                    "https://malinki.ca/cdn/shop/files/5_57183ba7-9fa2-49af-84d2-e1aa64310a20_554x.jpg?v=1662994488",
+                    "https://malinki.ca/cdn/shop/files/4_554x.jpg?v=1662660391"
+                ]
+            }
+        },
+        {
+            "slug": "jouer-pour-gagner",
+            "title": {
+                "fr": "WEBSERIE JOUER POUR GAGNER",
+                "en": "WEB SERIES PLAY TO WIN"
+            },
+            "shortDescription": {
+                "fr": "Conscients de l'importance de stimuler la création d'entreprises au Québec, Quebecor offre aux étudiants de toutes les universités du Québec la possibilité de recevoir l'une des cinq bourses Pierre-Péladeau. Au fil de la websérie Jouer pour gagner, découvrez quelles équipes remporterons les différentes bourses.",
+                "en": "Aware of the importance of stimulating business creation in Quebec, Quebecor offers students from all Quebec universities the opportunity to receive one of five Pierre-Péladeau scholarships. Through the web series Play to Win, discover which teams will win the different scholarships."
+            },
+            "mainVideo": {
+                "url": "https://cdn.shopify.com/videos/c/o/v/example123.mp4",
+                "type": "mp4"
+            },
+            "details": [
+                {
+                    "label": {
+                        "fr": "Client",
+                        "en": "Client"
+                    },
+                    "value": "asterX"
+                },
+                {
+                    "label": {
+                        "fr": "Agence",
+                        "en": "Agency"
+                    },
+                    "value": "Qolab"
+                }
+            ],
+            "additionalVideos": [],
+            "behindTheScenes": {
+                "portrait": [],
+                "landscape": []
+            }
+        },
+        {
+            "slug": "microsoft-cherylle-shyne",
+            "title": {
+                "fr": "MICROSOFT - CAMPAGNE DIGITALE",
+                "en": "MICROSOFT - DIGITAL CAMPAIGN"
+            },
+            "shortDescription": {
+                "fr": "Production de contenu publicitaire pour Microsoft mettant en vedette des solutions technologiques innovantes.",
+                "en": "Advertising content production for Microsoft featuring innovative technology solutions."
+            },
+            "mainVideo": {
+                "url": "https://cdn.shopify.com/videos/c/o/v/13ecea60934648308a6ab8b030a96d5e.mp4",
+                "type": "mp4"
+            },
+            "details": [
+                {
+                    "label": {
+                        "fr": "Client",
+                        "en": "Client"
+                    },
+                    "value": "Microsoft"
+                },
+                {
+                    "label": {
+                        "fr": "Agence",
+                        "en": "Agency"
+                    },
+                    "value": "Cherylle Shyne"
+                }
+            ],
+            "additionalVideos": [],
+            "behindTheScenes": {
+                "portrait": [],
+                "landscape": []
+            }
+        }
+    ]
+}

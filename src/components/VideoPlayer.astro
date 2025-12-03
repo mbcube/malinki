@@ -1,0 +1,55 @@
+---
+export interface Props {
+  url: string;
+  type: "youtube" | "vimeo" | "mp4";
+  className?: string;
+}
+
+const { url, type, className = "" } = Astro.props;
+
+// Extract video ID from YouTube URL
+function getYouTubeId(url: string): string | null {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11 ? match[2] : null;
+}
+
+// Extract video ID from Vimeo URL
+function getVimeoId(url: string): string | null {
+  const regExp = /(?:vimeo)\.com.*(?:videos|video|channels|)\/([\d]+)/i;
+  const match = url.match(regExp);
+  return match ? match[1] : null;
+}
+
+let embedUrl = "";
+let videoId = "";
+
+if (type === "youtube") {
+  videoId = getYouTubeId(url) || "";
+  embedUrl = `https://www.youtube.com/embed/${videoId}`;
+} else if (type === "vimeo") {
+  videoId = getVimeoId(url) || "";
+  embedUrl = `https://player.vimeo.com/video/${videoId}`;
+}
+---
+
+<div class={`w-full ${className}`}>
+  {
+    type === "mp4" ? (
+      <video controls class="w-full h-auto rounded-lg" preload="metadata">
+        <source src={url} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    ) : (
+      <div class="relative w-full rounded-lg overflow-hidden" style="padding-bottom: 56.25%;">
+        <iframe
+          src={embedUrl}
+          class="absolute top-0 left-0 w-full h-full"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+    )
+  }
+</div>

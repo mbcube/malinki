@@ -1,0 +1,179 @@
+---
+import { useTranslations } from "../../../i18n/utils";
+import "../../../styles/global.css";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import VideoPlayer from "../../../components/VideoPlayer.astro";
+import { getImage } from "astro:assets";
+import projectsData from "../../../data/projects.json";
+
+export function getStaticPaths() {
+  const paths = [];
+
+  // Generate paths for all projects in both languages
+  for (const project of projectsData.projects) {
+    // French (default)
+    paths.push({
+      params: { lang: undefined, project: project.slug },
+    });
+    // English
+    paths.push({
+      params: { lang: "en", project: project.slug },
+    });
+  }
+
+  return paths;
+}
+
+const { lang, project: projectSlug } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+const t = useTranslations(currentLang);
+
+// Find the project in data
+const project = projectsData.projects.find((p) => p.slug === projectSlug);
+
+if (!project) {
+  return Astro.redirect("/404");
+}
+
+const title = project.title[currentLang];
+const description = project.shortDescription[currentLang];
+---
+
+<html lang={currentLang} class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - Malinki</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
+    <Header lang={currentLang} />
+
+    <main
+      class="w-full flex flex-col 2xl:max-w-[1600px] mx-auto px-6 py-24 md:py-20"
+    >
+      <!-- Project Title -->
+      <div class="mb-8 md:mb-12">
+        <h1
+          class="font-['Montserrat'] text-[32px] md:text-[56px] lg:text-[64px] font-bold leading-none uppercase text-[#083D45] mb-6"
+        >
+          {title}
+        </h1>
+        <p
+          class="font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45] max-w-4xl"
+        >
+          {description}
+        </p>
+      </div>
+
+      <!-- Main Video and Details Section -->
+      <div class="mb-12 md:mb-16 flex flex-col md:flex-row gap-6 md:gap-8">
+        <!-- Main Video -->
+        <div class="w-full md:w-3/5">
+          <VideoPlayer
+            url={project.mainVideo.url}
+            type={project.mainVideo.type as "youtube" | "vimeo" | "mp4"}
+          />
+        </div>
+
+        <!-- Project Details -->
+        {
+          project.details && project.details.length > 0 && (
+            <div class="w-full md:w-2/5 bg-white/50 rounded-lg p-6 md:p-6 lg:p-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6">
+                {project.details.map((detail) => (
+                  <div class="space-y-2">
+                    <h3 class="font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none uppercase text-[#083D45]">
+                      {detail.label[currentLang]}
+                    </h3>
+                    <p class="font-['Montserrat'] text-[13px] md:text-[14px] lg:text-[15px] font-medium leading-[1.3] text-[#083D45] whitespace-pre-line">
+                      {detail.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+        }
+      </div>
+
+      <!-- Additional Videos -->
+      {
+        project.additionalVideos && project.additionalVideos.length > 0 && (
+          <div class="mb-12 md:mb-16">
+            <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
+              {t("project.additional_videos")}
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+              {project.additionalVideos.map((video) => (
+                <VideoPlayer
+                  url={video.url}
+                  type={video.type as "youtube" | "vimeo" | "mp4"}
+                />
+              ))}
+            </div>
+          </div>
+        )
+      }
+
+      <!-- Behind the Scenes Photos -->
+      {
+        project.behindTheScenes && 
+        (project.behindTheScenes.portrait?.length > 0 || project.behindTheScenes.landscape?.length > 0) && (
+          <div class="mb-12 md:mb-16">
+            <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
+              {t("project.behind_the_scenes")}
+            </h2>
+            
+            <!-- Portrait Photos -->
+            {project.behindTheScenes.portrait && project.behindTheScenes.portrait.length > 0 && (
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                {project.behindTheScenes.portrait.map((photo, index) => (
+                  <div class="aspect-[3/4] bg-white/30 rounded-lg overflow-hidden">
+                    <img
+                      src={photo}
+                      alt={`${title} - Behind the scenes portrait ${index + 1}`}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            <!-- Landscape Photos -->
+            {project.behindTheScenes.landscape && project.behindTheScenes.landscape.length > 0 && (
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {project.behindTheScenes.landscape.map((photo, index) => (
+                  <div class="aspect-video bg-white/30 rounded-lg overflow-hidden">
+                    <img
+                      src={photo}
+                      alt={`${title} - Behind the scenes landscape ${index + 1}`}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )
+      }
+
+      <!-- Back to Projects Button -->
+      <div class="mt-8 text-center">
+        <a
+          href={currentLang === "en" ? "/en#projects" : "/#projects"}
+          class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
+        >
+          {t("project.back_to_projects")}
+        </a>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

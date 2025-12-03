@@ -641,5 +641,12 @@
         "social_title": "Réseaux sociaux",
         "cta_title": "Prêt à commencer?",
         "cta_text": "Nous répondons généralement dans les 24 heures. Discutons de comment nous pouvons vous aider!"
+    },
+    "project": {
+        "behind_the_scenes": "DERRIÈRE LES COULISSES",
+        "additional_videos": "CONTENU ADDITIONNEL",
+        "back_to_projects": "Retour aux projets",
+        "not_found": "Projet non trouvé",
+        "main_video": "Vidéo principale"
     }
 }
