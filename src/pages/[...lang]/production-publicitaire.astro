@@ -1,7 +1,6 @@
 ---
-import { Image, getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import { useTranslations } from "../../i18n/utils";
-import malinkiLogoBg from "../../images/malinki-logo-bg.png";
 import btsChicago from "../../images/bts-chicago-malinki-lighting-2025-16-9_compressed.webp";
 import cameraPhoto from "../../images/camera-photo-l1000571_compressed.webp";
 import laurenceGb from "../../images/laurence-gb-omy-testimony.jpg";
@@ -28,18 +27,7 @@ const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
 const t = useTranslations(currentLang);
 
-const siteUrl = Astro.site?.href || "https://malinki.pages.dev";
-const currentUrl = `${siteUrl}/${currentLang === "en" ? "en/" : ""}production-publicitaire`;
-const ogImage = await getImage({
-  src: malinkiLogoBg,
-  width: 1200,
-  height: 630,
-});
-const ogImageUrl = new URL(ogImage.src, siteUrl).href;
-const pageTitle = `${t("production_publicitaire.title")} - Malinki`;
-const pageDescription =
-  t("production_publicitaire.description") ||
-  "Production publicitaire créative - Malinki";
+const pageTitle = t("production_publicitaire.title");
 
 // Page configuration
 const pageConfig = {
@@ -72,36 +60,12 @@ const pageConfig = {
 import "../../styles/global.css";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import Metadata from "../../components/Metadata.astro";
 ---
 
 <html lang={currentLang} class="h-full">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-    <meta name="description" content={pageDescription} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={currentUrl} />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={pageDescription} />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:locale"
-      content={currentLang === "en" ? "en_US" : "fr_CA"}
-    />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={currentUrl} />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={pageDescription} />
-    <meta name="twitter:image" content={ogImageUrl} />
+    <Metadata lang={currentLang} title={pageTitle} />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />

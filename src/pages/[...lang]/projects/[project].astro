@@ -5,6 +5,7 @@ import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import VideoPlayer from "../../../components/VideoPlayer.astro";
 import projectsData from "../../../data/projects.json";
+import Metadata from "../../../components/Metadata.astro";
 
 export function getStaticPaths() {
   const paths = [];
@@ -41,12 +42,7 @@ const description = project.shortDescription[currentLang];
 
 <html lang={currentLang} class="h-full">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title} - Malinki</title>
-    <meta name="description" content={description} />
+    <Metadata lang={currentLang} title={title} />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />

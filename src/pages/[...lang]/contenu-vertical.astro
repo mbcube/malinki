@@ -15,6 +15,7 @@ import shortsBts5 from "../../images/shorts-bts-5.jpg";
 import shortsBts6 from "../../images/shorts-bts-6_compressed_compressed.webp";
 import shortsBts7 from "../../images/shorts-bts-7_compressed.webp";
 import shortsBts8 from "../../images/shorts-bts-8_compressed.webp";
+import Metadata from "../../components/Metadata.astro";
 
 export function getStaticPaths() {
   return [
@@ -27,17 +28,7 @@ const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
 const t = useTranslations(currentLang);
 
-const siteUrl = Astro.site?.href || "https://malinki.pages.dev";
-const currentUrl = `${siteUrl}/${currentLang === "en" ? "en/" : ""}contenu-vertical`;
-const ogImage = await getImage({
-  src: malinkiLogoBg,
-  width: 1200,
-  height: 630,
-});
-const ogImageUrl = new URL(ogImage.src, siteUrl).href;
-const pageTitle = `${t("contenu_vertical.title")} - Malinki`;
-const pageDescription =
-  t("contenu_vertical.description") || "Contenu vertical créatif - Malinki";
+const pageTitle = t("contenu_vertical.title");
 
 // Page configuration
 const pageConfig = {
@@ -76,32 +67,7 @@ import Footer from "../../components/Footer.astro";
 
 <html lang={currentLang} class="h-full">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-    <meta name="description" content={pageDescription} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={currentUrl} />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={pageDescription} />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:locale"
-      content={currentLang === "en" ? "en_US" : "fr_CA"}
-    />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={currentUrl} />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={pageDescription} />
-    <meta name="twitter:image" content={ogImageUrl} />
+    <Metadata lang={currentLang} title={pageTitle} />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />

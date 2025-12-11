@@ -9,16 +9,6 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = lang || "fr";
-const t = useTranslations(currentLang as "fr" | "en");
-
-const siteUrl = Astro.site?.href || "https://malinki.pages.dev";
-const currentUrl = `${siteUrl}${currentLang === "en" ? "/en" : ""}`;
-const ogImage = await getImage({
-  src: malinkiLogoBg,
-  width: 1200,
-  height: 630,
-});
-const ogImageUrl = new URL(ogImage.src, siteUrl).href;
 
 import "../styles/global.css";
 import Header from "../components/Header.astro";
@@ -31,45 +21,12 @@ import ServicesSection from "../components/ServicesSection.astro";
 import TeamSection from "../components/TeamSection.astro";
 import LogosSection from "../components/LogosSection.astro";
 import CtaSection2 from "../components/CtaSection2.astro";
+import Metadata from "../components/Metadata.astro";
 ---
 
 <html lang={currentLang} class="h-full">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Malinki</title>
-    <meta
-      name="description"
-      content="Agence de production MALINKI - Production de vidéo créative, de publicités, contenu de marque, contenu vertical et vidéoclips."
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={currentUrl} />
-    <meta property="og:title" content="Malinki" />
-    <meta
-      property="og:description"
-      content="Agence de production MALINKI - Production de vidéo créative, de publicités, contenu de marque, contenu vertical et vidéoclips."
-    />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:locale"
-      content={currentLang === "en" ? "en_US" : "fr_CA"}
-    />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={currentUrl} />
-    <meta name="twitter:title" content="Malinki" />
-    <meta
-      name="twitter:description"
-      content="Agence de production MALINKI - Production de vidéo créative, de publicités, contenu de marque, contenu vertical et vidéoclips."
-    />
-    <meta name="twitter:image" content={ogImageUrl} />
+    <Metadata lang={currentLang} />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang as "fr" | "en"} />
@@ -83,7 +40,5 @@ import CtaSection2 from "../components/CtaSection2.astro";
       <LogosSection />
       <CtaSection2 />
     </main>
-  </body>
-
-  <Footer />
+  </body><Footer />
 </html>
