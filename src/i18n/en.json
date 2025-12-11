@@ -6,7 +6,10 @@
             "subtext": "It looks like nothing was found at this location."
         },
         "hero_video": {
-            "view_reel": "View reel"
+            "view_reel": "View reel",
+            "heading": "Visual creations <br> in your image",
+            "subtitle": "OUR CREATIVITY AT YOUR SERVICE",
+            "scroll_indicator_text": "Scroll"
         },
         "menu_icons": {
             "new": "NEW",
@@ -78,7 +81,10 @@
         }
     },
     "header": {
-        "contact_button": "Contact Us"
+        "contact_button": "Contact Us",
+        "menu_projects": "Our Projects",
+        "menu_services": "Services",
+        "menu_team": "Team"
     },
     "collections": {
         "general": {
@@ -647,6 +653,8 @@
         "additional_videos": "ADDITIONAL CONTENT",
         "back_to_projects": "Back to Projects",
         "not_found": "Project not found",
-        "main_video": "Main Video"
+        "main_video": "Main Video",
+        "client": "Client",
+        "agency": "Agency"
     }
 }

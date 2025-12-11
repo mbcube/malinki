@@ -3,9 +3,10 @@ export interface Props {
   url: string;
   type: "youtube" | "vimeo" | "mp4";
   className?: string;
+  autoplay?: boolean;
 }
 
-const { url, type, className = "" } = Astro.props;
+const { url, type, className = "", autoplay = false } = Astro.props;
 
 // Extract video ID from YouTube URL
 function getYouTubeId(url: string): string | null {
@@ -36,7 +37,12 @@ if (type === "youtube") {
 <div class={`w-full ${className}`}>
   {
     type === "mp4" ? (
-      <video controls class="w-full h-auto rounded-lg" preload="auto">
+      <video
+        controls
+        class="w-full h-auto rounded-lg"
+        preload="auto"
+        autoplay={autoplay}
+      >
         <source src={url} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

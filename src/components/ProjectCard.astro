@@ -8,7 +8,10 @@ interface Props {
   altText: string;
   clientName: string;
   agencyName: string;
-  tagText?: string;
+  tagText?: {
+    fr: string;
+    en: string;
+  };
   width: number;
   height: number;
   containerClasses?: string;
@@ -21,7 +24,7 @@ import microsoftCherylleShyne from "../images/Malinki-Microsoft-Cherylle-Shyne_8
 import visreiLisonLux from "../images/Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg";
 import briviaImmobilier from "../images/Malinki-Brivia-immobilier_820x.jpg";
 import cookItPretACuisiner from "../images/Malinki-Cooki-it-pret-a-cuisiner_820x.jpg";
-import bonesAndWires from "../images/Malinki-Bones-and-Wires-musique_820x.jpg";
+import bonesAndWires from "../images/don-giovanni-pre-opera.png";
 import omyProduitsBeaute from "../images/Malinki-Omy-produits-beaute_820x.jpg";
 import defi28Jours from "../images/Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg";
 import greyGoose from "../images/Malinki-Grey-Goose_820x.jpg";
@@ -40,6 +43,7 @@ import videotronRivard from "../images/Malinki-Videotron-Rivard-Mailly-Pressoir_
 import freddieOliver from "../images/Malinki-Freddie-Oliver-musique_694x.jpg";
 import nichePortrait from "../images/3300_NICHE_portrait_4x5_compressed.webp";
 import junesKartel from "../images/Malinki-Junes-Kartel-Musik-musique_694x.jpg";
+import operaDeMontreal from "../images/Malinki-Opera-de-Montreal_820x.jpg";
 
 // Create image mapping
 const imageMap: Record<string, ImageMetadata> = {
@@ -47,7 +51,7 @@ const imageMap: Record<string, ImageMetadata> = {
   "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg": visreiLisonLux,
   "Malinki-Brivia-immobilier_820x.jpg": briviaImmobilier,
   "Malinki-Cooki-it-pret-a-cuisiner_820x.jpg": cookItPretACuisiner,
-  "Malinki-Bones-and-Wires-musique_820x.jpg": bonesAndWires,
+  "don-giovanni-pre-opera.png": bonesAndWires,
   "Malinki-Omy-produits-beaute_820x.jpg": omyProduitsBeaute,
   "Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg": defi28Jours,
   "Malinki-Grey-Goose_820x.jpg": greyGoose,
@@ -66,6 +70,7 @@ const imageMap: Record<string, ImageMetadata> = {
   "Malinki-Freddie-Oliver-musique_694x.jpg": freddieOliver,
   "3300_NICHE_portrait_4x5_compressed.webp": nichePortrait,
   "Malinki-Junes-Kartel-Musik-musique_694x.jpg": junesKartel,
+  "Malinki-Opera-de-Montreal_820x.jpg": operaDeMontreal,
 };
 
 const {
@@ -74,12 +79,12 @@ const {
   altText,
   clientName,
   agencyName,
-  tagText = "Contenu publicitaire",
+  tagText,
   width,
   height,
   containerClasses = "",
   projectSlug,
-  lang = "fr",
+  lang = "fr" as "fr" | "en",
 } = Astro.props;
 
 // Build project URL with language support
@@ -148,7 +153,8 @@ const cleanVideoUrl = videoUrl ? videoUrl.split("#")[0] : null;
       <p
         class="font-['Montserrat'] font-bold text-[16px] text-[#083d45] uppercase leading-none m-0"
       >
-        {tagText}
+ 
+         {tagText?.[lang]}
       </p>
     </div>
 
@@ -216,8 +222,8 @@ const cleanVideoUrl = videoUrl ? videoUrl.split("#")[0] : null;
           <p
             class="font-['Montserrat'] font-bold text-[16px] text-[#083d45] uppercase leading-none m-0"
           >
-            {tagText}
-          </p>
+         {tagText?.[lang]}
+        </p>
         </div>
 
         <!-- Bottom gradient overlay -->

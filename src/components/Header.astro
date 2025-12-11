@@ -20,9 +20,9 @@ const settings = {
 // Links navigate to home page sections with anchors
 const homeUrl = lang === "en" ? "/en" : "/";
 const menuLinks = [
-  { title: "Nos projets", url: `${homeUrl}#projects` },
-  { title: "Services", url: `${homeUrl}#services` },
-  { title: "Équipe", url: `${homeUrl}#equipe` },
+  { title: t("header.menu_projects"), url: `${homeUrl}#projects` },
+  { title: t("header.menu_services"), url: `${homeUrl}#services` },
+  { title: t("header.menu_team"), url: `${homeUrl}#equipe` },
 ];
 
 const contactUrl = lang === "en" ? "/en/contact" : "/contact";
@@ -50,8 +50,8 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
         <Image
           src={settings.logo}
           alt="Malinki"
-                    width={1032}
-                    height={192}
+          width={1032}
+          height={192}
           class="h-full w-full object-contain"
         />
       </a>

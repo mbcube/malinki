@@ -4,6 +4,10 @@
             "id": "grid-1",
             "projects": [
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Malinki-Microsoft-Cherylle-Shyne_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/13ecea60934648308a6ab8b030a96d5e.mp4",
                     "altText": "Microsoft Cherylle Shyne",
@@ -15,6 +19,10 @@
                     "projectSlug": "microsoft-cherylle-shyne"
                 },
                 {
+                    "tagText": {
+                        "fr": "Vidéo clip",
+                        "en": "Video clip"
+                    },
                     "imageFile": "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/105a15ee3cac4911a2b66666d1f0c1a0.mp4#t=10",
                     "altText": "Visrei Lison Lux Records",
@@ -23,9 +31,13 @@
                     "width": 820,
                     "height": 461,
                     "containerClasses": "min-h-[178px]",
-                    "projectSlug": "visrei"
+                    "projectSlug": "ecarlate"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Malinki-Brivia-immobilier_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/a715b44f80574abe83715762785fa459.mp4#t=1",
                     "altText": "Brivia Immobilier",
@@ -37,6 +49,10 @@
                     "projectSlug": "brivia"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Malinki-Cooki-it-pret-a-cuisiner_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/c2ffb1262c504c849d435a6eab956a28.mp4",
                     "altText": "Cook it Pret a Cuisiner",
@@ -48,15 +64,19 @@
                     "projectSlug": "cook-it"
                 },
                 {
-                    "imageFile": "Malinki-Bones-and-Wires-musique_820x.jpg",
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
+                    "imageFile": "don-giovanni-pre-opera.png",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/b5dd2104bf364d9eb513cbdcbcd89575.mp4",
-                    "altText": "Bones and Wires",
-                    "clientName": "Bones and Wires",
+                    "altText": "Pré-Opéra saison 23-24",
+                    "clientName": "Opéra de Montréal",
                     "agencyName": "Malinki Studio",
                     "width": 820,
                     "height": 461,
                     "containerClasses": "min-h-[178px]",
-                    "projectSlug": "bones-and-wires"
+                    "projectSlug": "pre-opera-23-24"
                 }
             ]
         },
@@ -64,6 +84,10 @@
             "id": "grid-2",
             "projects": [
                 {
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
                     "imageFile": "Malinki-Omy-produits-beaute_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/cd7b0868d6444339b8dd362b61f27a0e.mp4",
                     "altText": "Omy Produits Beaute",
@@ -72,9 +96,13 @@
                     "width": 820,
                     "height": 461,
                     "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
-                    "projectSlug": "omy"
+                    "projectSlug": "labo-omy"
                 },
                 {
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
                     "imageFile": "Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/2e37eccfaed6485bb45ded9c1857b01a.mp4",
                     "altText": "Defi 28 Jours Fondation Jean Lapointe",
@@ -86,6 +114,10 @@
                     "projectSlug": "defi-28-jours"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Malinki-Grey-Goose_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/4134404b93b842ed9b34964b780edbe2.mp4",
                     "altText": "Grey Goose",
@@ -97,6 +129,10 @@
                     "projectSlug": "grey-goose"
                 },
                 {
+                    "tagText": {
+                        "fr": "Vidéo clip",
+                        "en": "Music video"
+                    },
                     "imageFile": "Malinki-Grand-Heron-musique_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/dde87e0d18ce47bbb4783d65a6f68006.mp4#t=5",
                     "altText": "Grand Heron",
@@ -108,6 +144,10 @@
                     "projectSlug": "grand-heron"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Malinki-St-Hubert-restaurant_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/8f0196cd74d3454c8a222f0b54e39875.mp4",
                     "altText": "St Hubert Restaurant",
@@ -119,7 +159,11 @@
                     "projectSlug": "st-hubert"
                 },
                 {
-                    "imageFile": "Malinki-Opera-de-Montreal-3_820x.jpg",
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
+                    "imageFile": "Malinki-Opera-de-Montreal_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/9daac83d7f1441d391136eeb4ac66c83.mp4",
                     "altText": "Opera de Montreal",
                     "clientName": "Opéra de Montréal",
@@ -130,6 +174,10 @@
                     "projectSlug": "opera-de-montreal"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "video-capture-t0030.05seg-6446.png",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/cc42212cdccd48ce8eaa63fc3a95065a.mp4",
                     "altText": "Air Transat",
@@ -146,6 +194,10 @@
             "id": "grid-3",
             "projects": [
                 {
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
                     "imageFile": "VDL-2.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/6d6dd12cf1124c67b4e6119e7207b650.mp4",
                     "altText": "Ville de laval",
@@ -157,6 +209,10 @@
                     "projectSlug": "ville-de-laval"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Videotron_Gamer_Remastered_compressed.webp",
                     "altText": "Videotron Rivard Mailly Pressoir",
                     "clientName": "Vidéotron",
@@ -167,6 +223,10 @@
                     "projectSlug": "videotron-gamer"
                 },
                 {
+                    "tagText": {
+                        "fr": "Vidéo clip",
+                        "en": "Music video"
+                    },
                     "imageFile": "video-capture-t0000.00seg-3990.png",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/59d1801b3c8a42deb613d8c6aca4ceb2.mp4",
                     "altText": "King Melrose Fleur De Cactus",
@@ -178,6 +238,10 @@
                     "projectSlug": "king-melrose"
                 },
                 {
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
                     "imageFile": "video-capture-t0000.00seg-5766.png",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/5738e849e4524d5ba42c603ace200153.mp4",
                     "altText": "Cadwork Projects",
@@ -189,6 +253,10 @@
                     "projectSlug": "cadwork"
                 },
                 {
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
                     "imageFile": "video-capture-t0141.86seg-4212.png",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/b0f7ba608c69446e81888dddf76bccaa.mp4",
                     "altText": "Niche x Ste Justine",
@@ -205,6 +273,10 @@
             "id": "grid-4",
             "projects": [
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Malinki-Fizz-telecommunication-2_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/13ed68bebb3847ebb6af9ff59e9762e2.mp4",
                     "altText": "Fizz Telecommunication",
@@ -213,9 +285,13 @@
                     "width": 820,
                     "height": 461,
                     "containerClasses": "row-span-2 min-h-[356px]",
-                    "projectSlug": "fizz"
+                    "projectSlug": "fizz-qolab"
                 },
                 {
+                    "tagText": {
+                        "fr": "Vidéo clip",
+                        "en": "Music video"
+                    },
                     "imageFile": "Malinki-Simon-Lachance-Rosemarie-Records_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/49034a736f80476eb673561a26d62b7b.mp4",
                     "altText": "Simon Lachance Rosemarie Records",
@@ -224,9 +300,13 @@
                     "width": 820,
                     "height": 461,
                     "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
-                    "projectSlug": "simon-lachance"
+                    "projectSlug": "amadoue-moi"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "Malinki-Videotron-Rivard-Mailly-Pressoir_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/4a4156318b3e4133a0cdb5523e4ffef1.mp4",
                     "altText": "Videotron Rivard Mailly Pressoir",
@@ -238,6 +318,10 @@
                     "projectSlug": "videotron"
                 },
                 {
+                    "tagText": {
+                        "fr": "Vidéo clip",
+                        "en": "Music video"
+                    },
                     "imageFile": "Malinki-Freddie-Oliver-musique_694x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/9791c35aaf964f9d80bd36805cbf955f.mp4",
                     "altText": "Freddie Oliver",
@@ -249,6 +333,10 @@
                     "projectSlug": "freddie-oliver"
                 },
                 {
+                    "tagText": {
+                        "fr": "Publicité",
+                        "en": "Advertising"
+                    },
                     "imageFile": "3300_NICHE_portrait_4x5_compressed.webp",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/3251c6a3c507480f89592953e0a77c56.mov",
                     "altText": "TVA Sports Qolab",
@@ -260,6 +348,10 @@
                     "projectSlug": "tva-sports"
                 },
                 {
+                    "tagText": {
+                        "fr": "Vidéo clip",
+                        "en": "Music video"
+                    },
                     "imageFile": "Malinki-Junes-Kartel-Musik-musique_694x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/e9191485f2a845d5b306bfa2dda69ac1.mp4#t=2",
                     "altText": "Junes Kartel Musik",
@@ -271,6 +363,10 @@
                     "projectSlug": "junes"
                 },
                 {
+                    "tagText": {
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
+                    },
                     "imageFile": "Malinki-Opera-de-Montreal-3_820x.jpg",
                     "videoUrl": "https://cdn.shopify.com/videos/c/o/v/d408fa81a8d24f559440e3443f2be62d.mp4",
                     "altText": "Opera de Montreal",
@@ -279,7 +375,7 @@
                     "width": 820,
                     "height": 461,
                     "containerClasses": "min-h-[178px]",
-                    "projectSlug": "opera-de-montreal-2"
+                    "projectSlug": "pre-opera-24-25"
                 }
             ]
         }

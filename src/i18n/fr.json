@@ -6,7 +6,10 @@
             "subtext": "Essayez une des pages suivantes:"
         },
         "hero_video": {
-            "view_reel": "Voir le reel"
+            "view_reel": "Voir le reel",
+            "heading": "Des créations visuelles <br> à votre image",
+            "subtitle": "NOTRE CRÉATIVITÉ À VOTRE SERVICE",
+            "scroll_indicator_text": "Défiler"
         },
         "menu_icons": {
             "new": "NOUVEAU",
@@ -78,7 +81,10 @@
         }
     },
     "header": {
-        "contact_button": "Contactez-nous"
+        "contact_button": "Contactez-nous",
+        "menu_projects": "Nos projets",
+        "menu_services": "Services",
+        "menu_team": "Équipe"
     },
     "collections": {
         "general": {
@@ -647,6 +653,8 @@
         "additional_videos": "CONTENU ADDITIONNEL",
         "back_to_projects": "Retour aux projets",
         "not_found": "Projet non trouvé",
-        "main_video": "Vidéo principale"
+        "main_video": "Vidéo principale",
+        "client": "Client",
+        "agency": "Agence"
     }
 }
