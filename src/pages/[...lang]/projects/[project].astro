@@ -9,7 +9,7 @@ import Metadata from "../../../components/Metadata.astro";
 import { Image } from "astro:assets";
 
 // Import all BTS images dynamically
-const allBtsImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/**/bts/*.{png,jpg,jpeg}', { eager: true });
+const allBtsImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/**/bts/*.{png,jpg,jpeg,webp}', { eager: true });
 
 // Helper to get image by project slug and filename
 function getProjectImage(slug: string, filename: string) {
