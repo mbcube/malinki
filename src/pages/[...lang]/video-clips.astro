@@ -14,16 +14,25 @@ const t = useTranslations(currentLang);
 
 const pageTitle = t("video_clips.title");
 
+// Import GIF images
+import tenpasttwo from "../../images/video-clips/tenpasttwo.gif";
+import alanna_clip from "../../images/video-clips/alanna-clip.gif";
+import visrei from "../../images/video-clips/visrei.gif";
+import junes from "../../images/video-clips/junes.gif";
+import amadouemoi from "../../images/video-clips/amadouemoi.gif";
+import raymond_est_mort from "../../images/video-clips/raymond-est-mort.gif";
+import king_melrose from "../../images/video-clips/king-melrose.gif";
+
 // Page configuration
 const pageConfig = {
   gifs: [
-    "https://cdn.shopify.com/s/files/1/0599/0714/5937/files/TenPastTwo_1080p.gif?v=1722285971",
-    "https://cdn.shopify.com/s/files/1/0599/0714/5937/files/Alanna_Clip_1080p.gif?v=1721082172",
-    "https://cdn.shopify.com/s/files/1/0599/0714/5937/files/Visrei_gif.gif?v=1705526050",
-    "https://cdn.shopify.com/s/files/1/0599/0714/5937/files/Junes_GIF.gif?v=1708108221",
-    "https://cdn.shopify.com/s/files/1/0599/0714/5937/files/Amadouemoi_GIF.gif?v=1708108220",
-    "https://cdn.shopify.com/s/files/1/0599/0714/5937/files/RaymondEstMort_GIF.gif?v=1708108532",
-    "https://cdn.shopify.com/s/files/1/0599/0714/5937/files/KingMelrose_GIF.gif?v=1708118139",
+    tenpasttwo.src,
+    alanna_clip.src,
+    visrei.src,
+    junes.src,
+    amadouemoi.src,
+    raymond_est_mort.src,
+    king_melrose.src,
   ],
   links: {
     cta: `/${currentLang === "fr" ? "" : "en/"}contact`,

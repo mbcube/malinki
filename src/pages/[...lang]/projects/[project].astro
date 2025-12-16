@@ -6,6 +6,16 @@ import Footer from "../../../components/Footer.astro";
 import VideoPlayer from "../../../components/VideoPlayer.astro";
 import projectsData from "../../../data/projects.json";
 import Metadata from "../../../components/Metadata.astro";
+import { Image } from "astro:assets";
+
+// Import all BTS images dynamically
+const allBtsImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/**/bts/*.{png,jpg,jpeg}', { eager: true });
+
+// Helper to get image by project slug and filename
+function getProjectImage(slug: string, filename: string) {
+  const path = `/src/images/projects/${slug}/bts/${filename}`;
+  return allBtsImages[path]?.default;
+}
 
 export function getStaticPaths() {
   const paths = [];
@@ -153,32 +163,42 @@ const description = project.shortDescription[currentLang];
             <!-- Portrait Photos -->
             {project.behindTheScenes.portrait && project.behindTheScenes.portrait.length > 0 && (
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                {project.behindTheScenes.portrait.map((photo, index) => (
-                  <div class="aspect-[3/4] bg-white/30 rounded-lg overflow-hidden">
-                    <img
-                      src={photo}
-                      alt={`${title} - Behind the scenes portrait ${index + 1}`}
-                      class="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
+                {project.behindTheScenes.portrait.map((filename, index) => {
+                  const imageModule = getProjectImage(project.slug, filename);
+                  return imageModule ? (
+                    <div class="aspect-[3/4] bg-white/30 rounded-lg overflow-hidden">
+                      <Image
+                        src={imageModule}
+                        alt={`${title} - Behind the scenes portrait ${index + 1}`}
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        widths={[400, 600, 800]}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px"
+                      />
+                    </div>
+                  ) : null;
+                })}
               </div>
             )}
             
             <!-- Landscape Photos -->
             {project.behindTheScenes.landscape && project.behindTheScenes.landscape.length > 0 && (
               <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
-                {project.behindTheScenes.landscape.map((photo, index) => (
-                  <div class="aspect-video bg-white/30 rounded-lg overflow-hidden">
-                    <img
-                      src={photo}
-                      alt={`${title} - Behind the scenes landscape ${index + 1}`}
-                      class="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
+                {project.behindTheScenes.landscape.map((filename, index) => {
+                  const imageModule = getProjectImage(project.slug, filename);
+                  return imageModule ? (
+                    <div class="aspect-video bg-white/30 rounded-lg overflow-hidden">
+                      <Image
+                        src={imageModule}
+                        alt={`${title} - Behind the scenes landscape ${index + 1}`}
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        widths={[400, 800, 1200]}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  ) : null;
+                })}
               </div>
             )}
           </div>

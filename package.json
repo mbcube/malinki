@@ -9,9 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.948.0",
+    "@cloudflare/wrangler": "^1.21.0",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.3",
     "gsap": "^3.13.0",
     "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "wrangler": "^4.54.0"
   }
 }
