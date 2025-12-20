@@ -131,22 +131,38 @@ const description = project.shortDescription[currentLang];
             <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
               {t("project.additional_videos")}
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-              {project.additionalVideos.slice(0, 2).map((video) => (
-                <VideoPlayer
-                  url={video.url}
-                  type={video.type as "youtube" | "vimeo" | "mp4"}
-                  className={`${project.additionalVideos.length === 1 ? 'md:col-span-2 md:w-4/5 md:mx-auto' : ''}`}
-                />
-              ))}
-              {project.additionalVideos.slice(2).map((video) => (
+            {/* Check if videos are portrait or landscape (all will be same orientation) */}
+            {(project.additionalVideos[0] as any)?.isPortrait ? (
+              /* Portrait Videos Layout */
+              <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 sm:gap-12 md:gap-24 lg:gap-32">
+                {project.additionalVideos.map((video) => (
+                  <div class="aspect-3/4">
+                    <VideoPlayer
+                      url={video.url}
+                      type={video.type as "youtube" | "vimeo" | "mp4"}
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              /* Landscape Videos Layout (existing layout) */
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+                {project.additionalVideos.slice(0, 2).map((video) => (
                   <VideoPlayer
-                    className=" w-full md:col-span-2 md:w-1/2 md:mx-auto"
+                    url={video.url}
+                    type={video.type as "youtube" | "vimeo" | "mp4"}
+                    className={`${project.additionalVideos.length === 1 ? 'md:col-span-2 md:w-4/5 md:mx-auto' : ''}`}
+                  />
+                ))}
+                {project.additionalVideos.slice(2).map((video) => (
+                  <VideoPlayer
+                    className="w-full md:col-span-2 md:w-1/2 md:mx-auto"
                     url={video.url}
                     type={video.type as "youtube" | "vimeo" | "mp4"}
                   />
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
         )
       }
@@ -166,7 +182,7 @@ const description = project.shortDescription[currentLang];
                 {project.behindTheScenes.portrait.map((filename, index) => {
                   const imageModule = getProjectImage(project.slug, filename);
                   return imageModule ? (
-                    <div class="aspect-[3/4] bg-white/30 rounded-lg overflow-hidden">
+                    <div class="aspect-3/4 bg-white/30 rounded-lg overflow-hidden">
                       <Image
                         src={imageModule}
                         alt={`${title} - Behind the scenes portrait ${index + 1}`}

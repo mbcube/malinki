@@ -219,8 +219,7 @@
                     "agencyName": "Rivard Mailly Pressoir",
                     "width": 820,
                     "height": 461,
-                    "containerClasses": "row-span-2 min-h-[356px]",
-                    "projectSlug": "videotron-gamer"
+                    "containerClasses": "row-span-2 min-h-[356px]"
                 },
                 {
                     "tagText": {

@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "wrangler pages deploy dist"
+    "deploy": "wrangler pages deploy"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.948.0",

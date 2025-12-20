@@ -121,7 +121,8 @@
             "additionalVideos": [
                 {
                     "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cook-it/cook-it-additional-1.mp4",
-                    "type": "mp4"
+                    "type": "mp4",
+                    "isPortrait": false
                 }
             ],
             "behindTheScenes": {
@@ -1571,6 +1572,52 @@
             },
             "details": [],
             "additionalVideos": [],
+            "behindTheScenes": {
+                "portrait": [],
+                "landscape": []
+            }
+        },
+        {
+            "slug": "tva-sports",
+            "clientName": {
+                "fr": "TVA Sports",
+                "en": "TVA Sports"
+            },
+            "agencyName": {
+                "fr": "Qolab",
+                "en": "Qolab"
+            },
+            "title": {
+                "fr": "PUBLICITÉ TÉLÉ & WEB",
+                "en": "TV & Web Advertising"
+            },
+            "shortDescription": {
+                "fr": "Publicité produite pour Qolab dans le cadre de la campagne web et télé de TVA Sports. La production met en valeur l'intensité et la passion du sport à travers un contenu captivant et dynamique.",
+                "en": "Advertisement produced for Qolab as part of TVA Sports' web and TV campaign. The production highlights the intensity and passion of sports through captivating and dynamic content."
+            },
+            "mainVideo": {
+                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/tva-sports-grid.mov",
+                "type": "mp4",
+                "isPortrait": true
+            },
+            "details": [],
+            "additionalVideos": [
+                {
+                    "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Elaine_final_v06.mov",
+                    "type": "mp4",
+                    "isPortrait": true
+                },
+                {
+                    "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Marie-eve_final_v05.mov",
+                    "type": "mp4",
+                    "isPortrait": true
+                },
+                {
+                    "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Sofia_final_v05.mov",
+                    "type": "mp4",
+                    "isPortrait": true
+                }
+            ],
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
