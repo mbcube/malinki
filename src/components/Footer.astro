@@ -2,11 +2,13 @@
 import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
 import malinkiLogo from "../images/malinki-logo-c.png";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 // Get current language from Astro params
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
 const t = useTranslations(currentLang);
+const currentPath = Astro.url.pathname;
 
 // Inline settings (migrated from Shopify schema)
 const settings = {
@@ -35,7 +37,7 @@ const settings = {
       </a>
     </div>
 
-    <!-- Social Icon + Copyright -->
+    <!-- Social Icon + Language Switcher + Copyright -->
     <div
       class="flex flex-col gap-[32px] items-center lg:items-end justify-center"
     >
@@ -60,6 +62,11 @@ const settings = {
           </div>
         )
       }
+
+      <!-- Language Switcher -->
+      <div class="flex justify-center lg:justify-end">
+        <LanguageSwitcher client:load currentLang={currentLang} currentPath={currentPath} />
+      </div>
 
       <!-- Copyright Text -->
       <p
