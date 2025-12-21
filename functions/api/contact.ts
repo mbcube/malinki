@@ -41,7 +41,7 @@ export async function onRequestPost(context: any) {
             },
             body: JSON.stringify({
                 from: 'Malinki Contact <notifications@malinki.ca>',
-                to: 'mouad@mbcubeconsulting.ca',
+                to: env.CONTACT_EMAIL || 'info@malinki.ca',
                 reply_to: email,
                 subject: `New message from ${name}`,
                 html: `
