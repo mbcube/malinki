@@ -1,5 +1,6 @@
 ---
 import { useTranslations } from "../../i18n/utils";
+import ContactForm from "../../components/ContactForm";
 
 export function getStaticPaths() {
   return [
@@ -13,6 +14,28 @@ const currentLang = (lang || "fr") as "fr" | "en";
 const t = useTranslations(currentLang);
 
 const pageTitle = t("contact.title");
+
+// Props for ContactForm
+const formLabels = {
+  name: t("contact.name_label"),
+  email: t("contact.email_label"),
+  phone: t("contact.phone_label"),
+  message: t("contact.message_label"),
+  submit: t("contact.submit_button"),
+  submitting: t("contact.submitting_button"),
+};
+
+const formPlaceholders = {
+  name: t("contact.name_placeholder"),
+  email: t("contact.email_placeholder"),
+  phone: t("contact.phone_placeholder"),
+  message: t("contact.message_placeholder"),
+};
+
+const formMessages = {
+  success: t("contact.success_message"),
+  error: t("contact.error_message"),
+};
 
 import "../../styles/global.css";
 import Header from "../../components/Header.astro";
@@ -60,85 +83,12 @@ import Metadata from "../../components/Metadata.astro";
               {t("contact.form_title")}
             </h2>
 
-            <form class="space-y-6" id="contact-form">
-              <!-- Name -->
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-semibold text-[#083e44] mb-2"
-                >
-                  {t("contact.name_label")}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="w-full px-4 py-3 border-2 border-[#E6F5F7] rounded-lg focus:border-[#083e44] focus:outline-none transition-colors duration-200 text-[#083e44]"
-                  placeholder={t("contact.name_placeholder")}
-                />
-              </div>
-
-              <!-- Email -->
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-semibold text-[#083e44] mb-2"
-                >
-                  {t("contact.email_label")}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="w-full px-4 py-3 border-2 border-[#E6F5F7] rounded-lg focus:border-[#083e44] focus:outline-none transition-colors duration-200 text-[#083e44]"
-                  placeholder={t("contact.email_placeholder")}
-                />
-              </div>
-
-              <!-- Phone -->
-              <div>
-                <label
-                  for="phone"
-                  class="block text-sm font-semibold text-[#083e44] mb-2"
-                >
-                  {t("contact.phone_label")}
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  class="w-full px-4 py-3 border-2 border-[#E6F5F7] rounded-lg focus:border-[#083e44] focus:outline-none transition-colors duration-200 text-[#083e44]"
-                  placeholder={t("contact.phone_placeholder")}
-                />
-              </div>
-
-              <!-- Message -->
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-semibold text-[#083e44] mb-2"
-                >
-                  {t("contact.message_label")}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows="5"
-                  class="w-full px-4 py-3 border-2 border-[#E6F5F7] rounded-lg focus:border-[#083e44] focus:outline-none transition-colors duration-200 resize-none text-[#083e44]"
-                  placeholder={t("contact.message_placeholder")}></textarea>
-              </div>
-
-              <!-- Submit Button -->
-              <button
-                type="submit"
-                class="w-full bg-[#083e44] text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-[#0a4d56] transition-all duration-200 uppercase tracking-wide transform hover:scale-[1.02]"
-              >
-                {t("contact.submit_button")}
-              </button>
-            </form>
+            <ContactForm
+              client:load
+              labels={formLabels}
+              placeholders={formPlaceholders}
+              messages={formMessages}
+            />
           </div>
 
           <!-- Contact Info -->
@@ -149,7 +99,7 @@ import Metadata from "../../components/Metadata.astro";
             >
               <div class="flex items-start space-x-4">
                 <div
-                  class="flex-shrink-0 w-12 h-12 bg-[#083e44] rounded-full flex items-center justify-center"
+                  class="shrink-0 w-12 h-12 bg-[#083e44] rounded-full flex items-center justify-center"
                 >
                   <svg
                     class="w-6 h-6 text-white"
@@ -185,7 +135,7 @@ import Metadata from "../../components/Metadata.astro";
             >
               <div class="flex items-start space-x-4">
                 <div
-                  class="flex-shrink-0 w-12 h-12 bg-[#083e44] rounded-full flex items-center justify-center"
+                  class="shrink-0 w-12 h-12 bg-[#083e44] rounded-full flex items-center justify-center"
                 >
                   <svg
                     class="w-6 h-6 text-white"
@@ -221,7 +171,7 @@ import Metadata from "../../components/Metadata.astro";
             >
               <div class="flex items-start space-x-4">
                 <div
-                  class="flex-shrink-0 w-12 h-12 bg-[#083e44] rounded-full flex items-center justify-center"
+                  class="shrink-0 w-12 h-12 bg-[#083e44] rounded-full flex items-center justify-center"
                 >
                   <svg
                     class="w-6 h-6 text-white"
@@ -251,7 +201,7 @@ import Metadata from "../../components/Metadata.astro";
 
             <!-- CTA Box -->
             <div
-              class="bg-gradient-to-br from-[#083e44] to-[#0a4d56] rounded-2xl shadow-xl p-8 text-white"
+              class="bg-linear-to-br from-[#083e44] to-[#0a4d56] rounded-2xl shadow-xl p-8 text-white"
             >
               <h3 class="text-2xl font-bold mb-3">
                 {t("contact.cta_title")}
@@ -268,27 +218,3 @@ import Metadata from "../../components/Metadata.astro";
     <Footer />
   </body>
 </html>
-
-<script>
-  // Form submission handling (you can integrate with your backend)
-  document
-    .getElementById("contact-form")
-    ?.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // Get form data
-      const formData = new FormData(e.target as HTMLFormElement);
-      const data = Object.fromEntries(formData);
-
-      // Here you would typically send the data to your backend
-      console.log("Form submitted:", data);
-
-      // Show success message (you can customize this)
-      alert(
-        "Merci! Nous avons reçu votre message et nous vous contacterons bientôt."
-      );
-
-      // Reset form
-      (e.target as HTMLFormElement).reset();
-    });
-</script>

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
+import { TeamMemberAccordion } from "./TeamMemberAccordion";
 import andrewTchernilevskii from "../images/Andrew-Tchernilevskii.png";
 import miroslavDufresne from "../images/Miroslav-Dufresne_compressed.webp";
 import jeremyLeblond from "../images/Jeremy-Leblond.png";
@@ -14,18 +15,33 @@ const teamMembers = [
     id: "member_1",
     image: andrewTchernilevskii,
     hasSplitName: true,
+    url: "https://www.linkedin.com/in/andrew-tchernilevskii-102496113/"
   },
   {
     id: "member_2",
     image: miroslavDufresne,
     hasSplitName: false,
+    url: "https://www.linkedin.com/in/miroslav-dufresne-a5359863/"
   },
   {
     id: "member_3",
     image: jeremyLeblond,
     hasSplitName: true,
+    url: "https://www.linkedin.com/in/j%C3%A9r%C3%A9my-leblond-0ab6a7153/"
   },
 ];
+
+// Prepare data for React component
+const teamMembersForReact = teamMembers.map((member) => ({
+  id: member.id,
+  name: member.hasSplitName ? "" : t(`sections.team.${member.id}.name`),
+  nameLine1: member.hasSplitName ? t(`sections.team.${member.id}.name_line_1`) : undefined,
+  nameLine2: member.hasSplitName ? t(`sections.team.${member.id}.name_line_2`) : undefined,
+  role: t(`sections.team.${member.id}.role`),
+  imageUrl: member.image.src,
+  linkedinUrl: member.url,
+  hasSplitName: member.hasSplitName,
+}));
 ---
 
 <!-- Team Section -->
@@ -55,7 +71,7 @@ const teamMembers = [
 
       <!-- Desktop: Split Heading -->
       <h2
-        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] flex-shrink-0"
+        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] shrink-0"
       >
         {t("sections.team.heading_left")}
       </h2>
@@ -65,19 +81,29 @@ const teamMembers = [
         {t("sections.team.tagline")}
       </p>
       <h2
-        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] text-right flex-shrink-0"
+        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] text-right shrink-0"
       >
         {t("sections.team.heading_right")}
       </h2>
     </div>
 
-    <!-- Team Members List -->
-    <div class="flex flex-col w-full group">
+    <!-- Mobile: Accordion with LinkedIn Icons -->
+    <div class="lg:hidden">
+      <TeamMemberAccordion client:load members={teamMembersForReact} />
+    </div>
+
+    <!-- Desktop: Hover Effect with LinkedIn Links -->
+    <div class="hidden lg:flex lg:flex-col w-full group">
       {
         teamMembers.map((member) => (
-          <div class="team-member group/member border-[#083D45] border-[0px_0px_1px] border-solid py-8 transition-opacity duration-200 ease-in-out relative lg:group-hover:opacity-50 lg:hover:!opacity-100">
+          <a 
+            href={member.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="team-member group/member border-[#083D45] border-[0px_0px_1px] border-solid py-8 transition-opacity duration-200 ease-in-out relative group-hover:opacity-50 hover:opacity-100! block no-underline"
+          >
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-              <div class="team-member-header cursor-pointer lg:cursor-default flex flex-col gap-4 pl-4 transition-transform duration-200 ease-in-out lg:group-hover/member:translate-x-5">
+              <div class="team-member-header cursor-pointer flex flex-col gap-4 pl-4 transition-transform duration-200 ease-in-out group-hover/member:translate-x-5">
                 <h3 class="p-0 font-['Montserrat'] text-[24px] md:text-[32px] font-bold leading-none uppercase text-[#083D45]">
                   {member.hasSplitName ? (
                     <>
@@ -95,7 +121,7 @@ const teamMembers = [
               </div>
 
               <!-- Desktop Photo (Shows on Hover) -->
-              <div class="hidden lg:flex items-center justify-end pr-4 absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <div class="flex items-center justify-end pr-4 absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <Image
                   src={member.image}
                   alt={
@@ -103,90 +129,17 @@ const teamMembers = [
                       ? `${t(`sections.team.${member.id}.name_line_1`)} ${t(`sections.team.${member.id}.name_line_2`)}`
                       : t(`sections.team.${member.id}.name`)
                   }
-                  class="rounded-[32px] object-cover w-[384px] h-[480px] scale-0 lg:group-hover/member:scale-100 transition-transform duration-200 ease-in-out origin-center"
+                  class="rounded-[32px] object-cover w-[384px] h-[480px] scale-0 group-hover/member:scale-100 transition-transform duration-200 ease-in-out origin-center"
                   loading="lazy"
                   width={1152}
                   height={1440}
                 />
               </div>
             </div>
-
-            <!-- Mobile Photo (Accordion) -->
-            <div class="team-member-photo-mobile mt-4 max-h-0 overflow-hidden transition-all duration-200 ease-in-out lg:hidden">
-              <Image
-                src={member.image}
-                alt={
-                  member.hasSplitName
-                    ? `${t(`sections.team.${member.id}.name_line_1`)} ${t(`sections.team.${member.id}.name_line_2`)}`
-                    : t(`sections.team.${member.id}.name`)
-                }
-                class="w-full h-auto rounded-lg object-cover"
-                loading="lazy"
-                width={1152}
-                height={1440}
-              />
-            </div>
-          </div>
+          </a>
         ))
       }
     </div>
   </div>
 </section>
 
-<script>
-  // Mobile accordion with resize handling
-  function initAccordion() {
-    if (window.innerWidth < 1024) {
-      const teamMembers = document.querySelectorAll(".team-member");
-
-      teamMembers.forEach((member) => {
-        const header = member.querySelector(".team-member-header");
-        const photo = member.querySelector(
-          ".team-member-photo-mobile"
-        ) as HTMLElement;
-
-        if (header && photo) {
-          // Remove existing listeners to prevent duplicates if re-initialized
-          const newHeader = header.cloneNode(true);
-          header.parentNode?.replaceChild(newHeader, header);
-          
-          newHeader.addEventListener("click", function () {
-            const isExpanded = photo.classList.contains("active");
-
-            // Close all other accordions
-            document
-              .querySelectorAll(".team-member-photo-mobile")
-              .forEach((p) => {
-                p.classList.remove("active");
-                (p as HTMLElement).style.maxHeight = "0";
-              });
-
-            // Toggle current accordion
-            if (!isExpanded) {
-              photo.classList.add("active");
-              photo.style.maxHeight = "800px";
-            }
-          });
-        }
-      });
-    } else {
-        // Reset on desktop
-        document
-              .querySelectorAll(".team-member-photo-mobile")
-              .forEach((p) => {
-                p.classList.remove("active");
-                (p as HTMLElement).style.maxHeight = "0";
-              });
-    }
-  }
-
-  // Initialize on load
-  document.addEventListener("DOMContentLoaded", initAccordion);
-
-  // Re-initialize on resize
-  let resizeTimer: number;
-  window.addEventListener("resize", function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(initAccordion, 250);
-  });
-</script>
