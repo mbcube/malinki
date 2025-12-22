@@ -1,67 +1,48 @@
 ---
 import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
-import operaDeMontreal from "../images/opera-de-montreal.png";
-import cookIt from "../images/cook-it.png";
-import omy from "../images/omy.png";
-import quartierDesSpectacles from "../images/quartier-des-spectacles.png";
-import maddle from "../images/Maddle.png";
-import airTransat from "../images/Air-transat.png";
-import stHubert from "../images/St-Hubert.png";
-import keywordsStudios from "../images/keywords-studios.png";
-import laval from "../images/Laval.png";
-import veritas from "../images/Veritas.png";
-import meatAndProduce from "../images/Meat-and-produce.png";
-import maisonJeanLapointe from "../images/Maison-Jean-Lapointe.png";
-import bell from "../images/Bell.png";
-import niche from "../images/niche.png";
-import qolab from "../images/qolab.png";
+// SVG imports (raw path)
+import operaDeMontreal from "../images/logos/odm.svg?raw";
+// PNG imports (for Image component)
+import cookIt from "../images/logos/cook-it.svg?raw";
+import omy from "../images/logos/omy.svg?raw";
+import quartierDesSpectacles from "../images/logos/qds.svg?raw";
+import maddle from "../images/logos/Maddle.svg?raw";
+import airTransat from "../images/logos/transat.svg?raw";
+import stHubert from "../images/logos/st-hubert.svg?raw";
+import keywordsStudios from "../images/logos/keywords.svg?raw";
+import laval from "../images/logos/Laval.svg?raw";
+import veritas from "../images/logos/veritas.svg?raw";
+import meatAndProduce from "../images/logos/mnp.svg?raw";
+import maisonJeanLapointe from "../images/logos/mjl.svg?raw";
+import immobilia from "../images/logos/logo-pur-immobilia.png";
+import niche from "../images/logos/niche.svg?raw";
+import qolab from "../images/logos/qolab.svg?raw";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
 const t = useTranslations(currentLang);
 
-const logos = [
-  {
-    image: operaDeMontreal,
-    alt: "Opéra de Montréal",
-    width: 2592,
-    height: 768,
-  },
-  { image: cookIt, alt: "Cook it", width: 2352, height: 576 },
-  { image: omy, alt: "omy LAB", width: 2592, height: 768 },
-  {
-    image: quartierDesSpectacles,
-    alt: "Quartier des spectacles",
-    width: 2592,
-    height: 768,
-  },
-  { image: maddle, alt: "Maddle", width: 2856, height: 960 },
-  { image: airTransat, alt: "Air transat", width: 2196, height: 480 },
-  { image: stHubert, alt: "St-Hubert", width: 2520, height: 480 },
-  {
-    image: keywordsStudios,
-    alt: "Keywords Studios",
-    width: 2040,
-    height: 1152,
-  },
-  { image: laval, alt: "Laval", width: 1728, height: 1152 },
-  { image: veritas, alt: "Veritas", width: 2280, height: 576 },
-  {
-    image: meatAndProduce,
-    alt: "Meat & Produce",
-    width: 2148,
-    height: 768,
-  },
-  {
-    image: maisonJeanLapointe,
-    alt: "Maison Jean Lapointe",
-    width: 2388,
-    height: 768,
-  },
-  { image: bell, alt: "Bell", width: 888, height: 1152 },
-  { image: niche, alt: "niche", width: 2184, height: 576 },
-  { image: qolab, alt: "qolab", width: 1716, height: 672 },
+type Logo = {
+  alt: string;
+} & ({ image: ImageMetadata; svg?: never } | { svg: string; image?: never });
+
+const logos: Logo[] = [
+  { svg: operaDeMontreal, alt: "Opéra de Montréal" },
+  { svg: cookIt, alt: "Cook it" },
+  { svg: omy, alt: "omy LAB" },
+  { svg: quartierDesSpectacles, alt: "Quartier des spectacles" },
+  { svg: maddle, alt: "Maddle" },
+  { svg: airTransat, alt: "Air transat" },
+  { svg: stHubert, alt: "St-Hubert" },
+  { svg: keywordsStudios, alt: "Keywords Studios" },
+  { svg: laval, alt: "Laval" },
+  { svg: veritas, alt: "Veritas" },
+  { svg: meatAndProduce, alt: "Meat & Produce" },
+  { svg: maisonJeanLapointe, alt: "Maison Jean Lapointe" },
+  { image: immobilia, alt: "immobilia" },
+  { svg: niche, alt: "niche" },
+  { svg: qolab, alt: "qolab" },
 ];
 ---
 
@@ -83,14 +64,16 @@ const logos = [
       {
         logos.map((logo) => (
           <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)]">
-            <Image
-              src={logo.image}
-              alt={logo.alt}
-              loading="lazy"
-              width={logo.width}
-              height={logo.height}
-              class="max-w-full max-h-full object-contain"
-            />
+            {logo.svg ? (
+              <Fragment set:html={logo.svg} />
+            ) : (
+              <Image
+                src={logo.image!}
+                alt={logo.alt}
+                loading="lazy"
+                class="max-w-full max-h-full object-contain"
+              />
+            )}
           </div>
         ))
       }
