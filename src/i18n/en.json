@@ -590,7 +590,7 @@
             "heading_left": "Our",
             "heading_right": "team",
             "mobile_heading": "Our team",
-            "tagline": "Over 70 years of combined production experience!",
+            "tagline": "",
             "member_1": {
                 "name_line_1": "Andrew",
                 "name_line_2": "Tchernilevskii",
@@ -598,7 +598,7 @@
             },
             "member_2": {
                 "name": "Miroslav Dufresne",
-                "role": "Director of Photography & Technical Director"
+                "role": "Director of Photography & Photographer"
             },
             "member_3": {
                 "name_line_1": "Jérémy",
@@ -647,7 +647,8 @@
         "error_message": "Oops! Something went wrong. Please try again or contact us directly by email.",
         "email_title": "Email",
         "phone_title": "Phone",
-        "social_title": "Instagram",
+        "agence_title": "Agency",
+        "studio_title": "Studio",
         "cta_title": "Ready to Get Started?",
         "cta_text": "We typically respond within 24 hours. Let's discuss how we can help you!"
     },

@@ -26,13 +26,34 @@ import king_melrose from "../../images/video-clips/king-melrose.gif";
 // Page configuration
 const pageConfig = {
   gifs: [
-    tenpasttwo.src,
-    alanna_clip.src,
-    visrei.src,
-    junes.src,
-    amadouemoi.src,
-    raymond_est_mort.src,
-    king_melrose.src,
+    {
+      src: tenpasttwo.src,
+      projectSlug: "freddie-oliver",
+    },
+    {
+      src: alanna_clip.src,
+      projectSlug: "ecarlate",
+    },
+    {
+      src: visrei.src,
+      projectSlug: "ecarlate",
+    },
+    {
+      src: junes.src,
+      projectSlug: "junes",
+    },
+    {
+      src: amadouemoi.src,
+      projectSlug: "amadoue-moi",
+    },
+    {
+      src: raymond_est_mort.src,
+      projectSlug: "grand-heron",
+    },
+    {
+      src: king_melrose.src,
+      projectSlug: "king-melrose",
+    },
   ],
   links: {
     cta: `/${currentLang === "fr" ? "" : "en/"}contact`,
@@ -99,15 +120,18 @@ import Metadata from "../../components/Metadata.astro";
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
           >
             {
-              pageConfig.gifs.slice(0, 3).map((gifUrl, index) => (
-                <div class="aspect-square w-full">
+              pageConfig.gifs.slice(0, 3).map((gif, index) => (
+                <a
+                  href={`/projects/${gif.projectSlug}`}
+                  class="aspect-square w-full"
+                >
                   <img
-                    src={gifUrl}
+                    src={gif.src}
                     alt={t(`video_clips.gif_${index + 1}_alt`)}
                     class="w-full h-full rounded-lg object-cover"
                     loading="lazy"
                   />
-                </div>
+                </a>
               ))
             }
           </div>
@@ -117,15 +141,18 @@ import Metadata from "../../components/Metadata.astro";
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
           >
             {
-              pageConfig.gifs.slice(3, 7).map((gifUrl, index) => (
-                <div class="aspect-square w-full">
+              pageConfig.gifs.slice(3, 7).map((gif, index) => (
+                <a
+                  href={`/projects/${gif.projectSlug}`}
+                  class="aspect-square w-full"
+                >
                   <img
-                    src={gifUrl}
+                    src={gif.src}
                     alt={t(`video_clips.gif_${index + 4}_alt`)}
                     class="w-full h-full rounded-lg object-cover"
                     loading="lazy"
                   />
-                </div>
+                </a>
               ))
             }
           </div>
