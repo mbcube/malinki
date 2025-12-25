@@ -31,7 +31,8 @@ export default function LanguageSwitcher({
       }
     }
 
-    window.location.href = newPath;
+    // Add #footer hash to preserve scroll position at footer
+    window.location.href = `${newPath}#footer`;
   };
 
   return (

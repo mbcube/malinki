@@ -17,6 +17,7 @@ const settings = {
 ---
 
 <footer
+  id="footer"
   class="flex-shrink-0 bg-[#083D45]! box-border p-[32px] w-full block!"
   data-section-type="footer-template"
 >
@@ -65,7 +66,11 @@ const settings = {
 
       <!-- Language Switcher -->
       <div class="flex justify-center lg:justify-end">
-        <LanguageSwitcher client:load currentLang={currentLang} currentPath={currentPath} />
+        <LanguageSwitcher
+          client:load
+          currentLang={currentLang}
+          currentPath={currentPath}
+        />
       </div>
 
       <!-- Copyright Text -->
