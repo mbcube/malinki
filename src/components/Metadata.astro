@@ -19,6 +19,11 @@ const ogImageUrl = new URL(ogImage.src, siteUrl).href;
 <meta charset="utf-8" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="viewport" content="width=device-width" />
+
+<!-- Preload critical fonts to prevent FOUT -->
+<link rel="preload" href="/fonts/Montserrat-Medium.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="/fonts/Montserrat-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="/fonts/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
 <meta
