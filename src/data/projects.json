@@ -21,87 +21,31 @@
             "details": [
                 {
                     "label": {
-                        "fr": "Clients",
-                        "en": "Clients"
-                    },
-                    "value": "Pelra Azondekon (asterX)\nAndrée-Anne Gauthier (Qolab)\nLaurence Vézina (Qolab)"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Réalisation",
+                        "fr": "Réalisateur",
                         "en": "Director"
                     },
                     "value": "Philippe Lupien"
                 },
                 {
                     "label": {
-                        "fr": "DOP",
-                        "en": "DOP"
+                        "fr": "Directeur Photo",
+                        "en": "Director of Photography"
                     },
-                    "value": "Thomas Leblanc-Murray"
+                    "value": "Jeremie Boivin"
                 },
                 {
                     "label": {
-                        "fr": "Opérateur Caméra 1",
-                        "en": "Camera Operator 1"
+                        "fr": "Producteur Exécutif",
+                        "en": "Executive Producer"
                     },
-                    "value": "Miroslav Dufresne"
+                    "value": "Andrew Tchernilevskii"
                 },
                 {
                     "label": {
-                        "fr": "Opérateur Caméra 2",
-                        "en": "Camera Operator 2"
+                        "fr": "Productrice",
+                        "en": "Producer"
                     },
-                    "value": "François Haché"
-                },
-                {
-                    "label": {
-                        "fr": "Preneur de son",
-                        "en": "Sound Recordist"
-                    },
-                    "value": "Yohan Boudreault"
-                },
-                {
-                    "label": {
-                        "fr": "Éclairagiste 1",
-                        "en": "Gaffer 1"
-                    },
-                    "value": "Tom Halley"
-                },
-                {
-                    "label": {
-                        "fr": "Machino 1",
-                        "en": "Grip 1"
-                    },
-                    "value": "Hugo Klopp"
-                },
-                {
-                    "label": {
-                        "fr": "Machino 2",
-                        "en": "Grip 2"
-                    },
-                    "value": "Maxime Seguela"
-                },
-                {
-                    "label": {
-                        "fr": "Mixage sonore",
-                        "en": "Sound Mixing"
-                    },
-                    "value": "Alexey Fominskyi"
-                },
-                {
-                    "label": {
-                        "fr": "Coordinateur de production",
-                        "en": "Production Coordinator"
-                    },
-                    "value": "Jérémy Leblond"
+                    "value": "Érika Bellehumeur"
                 },
                 {
                     "label": {
@@ -112,7 +56,35 @@
                 },
                 {
                     "label": {
-                        "fr": "Mixage Sonore",
+                        "fr": "Chef Machiniste",
+                        "en": "Key Grip"
+                    },
+                    "value": "Stéphane Klopp"
+                },
+                {
+                    "label": {
+                        "fr": "Chef Éclairagiste",
+                        "en": "Gaffer"
+                    },
+                    "value": "Nico Tomassini"
+                },
+                {
+                    "label": {
+                        "fr": "Monteur offline",
+                        "en": "Offline Editor"
+                    },
+                    "value": "Marc André Côté & Simon Gilbert"
+                },
+                {
+                    "label": {
+                        "fr": "Coloriste",
+                        "en": "Colorist"
+                    },
+                    "value": "Béatrice Tremblay (Outpost MTL)"
+                },
+                {
+                    "label": {
+                        "fr": "Mixage sonore",
                         "en": "Sound Mixing"
                     },
                     "value": "François Del Fante (Reservoir Audio)"
@@ -238,13 +210,6 @@
                         "en": "Electrician"
                     },
                     "value": "Vincent McDonald"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Marketing",
-                        "en": "Chief Marketing Officer"
-                    },
-                    "value": "Laurence Gagnon Beaudoin"
                 },
                 {
                     "label": {
@@ -382,7 +347,7 @@
                         "fr": "Réalisation",
                         "en": "Director"
                     },
-                    "value": "Miroslav Dufresne"
+                    "value": "Andrew Tchernilevskii"
                 },
                 {
                     "label": {
@@ -839,7 +804,29 @@
                 "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-heron/grand-heron-main.mp4",
                 "type": "mp4"
             },
-            "details": [],
+            "details": [
+                {
+                    "label": {
+                        "fr": "Produit par",
+                        "en": "Produced by"
+                    },
+                    "value": "Malinki"
+                },
+                {
+                    "label": {
+                        "fr": "Réalisateur",
+                        "en": "Director"
+                    },
+                    "value": "Philippe Lupien"
+                },
+                {
+                    "label": {
+                        "fr": "Directeur photo",
+                        "en": "Director of Photography"
+                    },
+                    "value": "Thomas Leblanc Murray"
+                }
+            ],
             "additionalVideos": [],
             "behindTheScenes": {
                 "portrait": [],

@@ -65,14 +65,14 @@ export default function LanguageSwitcher({
         <ToggleGroupItem
           value="fr"
           aria-label="Français"
-          className="text-white! border-white hover:bg-white/10 hover:text-white! data-[state=on]:bg-white data-[state=on]:text-[#083D45]! font-semibold text-sm uppercase min-w-10"
+          className="text-white! border-white hover:bg-white/10 hover:text-white! data-[state=on]:bg-white data-[state=on]:text-[#083D45]! font-semibold text-sm uppercase min-w-10 max-h-6"
         >
           fr
         </ToggleGroupItem>
         <ToggleGroupItem
           value="en"
           aria-label="English"
-          className="text-white! border-white hover:bg-white/10 hover:text-white! data-[state=on]:bg-white data-[state=on]:text-[#083D45]! font-semibold text-sm uppercase min-w-10"
+          className="text-white! border-white hover:bg-white/10 hover:text-white! data-[state=on]:bg-white data-[state=on]:text-[#083D45]! font-semibold text-sm uppercase min-w-10 max-h-6"
         >
           en
         </ToggleGroupItem>

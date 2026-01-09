@@ -131,7 +131,7 @@
                 {
                     "tagText": {
                         "fr": "Vidéoclip",
-                        "en": "Music video"
+                        "en": "Videoclip"
                     },
                     "imageFile": "Malinki-Grand-Heron-musique_820x.jpg",
                     "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-heron/grand-heron-grid.mp4#t=5",
@@ -224,7 +224,7 @@
                 {
                     "tagText": {
                         "fr": "Vidéoclip",
-                        "en": "Music video"
+                        "en": "Videoclip"
                     },
                     "imageFile": "video-capture-t0000.00seg-3990.png",
                     "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/king-melrose/king-melrose-grid.mp4",
@@ -289,7 +289,7 @@
                 {
                     "tagText": {
                         "fr": "Vidéoclip",
-                        "en": "Music video"
+                        "en": "Videoclip"
                     },
                     "imageFile": "Malinki-Simon-Lachance-Rosemarie-Records_820x.jpg",
                     "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/amadoue-moi/amadoue-moi-grid.mp4",
@@ -319,7 +319,7 @@
                 {
                     "tagText": {
                         "fr": "Vidéoclip",
-                        "en": "Music video"
+                        "en": "Videoclip"
                     },
                     "imageFile": "Malinki-Freddie-Oliver-musique_694x.jpg",
                     "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/freddie-oliver/freddie-oliver-grid.mp4",
@@ -333,8 +333,8 @@
                 },
                 {
                     "tagText": {
-                        "fr": "Publicité",
-                        "en": "Advertising"
+                        "fr": "Contenu de marque",
+                        "en": "Branded content"
                     },
                     "imageFile": "3300_NICHE_portrait_4x5_compressed.webp",
                     "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/tva-sports-grid.mov",
@@ -349,7 +349,7 @@
                 {
                     "tagText": {
                         "fr": "Vidéoclip",
-                        "en": "Music video"
+                        "en": "Videoclip"
                     },
                     "imageFile": "Malinki-Junes-Kartel-Musik-musique_694x.jpg",
                     "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/junes/junes-grid.mp4#t=2",

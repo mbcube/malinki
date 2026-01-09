@@ -2,13 +2,17 @@
 import { Image } from "astro:assets";
 import { useTranslations } from "../i18n/utils";
 import malinkiLogo from "../images/malinki-logo-c.png";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface Props {
   lang: "fr" | "en";
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const currentLang = (lang || "fr") as "fr" | "en";
+const currentPath = Astro.url.pathname;
+
+const t = useTranslations(currentLang);
 
 // Inline settings as requested
 const settings = {
@@ -35,30 +39,32 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
 >
   <!-- Desktop & Mobile Navbar -->
   <nav
-    class="bg-[#083D45] flex! flex-row items-center justify-between px-8 py-3 relative w-full transition-all duration-300 z-50"
+    class="bg-[#083D45] flex! flex-row items-center px-8 py-3 relative w-full transition-all duration-300 z-50"
     data-header-nav
   >
-    <!-- Logo -->
-    <div
-      class="flex flex-col items-start shrink-0 md:w-[172px] md:h-[32px] w-[129px] h-[24px] transition-all duration-300"
-      data-logo-container
-    >
-      <a
-        href={lang === "en" ? "/en" : "/"}
-        class="block w-full h-full relative"
+    <!-- Left Section - Logo -->
+    <div class="flex-1 flex justify-start">
+      <div
+        class="flex flex-col items-start shrink-0 md:w-[172px] md:h-[32px] w-[129px] h-[24px] transition-all duration-300"
+        data-logo-container
       >
-        <Image
-          src={settings.logo}
-          alt="Malinki"
-          width={1032}
-          height={192}
-          class="h-full w-full object-contain"
-        />
-      </a>
+        <a
+          href={lang === "en" ? "/en" : "/"}
+          class="block w-full h-full relative"
+        >
+          <Image
+            src={settings.logo}
+            alt="Malinki"
+            width={1032}
+            height={192}
+            class="h-full w-full object-contain"
+          />
+        </a>
+      </div>
     </div>
 
-    <!-- Desktop Navigation Links -->
-    <div class="hidden md:flex gap-4 items-center">
+    <!-- Center Section - Desktop Navigation Links -->
+    <div class="hidden md:flex gap-4 items-center justify-center">
       {
         menuLinks.map((link) => (
           <div class="flex items-center justify-center p-1">
@@ -73,36 +79,45 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
       }
     </div>
 
-    <!-- Contact Button (Desktop) -->
-    <div class="hidden md:block">
-      <a
-        href={contactUrl}
-        class="bg-white flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
-      >
-        {t("header.contact_button")}
-      </a>
-    </div>
+    <!-- Right Section - Controls -->
+    <div class="flex-1 flex items-center justify-end gap-4">
+      <LanguageSwitcher
+        client:load
+        currentLang={currentLang}
+        currentPath={currentPath}
+      />
 
-    <!-- Mobile/Tablet Menu Toggle -->
-    <button
-      type="button"
-      class="md:hidden text-white p-2"
-      aria-label="Open menu"
-      data-mobile-menu-toggle
-    >
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+      <!-- Contact Button (Desktop) -->
+      <div class="hidden md:block">
+        <a
+          href={contactUrl}
+          class="bg-white flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
+        >
+          {t("header.contact_button")}
+        </a>
+      </div>
+
+      <!-- Mobile/Tablet Menu Toggle -->
+      <button
+        type="button"
+        class="md:hidden text-white p-2"
+        aria-label="Open menu"
+        data-mobile-menu-toggle
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
   </nav>
 
   <!-- Mobile/Tablet Menu (Hidden by default) -->
