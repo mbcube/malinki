@@ -21,9 +21,27 @@ const ogImageUrl = new URL(ogImage.src, siteUrl).href;
 <meta name="viewport" content="width=device-width" />
 
 <!-- Preload critical fonts to prevent FOUT -->
-<link rel="preload" href="/fonts/Montserrat-Medium.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="preload" href="/fonts/Montserrat-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="preload" href="/fonts/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin />
+<link
+  rel="preload"
+  href="/fonts/Montserrat-Medium.ttf"
+  as="font"
+  type="font/ttf"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Montserrat-SemiBold.ttf"
+  as="font"
+  type="font/ttf"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Montserrat-Bold.ttf"
+  as="font"
+  type="font/ttf"
+  crossorigin
+/>
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
 <meta
@@ -53,3 +71,19 @@ const ogImageUrl = new URL(ogImage.src, siteUrl).href;
   content="Agence de production MALINKI - Production de vidéo créative, de publicités, contenu de marque, contenu vertical et vidéoclips."
 />
 <meta name="twitter:image" content={ogImageUrl} />
+
+<!-- Restore scroll position after language switch -->
+<script is:inline>
+  // Restore scroll position if saved from language switch
+  (function () {
+    const savedScrollPosition = sessionStorage.getItem("scrollPosition");
+    if (savedScrollPosition !== null) {
+      // Wait for page to load, then restore scroll position
+      window.addEventListener("load", function () {
+        window.scrollTo(0, parseInt(savedScrollPosition, 10));
+        // Clear the saved position
+        sessionStorage.removeItem("scrollPosition");
+      });
+    }
+  })();
+</script>

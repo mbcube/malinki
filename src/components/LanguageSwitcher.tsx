@@ -31,8 +31,11 @@ export default function LanguageSwitcher({
       }
     }
 
-    // Add #footer hash to preserve scroll position at footer
-    window.location.href = `${newPath}#footer`;
+    // Save current scroll position before redirecting
+    sessionStorage.setItem("scrollPosition", window.scrollY.toString());
+
+    // Navigate to new language page
+    window.location.href = newPath;
   };
 
   return (
