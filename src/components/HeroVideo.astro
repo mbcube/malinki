@@ -8,8 +8,10 @@ const t = useTranslations(currentLang);
 
 // Inline settings (migrated from Shopify schema)
 const settings = {
-  video_url:
+  video_url_desktop:
     "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/hero/hero-video.mp4",
+  video_url_mobile:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/hero/malinki_demo_reel_portrait.mp4",
   reel_link: "https://vimeo.com/912326021",
   heading: t("general.hero_video.heading"),
   subtitle: t("general.hero_video.subtitle"),
@@ -39,8 +41,10 @@ const settings = {
         muted
         playsinline
         data-hero-video
+        data-video-desktop={settings.video_url_desktop}
+        data-video-mobile={settings.video_url_mobile}
       >
-        <source src={settings.video_url} type="video/mp4" />
+        <source src={settings.video_url_desktop} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -148,6 +152,37 @@ const settings = {
 
   document.addEventListener("DOMContentLoaded", function () {
     let resizeTimeout: number;
+
+    // Function to update video source based on screen size
+    function updateVideoSource() {
+      const video = document.querySelector(
+        "[data-hero-video]"
+      ) as HTMLVideoElement;
+      if (!video) return;
+
+      const isMobile = window.innerWidth <= 640;
+      const desktopUrl = video.dataset.videoDesktop;
+      const mobileUrl = video.dataset.videoMobile;
+
+      if (!desktopUrl || !mobileUrl) return;
+
+      const currentSrc = video.querySelector("source")?.src;
+      const targetUrl = isMobile ? mobileUrl : desktopUrl;
+
+      // Only update if the source needs to change
+      if (currentSrc && !currentSrc.endsWith(targetUrl.split("/").pop()!)) {
+        const currentTime = video.currentTime;
+        const source = video.querySelector("source");
+        if (source) {
+          source.src = targetUrl;
+          video.load();
+          video.currentTime = currentTime;
+          video.play().catch(() => {
+            // Video play was prevented, likely due to autoplay policies
+          });
+        }
+      }
+    }
 
     // Initialize hero video animation
     function initHeroVideoAnimation() {
@@ -283,12 +318,14 @@ const settings = {
     }
 
     // Initialize on page load
+    updateVideoSource();
     initHeroVideoAnimation();
 
     // Debounced resize handler to reinitialize animations
     window.addEventListener("resize", function () {
       clearTimeout(resizeTimeout);
       resizeTimeout = window.setTimeout(function () {
+        updateVideoSource();
         initHeroVideoAnimation();
       }, 250); // Wait 250ms after resize stops before reinitializing
     });
