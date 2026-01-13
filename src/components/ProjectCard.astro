@@ -88,8 +88,10 @@ const {
 } = Astro.props;
 
 // Build project URL with language support
-const projectUrl = projectSlug 
-  ? (lang === "en" ? `/en/projects/${projectSlug}` : `/projects/${projectSlug}`)
+const projectUrl = projectSlug
+  ? lang === "en"
+    ? `/en/projects/${projectSlug}`
+    : `/projects/${projectSlug}`
   : null;
 
 const imageSrc = imageMap[imageFile];
@@ -103,44 +105,47 @@ const posterImage = imageSrc
 // Remove time fragment from video URL to preserve poster image
 // The JavaScript will parse the original URL from data attribute
 const cleanVideoUrl = videoUrl ? videoUrl.split("#")[0] : null;
+
+// Common container classes
+const containerClass = `group relative overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[48px] cursor-pointer ${containerClasses}`;
+
+// Define wrapper element
+const WrapperElement = projectUrl ? "a" : "div";
+const wrapperProps = projectUrl
+  ? { href: projectUrl, class: `${containerClass} block` }
+  : { class: containerClass };
 ---
 
 <!-- ProjectCard Component -->
-{
-  projectUrl ? (
-    <a
-      href={projectUrl}
-      class={`group relative overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[48px] cursor-pointer block ${containerClasses}`}
-      data-project-card
-    >
-      {
-        cleanVideoUrl ? (
-          <video
-            class="w-full h-full object-fill transition-transform duration-300 group-hover:scale-105 block z-10 aspect-auto"
-            style={`aspect-ratio: ${width} / ${height};`}
-            poster={posterImage?.src}
-            preload="metadata"
-            muted
-            loop
-            playsinline
-            width={width}
-            height={height}
-            data-video-hover
-            data-video-url={videoUrl}
-          >
-            <source src={cleanVideoUrl} type="video/mp4" />
-          </video>
-        ) : imageSrc ? (
-          <Image
-            src={imageSrc}
-            alt={altText}
-            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 z-20"
-            width={scaledWidth}
-            height={scaledHeight}
-            loading="lazy"
-          />
-        ) : null
-      }
+<WrapperElement {...wrapperProps} data-project-card>
+  {
+    cleanVideoUrl ? (
+      <video
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 block z-10 aspect-auto"
+        style={`aspect-ratio: ${width} / ${height};`}
+        poster={posterImage?.src}
+        preload="metadata"
+        muted
+        loop
+        playsinline
+        width={width}
+        height={height}
+        data-video-hover
+        data-video-url={videoUrl}
+      >
+        <source src={cleanVideoUrl} type="video/mp4" />
+      </video>
+    ) : imageSrc ? (
+      <Image
+        src={imageSrc}
+        alt={altText}
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 z-20"
+        width={scaledWidth}
+        height={scaledHeight}
+        loading="lazy"
+      />
+    ) : null
+  }
 
   <!-- Overlay content (visible on hover) -->
   <div
@@ -153,8 +158,7 @@ const cleanVideoUrl = videoUrl ? videoUrl.split("#")[0] : null;
       <p
         class="font-['Montserrat'] font-bold text-[16px] text-[#083d45] uppercase leading-none m-0"
       >
- 
-         {tagText?.[lang]}
+        {tagText?.[lang]}
       </p>
     </div>
 
@@ -176,74 +180,4 @@ const cleanVideoUrl = videoUrl ? videoUrl.split("#")[0] : null;
       </p>
     </div>
   </div>
-    </a>
-  ) : (
-    <div
-      class={`group relative overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[48px] cursor-pointer ${containerClasses}`}
-      data-project-card
-    >
-      {
-        cleanVideoUrl ? (
-          <video
-            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 block z-10"
-            style={`aspect-ratio: ${width} / ${height};`}
-            poster={posterImage?.src}
-            preload="metadata"
-            muted
-            loop
-            playsinline
-            width={width}
-            height={height}
-            data-video-hover
-            data-video-url={videoUrl}
-          >
-            <source src={cleanVideoUrl} type="video/mp4" />
-          </video>
-        ) : imageSrc ? (
-          <Image
-            src={imageSrc}
-            alt={altText}
-            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 z-20"
-            width={scaledWidth}
-            height={scaledHeight}
-            loading="lazy"
-          />
-        ) : null
-      }
-
-      <!-- Overlay content (visible on hover) -->
-      <div
-        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      >
-        <!-- Tag at top left -->
-        <div
-          class="absolute top-6 left-6 bg-white rounded-[32px] px-3 py-3 flex items-center justify-center"
-        >
-          <p
-            class="font-['Montserrat'] font-bold text-[16px] text-[#083d45] uppercase leading-none m-0"
-          >
-         {tagText?.[lang]}
-        </p>
-        </div>
-
-        <!-- Bottom gradient overlay -->
-        <div
-          class="absolute bottom-0 left-0 right-0 h-[172px] bg-gradient-to-t from-[rgba(1,12,18,0.7)] via-[rgba(1,12,18,0.4)] to-transparent"
-        >
-        </div>
-
-        <!-- Client and agency info at bottom left -->
-        <div class="absolute bottom-6 left-6 flex flex-col gap-2 text-white">
-          <p
-            class="font-['Montserrat'] font-bold text-[24px] md:text-[32px] uppercase leading-none"
-          >
-            {clientName}
-          </p>
-          <p class="font-['Montserrat'] font-medium text-[16px] leading-[1.2]">
-            {agencyName}
-          </p>
-        </div>
-      </div>
-    </div>
-  )
-}
+</WrapperElement>
