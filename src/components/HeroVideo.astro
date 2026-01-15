@@ -12,6 +12,10 @@ const settings = {
     "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/hero/hero-video.mp4",
   video_url_mobile:
     "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/hero/malinki_demo_reel_portrait.mp4",
+  poster_desktop:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/hero/hero-video-poster.jpg",
+  poster_mobile:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/hero/hero-video-poster-mobile.jpg",
   reel_link: "https://vimeo.com/912326021",
   heading: t("general.hero_video.heading"),
   subtitle: t("general.hero_video.subtitle"),
@@ -40,9 +44,13 @@ const settings = {
         loop
         muted
         playsinline
+        preload="auto"
+        poster={settings.poster_desktop}
         data-hero-video
         data-video-desktop={settings.video_url_desktop}
         data-video-mobile={settings.video_url_mobile}
+        data-poster-desktop={settings.poster_desktop}
+        data-poster-mobile={settings.poster_mobile}
       >
         <source src={settings.video_url_desktop} type="video/mp4" />
         Your browser does not support the video tag.
@@ -163,18 +171,22 @@ const settings = {
       const isMobile = window.innerWidth <= 640;
       const desktopUrl = video.dataset.videoDesktop;
       const mobileUrl = video.dataset.videoMobile;
+      const desktopPoster = video.dataset.posterDesktop;
+      const mobilePoster = video.dataset.posterMobile;
 
       if (!desktopUrl || !mobileUrl) return;
 
       const currentSrc = video.querySelector("source")?.src;
       const targetUrl = isMobile ? mobileUrl : desktopUrl;
+      const targetPoster = isMobile ? mobilePoster : desktopPoster;
 
       // Only update if the source needs to change
       if (currentSrc && !currentSrc.endsWith(targetUrl.split("/").pop()!)) {
         const currentTime = video.currentTime;
         const source = video.querySelector("source");
-        if (source) {
+        if (source && targetPoster) {
           source.src = targetUrl;
+          video.poster = targetPoster;
           video.load();
           video.currentTime = currentTime;
           video.play().catch(() => {
