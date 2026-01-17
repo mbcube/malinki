@@ -27,10 +27,14 @@ let videoId = "";
 
 if (type === "youtube") {
   videoId = getYouTubeId(url) || "";
-  embedUrl = `https://www.youtube.com/embed/${videoId}`;
+  const autoplayParams = autoplay
+    ? "&autoplay=1&mute=1&loop=1&playlist=" + videoId
+    : "";
+  embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0${autoplayParams}`;
 } else if (type === "vimeo") {
   videoId = getVimeoId(url) || "";
-  embedUrl = `https://player.vimeo.com/video/${videoId}`;
+  const autoplayParams = autoplay ? "&autoplay=1&muted=1&loop=1" : "";
+  embedUrl = `https://player.vimeo.com/video/${videoId}?${autoplayParams}`;
 }
 ---
 
@@ -42,6 +46,9 @@ if (type === "youtube") {
         class="w-full h-auto rounded-lg"
         preload="metadata"
         autoplay={autoplay}
+        muted={autoplay}
+        loop={autoplay}
+        playsinline
       >
         <source src={url} type="video/mp4" />
         Your browser does not support the video tag.
