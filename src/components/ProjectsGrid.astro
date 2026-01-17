@@ -138,11 +138,11 @@ const { grids } = projectsGrid;
       let scrollTimeout: number | null = null;
       let currentlyPlayingVideo: HTMLVideoElement | null = null;
 
-      // Set up IntersectionObserver for 100% visibility tracking
+      // Set up IntersectionObserver for 80% visibility tracking
       const observerOptions = {
         root: null,
         rootMargin: "0px",
-        threshold: 1.0, // 100% visibility required
+        threshold: 0.8, // 80% visibility required
       };
 
       const observer = new IntersectionObserver((entries) => {
@@ -152,7 +152,7 @@ const { grids } = projectsGrid;
 
           if (data) {
             data.isVisible =
-              entry.isIntersecting && entry.intersectionRatio >= 1.0;
+              entry.isIntersecting && entry.intersectionRatio >= 0.8;
 
             // If video is no longer visible and it's playing, pause it
             if (!data.isVisible && video === currentlyPlayingVideo) {
