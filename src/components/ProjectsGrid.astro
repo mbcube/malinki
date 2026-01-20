@@ -48,10 +48,8 @@ const { grids } = projectsGrid;
 
     // Mobile detection utility
     const isMobile = () => {
-      const hasTouchScreen =
-        "ontouchstart" in window || navigator.maxTouchPoints > 0;
-      const isSmallScreen = window.innerWidth < 768;
-      return hasTouchScreen && isSmallScreen;
+      const isSmallScreen = window.innerWidth < 640;
+      return isSmallScreen;
     };
 
     // Video data map to store start times and state
