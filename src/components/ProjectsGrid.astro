@@ -160,6 +160,11 @@ const { grids } = projectsGrid;
               video.currentTime = data.startTime;
               video.load();
               currentlyPlayingVideo = null;
+              // Show overlay again when video pauses on mobile
+              const overlay = data.card.querySelector("[data-overlay]");
+              if (overlay) {
+                overlay.classList.remove("!opacity-0");
+              }
             }
           }
         });
@@ -211,6 +216,11 @@ const { grids } = projectsGrid;
             currentlyPlayingVideo.pause();
             currentlyPlayingVideo.currentTime = currentData.startTime;
             currentlyPlayingVideo.load();
+            // Show overlay again when video pauses on mobile
+            const overlay = currentData.card.querySelector("[data-overlay]");
+            if (overlay) {
+              overlay.classList.remove("!opacity-0");
+            }
           }
         }
 
@@ -224,6 +234,11 @@ const { grids } = projectsGrid;
             playPromise
               .then(() => {
                 currentlyPlayingVideo = targetVideo;
+                // Hide overlay when video plays on mobile
+                const overlay = targetData.card.querySelector("[data-overlay]");
+                if (overlay) {
+                  overlay.classList.add("!opacity-0");
+                }
               })
               .catch((error) => {
                 console.log("Video autoplay prevented:", error);
