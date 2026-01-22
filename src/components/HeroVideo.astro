@@ -235,6 +235,13 @@ const settings = {
       hasAnimated = true;
       isAnimating = true;
 
+      // Lock scrolling during animation to ensure user sees complete animation
+      const scrollY = window.scrollY;
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
       const isMobile = windowWidth < 640;
@@ -250,20 +257,27 @@ const settings = {
         const tl = gsap.timeline({
           onComplete: () => {
             isAnimating = false;
+            
+            // Unlock scrolling after animation completes
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollY);
           },
         });
 
         // Animate video wrapper
         tl.to(videoWrapper, {
           height: targetHeight,
-          duration: 1,
+          duration: 0.7,
           ease: "power2.out",
         }, 0);
 
         // Fade in heading
         tl.to(heading, {
           opacity: 1,
-          duration: 1,
+          duration: 0.7,
           ease: "linear",
         }, 0);
 
@@ -311,6 +325,13 @@ const settings = {
         const tl = gsap.timeline({
           onComplete: () => {
             isAnimating = false;
+            
+            // Unlock scrolling after animation completes
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollY);
           },
         });
 
@@ -318,14 +339,14 @@ const settings = {
         tl.to(videoWrapper, {
           width: targetWidth,
           height: targetHeight,
-          duration: 1,
+          duration: 0.7,
           ease: "power2.out",
         }, 0);
 
         // Fade in heading
         tl.to(heading, {
           opacity: 1,
-          duration: 1,
+          duration: 0.7,
           ease: "linear",
         }, 0);
 
