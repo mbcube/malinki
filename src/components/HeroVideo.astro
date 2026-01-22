@@ -196,78 +196,102 @@ const settings = {
       }
     }
 
-    // Initialize hero video animation
-    function initHeroVideoAnimation() {
-      const videoWrapper = document.querySelector(
-        "[data-hero-video-wrapper]",
-      ) as HTMLElement;
-      const videoContainer = document.querySelector(
-        "[data-hero-video-container]",
-      ) as HTMLElement;
-      const heroSection = document.querySelector(
-        '[data-section-type="hero-video"]',
-      ) as HTMLElement;
+  // Flag to track if animation has played (persists until page reload)
+  let hasAnimated = false;
+  let isAnimating = false;
 
-      if (!videoWrapper || !videoContainer || !heroSection) return;
+  // Initialize hero video animation
+  function initHeroVideoAnimation() {
+    const videoWrapper = document.querySelector(
+      "[data-hero-video-wrapper]",
+    ) as HTMLElement;
+    const videoContainer = document.querySelector(
+      "[data-hero-video-container]",
+    ) as HTMLElement;
+    const heroSection = document.querySelector(
+      '[data-section-type="hero-video"]',
+    ) as HTMLElement;
+    const scrollIndicator = document.querySelector(
+      "[data-hero-scroll-indicator]",
+    ) as HTMLElement;
+    const heading = document.querySelector("[data-hero-heading]") as HTMLElement;
 
-      // Kill existing ScrollTriggers for this section
-      ScrollTrigger.getAll().forEach((trigger) => {
-        if (
-          trigger.trigger === heroSection ||
-          trigger.trigger === videoWrapper
-        ) {
-          trigger.kill();
-        }
-      });
+    if (!videoWrapper || !videoContainer || !heroSection) return;
 
-      // Create a timeline for the video growth animation
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: heroSection,
-          start: "top top",
-          end: "+=1400", // Animation happens over 1400px of scroll
-          scrub: 1, // Smoother scrubbing effect
-          pin: true, // Pin the video container
-          pinSpacing: true, // Keep spacing after pin
-          anticipatePin: 1,
-          markers: false, // Set to true for debugging
-        },
-      });
+    // Kill existing ScrollTriggers for this section
+    ScrollTrigger.getAll().forEach((trigger) => {
+      if (
+        trigger.trigger === heroSection ||
+        trigger.trigger === videoWrapper
+      ) {
+        trigger.kill();
+      }
+    });
+
+    // Function to trigger the one-time animation
+    function triggerVideoAnimation() {
+      if (hasAnimated || isAnimating) return;
+      
+      hasAnimated = true;
+      isAnimating = true;
 
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
       const isMobile = windowWidth < 640;
 
-      let initialHeight: number,
-        targetHeight: number,
-        initialWidth: number,
+      let targetHeight: number,
         targetWidth: number;
 
       if (isMobile) {
         // Mobile: Keep full width, only grow in height
-        initialHeight = 300; // Starting height from CSS
         targetHeight = windowHeight * 0.9; // Grow to 90% of viewport height
 
+        // Create animation timeline
+        const tl = gsap.timeline({
+          onComplete: () => {
+            isAnimating = false;
+          },
+        });
+
+        // Animate video wrapper
         tl.to(videoWrapper, {
           height: targetHeight,
           duration: 1,
           ease: "power2.out",
-        });
+        }, 0);
+
+        // Fade in heading
+        tl.to(heading, {
+          opacity: 1,
+          duration: 1,
+          ease: "linear",
+        }, 0);
+
+        // Fade out scroll indicator
+        if (scrollIndicator) {
+          tl.to(scrollIndicator, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.out",
+          }, 0);
+        }
       } else {
         // Desktop/Tablet: Grow in width and height
+        let initialWidth: number, initialHeight: number;
+
         if (windowWidth >= 1280) {
           initialWidth = 504;
           initialHeight = 284;
         } else if (windowWidth >= 1024) {
           initialWidth = 406;
           initialHeight = 252;
-        } else if (windowWidth >= 640) {
+        } else {
           initialWidth = 300;
           initialHeight = 200;
         }
 
         // Calculate aspect ratio from initial dimensions
-        const aspectRatio = initialWidth! / initialHeight!;
+        const aspectRatio = initialWidth / initialHeight;
 
         // Calculate maximum available space with padding
         const maxWidth = windowWidth - 64; // 64px total padding on desktop
@@ -283,63 +307,113 @@ const settings = {
           targetWidth = targetHeight * aspectRatio;
         }
 
+        // Create animation timeline
+        const tl = gsap.timeline({
+          onComplete: () => {
+            isAnimating = false;
+          },
+        });
+
         // Animate the video wrapper to grow using width and height
         tl.to(videoWrapper, {
           width: targetWidth,
           height: targetHeight,
           duration: 1,
           ease: "power2.out",
-        });
-      }
+        }, 0);
 
-      // Fade in heading as video grows (at the same time)
-      tl.to(
-        "[data-hero-heading]",
-        {
+        // Fade in heading
+        tl.to(heading, {
           opacity: 1,
           duration: 1,
           ease: "linear",
-        },
-        0,
-      ); // Start at the beginning of the timeline (position 0)
+        }, 0);
 
-      gsap.to("[data-hero-scroll-indicator]", {
-        opacity: 0,
-        scrollTrigger: {
-          trigger: videoWrapper,
-          start: "top top",
-          end: "+=50",
-          scrub: 1,
-        },
-      });
-
-      // // Refresh ScrollTrigger after initialization to ensure proper positioning
-      // ScrollTrigger.refresh();
-
-      // // Restore scroll position after ScrollTrigger is ready (prevents flash)
-      // if (savedScrollPosition !== null && savedScrollPosition > 0) {
-      //     // Use requestAnimationFrame to ensure DOM is fully ready
-      //     requestAnimationFrame(function () {
-      //         requestAnimationFrame(function () {
-      //             window.scrollTo(0, savedScrollPosition);
-      //             // Clear saved position after restoring
-      //             sessionStorage.removeItem("scrollPosition");
-      //         });
-      //     });
-      // }
+        // Fade out scroll indicator
+        if (scrollIndicator) {
+          tl.to(scrollIndicator, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.out",
+          }, 0);
+        }
+      }
     }
 
-    // Initialize on page load
-    updateVideoSource();
-    initHeroVideoAnimation();
+    // Add scroll event listener to trigger animation on first scroll
+    function handleScroll() {
+      if (window.scrollY > 10) {
+        triggerVideoAnimation();
+      }
+    }
 
-    // Debounced resize handler to reinitialize animations
-    window.addEventListener("resize", function () {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = window.setTimeout(function () {
-        updateVideoSource();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+  }
+
+  // Initialize on page load
+  updateVideoSource();
+  initHeroVideoAnimation();
+
+  // Debounced resize handler to update video source and adjust dimensions if already animated
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = window.setTimeout(function () {
+      updateVideoSource();
+      
+      // If animation has already played, update dimensions to match new viewport
+      if (hasAnimated) {
+        const videoWrapper = document.querySelector(
+          "[data-hero-video-wrapper]",
+        ) as HTMLElement;
+        
+        if (!videoWrapper) return;
+        
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        const isMobile = windowWidth < 640;
+
+        if (isMobile) {
+          // Mobile: Update height to match new viewport
+          gsap.set(videoWrapper, {
+            height: windowHeight * 0.9,
+          });
+        } else {
+          // Desktop/Tablet: Recalculate dimensions
+          let initialWidth: number, initialHeight: number;
+
+          if (windowWidth >= 1280) {
+            initialWidth = 504;
+            initialHeight = 284;
+          } else if (windowWidth >= 1024) {
+            initialWidth = 406;
+            initialHeight = 252;
+          } else {
+            initialWidth = 300;
+            initialHeight = 200;
+          }
+
+          const aspectRatio = initialWidth / initialHeight;
+          const maxWidth = windowWidth - 64;
+          const maxHeight = windowHeight * 0.9;
+
+          let targetWidth = maxWidth;
+          let targetHeight = targetWidth / aspectRatio;
+
+          if (targetHeight > maxHeight) {
+            targetHeight = maxHeight;
+            targetWidth = targetHeight * aspectRatio;
+          }
+
+          gsap.set(videoWrapper, {
+            width: targetWidth,
+            height: targetHeight,
+          });
+        }
+      } else {
+        // If animation hasn't played yet, reinitialize
         initHeroVideoAnimation();
-      }, 250); // Wait 250ms after resize stops before reinitializing
-    });
+      }
+    }, 250); // Wait 250ms after resize stops before updating
+  });
   });
 </script>
