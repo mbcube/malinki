@@ -46,9 +46,27 @@ const { grids } = projectsGrid;
     // Get all project cards with video
     const projectCards = document.querySelectorAll("[data-project-card]");
 
+    // Mobile detection utility
+    const isMobile = () => {
+      const isSmallScreen = window.innerWidth < 640;
+      return isSmallScreen;
+    };
+
+    // Video data map to store start times and state
+    const videoDataMap = new Map<
+      HTMLVideoElement,
+      {
+        startTime: number;
+        card: Element;
+        isVisible: boolean;
+        isHovered: boolean;
+      }
+    >();
+
+    // Setup video data and hover listeners
     projectCards.forEach((card) => {
       const video = card.querySelector(
-        "[data-video-hover]"
+        "[data-video-hover]",
       ) as HTMLVideoElement;
 
       if (video) {
@@ -67,31 +85,186 @@ const { grids } = projectsGrid;
           }
         }
 
+        // Store video data
+        videoDataMap.set(video, {
+          startTime,
+          card,
+          isVisible: false,
+          isHovered: false,
+        });
+
         // Preload metadata to prevent jump on first hover
         video.load();
 
-        // Play video on hover
+        // Desktop: Play video on hover (only if not mobile)
         card.addEventListener("mouseenter", function () {
-          video.currentTime = startTime; // Start at specified time
+          if (isMobile()) return; // Skip hover behavior on mobile
+
+          const data = videoDataMap.get(video);
+          if (data) {
+            data.isHovered = true;
+          }
+
+          video.currentTime = startTime;
           const playPromise = video.play();
 
-          // Handle play promise for better error handling
           if (playPromise !== undefined) {
             playPromise.catch((error) => {
-              // Auto-play was prevented, video will show poster
               console.log("Video autoplay prevented:", error);
             });
           }
         });
 
-        // Pause and reset video when hover ends
+        // Desktop: Pause and reset video when hover ends
         card.addEventListener("mouseleave", function () {
+          if (isMobile()) return; // Skip hover behavior on mobile
+
+          const data = videoDataMap.get(video);
+          if (data) {
+            data.isHovered = false;
+          }
+
           video.pause();
-          video.currentTime = startTime; // Reset to start time
-          // Force reload to show poster image again
+          video.currentTime = startTime;
           video.load();
         });
       }
     });
+
+    // Mobile-specific scroll-pause video playback
+    if (isMobile()) {
+      let scrollTimeout: number | null = null;
+      let currentlyPlayingVideo: HTMLVideoElement | null = null;
+
+      // Set up IntersectionObserver for 80% visibility tracking
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.8, // 80% visibility required
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          const data = videoDataMap.get(video);
+
+          if (data) {
+            data.isVisible =
+              entry.isIntersecting && entry.intersectionRatio >= 0.8;
+
+            // If video is no longer visible and it's playing, pause it
+            if (!data.isVisible && video === currentlyPlayingVideo) {
+              video.pause();
+              video.currentTime = data.startTime;
+              video.load();
+              currentlyPlayingVideo = null;
+              // Show overlay again when video pauses on mobile
+              const overlay = data.card.querySelector("[data-overlay]");
+              if (overlay) {
+                overlay.classList.remove("!opacity-0");
+              }
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe all videos
+      videoDataMap.forEach((data, video) => {
+        observer.observe(video);
+      });
+
+      // Find the most centered visible video
+      const findMostCenteredVideo = (): HTMLVideoElement | null => {
+        const visibleVideos: Array<{
+          video: HTMLVideoElement;
+          distance: number;
+        }> = [];
+        const viewportCenter = window.innerHeight / 2;
+
+        videoDataMap.forEach((data, video) => {
+          if (data.isVisible) {
+            const rect = video.getBoundingClientRect();
+            const videoCenter = rect.top + rect.height / 2;
+            const distanceFromCenter = Math.abs(viewportCenter - videoCenter);
+
+            visibleVideos.push({ video, distance: distanceFromCenter });
+          }
+        });
+
+        if (visibleVideos.length === 0) return null;
+
+        // Sort by distance and return the closest to center
+        visibleVideos.sort((a, b) => a.distance - b.distance);
+        return visibleVideos[0].video;
+      };
+
+      // Play the most centered video
+      const playMostCenteredVideo = () => {
+        const targetVideo = findMostCenteredVideo();
+
+        // If no video is visible or the same video is already playing, do nothing
+        if (!targetVideo || targetVideo === currentlyPlayingVideo) {
+          return;
+        }
+
+        // Pause currently playing video if different
+        if (currentlyPlayingVideo && currentlyPlayingVideo !== targetVideo) {
+          const currentData = videoDataMap.get(currentlyPlayingVideo);
+          if (currentData) {
+            currentlyPlayingVideo.pause();
+            currentlyPlayingVideo.currentTime = currentData.startTime;
+            currentlyPlayingVideo.load();
+            // Show overlay again when video pauses on mobile
+            const overlay = currentData.card.querySelector("[data-overlay]");
+            if (overlay) {
+              overlay.classList.remove("!opacity-0");
+            }
+          }
+        }
+
+        // Play the new target video
+        const targetData = videoDataMap.get(targetVideo);
+        if (targetData) {
+          targetVideo.currentTime = targetData.startTime;
+          const playPromise = targetVideo.play();
+
+          if (playPromise !== undefined) {
+            playPromise
+              .then(() => {
+                currentlyPlayingVideo = targetVideo;
+                // Hide overlay when video plays on mobile
+                const overlay = targetData.card.querySelector("[data-overlay]");
+                if (overlay) {
+                  overlay.classList.add("!opacity-0");
+                }
+              })
+              .catch((error) => {
+                console.log("Video autoplay prevented:", error);
+              });
+          }
+        }
+      };
+
+      // Scroll event listener with debounce
+      const handleScroll = () => {
+        // Clear existing timeout
+        if (scrollTimeout !== null) {
+          clearTimeout(scrollTimeout);
+        }
+
+        // Set new timeout - triggers after 300ms of no scrolling
+        scrollTimeout = window.setTimeout(() => {
+          playMostCenteredVideo();
+        }, 300);
+      };
+
+      // Add scroll listener
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      // Also check on load in case a video is already in view
+      setTimeout(() => {
+        playMostCenteredVideo();
+      }, 500);
+    }
   });
 </script>

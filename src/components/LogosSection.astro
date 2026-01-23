@@ -65,12 +65,12 @@ const logos: Logo[] = [
         logos.map((logo) => (
           <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)]">
             {logo.svg ? (
-              <Fragment set:html={logo.svg} />
+              <div class="w-full h-full flex items-center justify-center [&>svg]:max-w-full [&>svg]:max-h-full [&>svg]:w-auto [&>svg]:h-auto" set:html={logo.svg} />
             ) : (
               <Image
                 src={logo.image!}
                 alt={logo.alt}
-                loading="lazy"
+                loading="eager"
                 class="max-w-full max-h-full object-contain"
               />
             )}
