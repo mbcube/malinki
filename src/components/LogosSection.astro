@@ -18,6 +18,11 @@ import maisonJeanLapointe from "../images/logos/mjl.svg?raw";
 import immobilia from "../images/logos/logo-pur-immobilia.png";
 import niche from "../images/logos/niche.svg?raw";
 import qolab from "../images/logos/qolab.svg?raw";
+import vt from "../images/logos/vt.svg?raw";
+import ms from "../images/logos/ms.svg?raw";
+import fizz from "../images/logos/fizz.svg?raw";
+import bnf from "../images/logos/bnf.svg?raw";
+import rtl from "../images/logos/rtl.svg?raw";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
@@ -28,21 +33,26 @@ type Logo = {
 } & ({ image: ImageMetadata; svg?: never } | { svg: string; image?: never });
 
 const logos: Logo[] = [
+  { svg: vt, alt: "Videotron" },
+  { svg: ms, alt: "Microsoft" },
+  { svg: fizz, alt: "Fizz" },
+  { svg: airTransat, alt: "Air transat" },
+  { image: immobilia, alt: "immobilia" },
   { svg: operaDeMontreal, alt: "Opéra de Montréal" },
+  { svg: laval, alt: "Laval" },
+  { svg: rtl, alt: "RTL" },
+  { svg: quartierDesSpectacles, alt: "Quartier des spectacles" },
+  { svg: maisonJeanLapointe, alt: "Maison Jean Lapointe" },
+  { svg: stHubert, alt: "St-Hubert" },
   { svg: cookIt, alt: "Cook it" },
   { svg: omy, alt: "omy LAB" },
-  { svg: quartierDesSpectacles, alt: "Quartier des spectacles" },
+  { svg: bnf, alt: "Ben and Florentine" },
   { svg: maddle, alt: "Maddle" },
-  { svg: airTransat, alt: "Air transat" },
-  { svg: stHubert, alt: "St-Hubert" },
-  { svg: keywordsStudios, alt: "Keywords Studios" },
-  { svg: laval, alt: "Laval" },
-  { svg: veritas, alt: "Veritas" },
-  { svg: meatAndProduce, alt: "Meat & Produce" },
-  { svg: maisonJeanLapointe, alt: "Maison Jean Lapointe" },
-  { image: immobilia, alt: "immobilia" },
-  { svg: niche, alt: "niche" },
   { svg: qolab, alt: "qolab" },
+  { svg: veritas, alt: "Veritas" },
+  { svg: niche, alt: "niche" },
+  { svg: keywordsStudios, alt: "Keywords Studios" },
+  { svg: meatAndProduce, alt: "Meat & Produce" },
 ];
 ---
 
@@ -63,9 +73,12 @@ const logos: Logo[] = [
     <div class="flex flex-wrap gap-[16px] w-full justify-center">
       {
         logos.map((logo) => (
-          <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)]">
+          <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-64px)/5)]">
             {logo.svg ? (
-              <div class="w-full h-full flex items-center justify-center [&>svg]:max-w-full [&>svg]:max-h-full [&>svg]:w-auto [&>svg]:h-auto" set:html={logo.svg} />
+              <div
+                class="w-full h-full flex items-center justify-center [&>svg]:max-w-full [&>svg]:max-h-full [&>svg]:w-auto [&>svg]:h-auto"
+                set:html={logo.svg}
+              />
             ) : (
               <Image
                 src={logo.image!}
