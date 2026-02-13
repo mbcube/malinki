@@ -604,6 +604,16 @@
                 "name_line_1": "Jérémy",
                 "name_line_2": "Leblond",
                 "role": "Production Manager & Project Manager"
+            },
+            "member_4": {
+                "name_line_1": "Alexandre",
+                "name_line_2": "Normand",
+                "role": "Camera Operator & Colorist"
+            },
+            "member_5": {
+                "name_line_1": "Cedric",
+                "name_line_2": "Demers",
+                "role": "Editor"
             }
         },
         "logos": {

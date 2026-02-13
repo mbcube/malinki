@@ -5,6 +5,8 @@ import { TeamMemberAccordion } from "./TeamMemberAccordion";
 import andrewTchernilevskii from "../images/Andrew-Tchernilevskii.png";
 import miroslavDufresne from "../images/Miroslav-Dufresne_compressed.webp";
 import jeremyLeblond from "../images/Jeremy-Leblond.png";
+import alexandreNormand from "../images/alex-normand.png";
+import cedricDemers from "../images/cedric.png";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
@@ -28,6 +30,18 @@ const teamMembers = [
     image: jeremyLeblond,
     hasSplitName: true,
     url: "https://www.linkedin.com/in/j%C3%A9r%C3%A9my-leblond-0ab6a7153/"
+  },
+  {
+    id: "member_4",
+    image: alexandreNormand,
+    hasSplitName: true,
+    url: "https://www.instagram.com/le.normand_alexandre/"
+  },
+  {
+    id: "member_5",
+    image: cedricDemers,
+    hasSplitName: true,
+    url: "https://www.linkedin.com/in/c%C3%A9dric-demers-891576250/"
   },
 ];
 
