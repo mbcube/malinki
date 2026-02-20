@@ -99,6 +99,7 @@ const description = project.shortDescription[currentLang];
           <VideoPlayer
             url={project.mainVideo.url}
             type={project.mainVideo.type as "youtube" | "vimeo" | "mp4"}
+            isPortrait={project.mainVideo?.isPortrait || false}
             autoplay={true}
           />
         </div>

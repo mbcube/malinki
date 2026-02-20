@@ -1,15 +1,18 @@
 ---
 export interface Props {
   url: string;
-  type: "youtube" | "vimeo" | "mp4";
+  type: "youtube" |  "vimeo" | "mp4";
   className?: string;
   autoplay?: boolean;
+  isPortrait?: boolean;
 }
 
-const { url, type, className = "", autoplay = false } = Astro.props;
+const { url, type, className = "", autoplay = false, isPortrait = false } = Astro.props;
 
-// Extract video ID from YouTube URL
+// Extract video ID from YouTube URL (watch, embed, youtu.be) or Shorts
 function getYouTubeId(url: string): string | null {
+  const shortsMatch = url.match(/youtube\.com\/shorts\/([^#&?/]+)/);
+  if (shortsMatch) return shortsMatch[1];
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = url.match(regExp);
   return match && match[2].length === 11 ? match[2] : null;
@@ -25,7 +28,7 @@ function getVimeoId(url: string): string | null {
 let embedUrl = "";
 let videoId = "";
 
-if (type === "youtube") {
+if (type === "youtube" ) {
   videoId = getYouTubeId(url) || "";
   const autoplayParams = autoplay
     ? "&autoplay=1&mute=1&loop=1&playlist=" + videoId
@@ -56,7 +59,7 @@ if (type === "youtube") {
     ) : (
       <div
         class="relative w-full rounded-lg overflow-hidden"
-        style="padding-bottom: 56.25%;"
+        style={isPortrait ? "padding-bottom: 177.78%;" : "padding-bottom: 56.25%;"}
       >
         <iframe
           src={embedUrl}

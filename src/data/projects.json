@@ -1645,6 +1645,86 @@
                 "portrait": [],
                 "landscape": []
             }
+        },
+        {
+            "slug": "red-scarf",
+            "clientName": {
+                "fr": "Alanna Sterling",
+                "en": "Alanna Sterling"
+            },
+            "title": {
+                "fr": "VIDÉOCLIP EVERYTHING'S GONNA BE JUST FINE",
+                "en": "VIDEOCLIP EVERYTHING'S GONNA BE JUST FINE"
+            },
+            "shortDescription": {
+                "fr": "",
+                "en": ""
+            },
+            "mainVideo": {
+                "url": "https://www.youtube.com/watch?v=P5IhMjPFOZw",
+                "type": "youtube"
+            },
+            "details": [],
+            "additionalVideos": [],
+            "behindTheScenes": {
+                "portrait": [],
+                "landscape": []
+            }
+        },
+        {
+            "slug": "petro-canada",
+            "clientName": {
+                "fr": "Petro Canada",
+                "en": "Petro Canada"
+            },
+            "title": {
+                "fr": "PUBLICITÉ TÉLÉ & WEB",
+                "en": "TV & Web Advertising"
+            },
+            "shortDescription": {
+                "fr": "",
+                "en": ""
+            },
+            "mainVideo": {
+                "url": "https://www.youtube.com/shorts/CFWUxUzKtes",
+                "type": "youtube",
+                "isPortrait": true
+
+            },
+            "details": [],
+            "additionalVideos": [],
+            "behindTheScenes": {
+                "portrait": [],
+                "landscape": []
+            }
+        },
+        {
+            "slug": "laval-tourisme",
+            "clientName": {
+                "fr": "Tourisme Laval",
+                "en": "Tourisme Laval"
+            },
+            "title": {
+                "fr": "PUBLICITÉ TÉLÉ & WEB",
+                "en": "TV & Web Advertising"
+            },
+            "shortDescription": {
+                "fr": "",
+                "en": ""
+            },
+            "mainVideo": {
+                "url": "https://www.youtube.com/watch?v=sU-lYbSmqQs",
+                "type": "youtube"
+            },
+            "details": [],
+            "additionalVideos": [
+
+            ],
+            "behindTheScenes": {
+                "portrait": [],
+                "landscape": []
+            }
         }
+        
     ]
 }
