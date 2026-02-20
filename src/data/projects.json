@@ -1542,22 +1542,58 @@
         {
             "slug": "niche-ste-justine",
             "clientName": {
-                "fr": "Niche x Ste Justine",
-                "en": "Niche x Ste Justine"
+                "fr": "Niché x Fondation Chu Sainte-Justine",
+                "en": "Niché x Chu Sainte-Justine Foundation"
             },
             "title": {
-                "fr": "Publicité télévisée",
-                "en": "Television Advertising"
+                "fr": "Contenu de marque",
+                "en": "Branded content"
             },
             "shortDescription": {
-                "fr": "",
-                "en": ""
+                "fr": "Lors de la soirée du Grand Bal Sainte-Justine de la Fondation du CHU Sainte-Justine, l'agence Niché a chargé Malinki de réaliser une vidéo mettant en avant la formule distinctive de Niché. L'objectif était de présenter le savoir-faire et l'engagement personnalisé de l'agence envers ses clients. En capturant les coulisses de la préparation des salles, l'effort de l'équipe Niché et l'attention au déroulement de la soirée, Malinki a su mettre en lumière le souci du détail caractéristique de Niché. Découvrez l'essence de Niché dans la vidéo ci-dessous.",
+                "en": "During the evening of the Grand Bal Sainte-Justine organized by the CHU Sainte-Justine Foundation, the agency Niché commissioned Malinki to produce a video highlighting Niché's distinctive approach. The goal was to showcase the agency's expertise and its personalized commitment to its clients. By capturing behind-the-scenes footage of the room preparations, the effort of the Niché team, and the attention paid to the flow of the evening, Malinki was able to shine a light on the meticulous attention to detail that is characteristic of Niché. Discover the essence of Niché in the video below."
             },
             "mainVideo": {
                 "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/niche-ste-justine/niche-ste-justine-main.mp4",
                 "type": "mp4"
             },
-            "details": [],
+            "details": [
+                {
+                    "label": {
+                        "fr": "Réalisateur",
+                        "en": "Director"
+                    },
+                    "value": "Andrew Tchernilevskii"
+                },
+                {
+                    "label": {
+                        "fr": "Opérateur caméra 1",
+                        "en": "Camera Operator 1"
+                    },
+                    "value": "Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Opérateur caméra 2",
+                        "en": "Camera Operator 2"
+                    },
+                    "value": "Alexandre Normand"
+                },
+                {
+                    "label": {
+                        "fr": "Assistant Monteur",
+                        "en": "Assistant Editor"
+                    },
+                    "value": "Cédric Demers"
+                },
+                {
+                    "label": {
+                        "fr": "Coloriste",
+                        "en": "Colorist"
+                    },
+                    "value": "Alexandre Normand"
+                }
+            ],
             "additionalVideos": [],
             "behindTheScenes": {
                 "portrait": [],
