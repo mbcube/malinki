@@ -566,21 +566,21 @@
     },
     "sections": {
         "about_text": {
-            "heading": "Malinki offre un service collaboratif et de qualité pour donner vie à votre projet audiovisuel.",
-            "body": "En combinant notre expertise en production audiovisuelle avec notre connaissance approfondie des plateformes numériques nous créons des contenus captivants et efficaces qui font une réelle différence."
+            "heading": "Une histoire à raconter ou un message à faire passer?",
+            "body": "Même quand ça parait simple, produire du contenu porteur de sens devient rapidement exigeant lorsqu’il repose sur les mêmes épaules."
         },
         "cta": {
-            "heading_line1": "Nos projets",
-            "heading_line2": "vous parlent?",
-            "button_text": "Contactez-nous"
+            "heading_line1": "Chaque projet commence par ",
+            "heading_line2": "une idée",
+            "button_text": "On en discute?"
         },
         "cta2": {
-            "heading": "Avez-vous un projet en tête?",
-            "button_text": "Contactez-nous"
+            "heading": "Prêt à en parler? ",
+            "button_text": "Viens challenger ton idée"
         },
         "services": {
             "heading": "NOS SERVICES",
-            "description": "Nous vous accompagnons tout au long du processus de création pour concrétiser votre vision. De la conception jusqu'à la post-production.",
+            "description": "",
             "service_1": "PUBLICITÉS",
             "service_2": "CONTENU DE MARQUE",
             "service_3": "CONTENU VERTICAL",

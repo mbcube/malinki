@@ -69,36 +69,18 @@ const teamMembersForReact = teamMembers.map((member) => ({
     <div
       class="border-[#083D45] border-[0px_0px_1px] border-solid flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-0 pb-8 lg:pb-8 mb-0"
     >
-      <!-- Mobile/Tablet: Single Heading -->
-      <div class="flex flex-col gap-4 lg:hidden">
+      <div class="flex flex-col gap-4">
         <h2
-          class="p-0 font-['Montserrat'] text-[44px] font-bold leading-none uppercase text-[#083D45]"
+          class="p-0 font-['Montserrat'] text-[2.75rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[5rem] font-bold leading-none uppercase text-[#083D45]"
         >
           {t("sections.team.mobile_heading")}
         </h2>
         <p
-          class="m-0 font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45] max-w-[291px]"
+          class="m-0 font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45] max-w-[291px] lg:max-w-[304px]"
         >
           {t("sections.team.tagline")}
         </p>
       </div>
-
-      <!-- Desktop: Split Heading -->
-      <h2
-        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] shrink-0"
-      >
-        {t("sections.team.heading_left")}
-      </h2>
-      <p
-        class="m-0 hidden lg:block font-['Montserrat'] text-[20px] font-medium leading-[1.2] text-[#083D45] text-center max-w-[304px]"
-      >
-        {t("sections.team.tagline")}
-      </p>
-      <h2
-        class="p-0 hidden lg:block font-['Montserrat'] text-[120px] font-bold leading-none uppercase text-[#083D45] text-right shrink-0"
-      >
-        {t("sections.team.heading_right")}
-      </h2>
     </div>
 
     <!-- Mobile: Accordion with LinkedIn Icons -->

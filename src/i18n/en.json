@@ -247,6 +247,28 @@
         }
     },
     "contact": {
+        "title": "Contact",
+        "heading": "Let's Talk About Your Project",
+        "subheading": "We're excited to bring your vision to life. Get in touch to discuss your next audiovisual project.",
+        "form_title": "Send Us a Message",
+        "name_label": "Full Name",
+        "name_placeholder": "Your name",
+        "email_label": "Email",
+        "email_placeholder": "your@email.com",
+        "phone_label": "Phone",
+        "phone_placeholder": "(514) 555-1234",
+        "message_label": "Message",
+        "message_placeholder": "Tell us about your project, goals, and important dates...",
+        "submit_button": "Send Message",
+        "submitting_button": "Sending...",
+        "success_message": "Thank you! We've received your message and will get back to you shortly.",
+        "error_message": "Oops! Something went wrong. Please try again or contact us directly by email.",
+        "email_title": "Email",
+        "phone_title": "Phone",
+        "agence_title": "Agency",
+        "studio_title": "Studio",
+        "cta_title": "Ready to Get Started?",
+        "cta_text": "We typically respond within 24 hours. Let's discuss how we can help you!",
         "form": {
             "name": "Your Name",
             "email": "Your Email",
@@ -566,13 +588,13 @@
     },
     "sections": {
         "about_text": {
-            "heading": "Malinki offers a collaborative and quality service to bring your audiovisual project to life.",
-            "body": "By combining our expertise in audiovisual production with our in-depth knowledge of digital platforms, we create captivating and effective content that makes a real difference."
+            "heading": "A story to tell or a message to pass on?",
+            "body": "Even when it seems simple, producing content that resonates becomes quickly demanding when it rests on the same shoulders."
         },
         "cta": {
-            "heading_line1": "Our projects",
-            "heading_line2": "speak to you?",
-            "button_text": "Contact us"
+            "heading_line1": "Each project begins with ",
+            "heading_line2": "an idea",
+            "button_text": "Let's talk"
         },
         "cta2": {
             "heading": "Do you have a project in mind?",
@@ -580,7 +602,7 @@
         },
         "services": {
             "heading": "OUR SERVICES",
-            "description": "We guide you through the entire creative process to bring your vision to life. From conception to post-production.",
+            "description": "",
             "service_1": "ADVERTISING",
             "service_2": "BRANDED CONTENT",
             "service_3": "VERTICAL CONTENT",
@@ -638,30 +660,7 @@
         "contact_cta_text": "Ready to create your next music video?",
         "contact_cta_button_text": "LET'S DISCUSS YOUR PROJECT"
     },
-    "contact": {
-        "title": "Contact",
-        "heading": "Let's Talk About Your Project",
-        "subheading": "We're excited to bring your vision to life. Get in touch to discuss your next audiovisual project.",
-        "form_title": "Send Us a Message",
-        "name_label": "Full Name",
-        "name_placeholder": "Your name",
-        "email_label": "Email",
-        "email_placeholder": "your@email.com",
-        "phone_label": "Phone",
-        "phone_placeholder": "(514) 555-1234",
-        "message_label": "Message",
-        "message_placeholder": "Tell us about your project, goals, and important dates...",
-        "submit_button": "Send Message",
-        "submitting_button": "Sending...",
-        "success_message": "Thank you! We've received your message and will get back to you shortly.",
-        "error_message": "Oops! Something went wrong. Please try again or contact us directly by email.",
-        "email_title": "Email",
-        "phone_title": "Phone",
-        "agence_title": "Agency",
-        "studio_title": "Studio",
-        "cta_title": "Ready to Get Started?",
-        "cta_text": "We typically respond within 24 hours. Let's discuss how we can help you!"
-    },
+ 
     "project": {
         "behind_the_scenes": "BEHIND THE SCENES",
         "additional_videos": "ADDITIONAL CONTENT",
