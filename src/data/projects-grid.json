@@ -59,7 +59,7 @@
                         "en": "Video clip"
                     },
                     "imageFile": "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg",
-                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ecarlate/ecarlate-grid.mp4#t=10",
+                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ecarlate/ecarlate-grid.mp4#t=112",
                     "altText": "Visrei Lison Lux Records",
                     "clientName": "Visrei",
                     "agencyName": "Lux Records",
@@ -80,7 +80,8 @@
                     "agencyName": "Malinki",
                     "width": 500,
                     "height": 800,
-                    "containerClasses": "row-span-2 min-h-[356px]"
+                    "containerClasses": "row-span-2 min-h-[356px]",
+                    "projectSlug": "monsieur-le-maire"
                 },
                 {
                     "tagText": {
@@ -95,7 +96,7 @@
                     "width": 820,
                     "height": 461,
                     "containerClasses": "min-h-[178px]",
-                    "projectSlug": "pre-opera-23-24"
+                    "projectSlug": "pre-opera-25-26"
                 },
                 {
                     "tagText": {
@@ -140,7 +141,7 @@
                         "en": "Advertising"
                     },
                     "imageFile": "Malinki-Brivia-immobilier_820x.jpg",
-                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/brivia/brivia-grid.mp4#t=1",
+                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/brivia/brivia-grid.mp4#t=23",
                     "altText": "Brivia Immobilier",
                     "clientName": "Brivia",
                     "agencyName": "Wellington",
@@ -161,7 +162,7 @@
                     "width": 600,
                     "height": 810,
                     "containerClasses": "row-span-2 min-h-[356px]",
-                    "projectSlug": "grey-goose"
+                    "projectSlug": "ben-and-florentine"
                 },
                 {
                     "tagText": {
@@ -169,7 +170,7 @@
                         "en": "Videoclip"
                     },
                     "imageFile": "Malinki-Grand-Heron-musique_820x.jpg",
-                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-heron/grand-heron-grid.mp4#t=5",
+                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-heron/grand-heron-grid.mp4#t=95",
                     "altText": "Grand Heron",
                     "clientName": "Grand Héron",
                     "agencyName": "Malinki",
@@ -266,7 +267,7 @@
                         "en": "Videoclip"
                     },
                     "imageFile": "Malinki-Simon-Lachance-Rosemarie-Records_820x.jpg",
-                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/amadoue-moi/amadoue-moi-grid.mp4",
+                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/amadoue-moi/amadoue-moi-grid.mp4#t=10",
                     "altText": "Simon Lachance Rosemarie Records",
                     "clientName": "Simon Lachance",
                     "agencyName": "Rosemarie Records",
@@ -281,7 +282,7 @@
                         "en": "Branded content"
                     },
                     "imageFile": "video-capture-t0000.00seg-5766.png",
-                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cadwork/cadwork-main.mp4",
+                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cadwork/cadwork-main.mp4#t=20",
                     "altText": "Cadwork Projects",
                     "clientName": "Cadwork",
                     "agencyName": "Malinki",
@@ -361,7 +362,7 @@
                         "en": "Videoclip"
                     },
                     "imageFile": "Malinki-Freddie-Oliver-musique_694x.jpg",
-                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/freddie-oliver/freddie-oliver-grid.mp4",
+                    "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/freddie-oliver/freddie-oliver-grid.mp4#t=23",
                     "altText": "Freddie Oliver",
                     "clientName": "Freddie Oliver",
                     "agencyName": "Malinki",

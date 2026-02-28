@@ -108,6 +108,10 @@
                     "5_57183ba7-9fa2-49af-84d2-e1aa64310a20_554x.webp",
                     "4_554x.webp"
                 ]
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -148,6 +152,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -169,13 +177,6 @@
                 "type": "youtube"
             },
             "details": [
-                {
-                    "label": {
-                        "fr": "Produit par",
-                        "en": "Produced by"
-                    },
-                    "value": "Malinki"
-                },
                 {
                     "label": {
                         "fr": "Réalisateur",
@@ -285,6 +286,10 @@
                     "labo-omy-bts-landscape-02.jpg",
                     "labo-omy-bts-landscape-03.jpg"
                 ]
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -437,6 +442,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -527,40 +536,37 @@
                     "ecarlate-bts-landscape-02.png",
                     "ecarlate-bts-landscape-03.png"
                 ]
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
-            "slug": "pre-opera-23-24",
+            "slug": "pre-opera-25-26",
             "clientName": {
                 "fr": "Opéra de Montréal",
                 "en": "Montreal Opera"
             },
             "title": {
-                "fr": "Pré-Opéra Saison 23-24",
-                "en": "Pré-Opéra Season 23-24"
+                "fr": "Pré-Opéra Saison 25-26",
+                "en": "Pré-Opéra Season 25-26"
             },
             "shortDescription": {
-                "fr": "Pour une 3e saison, Malinki signe la production des capsules Pré-Opéra del'Opéra de Montréal. Avant chaque représentation, l'Opéra de Montréal propose ases spectateurs un résumé de l'œuvre présentée, question de plonger dansl'histoire. Les 5 capsules ont pour but d'instruire sur l'histoire de la pièceainsi que la musicologie des œuvres.",
-                "en": "For a third season, Malinki signs the production of the Pré-Opéra capsules for the Montreal Opera. Before each performance, the Montreal Opera offers its audience a summary of the presented work, a chance to delve into the story. The five capsules aim to educate about the history of the play as well as the musicology of the works."
+                "fr": "Pour une 5e saison, Malinki signe la co-production des capsules Pré-Opéra Express de l'Opéra de Montréal. Avant chaque représentation, l'Opéra de Montréal propose a ses spectateurs un résumé de l'œuvre présentée, question de plonger dans l'histoire. Les 4 capsules ont pour but d'instruire sur l'histoire de la pièce ainsi que la musicologie des œuvres.",
+                "en": "For a fifth season, Malinki co-produced the Pré-Opéra Express capsules for the Opéra de Montréal. Before each performance, the Opéra de Montréal offers its audience a summary of the presented work, allowing them to dive into the story. The 4 capsules aim to educate about the story of the piece as well as the musicology of the works."
             },
             "mainVideo": {
-                "url": "https://www.youtube.com/embed/HAQgVlXKZK0?si=2OAN-2lkO8M4WH6x",
+                "url": "https://www.youtube.com/embed/SzPl_4MoFn0",
                 "type": "youtube"
             },
             "details": [
                 {
                     "label": {
-                        "fr": "Réalisation",
-                        "en": "Director"
+                        "fr": "Musicologue",
+                        "en": "Musicologist"
                     },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Guillaume Shea-Blais"
+                    "value": "Pierre Vachon"
                 },
                 {
                     "label": {
@@ -571,85 +577,78 @@
                 },
                 {
                     "label": {
-                        "fr": "Cadreur",
-                        "en": "Camera operator"
+                        "fr": "Directeur de production",
+                        "en": "Production Director"
+                    },
+                    "value": "Jérémy LeBlond"
+                },
+                {
+                    "label": {
+                        "fr": "Directeur de la photographie",
+                        "en": "Director of Photography"
+                    },
+                    "value": "Guillaume Shea-Blais"
+                },
+                {
+                    "label": {
+                        "fr": "Opérateur caméra",
+                        "en": "Camera Operator"
                     },
                     "value": "Miroslav Dufresne"
                 },
                 {
                     "label": {
-                        "fr": "Assit. caméra",
-                        "en": "Assistant Camera"
+                        "fr": "Prise de son",
+                        "en": "Sound Recordist"
                     },
-                    "value": "Camille D Gendreau"
+                    "value": "Charles Warren"
                 },
                 {
                     "label": {
-                        "fr": "Grip",
-                        "en": "Grip"
+                        "fr": "Monteur",
+                        "en": "Editor"
                     },
-                    "value": "Andres Castillo"
-                },
-                {
-                    "label": {
-                        "fr": "Key Grip",
-                        "en": "Key Grip"
-                    },
-                    "value": "Hugo Klopp"
-                },
-                {
-                    "label": {
-                        "fr": "Éclairagiste",
-                        "en": "Gaffer"
-                    },
-                    "value": "Daniel Ho-Tieng"
-                },
-                {
-                    "label": {
-                        "fr": "Motion designer",
-                        "en": "Motion Designer"
-                    },
-                    "value": "Anthony Airoldi"
-                },
-                {
-                    "label": {
-                        "fr": "Musicologue",
-                        "en": "Musicologist"
-                    },
-                    "value": "Pierre Vachon"
+                    "value": "Miroslav Dufresne"
                 },
                 {
                     "label": {
                         "fr": "Coloriste",
                         "en": "Colorist"
                     },
-                    "value": "Martin Gaumond (Outpost MTL)"
+                    "value": "Alexandre Normand"
                 },
                 {
                     "label": {
-                        "fr": "Coordonnateur de production",
-                        "en": "Production Coordinator"
+                        "fr": "Motion design",
+                        "en": "Motion Design"
                     },
-                    "value": "Jérémy LeBlond"
+                    "value": "Colegram"
+                },
+                {
+                    "label": {
+                        "fr": "Mixage sonore",
+                        "en": "Sound Mix"
+                    },
+                    "value": "Underground Studio"
                 }
             ],
             "additionalVideos": [
                 {
-                    "url": "https://www.youtube.com/watch?v=adLxIah4bgc",
+                    "url": "https://www.youtube.com/watch?v=qwSfZTQzLiM",
                     "type": "youtube"
                 },
                 {
-                    "url": "https://www.youtube.com/watch?v=SP0BHdryOMQ",
-                    "type": "youtube"
-                },
-                {
-                    "url": "https://www.youtube.com/watch?v=9NOlVzZM-Lk",
+                    "url": "https://www.youtube.com/watch?v=f-g1-mvoey0",
                     "type": "youtube"
                 }
             ],
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -754,36 +753,101 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
-            "slug": "grey-goose",
+            "slug": "ben-and-florentine",
             "clientName": {
-                "fr": "Grey Goose",
-                "en": "Grey Goose"
-            },
-            "agencyName": {
-                "fr": "Meat & Produce",
-                "en": "Meat & Produce"
+                "fr": "Ben & Florentine",
+                "en": "Ben & Florentine"
             },
             "title": {
-                "fr": "Contenu vertical",
-                "en": "Vertical content"
+                "fr": "Banque de contenus",
+                "en": "Content bank"
             },
             "shortDescription": {
-                "fr": "Création de contenu vertical pour Grey Goose à l'approche du Temps des Fêtes.Les concepts ont été imaginés pour suivre les codes de la plateformes en mettanten vedette une influenceuse connue. La création des concepts a été faite parMalinki. Client : Meat & Produce.",
-                "en": "Creation of vertical content for Grey Goose approaching the Holiday Season. The concepts were designed to follow platform codes featuring a well-known influencer. The concept creation was done by Malinki. Client: Meat & Produce."
+                "fr": "L'équipe de Malinki a été mandatée par Ben & Florentine afin de créer une banque de courtes vidéos ultra appétissantes mettant en valeur les plats du menu. L'objectif premier : impressionner par la beauté des assiettes et renforcer l'expertise de la marque en matière de déjeuner. À travers ces capsules, la production met également en lumière l'expérience en restaurant ; l'ambiance, le plaisir et le moment gourmand afin de positionner Ben & Florentine comme LE détour matinal incontournable.",
+                "en": "The Malinki team was commissioned by Ben & Florentine to create a bank of ultra-appetizing short videos showcasing the menu's dishes. The primary goal: to impress with the beauty of the plates and reinforce the brand's expertise in breakfast. Through these clips, the production also highlights the restaurant experience — the atmosphere, the pleasure, and the indulgent moment — to position Ben & Florentine as THE unmissable morning stop."
             },
             "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grey-goose/grey-goose-main.mp4",
-                "type": "mp4",
+                "url": "https://www.youtube.com/watch?v=hbUSagRFvPo",
+                "type": "youtube",
                 "isPortrait": true
             },
-            "details": [],
+            "details": [
+                {
+                    "label": {
+                        "fr": "Producteur",
+                        "en": "Producer"
+                    },
+                    "value": "Andrew Tchernilevskii"
+                },
+                {
+                    "label": {
+                        "fr": "Directeur de production",
+                        "en": "Production Director"
+                    },
+                    "value": "Jérémy LeBlond"
+                },
+                {
+                    "label": {
+                        "fr": "Directeur de la photographie",
+                        "en": "Director of Photography"
+                    },
+                    "value": "Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Éclairagiste",
+                        "en": "Gaffer"
+                    },
+                    "value": "Natan B. Foisy"
+                },
+                {
+                    "label": {
+                        "fr": "Styliste culinaire",
+                        "en": "Food Stylist"
+                    },
+                    "value": "Chloé Girard"
+                },
+                {
+                    "label": {
+                        "fr": "Montage offline",
+                        "en": "Offline Edit"
+                    },
+                    "value": "Jérémy LeBlond"
+                },
+                {
+                    "label": {
+                        "fr": "Montage online",
+                        "en": "Online Edit"
+                    },
+                    "value": "Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Coloriste",
+                        "en": "Colorist"
+                    },
+                    "value": "Alexandre Normand"
+                }
+            ],
             "additionalVideos": [],
             "behindTheScenes": {
-                "portrait": [],
+                "portrait": [
+                    "ben-and-florentine-bts-1.png",
+                    "ben-and-florentine-bts-2.png",
+                    "ben-and-florentine-bts-3.png"
+                ],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -807,13 +871,6 @@
             "details": [
                 {
                     "label": {
-                        "fr": "Produit par",
-                        "en": "Produced by"
-                    },
-                    "value": "Malinki"
-                },
-                {
-                    "label": {
                         "fr": "Réalisateur",
                         "en": "Director"
                     },
@@ -835,6 +892,10 @@
                     "grand-heron-bts-landscape-02.jpg",
                     "grand-heron-bts-landscape-03.jpg"
                 ]
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -959,6 +1020,10 @@
                     "junes-bts-landscape-02.jpg",
                     "junes-bts-landscape-03.jpg"
                 ]
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1097,6 +1162,10 @@
                     "freddie-oliver-bts-landscape-02.png",
                     "freddie-oliver-bts-landscape-03.png"
                 ]
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1181,6 +1250,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1246,6 +1319,10 @@
                     "amadoue-moi-bts-portrait-03.jpg"
                 ],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1347,6 +1424,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1368,13 +1449,6 @@
                 "type": "mp4"
             },
             "details": [
-                {
-                    "label": {
-                        "fr": "Concept",
-                        "en": "Concept"
-                    },
-                    "value": "MALINKI"
-                },
                 {
                     "label": {
                         "fr": "Réalisateurs",
@@ -1437,6 +1511,10 @@
                     "opera-de-montreal-bts-landscape-02.jpg",
                     "opera-de-montreal-bts-landscape-03.jpg"
                 ]
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1462,6 +1540,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1487,6 +1569,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1512,6 +1598,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1537,6 +1627,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1598,6 +1692,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1669,6 +1767,10 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
@@ -1689,20 +1791,90 @@
                 "url": "https://www.youtube.com/shorts/CFWUxUzKtes",
                 "type": "youtube",
                 "isPortrait": true
-
             },
             "details": [],
             "additionalVideos": [],
             "behindTheScenes": {
-                "portrait": [],
+                "portrait": [
+                    "petro-canada-bts-2.jpg",
+                    "petro-canada-bts-3.jpg"
+                ],
                 "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
+            }
+        },
+        {
+            "slug": "monsieur-le-maire",
+            "title": {
+                "fr": "MONSIEUR LE MAIRE - PRODUCTION PHOTO",
+                "en": "MONSIEUR LE MAIRE - PHOTO PRODUCTION"
+            },
+            "clientName": {
+                "fr": "Groupe Encore",
+                "en": "Groupe Encore"
+            },
+            "shortDescription": {
+                "fr": "L'équipe de Malinki a été mandatée par Groupe Encore afin d'assurer la production photo et la retouche des visuels promotionnels des comédiens et comédiennes de la pièce Monsieur le Maire, mettant en vedette Mario Jean. L'objectif : créer des portraits forts et expressifs reflétant le ton mordant et hilarant de la comédie.\n\nÀ travers cette production, Malinki met en valeur les personnages et l'univers de la pièce, marqués par la collusion, les rivalités de pouvoir et les ambitions démesurées, tout en soutenant l'image et le positionnement de la production.",
+                "en": "The Malinki team was commissioned by Groupe Encore to handle the photo production and retouching of the promotional visuals for the cast of the play Monsieur le Maire, starring Mario Jean. The goal: create powerful, expressive portraits reflecting the biting and hilarious tone of the comedy.\n\nThrough this production, Malinki highlights the characters and universe of the play — marked by collusion, power rivalries, and overblown ambitions — while supporting the image and positioning of the production."
+            },
+            "mainImageUrl": "le-maire-grid.jpg",
+            "galleryImages": [],
+            "details": [
+                {
+                    "label": {
+                        "fr": "Directeur de création",
+                        "en": "Creative Director"
+                    },
+                    "value": "Jocelyn Goyer"
+                },
+                {
+                    "label": {
+                        "fr": "Photographe",
+                        "en": "Photographer"
+                    },
+                    "value": "Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Retouches",
+                        "en": "Photo Retouching"
+                    },
+                    "value": "Mélanie Lapointe"
+                },
+                {
+                    "label": {
+                        "fr": "Design",
+                        "en": "Design"
+                    },
+                    "value": "Jocelyn Goyer"
+                }
+            ],
+            "additionalVideos": [],
+            "behindTheScenes": {
+                "portrait": [
+                    "le-maire-1.jpg",
+                    "le-maire-2.jpg",
+                    "le-maire-3.jpg"
+                ],
+                "landscape": []
+            },
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
             }
         },
         {
             "slug": "laval-tourisme",
+            "agencyName": {
+                "fr": "Malinki",
+                "en": "Malinki"
+            },
             "clientName": {
-                "fr": "Tourisme Laval",
-                "en": "Tourisme Laval"
+                "fr": "Tourisme Laval & Ville de Laval",
+                "en": "Tourisme Laval & Ville de Laval"
             },
             "title": {
                 "fr": "PUBLICITÉ TÉLÉ & WEB",
@@ -1716,15 +1888,69 @@
                 "url": "https://www.youtube.com/watch?v=sU-lYbSmqQs",
                 "type": "youtube"
             },
-            "details": [],
-            "additionalVideos": [
-
+            "details": [
+                {
+                    "label": {
+                        "fr": "Réalisateur",
+                        "en": "Director"
+                    },
+                    "value": "Andrew Tchernilevskii"
+                },
+                {
+                    "label": {
+                        "fr": "Directeur de la photographie",
+                        "en": "Director of Photography"
+                    },
+                    "value": "Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Gestion de projet",
+                        "en": "Project Manager"
+                    },
+                    "value": "Jérémy LeBlond"
+                },
+                {
+                    "label": {
+                        "fr": "Monteur",
+                        "en": "Editor"
+                    },
+                    "value": "Andrew Tchernilevskii & Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Coloriste",
+                        "en": "Colorist"
+                    },
+                    "value": "Alexandre Normand"
+                },
+                {
+                    "label": {
+                        "fr": "Postproduction sonore",
+                        "en": "Sound Post-Production"
+                    },
+                    "value": "Studio Underground"
+                },
+                {
+                    "label": {
+                        "fr": "Coordonnatrice de postproduction sonore",
+                        "en": "Sound Post-Production Coordinator"
+                    },
+                    "value": "Charlotte Lamoureux"
+                },
+                {
+                    "label": {
+                        "fr": "Mixage et conception sonore",
+                        "en": "Sound Mix & Design"
+                    },
+                    "value": "Steve Labbé"
+                }
             ],
+            "additionalVideos": [],
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
             }
         }
-        
     ]
 }

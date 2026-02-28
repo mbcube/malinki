@@ -8,15 +8,6 @@ import projectsData from "../../../data/projects.json";
 import Metadata from "../../../components/Metadata.astro";
 import { Image } from "astro:assets";
 
-// Import all BTS images dynamically
-const allBtsImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/**/bts/*.{png,jpg,jpeg,webp}', { eager: true });
-
-// Helper to get image by project slug and filename
-function getProjectImage(slug: string, filename: string) {
-  const path = `/src/images/projects/${slug}/bts/${filename}`;
-  return allBtsImages[path]?.default;
-}
-
 export function getStaticPaths() {
   const paths = [];
 
@@ -48,6 +39,21 @@ if (!project) {
 
 const title = project.title[currentLang];
 const description = project.shortDescription[currentLang];
+
+// Import all BTS images dynamically
+const allProjectImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/images/projects/**/**/*.{jpg,jpeg,png,webp,gif,svg}",
+  { eager: true }
+);
+
+// Helper to get image by project slug and filename
+const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
+  Object.entries(allProjectImages).map(([path, mod]) => [path.split("/").pop()!, mod.default])
+);
+
+function getProjectImage(filename: string) {
+  return imageMap[filename];
+}
 ---
 
 <html lang={currentLang} class="h-full">
@@ -63,7 +69,7 @@ const description = project.shortDescription[currentLang];
       <!-- Project Title -->
       <div class="w-full md:w-4/5 mx-auto mb-8 md:mb-12">
         <h1
-          class="font-['Montserrat'] text-[32px] md:text-[56px] lg:text-[64px] font-bold leading-none uppercase text-[#083D45] mb-6"
+          class="font-['Montserrat'] text-[32px] md:text-[50px] lg:text-[60px] xl:text-[64px] font-bold leading-none uppercase text-[#083D45] mb-6"
         >
           {title}
         </h1>
@@ -92,17 +98,31 @@ const description = project.shortDescription[currentLang];
         </p>
       </div>
 
-      <!-- Main Video and Details Section -->
+      <!-- Main Media and Details Section -->
       <div class={"mb-12 md:mb-16 flex flex-col gap-6 md:gap-8"}>
         <!-- Main Video -->
-        <div class={` mx-auto ${project.mainVideo.isPortrait ? 'w-2/3 sm:w-1/3 md:w-1/4 lg:w-1/5 aspect-3/4' : 'w-full md:w-4/5'}`}>
-          <VideoPlayer
-            url={project.mainVideo.url}
-            type={project.mainVideo.type as "youtube" | "vimeo" | "mp4"}
-            isPortrait={project.mainVideo?.isPortrait || false}
-            autoplay={true}
-          />
-        </div>
+        {project.mainVideo && (
+          <div class={` mx-auto ${(project.mainVideo as any).isPortrait ? 'w-full md:w-3/5 lg:w-1/2 xl:w-1/3 ' : 'w-full md:w-4/5'}`}>
+            <VideoPlayer
+              url={(project.mainVideo as any).url}
+              type={(project.mainVideo as any).type as "youtube" | "vimeo" | "mp4"}
+              isPortrait={(project.mainVideo as any)?.isPortrait || false}
+              autoplay={true}
+            />
+          </div>
+        )}
+
+        <!-- Main Image (photo productions) -->
+        {!project.mainVideo && project.mainImageUrl && (
+          <div class="w-full md:w-3/5 lg:w-1/2 xl:w-1/3  mx-auto rounded-lg overflow-hidden">
+            <img
+              src={getProjectImage(project.mainImageUrl)?.src}
+              alt={title}
+              class="w-full h-auto object-cover"
+              loading="eager"
+            />
+          </div>
+        )}
 
         <!-- Project Details -->
         {
@@ -168,6 +188,29 @@ const description = project.shortDescription[currentLang];
         )
       }
 
+      <!-- Photo Gallery (photo productions) -->
+      {
+        (project as any).galleryImages && (project as any).galleryImages.length > 0 && (
+          <div class="mb-12 md:mb-16">
+            <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
+              {t("project.photo_gallery")}
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {(project as any).galleryImages.map((url: string, index: number) => (
+                <div class="bg-white/30 rounded-lg overflow-hidden">
+                  <img
+                    src={url}
+                    alt={`${title} ${index + 1}`}
+                    class="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
+
       <!-- Behind the Scenes Photos -->
       {
         project.behindTheScenes && 
@@ -181,7 +224,7 @@ const description = project.shortDescription[currentLang];
             {project.behindTheScenes.portrait && project.behindTheScenes.portrait.length > 0 && (
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 {project.behindTheScenes.portrait.map((filename, index) => {
-                  const imageModule = getProjectImage(project.slug, filename);
+                  const imageModule = getProjectImage(filename);
                   return imageModule ? (
                     <div class="aspect-3/4 bg-white/30 rounded-lg overflow-hidden">
                       <Image
@@ -202,7 +245,7 @@ const description = project.shortDescription[currentLang];
             {project.behindTheScenes.landscape && project.behindTheScenes.landscape.length > 0 && (
               <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                 {project.behindTheScenes.landscape.map((filename, index) => {
-                  const imageModule = getProjectImage(project.slug, filename);
+                  const imageModule = getProjectImage( filename);
                   return imageModule ? (
                     <div class="aspect-video bg-white/30 rounded-lg overflow-hidden">
                       <Image
