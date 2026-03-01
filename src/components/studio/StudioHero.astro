@@ -7,6 +7,17 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+const settings = {
+  video_url_desktop:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/hero-final.mov",
+  video_url_mobile:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/hero-mobile-final.mp4",
+  poster:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/hero-final-poster.png"
+
+};
+
 ---
 
 <section class="w-full pt-16 pb-8 border-none">
@@ -20,9 +31,12 @@ const t = useTranslations(lang);
         muted
         playsinline
         preload="auto"
-        poster="https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/studio-hero-placeholder.jpg"
+        poster={settings.poster}
+        data-video-desktop={settings.video_url_desktop}
+        data-video-mobile={settings.video_url_mobile}
+        data-poster={settings.poster}
       >
-        <source src="https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/studio-hero.mp4" type="video/mp4" />
+        <source src={settings.video_url_desktop} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
