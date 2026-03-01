@@ -1,5 +1,6 @@
 {
     "general": {
+        "page_title": "Malinki - Production Agency",
         "404": {
             "title": "THAT PAGE CAN'T BE FOUND.",
             "button": "GO TO HOME",
@@ -660,7 +661,14 @@
         "contact_cta_text": "Ready to create your next music video?",
         "contact_cta_button_text": "LET'S DISCUSS YOUR PROJECT"
     },
- 
+    "studio": {
+        "title": "Malinki Studio",
+        "hero": {
+            "title_line1": "Studio",
+            "title_line2": "Malinki",
+            "intro_text": "Located in the Lofts Cadbury, Studio Malinki is a bright and welcoming space designed for creation. With its 1000 sq. ft., large cyclorama and relaxed atmosphere, it adapts to all projects: photography, filming, web or artistic content. The layout is simple, flexible and inspiring according to your needs."
+        }
+    },
     "project": {
         "behind_the_scenes": "BEHIND THE SCENES",
         "additional_videos": "ADDITIONAL CONTENT",

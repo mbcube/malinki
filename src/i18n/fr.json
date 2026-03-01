@@ -1,5 +1,6 @@
 {
     "general": {
+        "page_title": "Malinki - Agence de production",
         "404": {
             "title": "Page non trouvée!",
             "button": "Page d'accueil",
@@ -247,6 +248,28 @@
         }
     },
     "contact": {
+        "title": "Contact",
+        "heading": "Parlons de votre projet",
+        "subheading": "Nous sommes impatients de donner vie à votre vision. Contactez-nous pour discuter de votre prochain projet audiovisuel.",
+        "form_title": "Envoyez-nous un message",
+        "name_label": "Nom complet",
+        "name_placeholder": "Votre nom",
+        "email_label": "Courriel",
+        "email_placeholder": "votre@courriel.com",
+        "phone_label": "Téléphone",
+        "phone_placeholder": "(514) 555-1234",
+        "message_label": "Message",
+        "message_placeholder": "Parlez-nous de votre projet, vos objectifs et vos dates importantes...",
+        "submit_button": "Envoyer le message",
+        "submitting_button": "Envoi en cours...",
+        "success_message": "Merci! Nous avons bien reçu votre message et nous vous contacterons dans les plus brefs délais.",
+        "error_message": "Oups! Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par courriel.",
+        "email_title": "Courriel",
+        "phone_title": "Téléphone",
+        "agence_title": "Agence",
+        "studio_title": "Studio",
+        "cta_title": "Prêt à commencer?",
+        "cta_text": "Nous répondons généralement dans les 24 heures. Discutons de comment nous pouvons vous aider!",
         "form": {
             "name": "Prénom",
             "email": "Email",
@@ -638,30 +661,15 @@
         "contact_cta_text": "Prêt à créer votre prochain vidéoclip?",
         "contact_cta_button_text": "DISCUTONS DE VOTRE PROJET"
     },
-    "contact": {
-        "title": "Contact",
-        "heading": "Parlons de votre projet",
-        "subheading": "Nous sommes impatients de donner vie à votre vision. Contactez-nous pour discuter de votre prochain projet audiovisuel.",
-        "form_title": "Envoyez-nous un message",
-        "name_label": "Nom complet",
-        "name_placeholder": "Votre nom",
-        "email_label": "Courriel",
-        "email_placeholder": "votre@courriel.com",
-        "phone_label": "Téléphone",
-        "phone_placeholder": "(514) 555-1234",
-        "message_label": "Message",
-        "message_placeholder": "Parlez-nous de votre projet, vos objectifs et vos dates importantes...",
-        "submit_button": "Envoyer le message",
-        "submitting_button": "Envoi en cours...",
-        "success_message": "Merci! Nous avons bien reçu votre message et nous vous contacterons dans les plus brefs délais.",
-        "error_message": "Oups! Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par courriel.",
-        "email_title": "Courriel",
-        "phone_title": "Téléphone",
-        "agence_title": "Agence",
-        "studio_title": "Studio",
-        "cta_title": "Prêt à commencer?",
-        "cta_text": "Nous répondons généralement dans les 24 heures. Discutons de comment nous pouvons vous aider!"
+    "studio": {
+        "title": "Studio Malinki",
+        "hero": {
+            "title_line1": "Studio",
+            "title_line2": "Malinki",
+            "intro_text": "Situé dans les Lofts Cadbury, le Studio Malinki est un lieu lumineux et accueillant pensé pour la création. Avec ses 1000 pi², son grand cyclorama et son ambiance décontractée, il s'adapte à tous les projets : photo, tournage, contenu web ou artistique. La disposition de l'espace est simple, flexible et inspirante selon vos besoins."
+        }
     },
+
     "project": {
         "behind_the_scenes": "DERRIÈRE LES COULISSES",
         "additional_videos": "CONTENU ADDITIONNEL",

@@ -1,0 +1,43 @@
+---
+import { useTranslations } from "../../i18n/utils";
+
+interface Props {
+  lang: "fr" | "en";
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="w-full bg-[#083D45] pt-24">
+  <div class="w-full mx-auto px-4">
+    <!-- Video/Image with Rounded Corners -->
+    <div class=" w-full  rounded-[24px] overflow-hidden">
+      <video
+        class="w-full h-full object-cover aspect-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        poster="https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/studio-hero-placeholder.jpg"
+      >
+        <source src="https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/studio-hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Title Section - Below the image -->
+    <div class=" mt-2">
+      <!-- STUDIO text - Left -->
+        <h1 class="font-['Montserrat'] text-[48px] md:text-[64px] lg:text-[72px] xl:text-[96px] font-bold leading-none uppercase text-white">
+        {t("studio.hero.title_line1")}
+      </h1>
+      
+      <!-- MALINKI text - Right -->
+      <h1 class="justify-self-end font-['Montserrat'] text-[48px] md:text-[64px] lg:text-[72px] xl:text-[96px] font-bold leading-none uppercase text-white">
+        {t("studio.hero.title_line2")}
+      </h1>
+    </div>
+  </div>
+</section>
