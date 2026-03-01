@@ -39,6 +39,19 @@ if (!project) {
 
 const title = project.title[currentLang];
 const description = project.shortDescription[currentLang];
+const seoTitle = `${title}${t("seo.project.title_suffix")}`;
+
+const videoObjectLd = project.mainVideo
+  ? {
+      "@context": "https://schema.org" as const,
+      "@type": "VideoObject" as const,
+      name: title,
+      description: description,
+      contentUrl: project.mainVideo.url,
+      thumbnailUrl: project.mainVideo.url,
+      uploadDate: new Date().toISOString().split("T")[0],
+    }
+  : undefined;
 
 // Import all BTS images dynamically
 const allProjectImages = import.meta.glob<{ default: ImageMetadata }>(
@@ -58,7 +71,13 @@ function getProjectImage(filename: string) {
 
 <html lang={currentLang} class="h-full">
   <head>
-    <Metadata lang={currentLang} title={title} />
+    <Metadata
+      lang={currentLang}
+      title={seoTitle}
+      description={description}
+      canonicalPath={`/projects/${project.slug}`}
+      {...(videoObjectLd ? { jsonLd: videoObjectLd } : {})}
+    />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />
