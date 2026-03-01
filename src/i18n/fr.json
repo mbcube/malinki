@@ -667,6 +667,90 @@
             "title_line1": "Studio",
             "title_line2": "Malinki",
             "intro_text": "Situé dans les Lofts Cadbury, le Studio Malinki est un lieu lumineux et accueillant pensé pour la création. Avec ses 1000 pi², son grand cyclorama et son ambiance décontractée, il s'adapte à tous les projets : photo, tournage, contenu web ou artistique. La disposition de l'espace est simple, flexible et inspirante selon vos besoins."
+        },
+        "nav": {
+            "le_studio": "Le studio",
+            "galerie_photo": "Galerie photo",
+            "nos_equipements": "Nos équipements",
+            "les_tarifs": "Les tarifs"
+        },
+        "plan": {
+            "access_line1": "ACCÈS À UN",
+            "access_line2": "ESPACE DE",
+            "access_size": "1000 PI²",
+            "specs_title": "SPÉCIFICATIONS",
+            "specs": [
+                "Cyclorama 15 pi (L) x 8,6 pi (l) x 11 pi (h)",
+                "Station CCM",
+                "Salle de bain (corridor)",
+                "Tuyaux d'acier encastrés (plafond)",
+                "Air climatisé",
+                "Espace cuisine (micro-onde, frigo, évier, air fryer)",
+                "Quai de chargement + monte-charge",
+                "Stationnements (payants)"
+            ],
+            "inclusions_title": "INCLUSIONS",
+            "inclusions": [
+                "Backdrops + papiers 9'",
+                "Équipements (en savoir plus)",
+                "Steamer de vêtements",
+                "Wi-fi haute vitesse",
+                "Escabeaux 5,8,12'",
+                "Système de son",
+                "Café & thé",
+                "Tables pliantes",
+                "Sacs de sables, boîtes de pommes, C-Stand inclus"
+            ],
+            "cta_line1": "NOS ESPACES",
+            "cta_line2": "VOUS INTÉRESSENT?",
+            "cta_button": "Réserver maintenant"
+        },
+        "equipment": {
+            "available_title_line1": "ÉQUIPEMENTS",
+            "available_title_line2": "DISPONIBLES",
+            "rental_title_line1": "ÉQUIPEMENTS À",
+            "rental_title_line2": "LOUER",
+            "available": [
+                "C-Stands (8)",
+                "Boîtes de pommes",
+                "Sacs de sables (10)"
+            ],
+            "rental": [
+                "Aputure 1200 D / 600 D / 300D",
+                "Aputure P300C Kit (x2)",
+                "Aputure F22c",
+                "Aputure spotlight 19°",
+                "Aputure Lantern 90",
+                "Aputure Fresnel F10 / 2X"
+            ]
+        },
+        "pricing": {
+            "title": "Tarifs",
+            "subtitle": "La location se fait sur une durée minimale de 4h",
+            "plan_4h_title": "Durée de 4h",
+            "plan_4h_price": "400$",
+            "plan_8h_title": "Durée de 8h",
+            "plan_8h_price": "650$",
+            "plan_creative_title": "Projet créatif",
+            "plan_creative_desc": "Donnez-nous tous les détails de votre projet",
+            "book_now": "Réserver maintenant",
+            "contact_us": "Contactez-nous"
+        },
+        "faq": {
+            "title": "FAQ",
+            "q1_question": "Stationnement",
+            "q1_answer": "Lorem ipsum dolor sit amet consectetur. Vel velit porttitor accumsan augue lectus ultricies tempor dictum quis. Sed scelerisque fermentum ornare lacus purus at. Odio quis eleifend ornare amet facilisis non suspendisse bibendum feugiat. Orci dignissim eu fringilla eget sed ultricies. Sollicitudin id ut massa cum.",
+            "q2_question": "Annulation et report",
+            "q2_answer": "",
+            "q3_question": "Dommages et nettoyages",
+            "q3_answer": "",
+            "q4_question": "Lorem Ipsum",
+            "q4_answer": ""
+        },
+        "map": {
+            "title": "Retrouvez-nous facilement",
+            "address": "5425 Rue de Bordeaux, Montréal, QC H2H 2P9",
+            "cta": "Réserver maintenant"
         }
     },
 

@@ -19,19 +19,33 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Metadata from "../../components/Metadata.astro";
 import StudioHero from "../../components/studio/StudioHero.astro";
+import StudioNav from "../../components/studio/StudioNav.astro";
+import StudioDescription from "../../components/studio/StudioDescription.astro";
+import StudioCarousel from "../../components/studio/StudioCarousel";
+import StudioPlan from "../../components/studio/StudioPlan.astro";
+import StudioEquipment from "../../components/studio/StudioEquipment.astro";
+import StudioPricing from "../../components/studio/StudioPricing.astro";
+import StudioFaq from "../../components/studio/StudioFaq.astro";
+import StudioMap from "../../components/studio/StudioMap.astro";
 ---
 
 <html lang={currentLang} class="h-full">
   <head>
     <Metadata lang={currentLang} title={pageTitle} />
   </head>
-  <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
+  <body class="min-h-full w-full font-['Montserrat'] bg-[#083D45]">
     <Header lang={currentLang} />
 
     <main class="w-full flex flex-col min-h-screen">
       <StudioHero lang={currentLang} />
-      
-      <!-- Additional studio sections will go here -->
+      <StudioNav lang={currentLang} />
+      <StudioDescription lang={currentLang} />
+      <StudioPlan lang={currentLang} />
+      <StudioCarousel client:load />
+      <StudioEquipment lang={currentLang} />
+      <StudioPricing lang={currentLang} />
+      <StudioFaq lang={currentLang} />
+      <StudioMap lang={currentLang} />
     </main>
 
     <Footer />

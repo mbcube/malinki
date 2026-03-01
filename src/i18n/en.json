@@ -667,6 +667,90 @@
             "title_line1": "Studio",
             "title_line2": "Malinki",
             "intro_text": "Located in the Lofts Cadbury, Studio Malinki is a bright and welcoming space designed for creation. With its 1000 sq. ft., large cyclorama and relaxed atmosphere, it adapts to all projects: photography, filming, web or artistic content. The layout is simple, flexible and inspiring according to your needs."
+        },
+        "nav": {
+            "le_studio": "The studio",
+            "galerie_photo": "Photo gallery",
+            "nos_equipements": "Our equipment",
+            "les_tarifs": "Pricing"
+        },
+        "plan": {
+            "access_line1": "ACCESS TO A",
+            "access_line2": "SPACE OF",
+            "access_size": "1000 SQ. FT.",
+            "specs_title": "SPECIFICATIONS",
+            "specs": [
+                "Cyclorama 15 ft (L) x 8.6 ft (W) x 11 ft (H)",
+                "CCM Station",
+                "Bathroom (corridor)",
+                "Recessed steel pipes (ceiling)",
+                "Air conditioning",
+                "Kitchen area (microwave, fridge, sink, air fryer)",
+                "Loading dock + freight elevator",
+                "Parking (paid)"
+            ],
+            "inclusions_title": "INCLUSIONS",
+            "inclusions": [
+                "Backdrops + 9' paper rolls",
+                "Equipment (learn more)",
+                "Clothing steamer",
+                "High-speed Wi-Fi",
+                "Step ladders 5, 8, 12'",
+                "Sound system",
+                "Coffee & tea",
+                "Folding tables",
+                "Sandbags, apple boxes, C-Stand included"
+            ],
+            "cta_line1": "INTERESTED IN ",
+            "cta_line2": "OUR SPACES?",
+            "cta_button": "Book now"
+        },
+        "equipment": {
+            "available_title_line1": "AVAILABLE",
+            "available_title_line2": "EQUIPMENT",
+            "rental_title_line1": "EQUIPMENT",
+            "rental_title_line2": "FOR RENT",
+            "available": [
+                "C-Stands (8)",
+                "Apple boxes",
+                "Sandbags (10)"
+            ],
+            "rental": [
+                "Aputure 1200 D / 600 D / 300D",
+                "Aputure P300C Kit (x2)",
+                "Aputure F22c",
+                "Aputure spotlight 19°",
+                "Aputure Lantern 90",
+                "Aputure Fresnel F10 / 2X"
+            ]
+        },
+        "pricing": {
+            "title": "Pricing",
+            "subtitle": "Minimum rental duration is 4 hours",
+            "plan_4h_title": "4-hour rental",
+            "plan_4h_price": "400$",
+            "plan_8h_title": "8-hour rental",
+            "plan_8h_price": "650$",
+            "plan_creative_title": "Creative project",
+            "plan_creative_desc": "Give us all the details of your project",
+            "book_now": "Book now",
+            "contact_us": "Contact us"
+        },
+        "faq": {
+            "title": "FAQ",
+            "q1_question": "Parking",
+            "q1_answer": "Lorem ipsum dolor sit amet consectetur. Vel velit porttitor accumsan augue lectus ultricies tempor dictum quis. Sed scelerisque fermentum ornare lacus purus at. Odio quis eleifend ornare amet facilisis non suspendisse bibendum feugiat. Orci dignissim eu fringilla eget sed ultricies. Sollicitudin id ut massa cum.",
+            "q2_question": "Cancellation and rescheduling",
+            "q2_answer": "",
+            "q3_question": "Damages and cleaning",
+            "q3_answer": "",
+            "q4_question": "Other questions",
+            "q4_answer": ""
+        },
+        "map": {
+            "title": "Find us easily",
+            "address": "5425 Rue de Bordeaux, Montréal, QC H2H 2P9",
+            "cta": "Book now"
         }
     },
     "project": {
