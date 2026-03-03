@@ -6,13 +6,14 @@ import {
   useCarousel,
 } from "@/components/ui/carousel"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Cal from "./cal"
 
 interface PricingCard {
   title: string
   price?: string
   description?: string
   ctaLabel: string
-  ctaHref: string
+  ctaHref?: string
 }
 
 interface Props {
@@ -61,12 +62,20 @@ function PriceCard({ card }: { card: PricingCard }) {
           </p>
         )}
       </div>
-      <a
-        href={card.ctaHref}
-        className="text-[1rem] font-semibold leading-none text-white bg-[#083D45] px-8 py-5 rounded-lg text-center hover:bg-[#083D45]/80 transition-colors"
-      >
-        {card.ctaLabel}
-      </a>
+      {card.ctaHref ? (
+        <a
+          href={card.ctaHref}
+          className="text-[1rem] font-semibold leading-none text-white bg-[#083D45] px-8 py-5 rounded-lg text-center hover:bg-[#083D45]/80 transition-colors"
+        >
+          {card.ctaLabel}
+        </a>
+      ) : (
+        <Cal
+          className="text-[1rem] font-semibold leading-none text-white bg-[#083D45] px-8 py-5 rounded-lg text-center hover:bg-[#083D45]/80 transition-colors"
+        >
+          {card.ctaLabel}
+        </Cal>
+      )}
     </div>
   )
 }
