@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "^3.7.0",
     "@aws-sdk/client-s3": "^3.948.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-toggle": "^1.1.10",

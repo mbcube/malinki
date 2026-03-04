@@ -48,7 +48,12 @@ import Metadata from "../../components/Metadata.astro";
 
 <html lang={currentLang} class="h-full">
   <head>
-    <Metadata lang={currentLang} title={pageTitle} />
+    <Metadata
+      lang={currentLang}
+      title={t("seo.contact.title")}
+      description={t("seo.contact.description")}
+      canonicalPath="/contact"
+    />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />

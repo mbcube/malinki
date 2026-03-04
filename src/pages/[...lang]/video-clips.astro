@@ -14,6 +14,20 @@ const t = useTranslations(currentLang);
 
 const pageTitle = t("video_clips.title");
 
+const serviceLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: t("seo.video_clips.title"),
+  description: t("seo.video_clips.description"),
+  provider: {
+    "@type": "Organization",
+    name: "Malinki",
+    url: "https://malinki.ca",
+  },
+  areaServed: "CA",
+  serviceType: "Music Video Production",
+};
+
 // Import GIF images
 import tenpasttwo from "../../images/video-clips/tenpasttwo.gif";
 import alanna_clip from "../../images/video-clips/alanna-clip.gif";
@@ -68,7 +82,13 @@ import Metadata from "../../components/Metadata.astro";
 
 <html lang={currentLang} class="h-full">
   <head>
-    <Metadata lang={currentLang} title={pageTitle} />
+    <Metadata
+      lang={currentLang}
+      title={t("seo.video_clips.title")}
+      description={t("seo.video_clips.description")}
+      canonicalPath="/video-clips"
+      jsonLd={serviceLd}
+    />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />

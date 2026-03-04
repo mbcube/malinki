@@ -30,6 +30,20 @@ const t = useTranslations(currentLang);
 
 const pageTitle = t("contenu_vertical.title");
 
+const serviceLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: t("seo.contenu_vertical.title"),
+  description: t("seo.contenu_vertical.description"),
+  provider: {
+    "@type": "Organization",
+    name: "Malinki",
+    url: "https://malinki.ca",
+  },
+  areaServed: "CA",
+  serviceType: "Vertical Content Production",
+};
+
 // Page configuration
 const pageConfig = {
   images: {
@@ -67,7 +81,13 @@ import Footer from "../../components/Footer.astro";
 
 <html lang={currentLang} class="h-full">
   <head>
-    <Metadata lang={currentLang} title={pageTitle} />
+    <Metadata
+      lang={currentLang}
+      title={t("seo.contenu_vertical.title")}
+      description={t("seo.contenu_vertical.description")}
+      canonicalPath="/contenu-vertical"
+      jsonLd={serviceLd}
+    />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />
