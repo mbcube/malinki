@@ -228,6 +228,47 @@ const settings = {
 
       if (!videoWrapper || !videoContainer || !heroSection) return;
 
+      // Skip animation if:
+      // - page loaded with a hash anchor (browser will auto-scroll, hero won't be visible)
+      // - page loaded with a non-zero scroll position (already scrolled past hero)
+      if (window.location.hash !== "" || window.scrollY > 0) {
+        hasAnimated = true;
+        if (heading) gsap.set(heading, { opacity: 1 });
+        if (scrollIndicator) gsap.set(scrollIndicator, { opacity: 0 });
+
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        const isMobile = windowWidth < 640;
+
+        if (isMobile) {
+          gsap.set(videoWrapper, { height: windowHeight * 0.9 });
+        } else {
+          let initialWidth: number, initialHeight: number;
+          if (windowWidth >= 1280) {
+            initialWidth = 504;
+            initialHeight = 284;
+          } else if (windowWidth >= 1024) {
+            initialWidth = 406;
+            initialHeight = 252;
+          } else {
+            initialWidth = 300;
+            initialHeight = 200;
+          }
+          const aspectRatio = initialWidth / initialHeight;
+          const maxWidth = windowWidth - 64;
+          const maxHeight = windowHeight * 0.9;
+          let targetWidth = maxWidth;
+          let targetHeight = targetWidth / aspectRatio;
+          if (targetHeight > maxHeight) {
+            targetHeight = maxHeight;
+            targetWidth = targetHeight * aspectRatio;
+          }
+          gsap.set(videoWrapper, { width: targetWidth, height: targetHeight });
+        }
+
+        return;
+      }
+
       // Kill existing ScrollTriggers for this section
       ScrollTrigger.getAll().forEach((trigger) => {
         if (
@@ -467,6 +508,51 @@ const settings = {
 
       // Block all scrolling initially
       addScrollBlockers();
+
+      // If the page scrolls programmatically before the user triggers the animation
+      // (e.g. clicking a nav anchor link), cancel the pending animation and expand instantly
+      function handleProgrammaticScroll() {
+        if (!hasAnimated && !isAnimating && window.scrollY > 0) {
+          window.removeEventListener("scroll", handleProgrammaticScroll);
+          removeScrollBlockers();
+
+          hasAnimated = true;
+          if (heading) gsap.set(heading, { opacity: 1 });
+          if (scrollIndicator) gsap.set(scrollIndicator, { opacity: 0 });
+
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+          const isMobile = windowWidth < 640;
+
+          if (isMobile) {
+            gsap.set(videoWrapper, { height: windowHeight * 0.9 });
+          } else {
+            let initialWidth: number, initialHeight: number;
+            if (windowWidth >= 1280) {
+              initialWidth = 504;
+              initialHeight = 284;
+            } else if (windowWidth >= 1024) {
+              initialWidth = 406;
+              initialHeight = 252;
+            } else {
+              initialWidth = 300;
+              initialHeight = 200;
+            }
+            const aspectRatio = initialWidth / initialHeight;
+            const maxWidth = windowWidth - 64;
+            const maxHeight = windowHeight * 0.9;
+            let targetWidth = maxWidth;
+            let targetHeight = targetWidth / aspectRatio;
+            if (targetHeight > maxHeight) {
+              targetHeight = maxHeight;
+              targetWidth = targetHeight * aspectRatio;
+            }
+            gsap.set(videoWrapper, { width: targetWidth, height: targetHeight });
+          }
+        }
+      }
+
+      window.addEventListener("scroll", handleProgrammaticScroll);
     }
 
     // Initialize on page load
