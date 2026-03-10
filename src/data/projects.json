@@ -768,7 +768,7 @@
             "publishedAt": "2024-03-01"
         },
         {
-            "slug": "ben-and-florentine",
+            "slug": "ben-&-florentine",
             "clientName": {
                 "fr": "Ben & Florentine",
                 "en": "Ben & Florentine"
@@ -847,9 +847,9 @@
             "additionalVideos": [],
             "behindTheScenes": {
                 "portrait": [
-                    "ben-and-florentine-bts-1.png",
-                    "ben-and-florentine-bts-2.png",
-                    "ben-and-florentine-bts-3.png"
+                    "ben-&-florentine-bts-1.png",
+                    "ben-&-florentine-bts-2.png",
+                    "ben-&-florentine-bts-3.png"
                 ],
                 "landscape": []
             },

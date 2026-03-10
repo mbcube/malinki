@@ -157,13 +157,13 @@
                     },
                     "imageFile": "pancakes.png",
                     "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ben-and-florentine/ben-and-florentine-main.mp4",
-                    "altText": "Ben and Florentine",
-                    "clientName": "Ben and Florentine",
+                    "altText": "Ben & Florentine",
+                    "clientName": "Ben & Florentine",
                     "agencyName": "Malinki",
                     "width": 600,
                     "height": 810,
                     "containerClasses": "row-span-2 min-h-[356px]",
-                    "projectSlug": "ben-and-florentine"
+                    "projectSlug": "ben-&-florentine"
                 },
                 {
                     "tagText": {
