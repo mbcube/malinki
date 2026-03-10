@@ -112,7 +112,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2022-06-01"
         },
         {
             "slug": "jouer-pour-gagner",
@@ -156,7 +157,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-06-01"
         },
         {
             "slug": "labo-omy",
@@ -290,7 +292,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-03-01"
         },
         {
             "slug": "brivia",
@@ -319,7 +322,8 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
-            }
+            },
+            "publishedAt": "2023-09-01"
         },
         {
             "slug": "defi-28-jours",
@@ -446,7 +450,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-03-01"
         },
         {
             "slug": "ecarlate",
@@ -540,7 +545,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-06-01"
         },
         {
             "slug": "pre-opera-25-26",
@@ -649,7 +655,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2025-09-01"
         },
         {
             "slug": "microsoft-cherylle-shyne",
@@ -757,7 +764,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-03-01"
         },
         {
             "slug": "ben-and-florentine",
@@ -848,7 +856,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-09-01"
         },
         {
             "slug": "grand-heron",
@@ -896,7 +905,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-03-01"
         },
         {
             "slug": "st-hubert",
@@ -930,7 +940,8 @@
                     "st-hubert-bts-portrait-03.jpg"
                 ],
                 "landscape": []
-            }
+            },
+            "publishedAt": "2022-09-01"
         },
         {
             "slug": "junes",
@@ -1024,7 +1035,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-06-01"
         },
         {
             "slug": "videotron",
@@ -1079,7 +1091,8 @@
                     "videotron-bts-portrait-03.jpg"
                 ],
                 "landscape": []
-            }
+            },
+            "publishedAt": "2022-03-01"
         },
         {
             "slug": "freddie-oliver",
@@ -1166,7 +1179,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-09-01"
         },
         {
             "slug": "pre-opera-24-25",
@@ -1254,7 +1268,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-09-01"
         },
         {
             "slug": "amadoue-moi",
@@ -1323,7 +1338,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-06-01"
         },
         {
             "slug": "fizz-qolab",
@@ -1349,7 +1365,8 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
-            }
+            },
+            "publishedAt": "2023-06-01"
         },
         {
             "slug": "king-melrose",
@@ -1428,7 +1445,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-09-01"
         },
         {
             "slug": "opera-de-montreal",
@@ -1515,7 +1533,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2022-06-01"
         },
         {
             "slug": "air-transat",
@@ -1544,7 +1563,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-03-01"
         },
         {
             "slug": "ville-de-laval",
@@ -1573,7 +1593,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-06-01"
         },
         {
             "slug": "videotron-gamer",
@@ -1602,7 +1623,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-03-01"
         },
         {
             "slug": "cadwork",
@@ -1631,7 +1653,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-09-01"
         },
         {
             "slug": "niche-ste-justine",
@@ -1696,7 +1719,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-03-01"
         },
         {
             "slug": "tva-sports",
@@ -1742,7 +1766,8 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
-            }
+            },
+            "publishedAt": "2022-03-01"
         },
         {
             "slug": "red-scarf",
@@ -1771,7 +1796,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2023-06-01"
         },
         {
             "slug": "petro-canada",
@@ -1804,7 +1830,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2024-06-01"
         },
         {
             "slug": "monsieur-le-maire",
@@ -1864,7 +1891,8 @@
             "agencyName": {
                 "fr": "Malinki",
                 "en": "Malinki"
-            }
+            },
+            "publishedAt": "2025-03-01"
         },
         {
             "slug": "laval-tourisme",
@@ -1950,7 +1978,8 @@
             "behindTheScenes": {
                 "portrait": [],
                 "landscape": []
-            }
+            },
+            "publishedAt": "2024-09-01"
         }
     ]
 }
