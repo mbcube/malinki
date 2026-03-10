@@ -1,14 +1,13 @@
 ---
 import { useTranslations } from "../i18n/utils";
-import { getImage } from "astro:assets";
-import malinkiLogoBg from "../images/malinki-logo-bg.png";
 
 export function getStaticPaths() {
   return [{ params: { lang: undefined } }, { params: { lang: "en" } }];
 }
 
 const { lang } = Astro.params;
-const currentLang = lang || "fr";
+const currentLang = (lang || "fr") as "fr" | "en";
+const t = useTranslations(currentLang);
 
 import "../styles/global.css";
 import Header from "../components/Header.astro";
@@ -26,7 +25,12 @@ import Metadata from "../components/Metadata.astro";
 
 <html lang={currentLang} class="h-full">
   <head>
-    <Metadata lang={currentLang} />
+    <Metadata
+      lang={currentLang}
+      title={t("seo.home.title")}
+      description={t("seo.home.description")}
+      canonicalPath="/"
+    />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang as "fr" | "en"} />

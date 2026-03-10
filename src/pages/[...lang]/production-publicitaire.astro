@@ -29,6 +29,20 @@ const t = useTranslations(currentLang);
 
 const pageTitle = t("production_publicitaire.title");
 
+const serviceLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: t("seo.production_publicitaire.title"),
+  description: t("seo.production_publicitaire.description"),
+  provider: {
+    "@type": "Organization",
+    name: "Malinki",
+    url: "https://malinki.ca",
+  },
+  areaServed: "CA",
+  serviceType: "Video Advertising Production",
+};
+
 // Page configuration
 const pageConfig = {
   images: {
@@ -65,7 +79,13 @@ import Metadata from "../../components/Metadata.astro";
 
 <html lang={currentLang} class="h-full">
   <head>
-    <Metadata lang={currentLang} title={pageTitle} />
+    <Metadata
+      lang={currentLang}
+      title={t("seo.production_publicitaire.title")}
+      description={t("seo.production_publicitaire.description")}
+      canonicalPath="/production-publicitaire"
+      jsonLd={serviceLd}
+    />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
     <Header lang={currentLang} />
