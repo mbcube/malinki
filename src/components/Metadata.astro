@@ -43,14 +43,30 @@ const ogImageUrl = new URL(processedOgImage.src, siteUrl).href;
 
 const organizationLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   name: "Malinki",
   url: siteUrl,
   logo: new URL(
     (await getImage({ src: malinkiLogoBg, width: 600 })).src,
     siteUrl
   ).href,
-  sameAs: ["https://www.instagram.com/malinkistudio/"],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Montréal",
+    addressRegion: "QC",
+    addressCountry: "CA",
+  },
+  areaServed: "Montréal",
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 45.5017,
+    longitude: -73.5673,
+  },
+  sameAs: [
+    "https://www.instagram.com/malinki.agence/",
+    "https://www.instagram.com/studio.malinki/",
+    "https://vimeo.com/malinkistudio",
+  ],
 };
 
 const allJsonLd = jsonLd
@@ -114,6 +130,7 @@ const allJsonLd = jsonLd
 <meta property="og:image" content={ogImageUrl} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
 <meta property="og:locale" content={currentLang === "en" ? "en_CA" : "fr_CA"} />
 <meta
   property="og:locale:alternate"

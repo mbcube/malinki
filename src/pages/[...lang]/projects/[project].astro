@@ -49,7 +49,7 @@ const videoObjectLd = project.mainVideo
       description: description,
       contentUrl: project.mainVideo.url,
       thumbnailUrl: project.mainVideo.url,
-      uploadDate: new Date().toISOString().split("T")[0],
+      uploadDate: project.publishedAt ?? new Date().toISOString().split("T")[0],
     }
   : undefined;
 
