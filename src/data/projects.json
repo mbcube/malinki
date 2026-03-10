@@ -1755,18 +1755,80 @@
                 "en": "VIDEOCLIP EVERYTHING'S GONNA BE JUST FINE"
             },
             "shortDescription": {
-                "fr": "",
-                "en": ""
+                "fr": "Le vidéoclip de « Everything’s Gonna Be Just Fine » de Alanna Sterling met en images un parcours émotionnel entre vulnérabilité et résilience. À travers une esthétique épurée mêlant performance musicale et danse contemporaine, il traduit visuellement le message d’espoir de la chanson : malgré les moments difficiles, tout finit par s’apaiser.",
+                "en": "The video clip for \"Everything’s Gonna Be Just Fine\"  by Alanna Sterling captures a journey of emotional vulnerability and resilience. Through a clean aesthetic blending musical performance and contemporary dance, it visually传达s the message of hope in the song: despite difficult moments, everything will eventually settle."
             },
             "mainVideo": {
                 "url": "https://www.youtube.com/watch?v=P5IhMjPFOZw",
                 "type": "youtube"
             },
-            "details": [],
+            "details": [
+                {
+                    "label": {
+                        "fr": "Réalisation",
+                        "en": "Director"
+                    },
+                    "value": "Yang Shi"
+                },
+                {
+                    "label": {
+                        "fr": "Directeur Photo",
+                        "en": "Director of Photography"
+                    },
+                    "value": "Jonathan Brisebois"
+                },
+                {
+                    "label": {
+                        "fr": "Montage",
+                        "en": "Editor"
+                    },
+                    "value": "Thomas Fortier"
+                },
+                {
+                    "label": {
+                        "fr": "Producteur",
+                        "en": "Producer"
+                    },
+                    "value": "Andrew Tche"
+                },
+                {
+                    "label": {
+                        "fr": "Assistant Camera",
+                        "en": "Camera Assistant"
+                    },
+                    "value": "Miroslav Dufresne"
+                },
+                {
+                    "label": {
+                        "fr": "Coloriste",
+                        "en": "Colorist"
+                    },
+                    "value": "Béatrice Tremblay (Outpost)"
+                },
+                {
+                    "label": {
+                        "fr": "Grip",
+                        "en": "Grip"
+                    },
+                    "value": "François Haché"
+                },
+                {
+                    "label": {
+                        "fr": "Danseuses",
+                        "en": "Dancers"
+                    },
+                    "value": "Evelynn Yan & Louanne Rousseau"
+                }
+            ],
             "additionalVideos": [],
             "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
+                "portrait": [
+                ],
+                "landscape": [
+                    "alanna-sterling-bts-1.png",
+                    "alanna-sterling-bts-2.png",
+                    "alanna-sterling-bts-3.png"
+                ]
             },
             "agencyName": {
                 "fr": "Malinki",
