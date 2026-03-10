@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from "../../i18n/utils";
+import { useTranslations } from "@/i18n/utils";
 
 export function getStaticPaths() {
   return [
@@ -29,13 +29,13 @@ const serviceLd = {
 };
 
 // Import GIF images
-import tenpasttwo from "../../images/video-clips/tenpasttwo.gif";
-import alanna_clip from "../../images/video-clips/alanna-clip.gif";
-import visrei from "../../images/video-clips/visrei.gif";
-import junes from "../../images/video-clips/junes.gif";
-import amadouemoi from "../../images/video-clips/amadouemoi.gif";
-import raymond_est_mort from "../../images/video-clips/raymond-est-mort.gif";
-import king_melrose from "../../images/video-clips/king-melrose.gif";
+import tenpasttwo from "@/images/video-clips/tenpasttwo.gif";
+import alanna_clip from "@/images/video-clips/alanna-clip.gif";
+import visrei from "@/images/video-clips/visrei.gif";
+import junes from "@/images/video-clips/junes.gif";
+import amadouemoi from "@/images/video-clips/amadouemoi.gif";
+import raymond_est_mort from "@/images/video-clips/raymond-est-mort.gif";
+import king_melrose from "@/images/video-clips/king-melrose.gif";
 
 // Page configuration
 const pageConfig = {
@@ -74,10 +74,10 @@ const pageConfig = {
   },
 };
 
-import "../../styles/global.css";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import Metadata from "../../components/Metadata.astro";
+import "@/styles/global.css";
+import Header from "@/components/shared/Header.astro";
+import Footer from "@/components/shared/Footer.astro";
+import Metadata from "@/components/shared/Metadata.astro";
 ---
 
 <html lang={currentLang} class="h-full">

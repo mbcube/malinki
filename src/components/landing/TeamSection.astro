@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "../i18n/utils";
-import { TeamMemberAccordion } from "./TeamMemberAccordion";
-import andrewTchernilevskii from "../images/Andrew-Tchernilevskii.png";
-import miroslavDufresne from "../images/Miroslav-Dufresne_compressed.webp";
-import jeremyLeblond from "../images/Jeremy-Leblond.png";
-import alexandreNormand from "../images/alex-normand.png";
-import cedricDemers from "../images/cedric.png";
+import { useTranslations } from "@/i18n/utils";
+import { TeamMemberAccordion } from "@/components/landing/islands/TeamMemberAccordion";
+import andrewTchernilevskii from "@/images/Andrew-Tchernilevskii.png";
+import miroslavDufresne from "@/images/Miroslav-Dufresne_compressed.webp";
+import jeremyLeblond from "@/images/Jeremy-Leblond.png";
+import alexandreNormand from "@/images/alex-normand.png";
+import cedricDemers from "@/images/cedric.png";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";

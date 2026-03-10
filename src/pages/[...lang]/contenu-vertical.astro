@@ -1,21 +1,21 @@
 ---
 import { Image, getImage } from "astro:assets";
-import { useTranslations } from "../../i18n/utils";
-import malinkiLogoBg from "../../images/malinki-logo-bg.png";
-import shortContentMain from "../../images/short-content-main_compressed.webp";
-import jessicaRomito from "../../images/Portait_Jessica_Romito_Malinki.jpg";
-import poiseBts from "../../images/poise-malinki-behind-the-scenes_compressed.webp";
-import clientsDesktopVertical from "../../images/Logos_Clients_Malinki_ContenuMarque_2025.png";
-import clientsMobileVertical from "../../images/Logos_Clients_Malinki_ContenuMarqueMobile_2025.png";
-import shortsBts1 from "../../images/shorts-bts-1_compressed.webp";
-import shortsBts2 from "../../images/shorts-bts-2_compressed.webp";
-import shortsBts3 from "../../images/shorts-bts-3_compressed.webp";
-import shortsBts4 from "../../images/shorts-bts-4_compressed.webp";
-import shortsBts5 from "../../images/shorts-bts-5.jpg";
-import shortsBts6 from "../../images/shorts-bts-6_compressed_compressed.webp";
-import shortsBts7 from "../../images/shorts-bts-7_compressed.webp";
-import shortsBts8 from "../../images/shorts-bts-8_compressed.webp";
-import Metadata from "../../components/Metadata.astro";
+import { useTranslations } from "@/i18n/utils";
+import malinkiLogoBg from "@/images/malinki-logo-bg.png";
+import shortContentMain from "@/images/short-content-main_compressed.webp";
+import jessicaRomito from "@/images/Portait_Jessica_Romito_Malinki.jpg";
+import poiseBts from "@/images/poise-malinki-behind-the-scenes_compressed.webp";
+import clientsDesktopVertical from "@/images/Logos_Clients_Malinki_ContenuMarque_2025.png";
+import clientsMobileVertical from "@/images/Logos_Clients_Malinki_ContenuMarqueMobile_2025.png";
+import shortsBts1 from "@/images/shorts-bts-1_compressed.webp";
+import shortsBts2 from "@/images/shorts-bts-2_compressed.webp";
+import shortsBts3 from "@/images/shorts-bts-3_compressed.webp";
+import shortsBts4 from "@/images/shorts-bts-4_compressed.webp";
+import shortsBts5 from "@/images/shorts-bts-5.jpg";
+import shortsBts6 from "@/images/shorts-bts-6_compressed_compressed.webp";
+import shortsBts7 from "@/images/shorts-bts-7_compressed.webp";
+import shortsBts8 from "@/images/shorts-bts-8_compressed.webp";
+import Metadata from "@/components/shared/Metadata.astro";
 
 export function getStaticPaths() {
   return [
@@ -74,9 +74,9 @@ const pageConfig = {
   },
 };
 
-import "../../styles/global.css";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import "@/styles/global.css";
+import Header from "@/components/shared/Header.astro";
+import Footer from "@/components/shared/Footer.astro";
 ---
 
 <html lang={currentLang} class="h-full">

@@ -7,9 +7,9 @@ import {
 } from "@/components/ui/carousel"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-import carousel1 from "../../images/studio/carousel/carousel-1.jpg"
-import carousel2 from "../../images/studio/carousel/carousel-2.jpg"
-import carousel3 from "../../images/studio/carousel/carousel-3.jpg"
+import carousel1 from "@/images/studio/carousel/carousel-1.jpg"
+import carousel2 from "@/images/studio/carousel/carousel-2.jpg"
+import carousel3 from "@/images/studio/carousel/carousel-3.jpg"
 import Autoplay from "embla-carousel-autoplay"
 
 const images = [

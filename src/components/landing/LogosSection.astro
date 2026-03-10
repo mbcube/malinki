@@ -1,28 +1,28 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "../i18n/utils";
+import { useTranslations } from "@/i18n/utils";
 // SVG imports (raw path)
-import operaDeMontreal from "../images/logos/odm.svg?raw";
+import operaDeMontreal from "@/images/logos/odm.svg?raw";
 // PNG imports (for Image component)
-import cookIt from "../images/logos/cook-it.svg?raw";
-import omy from "../images/logos/omy.svg?raw";
-import quartierDesSpectacles from "../images/logos/qds.svg?raw";
-import maddle from "../images/logos/maddle.svg?raw";
-import airTransat from "../images/logos/transat.svg?raw";
-import stHubert from "../images/logos/st-hubert.svg?raw";
-import keywordsStudios from "../images/logos/keywords.svg?raw";
-import laval from "../images/logos/laval.svg?raw";
-import veritas from "../images/logos/veritas.svg?raw";
-import meatAndProduce from "../images/logos/mnp.svg?raw";
-import maisonJeanLapointe from "../images/logos/mjl.svg?raw";
-import immobilia from "../images/logos/logo-pur-immobilia.png";
-import niche from "../images/logos/niche.svg?raw";
-import qolab from "../images/logos/qolab.svg?raw";
-import vt from "../images/logos/vt.svg?raw";
-import ms from "../images/logos/ms.svg?raw";
-import fizz from "../images/logos/fizz.svg?raw";
-import bnf from "../images/logos/bnf.svg?raw";
-import rtl from "../images/logos/rtl.svg?raw";
+import cookIt from "@/images/logos/cook-it.svg?raw";
+import omy from "@/images/logos/omy.svg?raw";
+import quartierDesSpectacles from "@/images/logos/qds.svg?raw";
+import maddle from "@/images/logos/maddle.svg?raw";
+import airTransat from "@/images/logos/transat.svg?raw";
+import stHubert from "@/images/logos/st-hubert.svg?raw";
+import keywordsStudios from "@/images/logos/keywords.svg?raw";
+import laval from "@/images/logos/laval.svg?raw";
+import veritas from "@/images/logos/veritas.svg?raw";
+import meatAndProduce from "@/images/logos/mnp.svg?raw";
+import maisonJeanLapointe from "@/images/logos/mjl.svg?raw";
+import immobilia from "@/images/logos/logo-pur-immobilia.png";
+import niche from "@/images/logos/niche.svg?raw";
+import qolab from "@/images/logos/qolab.svg?raw";
+import vt from "@/images/logos/vt.svg?raw";
+import ms from "@/images/logos/ms.svg?raw";
+import fizz from "@/images/logos/fizz.svg?raw";
+import bnf from "@/images/logos/bnf.svg?raw";
+import rtl from "@/images/logos/rtl.svg?raw";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
