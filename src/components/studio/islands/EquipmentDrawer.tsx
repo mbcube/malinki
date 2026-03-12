@@ -15,7 +15,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { X, Search } from "lucide-react"
+import {
+  Collapsible,
+  CollapsibleContent,
+} from "@/components/ui/collapsible"
+import { X, Search, ChevronDown } from "lucide-react"
 
 export type EquipmentItem = {
   name: string
@@ -37,6 +41,59 @@ interface Props {
   data?: EquipmentItem[]
 }
 
+function EquipmentRow({ item }: { item: EquipmentItem }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <TableRow
+        onClick={() => item.description && setOpen((o) => !o)}
+        className={`border-b border-[#083D45]/5 hover:bg-[#083D45]/3 transition-colors ${item.description ? "cursor-pointer md:cursor-default" : ""}`}
+      >
+        <TableCell className="px-6 py-3 font-['Montserrat'] text-[13px] font-medium text-[#083D45] whitespace-normal break-words">
+          <span className="flex items-center justify-between gap-2">
+            {item.name}
+            {item.description && (
+              <ChevronDown
+                className={`md:hidden shrink-0 size-3.5 text-[#083D45]/50 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+              />
+            )}
+          </span>
+        </TableCell>
+        <TableCell className="px-3 py-3 font-['Montserrat'] text-[13px] text-[#083D45] w-px whitespace-nowrap">
+          {item.qty}
+        </TableCell>
+        <TableCell className="px-3 py-3 hidden sm:table-cell w-px whitespace-nowrap">
+          {item.dept && (
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-['Montserrat'] font-semibold text-[#083D45] bg-[#083D45]/8 border border-[#083D45]/10">
+              {item.dept}
+            </span>
+          )}
+        </TableCell>
+        <TableCell className="px-3 py-3 font-['Montserrat'] text-[13px] font-medium text-[#083D45] w-px whitespace-nowrap">
+          {item.price}
+        </TableCell>
+        <TableCell className="hidden md:table-cell px-3 py-3 font-['Montserrat'] text-[12px] text-[#083D45] whitespace-normal break-words max-w-xs">
+          {item.description}
+        </TableCell>
+      </TableRow>
+      {item.description && (
+        <TableRow className="md:hidden border-b border-[#083D45]/10">
+          <TableCell colSpan={4} className="px-6 pb-0 pt-0">
+            <Collapsible open={open}>
+              <CollapsibleContent>
+                <div className="w-1/2 font-['Montserrat'] text-[12px] text-[#083D45] whitespace-normal pb-3">
+                  {item.description}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+          </TableCell>
+        </TableRow>
+      )}
+    </>
+  )
+}
+
 export default function EquipmentDrawer({
   label,
   title,
@@ -45,7 +102,7 @@ export default function EquipmentDrawer({
   colDept,
   colPrice,
   colDescription,
-  filterLabel = "Dept",
+  filterLabel = "",
   data = [],
 }: Props) {
   const [search, setSearch] = useState("")
@@ -131,19 +188,19 @@ export default function EquipmentDrawer({
           <Table className="table-auto  w-full">
             <TableHeader className=" ">
               <TableRow className="border-b border-[#083D45]/10 hover:bg-transparent ">
-                <TableHead className="px-6 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-tight text-[#083D45] w-1/3 whitespace-normal break-words overflow-hidden">
+                <TableHead className="px-6 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-tight text-[#083D45] whitespace-normal break-words">
                   {colName}
                 </TableHead>
-                <TableHead className="px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] ">
+                <TableHead className="px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] w-px whitespace-nowrap">
                   {colQty}
                 </TableHead>
-                <TableHead className="px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] hidden sm:block ">
+                <TableHead className="px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] hidden sm:table-cell w-px whitespace-nowrap">
                   {colDept}
                 </TableHead>
-                <TableHead className="px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] ">
+                <TableHead className="px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] w-px whitespace-nowrap">
                   {colPrice}
                 </TableHead>
-                <TableHead className="px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] w-1/3">
+                <TableHead className="hidden md:table-cell px-3 py-3 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-wide text-[#083D45] w-1/3">
                   {colDescription}
                 </TableHead>
               </TableRow>
@@ -151,30 +208,7 @@ export default function EquipmentDrawer({
             <TableBody className=" ">
               {filtered.length ? (
                 filtered.map((item, i) => (
-                  <TableRow
-                    key={i}
-                    className=" border-b border-[#083D45]/5 hover:bg-[#083D45]/3 transition-colors  "
-                  >
-                    <TableCell className="px-6 py-3 font-['Montserrat'] text-[13px] font-medium text-[#083D45] whitespace-normal break-words">
-                      {item.name}
-                    </TableCell>
-                    <TableCell className="px-3 py-3 font-['Montserrat'] text-[13px] text-[#083D45]">
-                      {item.qty}
-                    </TableCell>
-                    <TableCell className="px-3 py-3 hidden sm:block">
-                      {item.dept && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-['Montserrat'] font-semibold text-[#083D45] bg-[#083D45]/8 border border-[#083D45]/10">
-                          {item.dept}
-                        </span>
-                      )}
-                    </TableCell>
-                    <TableCell className="px-3 py-3 font-['Montserrat'] text-[13px] font-medium text-[#083D45]">
-                      {item.price}
-                    </TableCell>
-                    <TableCell className="px-3 py-3 font-['Montserrat'] text-[12px] text-[#083D45] whitespace-normal break-words max-w-xs">
-                      {item.description}
-                    </TableCell>
-                  </TableRow>
+                  <EquipmentRow key={i} item={item} />
                 ))
               ) : (
                 <TableRow className=" ">

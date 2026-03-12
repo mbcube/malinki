@@ -32,7 +32,7 @@
     "NOM": "KIT SM7B PODCAST MIC",
     "QTÉ": 1,
     "DPT": "Audio",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "SM7B + Carte de son"
   },
 
@@ -40,63 +40,63 @@
     "NOM": "Drone Mavic 2 PRO 4K",
     "QTÉ": 1,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Drone Mavic Mini 2k",
     "QTÉ": 1,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Drone Mavic Pro 4",
     "QTÉ": 1,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "- DJI RC 2 (Screen Remote Controller)\n- 3x batteries + chageur triple\n- DJI Goggles Integra Motion Combo avec Motion Control"
   },
   {
     "NOM": "DATA Wrangling station ( Laptop + SSD)",
     "QTÉ": 1,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Raid 0 12 TB",
     "QTÉ": 1,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "SSD 2 TB T5 OU T7",
     "QTÉ": 10,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "SSD 4 TB",
     "QTÉ": 2,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "LEE Filters Master Location Filter Pack - 36 Sheets (10 x 12\")",
     "QTÉ": 1,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Manfrotto Collapsible Reversible Background (6 x 7', White/Mid Gray)",
     "QTÉ": 1,
     "DPT": "Autre",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
 
@@ -104,28 +104,28 @@
     "NOM": "Alexa Mini",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "CHEZ CINÉGROUND 33% partenaire  avec Guillaume Shéa-Blais (66%)"
   },
   {
     "NOM": "RED Monstro 8K -DSMC2",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "NANUK 950 noir: RED Monstro - Full Cage Tilta V-mount sur Base plate Wooden Camera - 2x 960G REDmag - 1x 512G REDmag - 1x REDmag reader USB-C - 1x multitool RED - 1x PL mount adaptor - RED side handle outrigger - RED cable audio sync - Core SWX Duo hotswap adapter - 2x rode 4inch - Tilta base plate - 1x AC cable (6pin female LEMO)"
   },
   {
     "NOM": "RED DSMC2 Motion Mount Adaptor",
     "QTÉ": "",
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "Dans le caise 935 noir\nMOTION MOUNT integrates a global shutter, temporal anti-aliasing soft shutter, and variable neutral density (ND) system"
   },
   {
     "NOM": "Kit Nucleus-M",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "https://tilta.com/shop/nucleus-m-wireless-follow-focus/?srsltid=AfmBOooBHsznJWCJM2aXZ8fK-eKWprcjOcHxEsCKY4dQCh6uq921sJ16"
   },
   {
@@ -139,7 +139,7 @@
     "NOM": "OSEE Moniteur 15 ''",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "PROBLEME avec les boutons flèche de gauche et flèche due droite\npeut quand même changer de INPUT (SDI1 - SDI2 - HDMI)"
   },
   {
@@ -153,7 +153,7 @@
     "NOM": "Blackmagic Design New ATEM Television Studio HD",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "https://www.blackmagicdesign.com/media/release/20170206-01"
   },
   {
@@ -178,17 +178,17 @@
     "DESCRIPTION": ""
   },
   {
-    "NOM": "Kit KOMODO 6K -DSCM3 - SUR DEMANDE",
+    "NOM": "Kit KOMODO 6K -DSCM3 - -",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "SUR DEMANDE",
+    "PRIX": "-",
     "DESCRIPTION": "1x Komodo 6K\n1x Speedbooster 0.71x RF to EF - 2x Metabone RF to EF\n2x 512G ProGrade \n1x 512G Anglebird \n\n1x lecteur CFast2.0 + cable USB-C\nFull Cage 8Sinn: Top handle, rode expender, base plate\nFull Cage Tilta - top cold shoe"
   },
   {
-    "NOM": "KIT RED MONSTRO 8K - SUR DEMANDE",
+    "NOM": "KIT RED MONSTRO 8K - -",
     "QTÉ": "",
     "DPT": "Cameras",
-    "PRIX": "SUR DEMANDE",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
@@ -251,56 +251,56 @@
     "NOM": "Matebox RØDE Railmount",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "https://www.polarpro.com/products/basecamp-15mm-lws-rail-mount"
   },
   {
     "NOM": "MATTE BOX POLAR PRO 1 STAGE -114mm clip on",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "1x 15mm rode Rail Mount | BaseCamp"
   },
   {
     "NOM": "MATTE BOX POLAR PRO 2 STAGE (mirko) - 114mm clip on",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "POLAR PRO FILTER POLARISANT",
     "QTÉ": 2,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "1 des filtres est a mirko"
   },
   {
     "NOM": "POLAR PRO FILTER ND MIST 2-5",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "POLAR PRO FILTER ND VARIABLE 2-5",
     "QTÉ": 2,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "1 des filtres est a mirko"
   },
   {
     "NOM": "POLAR PRO FILTER ND VARIABLE 5-9",
     "QTÉ": 2,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "1 des filtres est a mirko"
   },
   {
     "NOM": "Mattebox RedRockMicro 2 tray up to 138mm",
     "QTÉ": "",
     "DPT": "",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "ACHETER DONUT - https://www.bhphotovideo.com/c/product/1159414-REG/wooden_camera_wc_204900_umb_1_universal_mattebox_cloth.html\nsupporte 4x4 - 4x5.65"
   },
   {
@@ -321,21 +321,21 @@
     "NOM": "SMALLHD Focus Pro RED KOMODO™ Kit",
     "QTÉ": 1,
     "DPT": "",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "PROBLEME NPF socket derrière non fonctionnel \ndoit être brancher en LEMO to d-tap\nPAS de cable de connection avec la komodo:\nLien"
   },
   {
     "NOM": "Portkeys pour Komodo",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "SMALL HD 502 Canon LP-E6",
     "QTÉ": 1,
     "DPT": "Cameras",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "dans le kit DJI RS2"
   },
 
@@ -624,56 +624,56 @@
     "NOM": "Leica Lens kit 28-35-50-60macro,80,90mm",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "SUR DEMANDE",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Leica R 28mm 2.8 Elmarit - CineMod - Canon EF",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "Cinemod - Canon EF"
   },
   {
     "NOM": "Leica R 35mm 2.8 Elmarit - CineMod - Canon EF",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Leica R 50mm 1.4 Summilux - CineMod - Canon EF",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Leica R 60mm MACRO 2.8 Elmarit - CineMod - Canon EF",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Leica R 80mm 1.4 Summilux - Rehoused - Canon EF",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Leica R 90mm 2 Summicron - CineMod - Canon EF",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "ISCO 2x anamorphic lens (adapteur)",
     "QTÉ": 1,
     "DPT": "Lentilles",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "Modded avec tripod mount ring pour ride/avec Single Focus V4"
   },
 
@@ -681,35 +681,35 @@
     "NOM": "KIT LIGHTUBES Digital sputnik 3x4'",
     "QTÉ": 3,
     "DPT": "Lumières",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "KIT LIGHTUBES Digital sputnik 3x2'",
     "QTÉ": 3,
     "DPT": "Lumières",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   },
   {
     "NOM": "Aputure XT26",
     "QTÉ": 1,
     "DPT": "Lumières",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "CHEZ SLA 50% partenaire avec Guillaume Shéa-Blais"
   },
   {
     "NOM": "Aputure Motorized F14 Fresnel Pour XT26",
     "QTÉ": 1,
     "DPT": "Lumières",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "CHEZ SLA 50% partenaire avec Guillaume Shéa-Blais"
   },
   {
     "NOM": "Aputure Spotlight Max Kit 36 degrés",
     "QTÉ": 1,
     "DPT": "Lumières",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "CHEZ SLA 50% partenaire avec Guillaume Shéa-Blais"
   },
   {
@@ -772,7 +772,7 @@
     "NOM": "Amaran F22c (RGB) (ENDOMMAGÉ, JUSTE LE HAUT FONCTIONNE)",
     "QTÉ": 1,
     "DPT": "Lumières",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": "La partie du bas ne fonctionne plus."
   },
   {
@@ -870,7 +870,7 @@
     "NOM": "Astera Titan  ( Sacha )",
     "QTÉ": 3,
     "DPT": "Lumières",
-    "PRIX": "",
+    "PRIX": "-",
     "DESCRIPTION": ""
   }
 ]
