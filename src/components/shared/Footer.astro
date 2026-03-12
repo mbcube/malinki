@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import { useTranslations } from "@/i18n/utils";
 import malinkiLogo from "@/images/malinki-logo-c.png";
+import studioLogo from "@/images/studio-malinki.jpg";
 import LanguageSwitcher from "@/components/shared/islands/LanguageSwitcher";
 
 // Get current language from Astro params
@@ -13,6 +14,8 @@ const currentPath = Astro.url.pathname;
 // Inline settings (migrated from Shopify schema)
 const settings = {
   instagram_url: "https://www.instagram.com/malinki.agence/",
+  studio_instagram_url: "https://www.instagram.com/studio.malinki/",
+
 };
 ---
 
@@ -42,27 +45,57 @@ const settings = {
     <div
       class="flex flex-col gap-[32px] items-center lg:items-end justify-center"
     >
-      <!-- Instagram Icon -->
-      {
-        settings.instagram_url && (
-          <div class="tt-social-icon-wrapper">
-            <a
-              target="_blank"
-              href={settings.instagram_url}
-              aria-label="Instagram"
-              class="block w-[40px]! h-[40px]! lg:w-[48px]! lg:h-[48px]!"
-            >
-              <img
-                src="/instagram.svg"
-                alt="Instagram"
-                class="w-full! h-full! object-contain!"
-                width="48"
-                height="48"
-              />
-            </a>
-          </div>
-        )
-      }
+      <!-- Instagram Icons -->
+      <div class="flex items-center gap-6">
+        {
+          settings.instagram_url && (
+            <div class="tt-social-icon-wrapper flex flex-col items-center gap-2">
+              <a
+                target="_blank"
+                href={settings.instagram_url}
+                aria-label="Instagram Malinki Agence"
+                class="block w-[48px] h-[48px] lg:w-[56px] lg:h-[56px] rounded-xl overflow-hidden"
+              >
+                <img
+                  src="/agence-malinki-icon.svg"
+                  alt="Malinki Agence Instagram"
+                  class="w-full h-full object-cover"
+                  width={56}
+                  height={56}
+                />
+              </a>
+              <span class="font-['Montserrat'] text-[10px] font-medium text-white/60 uppercase tracking-wide">
+                @{t("sections.footer.ig_agency")}
+              </span>
+            </div>
+          )
+        }
+        {
+          settings.studio_instagram_url && (
+            <div class="tt-social-icon-wrapper flex flex-col items-center gap-2">
+              <a
+                target="_blank"
+                href={settings.studio_instagram_url}
+                aria-label="Instagram Studio Malinki"
+                class="block w-[48px] h-[48px] lg:w-[56px] lg:h-[56px] rounded-xl overflow-hidden"
+              >
+                <Image
+                  src={studioLogo}
+                  alt="Studio Malinki Instagram"
+                  class="w-full h-full object-cover"
+                  width={56}
+                  height={56}
+                />
+              </a>
+              <span class="font-['Montserrat'] text-[10px] font-medium text-white/60 uppercase tracking-wide">
+                @{t("sections.footer.ig_studio")}
+              </span>
+            </div>
+          )
+        }
+      </div>
+
+      
 
       <!-- Language Switcher -->
       <div class="flex justify-center lg:justify-end">

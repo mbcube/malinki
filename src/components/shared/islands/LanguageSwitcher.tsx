@@ -1,13 +1,15 @@
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-
+import { cn } from "@/lib/utils";
 interface LanguageSwitcherProps {
   currentLang: "fr" | "en";
   currentPath: string;
+  className?: string;
 }
 
 export default function LanguageSwitcher({
   currentLang,
   currentPath,
+  className,
 }: LanguageSwitcherProps) {
   const handleLanguageChange = (value: string) => {
     if (!value || value === currentLang) return;
@@ -39,7 +41,7 @@ export default function LanguageSwitcher({
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className={cn("flex items-center gap-2", className)}>
       {/* Globe Icon */}
       <svg
         className="w-5 h-5 text-white"

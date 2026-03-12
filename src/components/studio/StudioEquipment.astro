@@ -1,5 +1,8 @@
 ---
 import { useTranslations } from "@/i18n/utils";
+import EquipmentDrawer from "@/components/studio/islands/EquipmentDrawer";
+import type { EquipmentItem } from "@/components/studio/islands/EquipmentDrawer";
+import rawEquipment from "@/data/equipment.json";
 
 interface Props {
   lang: "fr" | "en";
@@ -8,6 +11,16 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
+const equipmentData: EquipmentItem[] = rawEquipment.map(
+  (row: Record<string, string | number | null>) => ({
+    name: String(row["NOM"] ?? ""),
+    qty: String(row["QTÉ"] ?? ""),
+    dept: String(row["DPT"] ?? ""),
+    price: String(row["PRIX"] ?? ""),
+    description: String(row["DESCRIPTION"] ?? ""),
+  }),
+);
+
 const available = t("studio.equipment.available") as unknown as string[];
 const rental = t("studio.equipment.rental") as unknown as string[];
 ---
@@ -15,41 +28,61 @@ const rental = t("studio.equipment.rental") as unknown as string[];
 <section id="nos-equipements" class="w-full px-6 md:px-8 py-16 md:py-24">
   <div class="mx-auto w-full max-w-[84rem]">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
-
       <!-- Available equipment -->
       <div>
-        <h2 class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white mb-6">
+        <h2
+          class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white mb-6"
+        >
           {t("studio.equipment.available_title_line1")}<br />
           {t("studio.equipment.available_title_line2")}
         </h2>
         <div class="border-t border-white/40">
-          {available.map((item) => (
-            <div class="border-b border-white/40 py-4">
-              <p class="text-[1rem] font-medium leading-[1.2] text-white">
-                {item}
-              </p>
-            </div>
-          ))}
+          {
+            available.map((item) => (
+              <div class="border-b border-white/40 py-4">
+                <p class="text-[1rem] font-medium leading-[1.2] text-white">
+                  {item}
+                </p>
+              </div>
+            ))
+          }
         </div>
       </div>
 
       <!-- Rental equipment -->
       <div>
-        <h2 class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white mb-6">
+        <h2
+          class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white mb-6"
+        >
           {t("studio.equipment.rental_title_line1")}<br />
           {t("studio.equipment.rental_title_line2")}
         </h2>
         <div class="border-t border-white/40">
-          {rental.map((item) => (
-            <div class="border-b border-white/40 py-4">
-              <p class="text-[1rem] font-medium leading-[1.2] text-white">
-                {item}
-              </p>
-            </div>
-          ))}
+          {
+            rental.map((item) => (
+              <div class="border-b border-white/40 py-4">
+                <p class="text-[1rem] font-medium leading-[1.2] text-white">
+                  {item}
+                </p>
+              </div>
+            ))
+          }
+          <div class="border-b border-white/40 py-4">
+            <EquipmentDrawer
+              client:load
+              label={t("studio.equipment.view_full_list") as string}
+              title={t("studio.equipment.drawer_title") as string}
+              colName={t("studio.equipment.col_name") as string}
+              colQty={t("studio.equipment.col_qty") as string}
+              colDept={t("studio.equipment.col_dept") as string}
+              colPrice={t("studio.equipment.col_price") as string}
+              colDescription={t("studio.equipment.col_description") as string}
+              filterLabel={t("studio.equipment.filter_dept") as string}
+              data={equipmentData}
+            />
+          </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>

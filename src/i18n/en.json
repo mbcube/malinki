@@ -17,7 +17,8 @@
         "contact_button": "Contact us",
         "menu_projects": "Our projects",
         "menu_services": "Services",
-        "menu_team": "Team"
+        "menu_team": "Team",
+        "menu_studio": "Studio"
     },
     "production_publicitaire": {
         "title": "ADVERTISING CONTENT THAT CAPTURES ATTENTION",
@@ -188,7 +189,9 @@
             "heading": "They trusted us"
         },
         "footer": {
-            "copyright": "© MALINKI 2025. All rights reserved"
+            "copyright": "© MALINKI 2025. All rights reserved",
+            "ig_agency": "Agency",
+            "ig_studio": "Studio"
         }
     },
     "video_clips": {
@@ -267,7 +270,15 @@
                 "Aputure spotlight 19°",
                 "Aputure Lantern 90",
                 "Aputure Fresnel F10 / 2X"
-            ]
+            ],
+            "view_full_list": "View full list",
+            "filter_dept": "Dept",
+            "drawer_title": "Equipment list",
+            "col_name": "Name",
+            "col_qty": "Qty",
+            "col_dept": "Dept",
+            "col_price": "Price",
+            "col_description": "Description"
         },
         "pricing": {
             "title": "Pricing",
@@ -283,14 +294,55 @@
         },
         "faq": {
             "title": "FAQ",
-            "q1_question": "Parking",
-            "q1_answer": "Lorem ipsum dolor sit amet consectetur. Vel velit porttitor accumsan augue lectus ultricies tempor dictum quis. Sed scelerisque fermentum ornare lacus purus at. Odio quis eleifend ornare amet facilisis non suspendisse bibendum feugiat. Orci dignissim eu fringilla eget sed ultricies. Sollicitudin id ut massa cum.",
-            "q2_question": "Cancellation and rescheduling",
-            "q2_answer": "",
-            "q3_question": "Damages and cleaning",
-            "q3_answer": "",
-            "q4_question": "Other questions",
-            "q4_answer": ""
+            "cat_studio": "The Studio",
+            "cat_reservations": "Booking & practical information",
+            "cat_installations": "Facilities & equipment",
+            "cat_services": "Additional services",
+            "q1_question": "Where is your studio located?",
+            "q1_answer": "We are located at 5425 Rue de Bordeaux, Unit 253.",
+            "q2_question": "What's in your studio?",
+            "q2_answer": [
+                "Our 1,000 sq ft studio, located in Rosemont, is designed to be functional, comfortable, and suitable for a variety of production types.",
+                "It features a white cyclorama 15 feet wide, 8.6 feet deep and 11 feet high, steel pipes recessed in the ceiling for hanging equipment, and a HMU station with a makeup table, changing room, clothing rack and steamer.",
+                "A loading dock and freight elevator make equipment access easy. The studio also includes a kitchen (fridge, microwave, air fryer, sink and dishes), great coffee, air conditioning, bathroom access in the corridor, and available parking ($).",
+                "You can build walls to create full room sets, such as a living room, office, or other setting."
+            ],
+            "q3_question": "What are the booking terms?",
+            "q3_answer": [
+                "Payment is required at the time of booking to confirm your reservation.",
+                "Any cancellation made less than 48 hours before the booking date is non-refundable."
+            ],
+            "q4_question": "What are the studio usage conditions?",
+            "q4_answer": [
+                "The studio must be returned to its original condition upon departure.",
+                "Any material damage caused by the client or their party will result in repair or replacement fees. This includes, but is not limited to, damage to the cyclorama, furniture, and equipment.",
+                "If the studio is not properly reset, cleaning fees of up to $150 may be charged depending on the condition of the studio.",
+                "Please avoid glitter, feathers, confetti, powders, and other hard-to-clean materials. If in doubt, ask us beforehand.",
+                "The cyclorama surface must be kept clean. We ask that you wear shoe covers or clean indoor shoes when on the cyclo.",
+                "Please let us know in advance if you plan to bring a pet.",
+                "Respect your neighbours: keep noise levels (music, voices) at a reasonable level to avoid disturbing surrounding tenants."
+            ],
+            "q5_question": "Is parking available?",
+            "q5_answer": [
+                "One parking spot is included.",
+                "Additional parking can be reserved for $25/day.",
+                "A loading dock and freight elevator are accessible for equipment transport."
+            ],
+            "q6_question": "What time slots are available?",
+            "q6_answer": [
+                "Rentals are typically available for a half-day (4h) or a full day (8h).",
+                "It is also possible to book the studio for more specific time slots — simply contact us to arrange your reservation."
+            ],
+            "q7_question": "Do you rent equipment?",
+            "q7_answer": "Yes. In addition to the included equipment, we offer a wide selection of cameras, lenses, lights, grip gear and accessories for rental. See the full list here.",
+            "q8_question": "Can you repaint the cyclorama for our project?",
+            "q8_answer": "Yes, for an additional fee, we offer a cyclorama painting service upon prior request.",
+            "q9_question": "Where is your electrical panel (for tie-ins)?",
+            "q9_answer": "For higher electrical requirements, access to the secured electrical panel is available upon request.",
+            "q10_question": "Can we hire technicians for the studio?",
+            "q10_answer": "Yes! We can provide a full crew based on your needs: grip technician, gaffer, director of photography, director, hair & makeup artist, stylist, and more. Tell us what you need and we'll take care of the rest.",
+            "q11_question": "Do you provide creative services?",
+            "q11_answer": "Yes! You can call on our advertising content design and production services. Whether for a web, TV or social media campaign, we focus on clear ideas, strong visuals and agile execution."
         },
         "map": {
             "title": "Find us easily",

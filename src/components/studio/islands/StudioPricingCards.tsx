@@ -1,4 +1,3 @@
-import * as React from "react"
 import {
   Carousel,
   CarouselContent,
@@ -6,7 +5,7 @@ import {
   useCarousel,
 } from "@/components/ui/carousel"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import Cal from "@/components/studio/cal"
+import Cal from "@/components/studio/islands/cal"
 
 interface PricingCard {
   title: string

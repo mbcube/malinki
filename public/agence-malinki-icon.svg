@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="white"/>
+  <text
+    x="100"
+    y="105"
+    font-family="Montserrat, sans-serif"
+    font-weight="900"
+    font-size="40"
+    fill="#083D45"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    letter-spacing="-0.5"
+  >MALiNKi</text>
+</svg>

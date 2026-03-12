@@ -1,6 +1,6 @@
 ---
 import { useTranslations } from "@/i18n/utils";
-import StudioFaqAccordion from "@/components/studio/StudioFaqAccordion";
+import StudioFaqAccordion from "@/components/studio/islands/StudioFaqAccordion";
 
 interface Props {
   lang: "fr" | "en";
@@ -11,20 +11,52 @@ const t = useTranslations(lang);
 
 const faqItems = [
   {
+    categoryLabel: t("studio.faq.cat_studio") as string,
     question: t("studio.faq.q1_question") as string,
-    answer: t("studio.faq.q1_answer") as string,
+    answer: t("studio.faq.q1_answer"),
   },
   {
     question: t("studio.faq.q2_question") as string,
-    answer: t("studio.faq.q2_answer") as string,
+    answer: t("studio.faq.q2_answer"),
   },
   {
+    categoryLabel: t("studio.faq.cat_reservations") as string,
     question: t("studio.faq.q3_question") as string,
-    answer: t("studio.faq.q3_answer") as string,
+    answer: t("studio.faq.q3_answer"),
   },
   {
     question: t("studio.faq.q4_question") as string,
-    answer: t("studio.faq.q4_answer") as string,
+    answer: t("studio.faq.q4_answer"),
+  },
+  {
+    question: t("studio.faq.q5_question") as string,
+    answer: t("studio.faq.q5_answer"),
+  },
+  {
+    question: t("studio.faq.q6_question") as string,
+    answer: t("studio.faq.q6_answer"),
+  },
+  {
+    categoryLabel: t("studio.faq.cat_installations") as string,
+    question: t("studio.faq.q7_question") as string,
+    answer: t("studio.faq.q7_answer"),
+  },
+  {
+    question: t("studio.faq.q8_question") as string,
+    answer: t("studio.faq.q8_answer"),
+  },
+  {
+    question: t("studio.faq.q9_question") as string,
+    answer: t("studio.faq.q9_answer"),
+  },
+  {
+    categoryLabel: t("studio.faq.cat_services") as string,
+    question: t("studio.faq.q10_question") as string,
+    answer: t("studio.faq.q10_answer"),
+  },
+  {
+    question: t("studio.faq.q11_question") as string,
+    answer: t("studio.faq.q11_answer"),
   },
 ];
 ---

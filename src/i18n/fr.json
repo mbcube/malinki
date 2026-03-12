@@ -17,7 +17,8 @@
         "contact_button": "Contactez-nous",
         "menu_projects": "Nos projets",
         "menu_services": "Services",
-        "menu_team": "Équipe"
+        "menu_team": "Équipe",
+        "menu_studio": "Studio"
     },
     "production_publicitaire": {
         "title": "DU CONTENU PUBLICITAIRE QUI CAPTE L'ATTENTION",
@@ -188,7 +189,9 @@
             "heading": "Ils nous ont fait confiance"
         },
         "footer": {
-            "copyright": "© MALINKI 2025. Tout les droits réservés"
+            "copyright": "© MALINKI 2025. Tout les droits réservés",
+            "ig_agency": "Agence",
+            "ig_studio": "Studio"
         }
     },
     "video_clips": {
@@ -267,7 +270,15 @@
                 "Aputure spotlight 19°",
                 "Aputure Lantern 90",
                 "Aputure Fresnel F10 / 2X"
-            ]
+            ],
+            "view_full_list": "Voir la liste complète",
+            "filter_dept": "Dépt",
+            "drawer_title": "Liste d'équipements",
+            "col_name": "Nom",
+            "col_qty": "Qté",
+            "col_dept": "Dépt",
+            "col_price": "Prix",
+            "col_description": "Description"
         },
         "pricing": {
             "title": "Tarifs",
@@ -283,14 +294,55 @@
         },
         "faq": {
             "title": "FAQ",
-            "q1_question": "Stationnement",
-            "q1_answer": "Lorem ipsum dolor sit amet consectetur. Vel velit porttitor accumsan augue lectus ultricies tempor dictum quis. Sed scelerisque fermentum ornare lacus purus at. Odio quis eleifend ornare amet facilisis non suspendisse bibendum feugiat. Orci dignissim eu fringilla eget sed ultricies. Sollicitudin id ut massa cum.",
-            "q2_question": "Annulation et report",
-            "q2_answer": "",
-            "q3_question": "Dommages et nettoyages",
-            "q3_answer": "",
-            "q4_question": "Lorem Ipsum",
-            "q4_answer": ""
+            "cat_studio": "Le Studio",
+            "cat_reservations": "Réservation et informations pratiques",
+            "cat_installations": "Installations et équipement",
+            "cat_services": "Services additionnels",
+            "q1_question": "Où se trouve votre studio?",
+            "q1_answer": "Nous sommes situés au 5425, rue de Bordeaux, Unité 253.",
+            "q2_question": "Qu'est-ce qui se trouve dans votre studio?",
+            "q2_answer": [
+                "Notre studio de 1000 pi², situé à Rosemont, est conçu pour être fonctionnel, confortable et adapté à plusieurs types de productions.",
+                "On y retrouve un cyclorama blanc de 15 pieds de large, 8,6 pieds de profondeur et 11 pieds de haut, des tuyaux d'acier encastrés au plafond pour suspendre l'équipement, une station CCM avec table de maquillage, cabine d'essayage, rack à vêtements et steamer.",
+                "Un quai de chargement et un monte-charge facilitent l'accès au studio. Le studio comprend aussi une cuisine (frigo, micro-ondes, air fryer, évier et vaisselle), du bon café, l'air climatisé, l'accès à des salles de bain dans le corridor, et des stationnements disponibles ($).",
+                "Vous pouvez monter des murs pour créer des pièces entières, comme un décor de salon, de bureau ou autre."
+            ],
+            "q3_question": "Quelles sont les modalités de réservation?",
+            "q3_answer": [
+                "Le paiement est requis au moment de la réservation pour valider la location.",
+                "Toute annulation effectuée à moins de 48h de la date de réservation est non remboursable."
+            ],
+            "q4_question": "Quelles sont les conditions d'utilisation du studio?",
+            "q4_answer": [
+                "Le studio doit être remis dans son état initial au moment de quitter les lieux.",
+                "Tout dommage matériel causé par le client ou les personnes l'accompagnant entraînera des frais de réparation ou de remplacement. Ceci inclut, mais sans s'y limiter, les dommages causés au cyclo, au mobilier et aux équipements.",
+                "En cas de non remise en place des lieux, des frais de nettoyage seront appliqués, pouvant aller jusqu'à 150 $ selon l'état du studio.",
+                "Éviter les paillettes, plumes, confettis, poudres et autres matières difficiles à nettoyer. En cas de doute, nous demander au préalable.",
+                "La surface de cyclo doit être gardée propre, c'est pourquoi nous demandons de porter des couvres-chaussures ou de circuler avec des chaussures d'intérieur propres.",
+                "Nous informer à l'avance si vous prévoyez être accompagné de votre animal de compagnie.",
+                "Respectez le voisinage : conservez un niveau sonore (musique, voix) respectable afin de ne pas déranger les locaux avoisinants."
+            ],
+            "q5_question": "Est-ce qu'il y a des espaces de stationnement?",
+            "q5_answer": [
+                "Une place de stationnement est fournie.",
+                "Des stationnements additionnels peuvent être réservés pour 25$/jour.",
+                "Un quai de chargement et un monte-charge sont accessibles pour le transport d'équipement."
+            ],
+            "q6_question": "Quelles sont les plages horaires disponibles?",
+            "q6_answer": [
+                "Les locations sont généralement d'une durée d'une demi-journée (4h) ou d'une journée complète (8h).",
+                "Il est aussi possible de réserver le studio pour des temps de location plus spécifiques, simplement nous contacter pour effectuer cette réservation."
+            ],
+            "q7_question": "Louez-vous de l'équipement?",
+            "q7_answer": "Oui. En plus des équipements fournis, nous avons une vaste sélection de caméras, lentilles, lumières, gripping et accessoires en location. Voir la liste complète ici.",
+            "q8_question": "Est-ce que vous pouvez repeindre le cyclorama pour notre projet?",
+            "q8_answer": "Oui, moyennant des frais additionnels, on offre un service de peinture du cyclo en couleur sur demande préalable.",
+            "q9_question": "Où se trouve votre boîte électrique (pour les tie in)?",
+            "q9_answer": "Pour des besoins électriques supérieurs, un accès à la boîte électrique sécurisée est disponible sur demande.",
+            "q10_question": "Peut-on engager des techniciens pour le studio?",
+            "q10_answer": "Oui! On peut vous fournir une équipe complète selon vos besoins : technicien·ne grip, éclairagiste, directeur·trice photo, réalisateur·trice, maquilleur·se/coiffeur·se, styliste, etc. Dites-nous ce qu'il vous faut, et on s'occupe du reste.",
+            "q11_question": "Fournissez-vous des services créatifs?",
+            "q11_answer": "Oui ! Vous pouvez faire appel à nos services de conception et production de contenu publicitaire. Que ce soit pour une campagne web, télé ou sociale, on mise sur des idées claires, des visuels forts et une exécution agile."
         },
         "map": {
             "title": "Retrouvez-nous facilement",
