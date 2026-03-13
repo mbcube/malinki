@@ -17,7 +17,7 @@ export default function StudioFaqAccordion({ items }: Props) {
       {items.map((item, i) => (
         <div key={i}>
           {item.categoryLabel && (
-            <p className="text-[0.75rem] font-semibold uppercase tracking-widest text-white/50 pt-10 pb-2">
+            <p className="text-[1.25rem] font-light uppercase tracking-widest text-white/50 pt-8 pb-2">
               {item.categoryLabel}
             </p>
           )}
@@ -27,7 +27,7 @@ export default function StudioFaqAccordion({ items }: Props) {
           >
             <AccordionPrimitive.Header className="flex">
               <AccordionPrimitive.Trigger className="group flex w-full items-start justify-between gap-8 py-8 text-left outline-none">
-                <span className="text-[1.125rem] md:text-[1.25rem] font-bold leading-[1.2] text-white">
+                <span className="text-[1.125rem] md:text-[1.25rem] font-medium leading-[1.2] text-white">
                   {item.question}
                 </span>
                 <ChevronDownIcon className="mt-0.5 size-6 shrink-0 text-white transition-transform duration-200 group-data-[state=open]:rotate-180" />
@@ -38,12 +38,12 @@ export default function StudioFaqAccordion({ items }: Props) {
                 <div className="flex flex-col gap-3 pb-8">
                   {Array.isArray(item.answer) ? (
                     item.answer.map((line, j) => (
-                      <p key={j} className="text-[1rem] md:text-[1.125rem] font-medium leading-[1.5] text-white/80">
+                      <p key={j} className="text-[1rem] md:text-[1.125rem] font-light leading-[1.5] text-white/85">
                         {line}
                       </p>
                     ))
                   ) : (
-                    <p className="text-[1rem] md:text-[1.125rem] font-medium leading-[1.5] text-white/80">
+                    <p className="text-[1rem] md:text-[1.125rem] font-light leading-[1.5] text-white/85">
                       {item.answer}
                     </p>
                   )}
