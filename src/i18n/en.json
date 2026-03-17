@@ -278,7 +278,8 @@
             "col_qty": "Qty",
             "col_dept": "Dept",
             "col_price": "Price",
-            "col_description": "Description"
+            "col_description": "Description",
+            "price_tbd": "TBD"
         },
         "pricing": {
             "title": "Pricing",

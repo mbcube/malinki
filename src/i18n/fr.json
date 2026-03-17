@@ -278,7 +278,8 @@
             "col_qty": "Qté",
             "col_dept": "Dépt",
             "col_price": "Prix",
-            "col_description": "Description"
+            "col_description": "Description",
+            "price_tbd": "ÀD"
         },
         "pricing": {
             "title": "Tarifs",

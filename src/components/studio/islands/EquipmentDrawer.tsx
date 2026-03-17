@@ -37,11 +37,23 @@ interface Props {
   colDept: string
   colPrice: string
   colDescription: string
+  priceTbd?: string
   filterLabel?: string
   data?: EquipmentItem[]
 }
 
-function EquipmentRow({ item }: { item: EquipmentItem }) {
+function isPriceTbd(price: string): boolean {
+  const p = price.trim()
+  return !p || p === "-" || p === "—"
+}
+
+function EquipmentRow({
+  item,
+  priceTbd,
+}: {
+  item: EquipmentItem
+  priceTbd?: string
+}) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -71,7 +83,9 @@ function EquipmentRow({ item }: { item: EquipmentItem }) {
           )}
         </TableCell>
         <TableCell className="px-3 py-3 font-['Montserrat'] text-[13px] font-medium text-[#083D45] w-px whitespace-nowrap">
-          {item.price}
+          {isPriceTbd(item.price)
+            ? (priceTbd ?? "—")
+            : item.price}
         </TableCell>
         <TableCell className="hidden md:table-cell px-3 py-3 font-['Montserrat'] text-[12px] text-[#083D45] whitespace-normal break-words max-w-xs">
           {item.description}
@@ -102,6 +116,7 @@ export default function EquipmentDrawer({
   colDept,
   colPrice,
   colDescription,
+  priceTbd,
   filterLabel = "",
   data = [],
 }: Props) {
@@ -208,7 +223,7 @@ export default function EquipmentDrawer({
             <TableBody className=" ">
               {filtered.length ? (
                 filtered.map((item, i) => (
-                  <EquipmentRow key={i} item={item} />
+                  <EquipmentRow key={i} item={item} priceTbd={priceTbd} />
                 ))
               ) : (
                 <TableRow className=" ">
