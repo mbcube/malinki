@@ -43,16 +43,10 @@ const { grids } = projectsGrid;
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Get all project cards with video
     const projectCards = document.querySelectorAll("[data-project-card]");
 
-    // Mobile detection utility
-    const isMobile = () => {
-      const isSmallScreen = window.innerWidth < 640;
-      return isSmallScreen;
-    };
+    const isMobile = () => window.innerWidth < 640;
 
-    // Video data map to store start times and state
     const videoDataMap = new Map<
       HTMLVideoElement,
       {
@@ -60,23 +54,54 @@ const { grids } = projectsGrid;
         card: Element;
         isVisible: boolean;
         isHovered: boolean;
+        loaded: boolean;
       }
     >();
 
-    // Setup video data and hover listeners
+    function loadVideoSource(video: HTMLVideoElement) {
+      const data = videoDataMap.get(video);
+      if (data?.loaded) return;
+
+      const src = video.getAttribute("data-video-src");
+      if (!src) return;
+
+      let source = video.querySelector("source");
+      if (!source) {
+        source = document.createElement("source");
+        source.type = "video/mp4";
+        video.appendChild(source);
+      }
+      source.src = src;
+      video.preload = "metadata";
+      video.load();
+
+      if (data) data.loaded = true;
+    }
+
+    const lazyLoadObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const video = entry.target as HTMLVideoElement;
+            loadVideoSource(video);
+            lazyLoadObserver.unobserve(video);
+          }
+        });
+      },
+      { rootMargin: "300px" },
+    );
+
     projectCards.forEach((card) => {
       const video = card.querySelector(
         "[data-video-hover]",
       ) as HTMLVideoElement;
 
       if (video) {
-        // Extract start time from data attribute (original URL with time fragment)
         const originalUrl = video.getAttribute("data-video-url");
         let startTime = 0;
 
         if (originalUrl && originalUrl.includes("#t=")) {
           const timeFragment = originalUrl.split("#t=")[1];
-          // Handle formats like "10" (seconds) or "1:30" (minutes:seconds)
           if (timeFragment.includes(":")) {
             const parts = timeFragment.split(":");
             startTime = parseInt(parts[0]) * 60 + parseFloat(parts[1]);
@@ -85,95 +110,73 @@ const { grids } = projectsGrid;
           }
         }
 
-        // Store video data
         videoDataMap.set(video, {
           startTime,
           card,
           isVisible: false,
           isHovered: false,
+          loaded: false,
         });
 
-        // Preload metadata to prevent jump on first hover
-        video.load();
+        lazyLoadObserver.observe(video);
 
-        // Desktop: Play video on hover (only if not mobile)
         card.addEventListener("mouseenter", function () {
-          if (isMobile()) return; // Skip hover behavior on mobile
+          if (isMobile()) return;
 
           const data = videoDataMap.get(video);
-          if (data) {
-            data.isHovered = true;
-          }
+          if (data) data.isHovered = true;
 
+          loadVideoSource(video);
           video.currentTime = startTime;
           const playPromise = video.play();
-
           if (playPromise !== undefined) {
-            playPromise.catch((error) => {
-              console.log("Video autoplay prevented:", error);
-            });
+            playPromise.catch(() => {});
           }
         });
 
-        // Desktop: Pause and reset video when hover ends
         card.addEventListener("mouseleave", function () {
-          if (isMobile()) return; // Skip hover behavior on mobile
+          if (isMobile()) return;
 
           const data = videoDataMap.get(video);
-          if (data) {
-            data.isHovered = false;
-          }
+          if (data) data.isHovered = false;
 
           video.pause();
           video.currentTime = startTime;
-          video.load();
         });
       }
     });
 
-    // Mobile-specific scroll-pause video playback
     if (isMobile()) {
       let scrollTimeout: number | null = null;
       let currentlyPlayingVideo: HTMLVideoElement | null = null;
 
-      // Set up IntersectionObserver for 80% visibility tracking
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.8, // 80% visibility required
-      };
+      const visibilityObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target as HTMLVideoElement;
+            const data = videoDataMap.get(video);
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          const video = entry.target as HTMLVideoElement;
-          const data = videoDataMap.get(video);
+            if (data) {
+              data.isVisible =
+                entry.isIntersecting && entry.intersectionRatio >= 0.8;
 
-          if (data) {
-            data.isVisible =
-              entry.isIntersecting && entry.intersectionRatio >= 0.8;
-
-            // If video is no longer visible and it's playing, pause it
-            if (!data.isVisible && video === currentlyPlayingVideo) {
-              video.pause();
-              video.currentTime = data.startTime;
-              video.load();
-              currentlyPlayingVideo = null;
-              // Show overlay again when video pauses on mobile
-              const overlay = data.card.querySelector("[data-overlay]");
-              if (overlay) {
-                overlay.classList.remove("!opacity-0");
+              if (!data.isVisible && video === currentlyPlayingVideo) {
+                video.pause();
+                video.currentTime = data.startTime;
+                currentlyPlayingVideo = null;
+                const overlay = data.card.querySelector("[data-overlay]");
+                if (overlay) overlay.classList.remove("!opacity-0");
               }
             }
-          }
-        });
-      }, observerOptions);
+          });
+        },
+        { root: null, rootMargin: "0px", threshold: 0.8 },
+      );
 
-      // Observe all videos
-      videoDataMap.forEach((data, video) => {
-        observer.observe(video);
+      videoDataMap.forEach((_data, video) => {
+        visibilityObserver.observe(video);
       });
 
-      // Find the most centered visible video
       const findMostCenteredVideo = (): HTMLVideoElement | null => {
         const visibleVideos: Array<{
           video: HTMLVideoElement;
@@ -185,83 +188,58 @@ const { grids } = projectsGrid;
           if (data.isVisible) {
             const rect = video.getBoundingClientRect();
             const videoCenter = rect.top + rect.height / 2;
-            const distanceFromCenter = Math.abs(viewportCenter - videoCenter);
-
-            visibleVideos.push({ video, distance: distanceFromCenter });
+            visibleVideos.push({
+              video,
+              distance: Math.abs(viewportCenter - videoCenter),
+            });
           }
         });
 
         if (visibleVideos.length === 0) return null;
-
-        // Sort by distance and return the closest to center
         visibleVideos.sort((a, b) => a.distance - b.distance);
         return visibleVideos[0].video;
       };
 
-      // Play the most centered video
       const playMostCenteredVideo = () => {
         const targetVideo = findMostCenteredVideo();
+        if (!targetVideo || targetVideo === currentlyPlayingVideo) return;
 
-        // If no video is visible or the same video is already playing, do nothing
-        if (!targetVideo || targetVideo === currentlyPlayingVideo) {
-          return;
-        }
-
-        // Pause currently playing video if different
         if (currentlyPlayingVideo && currentlyPlayingVideo !== targetVideo) {
           const currentData = videoDataMap.get(currentlyPlayingVideo);
           if (currentData) {
             currentlyPlayingVideo.pause();
             currentlyPlayingVideo.currentTime = currentData.startTime;
-            currentlyPlayingVideo.load();
-            // Show overlay again when video pauses on mobile
             const overlay = currentData.card.querySelector("[data-overlay]");
-            if (overlay) {
-              overlay.classList.remove("!opacity-0");
-            }
+            if (overlay) overlay.classList.remove("!opacity-0");
           }
         }
 
-        // Play the new target video
         const targetData = videoDataMap.get(targetVideo);
         if (targetData) {
+          loadVideoSource(targetVideo);
           targetVideo.currentTime = targetData.startTime;
           const playPromise = targetVideo.play();
-
           if (playPromise !== undefined) {
             playPromise
               .then(() => {
                 currentlyPlayingVideo = targetVideo;
-                // Hide overlay when video plays on mobile
                 const overlay = targetData.card.querySelector("[data-overlay]");
-                if (overlay) {
-                  overlay.classList.add("!opacity-0");
-                }
+                if (overlay) overlay.classList.add("!opacity-0");
               })
-              .catch((error) => {
-                console.log("Video autoplay prevented:", error);
-              });
+              .catch(() => {});
           }
         }
       };
 
-      // Scroll event listener with debounce
       const handleScroll = () => {
-        // Clear existing timeout
-        if (scrollTimeout !== null) {
-          clearTimeout(scrollTimeout);
-        }
-
-        // Set new timeout - triggers after 300ms of no scrolling
+        if (scrollTimeout !== null) clearTimeout(scrollTimeout);
         scrollTimeout = window.setTimeout(() => {
           playMostCenteredVideo();
         }, 300);
       };
 
-      // Add scroll listener
       window.addEventListener("scroll", handleScroll, { passive: true });
 
-      // Also check on load in case a video is already in view
       setTimeout(() => {
         playMostCenteredVideo();
       }, 500);
