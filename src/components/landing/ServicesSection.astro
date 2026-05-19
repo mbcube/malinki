@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "../i18n/utils";
-import publicites from "../images/Publicites.png";
-import contenuDeMarque from "../images/contenu-de-marque.png";
-import contenuVertical from "../images/contenu-vertical.png";
-import videoclips from "../images/videoclips.png";
+import { useTranslations } from "@/i18n/utils";
+import publicites from "@/images/Publicites.png";
+import contenuDeMarque from "@/images/contenu-de-marque.png";
+import contenuVertical from "@/images/contenu-vertical.png";
+import videoclips from "@/images/videoclips.png";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";

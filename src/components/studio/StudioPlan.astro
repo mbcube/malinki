@@ -1,0 +1,107 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import planSvg from "@/images/studio/plan.svg";
+import Cal from "@/components/studio/islands/cal";
+
+interface Props {
+  lang: "fr" | "en";
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const specs = t("studio.plan.specs") as unknown as string[];
+const inclusions = t("studio.plan.inclusions") as unknown as string[];
+---
+
+<section class="w-full px-8 py-12">
+  <div class="p-8 bg-[#E6F5F7] rounded-[4rem]">
+    <!-- Plan: title + image -->
+    <div
+      class="flex flex-col md:flex-row md:items-center gap-8 md:gap-12 mb-12 md:mb-20"
+    >
+      <div class="shrink-0 text-center md:text-left">
+        <p
+          class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-[#083D45]"
+        >
+          {t("studio.plan.access_line1")}
+        </p>
+        <p
+          class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-[#083D45]"
+        >
+          {t("studio.plan.access_line2")}
+        </p>
+        <p
+          class="text-[3rem] md:text-[4rem] lg:text-[5rem] font-bold leading-none uppercase text-[#083D45] mt-1"
+        >
+          {t("studio.plan.access_size")}
+        </p>
+      </div>
+      <div class="w-full">
+        <img src={planSvg.src} alt="Studio floor plan" class="w-full h-auto" />
+      </div>
+    </div>
+
+    <!-- Specifications -->
+    <div class="mb-[2.5rem] md:mb-[4rem]">
+      <h2
+        class="text-[1.5rem] md:text-[2rem] font-bold leading-none uppercase text-[#083D45] text-center mb-[1.5rem] md:mb-[2.5rem]"
+      >
+        {t("studio.plan.specs_title")}
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 items-center"
+      >
+        {
+          specs.map((spec) => (
+            <div class="border-b border-[#083D45]/30 py-3">
+              <p class="text-[1rem] font-medium leading-[1.2] text-[#083D45]">
+                {spec}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Inclusions -->
+    <div class="mb-[3rem] md:mb-[5rem]">
+      <h2
+        class="text-[1.5rem] md:text-[2rem] font-bold leading-none uppercase text-[#083D45] text-center mb-[1.5rem] md:mb-[2.5rem]"
+      >
+        {t("studio.plan.inclusions_title")}
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 items-center"
+      >
+        {
+          inclusions.map((item) => (
+            <div class="border-b border-[#083D45]/30 py-3">
+              <p class="text-[1rem] font-medium leading-[1.2] text-[#083D45]">
+                {item}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div
+      class="rounded-[1.5rem] bg-white/60 py-[2.5rem] md:py-[3.5rem] px-[1.5rem] flex flex-col items-center gap-6"
+    >
+      <h2
+        class="text-[1.75rem] md:text-[2.75rem] font-medium lg:text-[3.5rem] leading-[1.1] uppercase text-[#083D45] text-center"
+      >
+        {t("studio.plan.cta_line1")}<br />
+        <em class="not-italic font-semibold">{t("studio.plan.cta_line2")}</em>
+      </h2>
+      <Cal
+        client:load
+        className="text-[1rem] font-semibold leading-none text-white bg-[#083D45] px-8 py-4 rounded-sm hover:bg-[#083D45]/80 transition-colors"
+      >
+        {t("studio.plan.cta_button")}
+      </Cal>
+    </div>
+  </div>
+</section>

@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "../i18n/utils";
-import cta2Red from "../images/cta-2-red.jpg";
-import cta2Fizz from "../images/cta-2-fizz.jpg";
-import cta2Lazy from "../images/cta-2-lazy.jpg";
-import cta2Interview from "../images/cta-2-interview.jpg";
+import { useTranslations } from "@/i18n/utils";
+import cta2Red from "@/images/cta-2-red.jpg";
+import cta2Fizz from "@/images/cta-2-fizz.jpg";
+import cta2Lazy from "@/images/cta-2-lazy.jpg";
+import cta2Interview from "@/images/cta-2-interview.jpg";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";

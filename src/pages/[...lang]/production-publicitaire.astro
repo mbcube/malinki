@@ -1,20 +1,20 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "../../i18n/utils";
-import btsChicago from "../../images/bts-chicago-malinki-lighting-2025-16-9_compressed.webp";
-import cameraPhoto from "../../images/camera-photo-l1000571_compressed.webp";
-import laurenceGb from "../../images/laurence-gb-omy-testimony.jpg";
-import villeDeLaval from "../../images/ville-de-laval-malinki-web-pub-2025_compressed.webp";
-import maddlePub from "../../images/maddle-malinki-pub-product-2024.jpg";
-import btsEtoilbystarr from "../../images/BTS_ETOILBYSTARR_MALINKI_PUB_2025-min_compressed.webp";
-import tvaSport from "../../images/tva-sport-malinki-pub-2022_compressed.webp";
-import btsCookIt from "../../images/bts-cook-it-malinki-pub-2022-alt.jpg";
-import btsOmy from "../../images/bts-omy-laboratories-malinki-pub-2024_compressed.webp";
-import btsOpera from "../../images/bts-opera-de-montreal-malinki-pub-2022.jpg";
-import petroCanada from "../../images/petro-canada-malinki-olympics-2024-bts_compressed.webp";
-import clientsDesktopPub from "../../images/Logos_Clients_Malinki_Pub_2025.png";
-import clientsMobilePub from "../../images/Logos_Clients_Malinki_PubMobile_2025.png";
-import btsKeywords from "../../images/bts-keywords-2-malinki-web-2022.jpg";
+import { useTranslations } from "@/i18n/utils";
+import btsChicago from "@/images/bts-chicago-malinki-lighting-2025-16-9_compressed.webp";
+import cameraPhoto from "@/images/camera-photo-l1000571_compressed.webp";
+import laurenceGb from "@/images/laurence-gb-omy-testimony.jpg";
+import villeDeLaval from "@/images/ville-de-laval-malinki-web-pub-2025_compressed.webp";
+import maddlePub from "@/images/maddle-malinki-pub-product-2024.jpg";
+import btsEtoilbystarr from "@/images/BTS_ETOILBYSTARR_MALINKI_PUB_2025-min_compressed.webp";
+import tvaSport from "@/images/tva-sport-malinki-pub-2022_compressed.webp";
+import btsCookIt from "@/images/bts-cook-it-malinki-pub-2022-alt.jpg";
+import btsOmy from "@/images/bts-omy-laboratories-malinki-pub-2024_compressed.webp";
+import btsOpera from "@/images/bts-opera-de-montreal-malinki-pub-2022.jpg";
+import petroCanada from "@/images/petro-canada-malinki-olympics-2024-bts_compressed.webp";
+import clientsDesktopPub from "@/images/Logos_Clients_Malinki_Pub_2025.png";
+import clientsMobilePub from "@/images/Logos_Clients_Malinki_PubMobile_2025.png";
+import btsKeywords from "@/images/bts-keywords-2-malinki-web-2022.jpg";
 
 export function getStaticPaths() {
   return [
@@ -71,10 +71,10 @@ const pageConfig = {
   },
 };
 
-import "../../styles/global.css";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import Metadata from "../../components/Metadata.astro";
+import "@/styles/global.css";
+import Header from "@/components/shared/Header.astro";
+import Footer from "@/components/shared/Footer.astro";
+import Metadata from "@/components/shared/Metadata.astro";
 ---
 
 <html lang={currentLang} class="h-full">

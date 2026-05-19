@@ -3,7 +3,7 @@ import { Image, getImage } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
 const modules = import.meta.glob<{ default: ImageMetadata }>(
-  "../images/**/*.{jpg,jpeg,png,webp,gif,svg}",
+  "@/images/**/*.{jpg,jpeg,png,webp,gif,svg}",
   { eager: true }
 );
 

@@ -1,8 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "../i18n/utils";
-import malinkiLogo from "../images/malinki-logo-c.png";
-import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "@/i18n/utils";
+import malinkiLogo from "@/images/malinki-logo-c.png";
+import LanguageSwitcher from "@/components/shared/islands/LanguageSwitcher";
+import LanguageSwitcherDropdown from "@/components/shared/islands/LanguageSwitcherDropdown";
 
 interface Props {
   lang: "fr" | "en";
@@ -27,6 +28,10 @@ const menuLinks = [
   { title: t("header.menu_projects"), url: `${homeUrl}#projects` },
   { title: t("header.menu_services"), url: `${homeUrl}#services` },
   { title: t("header.menu_team"), url: `${homeUrl}#equipe` },
+  {
+    title: t("header.menu_studio"),
+    url: lang === "en" ? `/en/studio` : `/studio`,
+  },
 ];
 
 const contactUrl = lang === "en" ? "/en/contact" : "/contact";
@@ -45,7 +50,7 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
     <!-- Left Section - Logo -->
     <div class="flex-1 flex justify-start">
       <div
-        class="flex flex-col items-start shrink-0 md:w-[172px] md:h-[32px] w-[129px] h-[24px] transition-all duration-300"
+        class="flex flex-col items-start shrink-0  w-[129px] h-[24px] md:w-[155px] md:h-[32px]  lg:w-[172px] lg:h-[32px] transition-all duration-300"
         data-logo-container
       >
         <a
@@ -64,7 +69,7 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
     </div>
 
     <!-- Center Section - Desktop Navigation Links -->
-    <div class="hidden md:flex gap-4 items-center justify-center">
+    <div class="hidden md:flex gap-4 md:gap-2 lg:gap-4 items-center justify-center">
       {
         menuLinks.map((link) => (
           <div class="flex items-center justify-center p-1">
@@ -81,17 +86,28 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
 
     <!-- Right Section - Controls -->
     <div class="flex-1 flex items-center justify-end gap-4">
-      <LanguageSwitcher
-        client:load
-        currentLang={currentLang}
-        currentPath={currentPath}
-      />
+      <div data-lang-switcher>
+        <LanguageSwitcher
+          className="flex md:hidden lg:flex"
+          client:load
+          currentLang={currentLang}
+          currentPath={currentPath}
+        />
+      </div>
+      <div data-lang-switcher-dropdown class="hidden md:block lg:hidden">
+        <LanguageSwitcherDropdown
+          
+          client:load
+          currentLang={currentLang}
+          currentPath={currentPath}
+        />
+      </div>
 
       <!-- Contact Button (Desktop) -->
       <div class="hidden md:block">
         <a
           href={contactUrl}
-          class="bg-white flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
+          class="bg-white flex gap-2 items-center justify-center px-6 md:px-4 lg:px-6 py-2 md:py-1 lg:py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
         >
           {t("header.contact_button")}
         </a>
@@ -280,6 +296,18 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
     font-size: 0.875rem;
+  }
+
+  /* Shrink language switchers */
+  [data-lang-switcher],
+  [data-lang-switcher-dropdown] {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right center;
+  }
+
+  .header-template-6.scrolled [data-lang-switcher],
+  .header-template-6.scrolled [data-lang-switcher-dropdown] {
+    transform: scale(0.8);
   }
 
   /* Mobile adjustments for scrolled state */

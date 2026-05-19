@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { Toaster } from './ui/sonner';
+import { Toaster } from '@/components/ui/sonner';
 
 interface ContactFormProps {
   labels: {

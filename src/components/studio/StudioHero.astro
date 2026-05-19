@@ -1,0 +1,64 @@
+---
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: "fr" | "en";
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const settings = {
+  video_url_desktop:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/hero-final.mov",
+  video_url_mobile:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/hero-mobile-final.mp4",
+  poster:
+    "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/studio/hero/hero-final-poster.png"
+
+};
+
+---
+
+<section class="w-full pt-16 pb-8 border-none">
+  <div class="w-full mx-auto px-4 ">
+    <!-- Video container — relative so title can overlay on md+ -->
+    <div class="relative w-full rounded-[1.5rem] overflow-hidden max-h-[90vh]">
+      <video
+        class="w-full h-full object-cover aspect-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        poster={settings.poster}
+        data-video-desktop={settings.video_url_desktop}
+        data-video-mobile={settings.video_url_mobile}
+        data-poster={settings.poster}
+      >
+        <source src={settings.video_url_desktop} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Title overlay — tablet (md) and above only -->
+      <div class="hidden md:flex absolute bottom-0 left-0 right-0 justify-between items-end px-6 pb-6 bg-gradient-to-t from-black/60 via-black/20 to-transparent pt-24">
+        <h1 class="text-[4rem] lg:text-[4.5rem] xl:text-[6rem] font-bold leading-none uppercase text-white">
+          {t("studio.hero.title_line1")}
+        </h1>
+        <h1 class="text-[4rem] lg:text-[4.5rem] xl:text-[6rem] font-bold leading-none uppercase text-white">
+          {t("studio.hero.title_line2")}
+        </h1>
+      </div>
+    </div>
+
+    <!-- Title Section — mobile only, below the video -->
+    <div class="md:hidden mt-2">
+      <h1 class="text-[3rem] font-bold leading-none uppercase text-white">
+        {t("studio.hero.title_line1")}
+      </h1>
+      <h1 class="text-[3rem] font-bold leading-none uppercase text-white text-right">
+        {t("studio.hero.title_line2")}
+      </h1>
+    </div>
+  </div>
+</section>
