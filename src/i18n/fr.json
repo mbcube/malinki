@@ -170,19 +170,20 @@
                 "role": "Directeur photo & Photographe"
             },
             "member_3": {
-                "name_line_1": "Jérémy",
-                "name_line_2": "Leblond",
+                "name": "Jérémy Leblond",
                 "role": "Chargé de productions & Chargé de projets"
             },
             "member_4": {
-                "name_line_1": "Alexandre",
-                "name_line_2": "Normand",
+                "name": "Alexandre Normand",
                 "role": "Cadreur & Coloriste"
             },
             "member_5": {
-                "name_line_1": "Cedric",
-                "name_line_2": "Demers",
+                "name": "Cedric Demers",
                 "role": "Monteur"
+            },
+            "member_6": {
+                "name": "Justine Gagnon",
+                "role": "Chargée de projets"
             }
         },
         "logos": {
