@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react"
+import { useState, useMemo } from "react";
 import {
   Drawer,
   DrawerClose,
@@ -6,7 +6,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer"
+} from "@/components/ui/drawer";
 import {
   Table,
   TableBody,
@@ -14,53 +14,51 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import {
-  Collapsible,
-  CollapsibleContent,
-} from "@/components/ui/collapsible"
-import { X, Search, ChevronDown } from "lucide-react"
+} from "@/components/ui/table";
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
+import { X, Search, ChevronDown } from "lucide-react";
 
 export type EquipmentItem = {
-  name: string
-  qty: string
-  dept: string
-  price: string
-  description: string
-}
+  name: string;
+  qty: string;
+  dept: string;
+  price: string;
+  description: string;
+};
 
 interface Props {
-  label: string
-  title: string
-  colName: string
-  colQty: string
-  colDept: string
-  colPrice: string
-  colDescription: string
-  priceTbd?: string
-  filterLabel?: string
-  data?: EquipmentItem[]
+  label: string;
+  title: string;
+  colName: string;
+  colQty: string;
+  colDept: string;
+  colPrice: string;
+  colDescription: string;
+  priceTbd?: string;
+  priceNote?: string;
+  filterLabel?: string;
+  data?: EquipmentItem[];
 }
 
 function isPriceTbd(price: string): boolean {
-  const p = price.trim()
-  return !p || p === "-" || p === "—"
+  const p = price.trim();
+  return !p || p === "-" || p === "—";
 }
 
 function EquipmentRow({
   item,
   priceTbd,
 }: {
-  item: EquipmentItem
-  priceTbd?: string
+  item: EquipmentItem;
+  priceTbd?: string;
 }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       <TableRow
         onClick={() => item.description && setOpen((o) => !o)}
-        className={`border-b border-[#083D45]/5 hover:bg-[#083D45]/3 transition-colors ${item.description ? "cursor-pointer md:cursor-default" : ""}`}
+        className={`border-b border-[#083D45]/5 hover:bg-[#083D45]/3 transition-colors ${item.description ? "cursor-pointer md:cursor-default select-text" : ""}`}
       >
         <TableCell className="px-6 py-3 font-['Montserrat'] text-[13px] font-medium text-[#083D45] whitespace-normal break-words">
           <span className="flex items-center justify-between gap-2">
@@ -83,16 +81,14 @@ function EquipmentRow({
           )}
         </TableCell>
         <TableCell className="px-3 py-3 font-['Montserrat'] text-[13px] font-medium text-[#083D45] w-px whitespace-nowrap">
-          {isPriceTbd(item.price)
-            ? (priceTbd ?? "—")
-            : item.price}
+          {isPriceTbd(item.price) ? (priceTbd ?? "—") : item.price}
         </TableCell>
         <TableCell className="hidden md:table-cell px-3 py-3 font-['Montserrat'] text-[12px] text-[#083D45] whitespace-normal break-words max-w-xs">
           {item.description}
         </TableCell>
       </TableRow>
       {item.description && (
-        <TableRow className="md:hidden border-b border-[#083D45]/10">
+        <TableRow className="md:hidden border-b border-[#083D45]/10 select-text">
           <TableCell colSpan={4} className="px-6 pb-0 pt-0">
             <Collapsible open={open}>
               <CollapsibleContent>
@@ -105,7 +101,7 @@ function EquipmentRow({
         </TableRow>
       )}
     </>
-  )
+  );
 }
 
 export default function EquipmentDrawer({
@@ -117,33 +113,37 @@ export default function EquipmentDrawer({
   colPrice,
   colDescription,
   priceTbd,
+  priceNote,
   filterLabel = "",
   data = [],
 }: Props) {
-  const [search, setSearch] = useState("")
-  const [activeDepts, setActiveDepts] = useState<string[]>([])
+  const [search, setSearch] = useState("");
+  const [activeDepts, setActiveDepts] = useState<string[]>([]);
 
   const depts = useMemo(
     () => Array.from(new Set(data.map((d) => d.dept).filter(Boolean))).sort(),
-    [data]
-  )
+    [data],
+  );
 
   const filtered = useMemo(() => {
     return data.filter((item) => {
-      const matchesSearch = item.name.toLowerCase().includes(search.toLowerCase())
-      const matchesDept = activeDepts.length === 0 || activeDepts.includes(item.dept)
-      return matchesSearch && matchesDept
-    })
-  }, [data, search, activeDepts])
+      const matchesSearch = item.name
+        .toLowerCase()
+        .includes(search.toLowerCase());
+      const matchesDept =
+        activeDepts.length === 0 || activeDepts.includes(item.dept);
+      return matchesSearch && matchesDept;
+    });
+  }, [data, search, activeDepts]);
 
   function toggleDept(dept: string) {
     setActiveDepts((prev) =>
-      prev.includes(dept) ? prev.filter((d) => d !== dept) : [...prev, dept]
-    )
+      prev.includes(dept) ? prev.filter((d) => d !== dept) : [...prev, dept],
+    );
   }
 
   return (
-    <Drawer direction="bottom" >
+    <Drawer direction="bottom">
       <DrawerTrigger asChild>
         <button className="font-['Montserrat'] text-[16px] font-semibold leading-none text-white underline underline-offset-4 hover:text-white/70 transition-colors cursor-pointer">
           {label}
@@ -179,7 +179,7 @@ export default function EquipmentDrawer({
                 {filterLabel}
               </span>
               {depts.map((dept) => {
-                const active = activeDepts.includes(dept)
+                const active = activeDepts.includes(dept);
                 return (
                   <button
                     key={dept}
@@ -192,14 +192,14 @@ export default function EquipmentDrawer({
                   >
                     {dept}
                   </button>
-                )
+                );
               })}
             </div>
           )}
         </div>
 
         {/* Table */}
-        <div className="flex-1 overflow-y-auto w-full max-w-350  mx-auto">
+        <div className="flex-1 overflow-y-auto w-full max-w-350  mx-auto ">
           <Table className="table-auto  w-full">
             <TableHeader className=" ">
               <TableRow className="border-b border-[#083D45]/10 hover:bg-transparent ">
@@ -241,13 +241,16 @@ export default function EquipmentDrawer({
 
         {/* Footer count */}
         {data.length > 0 && (
-          <div className="w-full max-w-350  mx-auto px-6 py-3 border-t border-[#083D45]/10">
-            <p className="text-[11px] font-['Montserrat'] font-medium text-[#083D45]">
+          <div className="w-full max-w-350 mx-auto px-6 py-3 border-t border-[#083D45]/10 flex items-center justify-between gap-4">
+            <p className="text-[11px] font-['Montserrat'] font-medium text-[#083D45]/50 italic">
+              {priceNote}
+            </p>
+            <p className="text-[11px] font-['Montserrat'] font-medium text-[#083D45] shrink-0">
               {filtered.length} / {data.length}
             </p>
           </div>
         )}
       </DrawerContent>
     </Drawer>
-  )
+  );
 }

@@ -5,6 +5,7 @@ interface FaqItem {
   question: string;
   answer: string | string[];
   categoryLabel?: string;
+  answerLink?: string | null;
 }
 
 interface Props {
@@ -38,7 +39,10 @@ export default function StudioFaqAccordion({ items }: Props) {
                 <div className="flex flex-col gap-3 pb-8">
                   {Array.isArray(item.answer) ? (
                     item.answer.map((line, j) => (
-                      <p key={j} className="text-[1rem] md:text-[1.125rem] font-light leading-[1.5] text-white/85">
+                      <p
+                        key={j}
+                        className="text-[1rem] md:text-[1.125rem] font-light leading-[1.5] text-white/85"
+                      >
                         {line}
                       </p>
                     ))

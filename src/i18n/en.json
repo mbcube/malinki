@@ -1,418 +1,415 @@
 {
-    "general": {
-        "page_title": "Malinki - Production Agency",
-        "404": {
-            "title": "THAT PAGE CAN'T BE FOUND.",
-            "button": "GO TO HOME",
-            "subtext": "It looks like nothing was found at this location."
-        },
-        "hero_video": {
-            "view_reel": "View reel",
-            "heading": "Visual creations <br> in your image",
-            "subtitle": "OUR CREATIVITY AT YOUR SERVICE",
-            "scroll_indicator_text": "Scroll"
-        }
+  "general": {
+    "page_title": "Malinki - Production Agency",
+    "404": {
+      "title": "THAT PAGE CAN'T BE FOUND.",
+      "button": "GO TO HOME",
+      "subtext": "It looks like nothing was found at this location."
     },
-    "header": {
-        "contact_button": "Contact us",
-        "menu_projects": "Our projects",
-        "menu_services": "Services",
-        "menu_team": "Team",
-        "menu_studio": "Studio"
+    "hero_video": {
+      "view_reel": "View reel",
+      "heading": "Visual creations <br> in your image",
+      "subtitle": "OUR CREATIVITY AT YOUR SERVICE",
+      "scroll_indicator_text": "Scroll"
+    }
+  },
+  "header": {
+    "contact_button": "Contact us",
+    "menu_projects": "Our projects",
+    "menu_services": "Services",
+    "menu_team": "Team",
+    "menu_studio": "Studio"
+  },
+  "production_publicitaire": {
+    "title": "ADVERTISING CONTENT THAT CAPTURES ATTENTION",
+    "description": "At Malinki, we design and produce advertising content that captures attention in the first few seconds. Whether it's for a web campaign, television, or social media, we focus on clear ideas, strong visuals, and agile execution.",
+    "cta_text": "TAKE ACTION",
+    "testimonial_text": "Malinki was able to deliver an advertising campaign in record time, without sacrificing quality.",
+    "testimonial_author": "Laurence Gagnon Beaudoin",
+    "testimonial_role": "Marketing Director | OMY",
+    "headline_line1": "MORE THAN A BEAUTIFUL VISUAL",
+    "headline_line2": "AN AD THAT PACKS A PUNCH",
+    "paragraph1": "We work hand in hand with your team to ensure that each piece of content serves a specific purpose: to sell, raise awareness, launch, or mobilize.",
+    "paragraph2": "Our approach is simple: we ask the right questions, propose solid ideas, and deliver quickly, without compromising on quality.",
+    "button_text": "OUR DEMO",
+    "productions_title": "OUR PRODUCTIONS",
+    "behind_scenes_title": "BEHIND THE SCENES",
+    "clients_title": "THOSE WHO TRUSTED US",
+    "prods_title": "OUR AD PRODUCTIONS",
+    "prods_subtitle_1": "DIGITAL ADVERTISING",
+    "prods_text_1": "Short formats designed for web and social media, optimized to capture attention and generate action.",
+    "prods_subtitle_2": "TV ADVERTISING",
+    "prods_text_2": "6, 15, or 30-second content, effective narration and compliance with broadcasting standards, for high-reach campaigns.",
+    "prods_subtitle_3": "CAMPAIGN PHOTOGRAPHY",
+    "prods_text_3": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
+    "prods_button_text": "Take action",
+    "contact_cta_title": "VISUAL CREATIONS IN YOUR IMAGE",
+    "contact_cta_text": "OUR CREATIVITY, AT YOUR SERVICE",
+    "contact_cta_button_text": "GET STARTED",
+    "main_image_alt": "Craftsman working on a laptop",
+    "sidebar_image_alt": "Craftsman at computer",
+    "testimonial_image_alt": "Author's photo",
+    "row_image_1_alt": "Super Aqua Club campaign photo",
+    "row_image_2_alt": "Judith campaign photo",
+    "row_image_3_alt": "Cook it campaign photo",
+    "feature_image_alt": "Two men watching TV on a couch",
+    "bts_image_1_alt": "Behind the scenes: camera setup",
+    "bts_image_2_alt": "Behind the scenes: team discussion",
+    "bts_image_3_alt": "Behind the scenes: lighting adjustment",
+    "bts_image_4_alt": "Behind the scenes: director at work",
+    "clients_image_alt": "Client logos",
+    "prods_image_alt": "Clap Cook it campaign photo"
+  },
+  "contenu_de_marque": {
+    "title": "REAL CONTENT THAT TELLS, UNITES AND RESONATES",
+    "description_1": "Every brand has a unique identity. Our role is to make it shine with your clients, your employees, and the talent you want to attract.",
+    "description_2": "We create authentic content, based on real listening, an understanding of your challenges, and an ability to translate your values into stories that make an impact.",
+    "cta_text": "tell us about your brand",
+    "bts_title": "why malinki?",
+    "bts_description": "We don't make generic content. We dig into your brand DNA to create pieces that have meaning, that spark emotion, and build a real connection with your audience. At Malinki, every image carries intention.",
+    "bts_button_text": "our demo",
+    "testimonial_text": "Professional, efficient, and attentive from start to finish. The shoot went smoothly, structured, and well organized.",
+    "testimonial_author": "Érika Gagné",
+    "testimonial_role": "Senior Advisor | DDMG Communications",
+    "testimonial_text_2": "[...] and on top of being talented, they are kind, generous, and pleasant to work with. A valuable collaboration we recommend without hesitation!",
+    "testimonial_author_2": "Élaine Lehouiller",
+    "testimonial_role_2": "Strategist | Niché",
+    "productions_title": "OUR PRODUCTIONS",
+    "prods_title": "NOT JUST BEAUTIFUL, REAL!",
+    "prods_subtitle_1": "BRAND PORTRAITS",
+    "prods_text_1": "We highlight the people behind your company: founders, employees, clients, to create an authentic connection with your audience.",
+    "prods_subtitle_2": "EMPLOYER CAPSULES",
+    "prods_text_2": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
+    "prods_subtitle_3": "NARRATIVE CONTENT SERIES",
+    "prods_text_3": "We build consistent narrative formats, designed to build audience loyalty over the long term.",
+    "prods_subtitle_4": "CLIENT TESTIMONIALS",
+    "prods_text_4": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
+    "prods_button_text": "GET A QUOTE IN 24 HOURS",
+    "contact_cta_text": "Your brand has a story. We help you tell it.",
+    "contact_cta_button_text": "CONTACT US",
+    "main_image_alt": "Craftsman working on a computer",
+    "sidebar_image_alt": "Side view of a craftsman at his desk",
+    "testimonial_image_alt": "Portrait of Laurence Gagnon Beaudoin",
+    "testimonial_image_alt_2": "Portrait of Érika Gagné",
+    "row_image_1_alt": "Super Aqua Club campaign photo",
+    "row_image_2_alt": "Judith campaign photo",
+    "row_image_3_alt": "Cook it campaign photo",
+    "row_image_4_alt": "Super Aqua Club campaign photo",
+    "row_image_5_alt": "Judith campaign photo",
+    "row_image_6_alt": "Cook it campaign photo",
+    "row_image_7_alt": "Super Aqua Club campaign photo",
+    "feature_image_alt": "Two men watching television on a couch",
+    "clients_image_alt": "Client logos"
+  },
+  "contenu_vertical": {
+    "title": "SHORT-FORM CONTENT DESIGNED FOR THE LONG TERM",
+    "description": "Each platform has its own codes: format, tone, rhythm, visuals... Everything matters. Adapting your message is essential to reach the right people, in the right place, in the right way.",
+    "gifs_alt_1": "Gif 1",
+    "gifs_alt_2": "Gif 2",
+    "gifs_alt_3": "Gif 3",
+    "gifs_alt_4": "Gif 4",
+    "cta_text": "TAKE ACTION",
+    "testimonial_text": "We trust Malinki as a partner because they are agile and flexible. They always deliver quality content, often within tight deadlines.",
+    "testimonial_author": "Jessica Romito",
+    "testimonial_role": "Director | Meat & Produce",
+    "testimonial_image_alt": "Portrait of Jessica Romito",
+    "main_image_alt": "Vertical content image",
+    "vertical_image_alt": "Vertical content image",
+    "tiktoks_title": "CREATE TIKTOKS AND REELS",
+    "tiktoks_description": "On TikTok and Reels, everything happens in the first few seconds. You have to get straight to the point, grab attention, but above all, stay authentic. We create vertical content that's punchy and on-trend, without ever sacrificing your brand voice. Whether it's funny, educational, or moving, we know how to get your message across in a format that's shareable and memorable.",
+    "tiktoks_button_text": "Take action",
+    "productions_title": "OUR PRODUCTIONS",
+    "behind_scenes_title": "BEHIND THE SCENES",
+    "bts_image_1_alt": "Behind the scenes: camera setup",
+    "bts_image_2_alt": "Behind the scenes: team discussion",
+    "bts_image_3_alt": "Behind the scenes: lighting adjustment",
+    "bts_image_4_alt": "Behind the scenes: director at work",
+    "bts_image_5_alt": "Behind the scenes: camera setup",
+    "bts_image_6_alt": "Behind the scenes: team discussion",
+    "bts_image_7_alt": "Behind the scenes: lighting adjustment",
+    "bts_image_8_alt": "Behind the scenes: director at work",
+    "contact_cta_title": "LET'S CREATE TOGETHER",
+    "contact_cta_text": "We are ready to create a reel for you. Let's talk about your project and how we can help.",
+    "contact_cta_button_text": "CONTACT US",
+    "clients_image_alt": "Client logos"
+  },
+  "sections": {
+    "about_text": {
+      "heading": "A story to tell or a message to pass on?",
+      "body": "Even when it seems simple, producing content that resonates becomes quickly demanding when it rests on the same shoulders."
+    },
+    "cta": {
+      "heading_line1": "Each project begins with ",
+      "heading_line2": "an idea",
+      "button_text": "Let's talk"
+    },
+    "cta2": {
+      "heading": "Do you have a project in mind?",
+      "button_text": "Contact us"
+    },
+    "services": {
+      "heading": "OUR SERVICES",
+      "description": "",
+      "service_1": "ADVERTISING",
+      "service_2": "BRANDED CONTENT",
+      "service_3": "VERTICAL CONTENT",
+      "service_4": "MUSIC VIDEOS"
+    },
+    "team": {
+      "heading_left": "Our",
+      "heading_right": "team",
+      "mobile_heading": "Our team",
+      "tagline": "",
+      "member_1": {
+        "name_line_1": "Andrew",
+        "name_line_2": "Tchernilevskii",
+        "role": "Executive Producer"
+      },
+      "member_2": {
+        "name": "Miroslav Dufresne",
+        "role": "Director of Photography & Photographer"
+      },
+      "member_3": {
+        "name": "Jérémy Leblond",
+        "role": "Production Manager & Project Manager"
+      },
+      "member_4": {
+        "name": "Alexandre Normand",
+        "role": "Camera Operator & Colorist"
+      },
+      "member_5": {
+        "name": "Cedric Demers",
+        "role": "Editor"
+      },
+      "member_6": {
+        "name": "Justine Gagnon",
+        "role": "Project Manager"
+      }
+    },
+    "logos": {
+      "heading": "They trusted us"
+    },
+    "footer": {
+      "copyright": "© MALINKI 2025. All rights reserved",
+      "ig_agency": "Agency",
+      "ig_studio": "Studio"
+    }
+  },
+  "video_clips": {
+    "title": "MUSIC VIDEO PRODUCTION",
+    "description": "Malinki produces music videos for artists working in various musical styles. The team works with several directors to offer the best rendering for the artist. We are deeply committed to supporting local artistic culture and offer productions adapted to each project scope.",
+    "cta_text": "CONTACT US",
+    "gallery_title": "OUR WORK",
+    "gif_1_alt": "Music Video - Ten Past Two",
+    "gif_2_alt": "Music Video - Alanna",
+    "gif_3_alt": "Music Video - Visrei",
+    "gif_4_alt": "Music Video - Junes",
+    "gif_5_alt": "Music Video - Amadouemoi",
+    "gif_6_alt": "Music Video - Raymond Est Mort",
+    "gif_7_alt": "Music Video - King Melrose",
+    "contact_cta_text": "Ready to create your next music video?",
+    "contact_cta_button_text": "LET'S DISCUSS YOUR PROJECT"
+  },
+  "studio": {
+    "title": "Malinki Studio",
+    "hero": {
+      "title_line1": "Studio",
+      "title_line2": "Malinki",
+      "intro_text": "Located in the Lofts Cadbury, Studio Malinki is a bright and welcoming space designed for creation. With its 1000 sq. ft., large cyclorama and relaxed atmosphere, it adapts to all projects: photography, filming, web or artistic content. The layout is simple, flexible and inspiring according to your needs."
+    },
+    "nav": {
+      "le_studio": "The studio",
+      "galerie_photo": "Photo gallery",
+      "nos_equipements": "Our equipment",
+      "les_tarifs": "Pricing"
+    },
+    "plan": {
+      "access_line1": "ACCESS TO A",
+      "access_line2": "SPACE OF",
+      "access_size": "1000 SQ. FT.",
+      "specs_title": "SPECIFICATIONS",
+      "specs": [
+        "Cyclorama 15 ft (L) x 8.6 ft (W) x 11 ft (H)",
+        "CCM Station",
+        "Bathroom (corridor)",
+        "Recessed steel pipes (ceiling)",
+        "Air conditioning",
+        "Kitchen area (microwave, fridge, sink, air fryer)",
+        "Loading dock + freight elevator",
+        "Parking (paid)"
+      ],
+      "inclusions_title": "INCLUSIONS",
+      "inclusions": [
+        "Backdrops + 9' paper rolls",
+        "Equipment (learn more)",
+        "Clothing steamer",
+        "High-speed Wi-Fi",
+        "Step ladders 5, 8, 12'",
+        "Sound system",
+        "Coffee & tea",
+        "Folding tables",
+        "Sandbags, apple boxes, C-Stand included"
+      ],
+      "cta_line1": "INTERESTED IN ",
+      "cta_line2": "OUR SPACES?",
+      "cta_button": "Book now"
+    },
+    "equipment": {
+      "available_title_line1": "AVAILABLE",
+      "available_title_line2": "EQUIPMENT",
+      "rental_title_line1": "EQUIPMENT",
+      "rental_title_line2": "FOR RENT",
+      "available": ["C-Stands (8)", "Apple boxes", "Sandbags (10)"],
+      "rental": [
+        "Aputure 1200 D / 600 D / 300D",
+        "Aputure P300C Kit (x2)",
+        "Aputure F22c",
+        "Aputure spotlight 19°",
+        "Aputure Lantern 90",
+        "Aputure Fresnel F10 / 2X"
+      ],
+      "view_full_list": "View full list",
+      "filter_dept": "",
+      "drawer_title": "Equipment list",
+      "col_name": "Name",
+      "col_qty": "Qty",
+      "col_dept": "Dept",
+      "col_price": "Price",
+      "col_description": "Description",
+      "price_tbd": "TBD",
+      "price_note": "Prices shown per day. Weekly rates available on request."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "Minimum rental duration is 4 hours",
+      "plan_4h_title": "4-hour rental",
+      "plan_4h_price": "400$",
+      "plan_8h_title": "8-hour rental",
+      "plan_8h_price": "650$",
+      "plan_creative_title": "Creative project",
+      "plan_creative_desc": "Give us all the details of your project",
+      "book_now": "Book now",
+      "contact_us": "Contact us"
+    },
+    "faq": {
+      "title": "FAQ",
+      "cat_studio": "The Studio",
+      "cat_reservations": "Booking & practical information",
+      "cat_installations": "Facilities & equipment",
+      "cat_services": "Additional services",
+      "q1_question": "Where is your studio located?",
+      "q1_answer": "We are located at 5425 Rue de Bordeaux, Unit 253.",
+      "q2_question": "What's in your studio?",
+      "q2_answer": [
+        "Our 1,000 sq ft studio, located in Rosemont, is designed to be functional, comfortable, and suitable for a variety of production types.",
+        "It features a white cyclorama 15 feet wide, 8.6 feet deep and 11 feet high, steel pipes recessed in the ceiling for hanging equipment, and a HMU station with a makeup table, changing room, clothing rack and steamer.",
+        "A loading dock and freight elevator make equipment access easy. The studio also includes a kitchen (fridge, microwave, air fryer, sink and dishes), great coffee, air conditioning, bathroom access in the corridor, and available parking ($).",
+        "You can build walls to create full room sets, such as a living room, office, or other setting."
+      ],
+      "q3_question": "What are the booking terms?",
+      "q3_answer": [
+        "Payment is required at the time of booking to confirm your reservation.",
+        "Any cancellation made less than 48 hours before the booking date is non-refundable."
+      ],
+      "q4_question": "What are the studio usage conditions?",
+      "q4_answer": [
+        "The studio must be returned to its original condition upon departure.",
+        "Any material damage caused by the client or their party will result in repair or replacement fees. This includes, but is not limited to, damage to the cyclorama, furniture, and equipment.",
+        "If the studio is not properly reset, cleaning fees of up to $150 may be charged depending on the condition of the studio.",
+        "Please avoid glitter, feathers, confetti, powders, and other hard-to-clean materials. If in doubt, ask us beforehand.",
+        "The cyclorama surface must be kept clean. We ask that you wear shoe covers or clean indoor shoes when on the cyclo.",
+        "Please let us know in advance if you plan to bring a pet.",
+        "Respect your neighbours: keep noise levels (music, voices) at a reasonable level to avoid disturbing surrounding tenants."
+      ],
+      "q5_question": "Is parking available?",
+      "q5_answer": [
+        "One parking spot is included.",
+        "Additional parking can be reserved for $25/day.",
+        "A loading dock and freight elevator are accessible for equipment transport."
+      ],
+      "q6_question": "What time slots are available?",
+      "q6_answer": [
+        "Rentals are typically available for a half-day (4h) or a full day (8h).",
+        "It is also possible to book the studio for more specific time slots — simply contact us to arrange your reservation."
+      ],
+      "q7_question": "Do you rent equipment?",
+      "q7_answer": "Yes. In addition to the included equipment, we offer a wide selection of cameras, lenses, lights, grip gear and accessories for rental.",
+      "q8_question": "Can you repaint the cyclorama for our project?",
+      "q8_answer": "Yes, for an additional fee, we offer a cyclorama painting service upon prior request.",
+      "q9_question": "Where is your electrical panel (for tie-ins)?",
+      "q9_answer": "For higher electrical requirements, access to the secured electrical panel is available upon request.",
+      "q10_question": "Can we hire technicians for the studio?",
+      "q10_answer": "Yes! We can provide a full crew based on your needs: grip technician, gaffer, director of photography, director, hair & makeup artist, stylist, and more. Tell us what you need and we'll take care of the rest.",
+      "q11_question": "Do you provide creative services?",
+      "q11_answer": "Yes! You can call on our advertising content design and production services. Whether for a web, TV or social media campaign, we focus on clear ideas, strong visuals and agile execution."
+    },
+    "map": {
+      "title": "Find us easily",
+      "address": "5425 Rue de Bordeaux, Montréal, QC H2H 2P9",
+      "cta": "Book now"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "heading": "Let's talk about your project",
+    "subheading": "We can't wait to bring your vision to life. Contact us to discuss your next audiovisual project.",
+    "form_title": "Send us a message",
+    "name_label": "Full name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+    "phone_label": "Phone",
+    "phone_placeholder": "(514) 555-1234",
+    "message_label": "Message",
+    "message_placeholder": "Tell us about your project, goals and important dates...",
+    "submit_button": "Send message",
+    "submitting_button": "Sending...",
+    "success_message": "Thank you! We received your message and will get back to you shortly.",
+    "error_message": "Oops! Something went wrong. Please try again or contact us directly by email.",
+    "email_title": "Email",
+    "phone_title": "Phone",
+    "agence_title": "Agency",
+    "studio_title": "Studio",
+    "cta_title": "Ready to get started?",
+    "cta_text": "We usually respond within 24 hours. Let's discuss how we can help!"
+  },
+  "project": {
+    "behind_the_scenes": "BEHIND THE SCENES",
+    "additional_videos": "ADDITIONAL CONTENT",
+    "photo_gallery": "PHOTO GALLERY",
+    "back_to_projects": "Back to Projects",
+    "not_found": "Project not found",
+    "main_video": "Main Video",
+    "client": "Client",
+    "agency": "Agency"
+  },
+  "seo": {
+    "home": {
+      "title": "Malinki | Creative Video Production Agency in Montreal",
+      "description": "Malinki is a Montreal-based video production agency specializing in advertising, brand content, vertical content and music videos. Visual creations in your image."
     },
     "production_publicitaire": {
-        "title": "ADVERTISING CONTENT THAT CAPTURES ATTENTION",
-        "description": "At Malinki, we design and produce advertising content that captures attention in the first few seconds. Whether it's for a web campaign, television, or social media, we focus on clear ideas, strong visuals, and agile execution.",
-        "cta_text": "TAKE ACTION",
-        "testimonial_text": "Malinki was able to deliver an advertising campaign in record time, without sacrificing quality.",
-        "testimonial_author": "Laurence Gagnon Beaudoin",
-        "testimonial_role": "Marketing Director | OMY",
-        "headline_line1": "MORE THAN A BEAUTIFUL VISUAL",
-        "headline_line2": "AN AD THAT PACKS A PUNCH",
-        "paragraph1": "We work hand in hand with your team to ensure that each piece of content serves a specific purpose: to sell, raise awareness, launch, or mobilize.",
-        "paragraph2": "Our approach is simple: we ask the right questions, propose solid ideas, and deliver quickly, without compromising on quality.",
-        "button_text": "OUR DEMO",
-        "productions_title": "OUR PRODUCTIONS",
-        "behind_scenes_title": "BEHIND THE SCENES",
-        "clients_title": "THOSE WHO TRUSTED US",
-        "prods_title": "OUR AD PRODUCTIONS",
-        "prods_subtitle_1": "DIGITAL ADVERTISING",
-        "prods_text_1": "Short formats designed for web and social media, optimized to capture attention and generate action.",
-        "prods_subtitle_2": "TV ADVERTISING",
-        "prods_text_2": "6, 15, or 30-second content, effective narration and compliance with broadcasting standards, for high-reach campaigns.",
-        "prods_subtitle_3": "CAMPAIGN PHOTOGRAPHY",
-        "prods_text_3": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
-        "prods_button_text": "Take action",
-        "contact_cta_title": "VISUAL CREATIONS IN YOUR IMAGE",
-        "contact_cta_text": "OUR CREATIVITY, AT YOUR SERVICE",
-        "contact_cta_button_text": "GET STARTED",
-        "main_image_alt": "Craftsman working on a laptop",
-        "sidebar_image_alt": "Craftsman at computer",
-        "testimonial_image_alt": "Author's photo",
-        "row_image_1_alt": "Super Aqua Club campaign photo",
-        "row_image_2_alt": "Judith campaign photo",
-        "row_image_3_alt": "Cook it campaign photo",
-        "feature_image_alt": "Two men watching TV on a couch",
-        "bts_image_1_alt": "Behind the scenes: camera setup",
-        "bts_image_2_alt": "Behind the scenes: team discussion",
-        "bts_image_3_alt": "Behind the scenes: lighting adjustment",
-        "bts_image_4_alt": "Behind the scenes: director at work",
-        "clients_image_alt": "Client logos",
-        "prods_image_alt": "Clap Cook it campaign photo"
+      "title": "Video Advertising Production in Montreal | Malinki",
+      "description": "Advertising content that captures attention in the first few seconds. Web, TV, and social media campaigns — clear ideas, strong visuals, agile execution."
     },
     "contenu_de_marque": {
-        "title": "REAL CONTENT THAT TELLS, UNITES AND RESONATES",
-        "description_1": "Every brand has a unique identity. Our role is to make it shine with your clients, your employees, and the talent you want to attract.",
-        "description_2": "We create authentic content, based on real listening, an understanding of your challenges, and an ability to translate your values into stories that make an impact.",
-        "cta_text": "tell us about your brand",
-        "bts_title": "why malinki?",
-        "bts_description": "We don't make generic content. We dig into your brand DNA to create pieces that have meaning, that spark emotion, and build a real connection with your audience. At Malinki, every image carries intention.",
-        "bts_button_text": "our demo",
-        "testimonial_text": "Professional, efficient, and attentive from start to finish. The shoot went smoothly, structured, and well organized.",
-        "testimonial_author": "Érika Gagné",
-        "testimonial_role": "Senior Advisor | DDMG Communications",
-        "testimonial_text_2": "[...] and on top of being talented, they are kind, generous, and pleasant to work with. A valuable collaboration we recommend without hesitation!",
-        "testimonial_author_2": "Élaine Lehouiller",
-        "testimonial_role_2": "Strategist | Niché",
-        "productions_title": "OUR PRODUCTIONS",
-        "prods_title": "NOT JUST BEAUTIFUL, REAL!",
-        "prods_subtitle_1": "BRAND PORTRAITS",
-        "prods_text_1": "We highlight the people behind your company: founders, employees, clients, to create an authentic connection with your audience.",
-        "prods_subtitle_2": "EMPLOYER CAPSULES",
-        "prods_text_2": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
-        "prods_subtitle_3": "NARRATIVE CONTENT SERIES",
-        "prods_text_3": "We build consistent narrative formats, designed to build audience loyalty over the long term.",
-        "prods_subtitle_4": "CLIENT TESTIMONIALS",
-        "prods_text_4": "Strong visuals consistent with your advertising videos, captured in studio or on location, to feed all your channels.",
-        "prods_button_text": "GET A QUOTE IN 24 HOURS",
-        "contact_cta_text": "Your brand has a story. We help you tell it.",
-        "contact_cta_button_text": "CONTACT US",
-        "main_image_alt": "Craftsman working on a computer",
-        "sidebar_image_alt": "Side view of a craftsman at his desk",
-        "testimonial_image_alt": "Portrait of Laurence Gagnon Beaudoin",
-        "testimonial_image_alt_2": "Portrait of Érika Gagné",
-        "row_image_1_alt": "Super Aqua Club campaign photo",
-        "row_image_2_alt": "Judith campaign photo",
-        "row_image_3_alt": "Cook it campaign photo",
-        "row_image_4_alt": "Super Aqua Club campaign photo",
-        "row_image_5_alt": "Judith campaign photo",
-        "row_image_6_alt": "Cook it campaign photo",
-        "row_image_7_alt": "Super Aqua Club campaign photo",
-        "feature_image_alt": "Two men watching television on a couch",
-        "clients_image_alt": "Client logos"
+      "title": "Brand Content Video Production in Montreal | Malinki",
+      "description": "Authentic content that tells, unites and resonates. Brand portraits, employer capsules, narrative series and client testimonials."
     },
     "contenu_vertical": {
-        "title": "SHORT-FORM CONTENT DESIGNED FOR THE LONG TERM",
-        "description": "Each platform has its own codes: format, tone, rhythm, visuals... Everything matters. Adapting your message is essential to reach the right people, in the right place, in the right way.",
-        "gifs_alt_1": "Gif 1",
-        "gifs_alt_2": "Gif 2",
-        "gifs_alt_3": "Gif 3",
-        "gifs_alt_4": "Gif 4",
-        "cta_text": "TAKE ACTION",
-        "testimonial_text": "We trust Malinki as a partner because they are agile and flexible. They always deliver quality content, often within tight deadlines.",
-        "testimonial_author": "Jessica Romito",
-        "testimonial_role": "Director | Meat & Produce",
-        "testimonial_image_alt": "Portrait of Jessica Romito",
-        "main_image_alt": "Vertical content image",
-        "vertical_image_alt": "Vertical content image",
-        "tiktoks_title": "CREATE TIKTOKS AND REELS",
-        "tiktoks_description": "On TikTok and Reels, everything happens in the first few seconds. You have to get straight to the point, grab attention, but above all, stay authentic. We create vertical content that's punchy and on-trend, without ever sacrificing your brand voice. Whether it's funny, educational, or moving, we know how to get your message across in a format that's shareable and memorable.",
-        "tiktoks_button_text": "Take action",
-        "productions_title": "OUR PRODUCTIONS",
-        "behind_scenes_title": "BEHIND THE SCENES",
-        "bts_image_1_alt": "Behind the scenes: camera setup",
-        "bts_image_2_alt": "Behind the scenes: team discussion",
-        "bts_image_3_alt": "Behind the scenes: lighting adjustment",
-        "bts_image_4_alt": "Behind the scenes: director at work",
-        "bts_image_5_alt": "Behind the scenes: camera setup",
-        "bts_image_6_alt": "Behind the scenes: team discussion",
-        "bts_image_7_alt": "Behind the scenes: lighting adjustment",
-        "bts_image_8_alt": "Behind the scenes: director at work",
-        "contact_cta_title": "LET'S CREATE TOGETHER",
-        "contact_cta_text": "We are ready to create a reel for you. Let's talk about your project and how we can help.",
-        "contact_cta_button_text": "CONTACT US",
-        "clients_image_alt": "Client logos"
-    },
-    "sections": {
-        "about_text": {
-            "heading": "A story to tell or a message to pass on?",
-            "body": "Even when it seems simple, producing content that resonates becomes quickly demanding when it rests on the same shoulders."
-        },
-        "cta": {
-            "heading_line1": "Each project begins with ",
-            "heading_line2": "an idea",
-            "button_text": "Let's talk"
-        },
-        "cta2": {
-            "heading": "Do you have a project in mind?",
-            "button_text": "Contact us"
-        },
-        "services": {
-            "heading": "OUR SERVICES",
-            "description": "",
-            "service_1": "ADVERTISING",
-            "service_2": "BRANDED CONTENT",
-            "service_3": "VERTICAL CONTENT",
-            "service_4": "MUSIC VIDEOS"
-        },
-        "team": {
-            "heading_left": "Our",
-            "heading_right": "team",
-            "mobile_heading": "Our team",
-            "tagline": "",
-            "member_1": {
-                "name_line_1": "Andrew",
-                "name_line_2": "Tchernilevskii",
-                "role": "Executive Producer"
-            },
-            "member_2": {
-                "name": "Miroslav Dufresne",
-                "role": "Director of Photography & Photographer"
-            },
-            "member_3": {
-                "name": "Jérémy Leblond",
-                "role": "Production Manager & Project Manager"
-            },
-            "member_4": {
-                "name": "Alexandre Normand",
-                "role": "Camera Operator & Colorist"
-            },
-            "member_5": {
-                "name": "Cedric Demers",
-                "role": "Editor"
-            },
-            "member_6": {
-                "name": "Justine Gagnon",
-                "role": "Project Manager"
-            }
-        },
-        "logos": {
-            "heading": "They trusted us"
-        },
-        "footer": {
-            "copyright": "© MALINKI 2025. All rights reserved",
-            "ig_agency": "Agency",
-            "ig_studio": "Studio"
-        }
+      "title": "Vertical Content for TikTok and Reels in Montreal | Malinki",
+      "description": "Short-form content designed for the long term. Punchy TikToks and Reels rooted in trends, without ever sacrificing your brand voice."
     },
     "video_clips": {
-        "title": "MUSIC VIDEO PRODUCTION",
-        "description": "Malinki produces music videos for artists working in various musical styles. The team works with several directors to offer the best rendering for the artist. We are deeply committed to supporting local artistic culture and offer productions adapted to each project scope.",
-        "cta_text": "CONTACT US",
-        "gallery_title": "OUR WORK",
-        "gif_1_alt": "Music Video - Ten Past Two",
-        "gif_2_alt": "Music Video - Alanna",
-        "gif_3_alt": "Music Video - Visrei",
-        "gif_4_alt": "Music Video - Junes",
-        "gif_5_alt": "Music Video - Amadouemoi",
-        "gif_6_alt": "Music Video - Raymond Est Mort",
-        "gif_7_alt": "Music Video - King Melrose",
-        "contact_cta_text": "Ready to create your next music video?",
-        "contact_cta_button_text": "LET'S DISCUSS YOUR PROJECT"
-    },
-    "studio": {
-        "title": "Malinki Studio",
-        "hero": {
-            "title_line1": "Studio",
-            "title_line2": "Malinki",
-            "intro_text": "Located in the Lofts Cadbury, Studio Malinki is a bright and welcoming space designed for creation. With its 1000 sq. ft., large cyclorama and relaxed atmosphere, it adapts to all projects: photography, filming, web or artistic content. The layout is simple, flexible and inspiring according to your needs."
-        },
-        "nav": {
-            "le_studio": "The studio",
-            "galerie_photo": "Photo gallery",
-            "nos_equipements": "Our equipment",
-            "les_tarifs": "Pricing"
-        },
-        "plan": {
-            "access_line1": "ACCESS TO A",
-            "access_line2": "SPACE OF",
-            "access_size": "1000 SQ. FT.",
-            "specs_title": "SPECIFICATIONS",
-            "specs": [
-                "Cyclorama 15 ft (L) x 8.6 ft (W) x 11 ft (H)",
-                "CCM Station",
-                "Bathroom (corridor)",
-                "Recessed steel pipes (ceiling)",
-                "Air conditioning",
-                "Kitchen area (microwave, fridge, sink, air fryer)",
-                "Loading dock + freight elevator",
-                "Parking (paid)"
-            ],
-            "inclusions_title": "INCLUSIONS",
-            "inclusions": [
-                "Backdrops + 9' paper rolls",
-                "Equipment (learn more)",
-                "Clothing steamer",
-                "High-speed Wi-Fi",
-                "Step ladders 5, 8, 12'",
-                "Sound system",
-                "Coffee & tea",
-                "Folding tables",
-                "Sandbags, apple boxes, C-Stand included"
-            ],
-            "cta_line1": "INTERESTED IN ",
-            "cta_line2": "OUR SPACES?",
-            "cta_button": "Book now"
-        },
-        "equipment": {
-            "available_title_line1": "AVAILABLE",
-            "available_title_line2": "EQUIPMENT",
-            "rental_title_line1": "EQUIPMENT",
-            "rental_title_line2": "FOR RENT",
-            "available": [
-                "C-Stands (8)",
-                "Apple boxes",
-                "Sandbags (10)"
-            ],
-            "rental": [
-                "Aputure 1200 D / 600 D / 300D",
-                "Aputure P300C Kit (x2)",
-                "Aputure F22c",
-                "Aputure spotlight 19°",
-                "Aputure Lantern 90",
-                "Aputure Fresnel F10 / 2X"
-            ],
-            "view_full_list": "View full list",
-            "filter_dept": "",
-            "drawer_title": "Equipment list",
-            "col_name": "Name",
-            "col_qty": "Qty",
-            "col_dept": "Dept",
-            "col_price": "Price",
-            "col_description": "Description",
-            "price_tbd": "TBD"
-        },
-        "pricing": {
-            "title": "Pricing",
-            "subtitle": "Minimum rental duration is 4 hours",
-            "plan_4h_title": "4-hour rental",
-            "plan_4h_price": "400$",
-            "plan_8h_title": "8-hour rental",
-            "plan_8h_price": "650$",
-            "plan_creative_title": "Creative project",
-            "plan_creative_desc": "Give us all the details of your project",
-            "book_now": "Book now",
-            "contact_us": "Contact us"
-        },
-        "faq": {
-            "title": "FAQ",
-            "cat_studio": "The Studio",
-            "cat_reservations": "Booking & practical information",
-            "cat_installations": "Facilities & equipment",
-            "cat_services": "Additional services",
-            "q1_question": "Where is your studio located?",
-            "q1_answer": "We are located at 5425 Rue de Bordeaux, Unit 253.",
-            "q2_question": "What's in your studio?",
-            "q2_answer": [
-                "Our 1,000 sq ft studio, located in Rosemont, is designed to be functional, comfortable, and suitable for a variety of production types.",
-                "It features a white cyclorama 15 feet wide, 8.6 feet deep and 11 feet high, steel pipes recessed in the ceiling for hanging equipment, and a HMU station with a makeup table, changing room, clothing rack and steamer.",
-                "A loading dock and freight elevator make equipment access easy. The studio also includes a kitchen (fridge, microwave, air fryer, sink and dishes), great coffee, air conditioning, bathroom access in the corridor, and available parking ($).",
-                "You can build walls to create full room sets, such as a living room, office, or other setting."
-            ],
-            "q3_question": "What are the booking terms?",
-            "q3_answer": [
-                "Payment is required at the time of booking to confirm your reservation.",
-                "Any cancellation made less than 48 hours before the booking date is non-refundable."
-            ],
-            "q4_question": "What are the studio usage conditions?",
-            "q4_answer": [
-                "The studio must be returned to its original condition upon departure.",
-                "Any material damage caused by the client or their party will result in repair or replacement fees. This includes, but is not limited to, damage to the cyclorama, furniture, and equipment.",
-                "If the studio is not properly reset, cleaning fees of up to $150 may be charged depending on the condition of the studio.",
-                "Please avoid glitter, feathers, confetti, powders, and other hard-to-clean materials. If in doubt, ask us beforehand.",
-                "The cyclorama surface must be kept clean. We ask that you wear shoe covers or clean indoor shoes when on the cyclo.",
-                "Please let us know in advance if you plan to bring a pet.",
-                "Respect your neighbours: keep noise levels (music, voices) at a reasonable level to avoid disturbing surrounding tenants."
-            ],
-            "q5_question": "Is parking available?",
-            "q5_answer": [
-                "One parking spot is included.",
-                "Additional parking can be reserved for $25/day.",
-                "A loading dock and freight elevator are accessible for equipment transport."
-            ],
-            "q6_question": "What time slots are available?",
-            "q6_answer": [
-                "Rentals are typically available for a half-day (4h) or a full day (8h).",
-                "It is also possible to book the studio for more specific time slots — simply contact us to arrange your reservation."
-            ],
-            "q7_question": "Do you rent equipment?",
-            "q7_answer": "Yes. In addition to the included equipment, we offer a wide selection of cameras, lenses, lights, grip gear and accessories for rental. See the full list here.",
-            "q8_question": "Can you repaint the cyclorama for our project?",
-            "q8_answer": "Yes, for an additional fee, we offer a cyclorama painting service upon prior request.",
-            "q9_question": "Where is your electrical panel (for tie-ins)?",
-            "q9_answer": "For higher electrical requirements, access to the secured electrical panel is available upon request.",
-            "q10_question": "Can we hire technicians for the studio?",
-            "q10_answer": "Yes! We can provide a full crew based on your needs: grip technician, gaffer, director of photography, director, hair & makeup artist, stylist, and more. Tell us what you need and we'll take care of the rest.",
-            "q11_question": "Do you provide creative services?",
-            "q11_answer": "Yes! You can call on our advertising content design and production services. Whether for a web, TV or social media campaign, we focus on clear ideas, strong visuals and agile execution."
-        },
-        "map": {
-            "title": "Find us easily",
-            "address": "5425 Rue de Bordeaux, Montréal, QC H2H 2P9",
-            "cta": "Book now"
-        }
+      "title": "Music Video Production in Montreal | Malinki",
+      "description": "Malinki produces music videos for artists across various musical styles. A passionate team supporting local artistic culture with productions tailored to every project."
     },
     "contact": {
-        "title": "Contact",
-        "heading": "Let's talk about your project",
-        "subheading": "We can't wait to bring your vision to life. Contact us to discuss your next audiovisual project.",
-        "form_title": "Send us a message",
-        "name_label": "Full name",
-        "name_placeholder": "Your name",
-        "email_label": "Email",
-        "email_placeholder": "your@email.com",
-        "phone_label": "Phone",
-        "phone_placeholder": "(514) 555-1234",
-        "message_label": "Message",
-        "message_placeholder": "Tell us about your project, goals and important dates...",
-        "submit_button": "Send message",
-        "submitting_button": "Sending...",
-        "success_message": "Thank you! We received your message and will get back to you shortly.",
-        "error_message": "Oops! Something went wrong. Please try again or contact us directly by email.",
-        "email_title": "Email",
-        "phone_title": "Phone",
-        "agence_title": "Agency",
-        "studio_title": "Studio",
-        "cta_title": "Ready to get started?",
-        "cta_text": "We usually respond within 24 hours. Let's discuss how we can help!"
+      "title": "Contact Us | Malinki — Video Production in Montreal",
+      "description": "Let's talk about your video project. Contact Malinki to discuss your next advertising production, brand content or music video."
     },
     "project": {
-        "behind_the_scenes": "BEHIND THE SCENES",
-        "additional_videos": "ADDITIONAL CONTENT",
-        "photo_gallery": "PHOTO GALLERY",
-        "back_to_projects": "Back to Projects",
-        "not_found": "Project not found",
-        "main_video": "Main Video",
-        "client": "Client",
-        "agency": "Agency"
-    },
-    "seo": {
-        "home": {
-            "title": "Malinki | Creative Video Production Agency in Montreal",
-            "description": "Malinki is a Montreal-based video production agency specializing in advertising, brand content, vertical content and music videos. Visual creations in your image."
-        },
-        "production_publicitaire": {
-            "title": "Video Advertising Production in Montreal | Malinki",
-            "description": "Advertising content that captures attention in the first few seconds. Web, TV, and social media campaigns — clear ideas, strong visuals, agile execution."
-        },
-        "contenu_de_marque": {
-            "title": "Brand Content Video Production in Montreal | Malinki",
-            "description": "Authentic content that tells, unites and resonates. Brand portraits, employer capsules, narrative series and client testimonials."
-        },
-        "contenu_vertical": {
-            "title": "Vertical Content for TikTok and Reels in Montreal | Malinki",
-            "description": "Short-form content designed for the long term. Punchy TikToks and Reels rooted in trends, without ever sacrificing your brand voice."
-        },
-        "video_clips": {
-            "title": "Music Video Production in Montreal | Malinki",
-            "description": "Malinki produces music videos for artists across various musical styles. A passionate team supporting local artistic culture with productions tailored to every project."
-        },
-        "contact": {
-            "title": "Contact Us | Malinki — Video Production in Montreal",
-            "description": "Let's talk about your video project. Contact Malinki to discuss your next advertising production, brand content or music video."
-        },
-        "project": {
-            "title_suffix": " | Malinki"
-        }
+      "title_suffix": " | Malinki"
     }
+  }
 }

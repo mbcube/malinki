@@ -1,2047 +1,2039 @@
 {
-    "projects": [
+  "projects": [
+    {
+      "slug": "cook-it",
+      "title": {
+        "fr": "COOK IT - CAMPAGNE PUBLICITAIRE",
+        "en": "COOK IT - ADVERTISING CAMPAIGN"
+      },
+      "clientName": {
+        "fr": "Cook it",
+        "en": "Cook it"
+      },
+      "shortDescription": {
+        "fr": "Une série de publicités qui met en lumière les prêts-à-cuisiner Cook it dans un environnement familial authentique et chaleureux.",
+        "en": "A series of advertisements highlighting Cook it meal kits in an authentic and warm family environment."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cook-it/cook-it-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
         {
-            "slug": "cook-it",
-            "title": {
-                "fr": "COOK IT - CAMPAGNE PUBLICITAIRE",
-                "en": "COOK IT - ADVERTISING CAMPAIGN"
-            },
-            "clientName": {
-                "fr": "Cook it",
-                "en": "Cook it"
-            },
-            "shortDescription": {
-                "fr": "Une série de publicités qui met en lumière les prêts-à-cuisiner Cook it dans un environnement familial authentique et chaleureux.",
-                "en": "A series of advertisements highlighting Cook it meal kits in an authentic and warm family environment."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cook-it/cook-it-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Philippe Lupien"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Jeremie Boivin"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur Exécutif",
-                        "en": "Executive Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Productrice",
-                        "en": "Producer"
-                    },
-                    "value": "Érika Bellehumeur"
-                },
-                {
-                    "label": {
-                        "fr": "Directrice de production",
-                        "en": "Production Manager"
-                    },
-                    "value": "Laurence Vézina"
-                },
-                {
-                    "label": {
-                        "fr": "Chef Machiniste",
-                        "en": "Key Grip"
-                    },
-                    "value": "Stéphane Klopp"
-                },
-                {
-                    "label": {
-                        "fr": "Chef Éclairagiste",
-                        "en": "Gaffer"
-                    },
-                    "value": "Nico Tomassini"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur offline",
-                        "en": "Offline Editor"
-                    },
-                    "value": "Marc André Côté & Simon Gilbert"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Béatrice Tremblay (Outpost MTL)"
-                },
-                {
-                    "label": {
-                        "fr": "Mixage sonore",
-                        "en": "Sound Mixing"
-                    },
-                    "value": "François Del Fante (Reservoir Audio)"
-                }
-            ],
-            "additionalVideos": [
-                {
-                    "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cook-it/cook-it-additional-1.mp4",
-                    "type": "mp4",
-                    "isPortrait": false
-                }
-            ],
-            "behindTheScenes": {
-                "portrait": [
-                    "2_554x.webp",
-                    "20220712_100752_554x.webp",
-                    "20220712_182435_0_554x.webp"
-                ],
-                "landscape": [
-                    "judith_2_554x.webp",
-                    "5_57183ba7-9fa2-49af-84d2-e1aa64310a20_554x.webp",
-                    "4_554x.webp"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2022-06-01"
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Philippe Lupien"
         },
         {
-            "slug": "jouer-pour-gagner",
-            "title": {
-                "fr": "WEBSERIE JOUER POUR GAGNER",
-                "en": "WEB SERIES PLAY TO WIN"
-            },
-            "clientName": {
-                "fr": "Quebecor",
-                "en": "Quebecor"
-            },
-            "shortDescription": {
-                "fr": "Conscients de l'importance de stimuler la création d'entreprises au Québec, Quebecor offre aux étudiants de toutes les universités du Québec la possibilité de recevoir l'une des cinq bourses Pierre-Péladeau. Au fil de la websérie Jouer pour gagner, découvrez quelles équipes remporterons les différentes bourses.",
-                "en": "Aware of the importance of stimulating business creation in Quebec, Quebecor offers students from all Quebec universities the opportunity to receive one of five Pierre-Péladeau scholarships. Through the web series Play to Win, discover which teams will win the different scholarships."
-            },
-            "mainVideo": {
-                "url": "https://cdn.shopify.com/videos/c/o/v/example123.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Client",
-                        "en": "Client"
-                    },
-                    "value": "asterX"
-                },
-                {
-                    "label": {
-                        "fr": "Agence",
-                        "en": "Agency"
-                    },
-                    "value": "Qolab"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-06-01"
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Jeremie Boivin"
         },
         {
-            "slug": "labo-omy",
-            "title": {
-                "fr": "PUBLICITÉS WEB",
-                "en": "WEB ADVERTISEMENTS"
-            },
-            "clientName": {
-                "fr": "OMY Laboratoires",
-                "en": "OMY Laboratories"
-            },
-            "shortDescription": {
-                "fr": " Publicités produites pour OMY Laboratoires dans le cadre la campagne \"Back toroutine\" à l'automne 2024. Elle se décline en trois versions présentantdifférent types de peau. Leur but est de faire connaître au public la marque Omyen s’insérant dans des environnements et médias de leur routine. Le tournage aeu lieu dans le studio Malinki, à Montréal.",
-                "en": "Advertisements produced for OMY Laboratories as part of the 'Back to routine' campaign in fall 2024. They come in three versions featuring different skin types. Their goal is to introduce the OMYen brand to the public, integrating into routine environments and media. Filming took place at the Malinki studio in Montreal."
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/watch?v=GSTCE2YNgHE",
-                "type": "youtube"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "DOP",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Guillaume Shea-Blais"
-                },
-                {
-                    "label": {
-                        "fr": "Assistant caméra",
-                        "en": "Assistant Camera"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Chef Grip",
-                        "en": "Grip"
-                    },
-                    "value": "Bastien Meyer"
-                },
-                {
-                    "label": {
-                        "fr": "Chef Électro",
-                        "en": "Electrician"
-                    },
-                    "value": "Vincent McDonald"
-                },
-                {
-                    "label": {
-                        "fr": "Assistante Direction artistique, casting, stylisme",
-                        "en": "Assistant Artistic Direction, Casting, Styling"
-                    },
-                    "value": "Coralie Doucet-Côté"
-                },
-                {
-                    "label": {
-                        "fr": "Directrice Artistique",
-                        "en": "Creative Director"
-                    },
-                    "value": "Meily Côté"
-                },
-                {
-                    "label": {
-                        "fr": "Coordonnateur de production",
-                        "en": "Production Coordinator"
-                    },
-                    "value": "Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "MUA",
-                        "en": "Makeup Artist"
-                    },
-                    "value": "Arielle Chartrand"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur Offline",
-                        "en": "Offline Editor"
-                    },
-                    "value": "Marc-André Cotton"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur Online",
-                        "en": "Online Editor"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Béatrice Tremblay (OUTPOST)"
-                },
-                {
-                    "label": {
-                        "fr": "Directrice Artistique",
-                        "en": "Creative Director"
-                    },
-                    "value": "Meily Côté"
-                }
-            ],
-            "additionalVideos": [
-                {
-                    "url": "https://www.youtube.com/watch?v=uycy7PJlpEM",
-                    "type": "youtube"
-                },
-                {
-                    "url": "https://www.youtube.com/watch?v=aWjV_FcTec4",
-                    "type": "youtube"
-                }
-            ],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": [
-                    "labo-omy-bts-landscape-01.jpg",
-                    "labo-omy-bts-landscape-02.jpg",
-                    "labo-omy-bts-landscape-03.jpg"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-03-01"
+          "label": {
+            "fr": "Producteur Exécutif",
+            "en": "Executive Producer"
+          },
+          "value": "Andrew Tchernilevskii"
         },
         {
-            "slug": "brivia",
-            "title": {
-                "fr": "PUBLICITÉ WEB BRIVIA",
-                "en": "BRIVIA WEB ADVERTISEMENT"
-            },
-            "clientName": {
-                "fr": "Groupe Brivia",
-                "en": "Brivia Group"
-            },
-            "agencyName": {
-                "fr": "Wellington (Departement maison de création)",
-                "en": "Wellington (Creative House Department)"
-            },
-            "shortDescription": {
-                "fr": "Production publicitaire web pour l'agence Wellington (Departement maison decréation) mettant de l'avant les projets immobiliers du groupe Brivia.",
-                "en": "Web advertising production for Wellington Agency (Creative House Department) showcasing the real‑estate projects of the Brivia Group."
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/embed/qL2l1j6JreU",
-                "type": "youtube"
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "publishedAt": "2023-09-01"
+          "label": {
+            "fr": "Productrice",
+            "en": "Producer"
+          },
+          "value": "Érika Bellehumeur"
         },
         {
-            "slug": "defi-28-jours",
-            "title": {
-                "fr": "Capsules Défi 28 Jours Sans Alcool",
-                "en": "28-Day Alcohol-Free Challenge Capsules"
-            },
-            "clientName": {
-                "fr": "Fondation Jean Lapointe",
-                "en": "Fondation Jean Lapointe"
-            },
-            "shortDescription": {
-                "fr": "L'équipe Malinki a été mandaté par l'agence Nucleus afin de produire les capsules web 2025 du Défi 28 jours Sans Alcool. À la demande de la Fondation Jean Lapointe, Malinki a produit deux mini-séries de capsules diffusées au fil du Défi 28 jours 2025. La boîte de production assure la réalisation et collabore avec l'agence pour la direction artistique des vidéos. Les séries présente les ambassadeur.rices du Défi, ainsi que des témoignages de personnes ayant eurecours à la Maison Jean Lapointe.",
-                "en": "The Malinki team was commissioned by Nucleus to produce the 2025 web capsules for the 28-Day Alcohol-Free Challenge. At the request of Fondation Jean Lapointe, Malinki produced two mini-series of capsules streamed throughout the 2025 28-Day Alcohol-Free Challenge. The production house handles the execution and collaborates with the agency on the artistic direction of the videos. The series showcases the Challenge ambassadors, as well as testimonials from individuals who have sought assistance at Maison Jean Lapointe."
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/embed/R6lNgvLdnB8?si=tUqGdmvP-ut1INqd",
-                "type": "youtube"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Réalisation",
-                        "en": "Director"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur de production",
-                        "en": "Production Manager"
-                    },
-                    "value": "Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "Coordinatrice de post-production audio",
-                        "en": "Audio Post-Production Coordinator"
-                    },
-                    "value": "Charlotte Lamoureux (Underground Studio)"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Guillaume Shea-Blais"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur",
-                        "en": "Camera Operator"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Preneur de son",
-                        "en": "Sound Recordist"
-                    },
-                    "value": "Yohann Boudreault"
-                },
-                {
-                    "label": {
-                        "fr": "MUA",
-                        "en": "MUA"
-                    },
-                    "value": "Arielle Chartand-Gilbert"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur",
-                        "en": "Editor"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Béatrice Tremblay"
-                },
-                {
-                    "label": {
-                        "fr": "Ingénieurs son",
-                        "en": "Sound Engineers"
-                    },
-                    "value": "Jean-Baptiste Montlibert & Steeve Labbé (Underground Studio)"
-                },
-                {
-                    "label": {
-                        "fr": "Coordinatrice de post-production audio",
-                        "en": "Audio Post-Production Coordinator"
-                    },
-                    "value": "Charlotte Lamoureux (Underground Studio)"
-                }
-            ],
-            "additionalVideos": [
-                {
-                    "url": "https://www.youtube.com/watch?v=KeDRaqRkqXQ",
-                    "type": "youtube"
-                },
-                {
-                    "url": "https://www.youtube.com/watch?v=yqUUw0mZZ5A",
-                    "type": "youtube"
-                },
-                {
-                    "url": "https://www.youtube.com/watch?v=KkbEHRYN1zA",
-                    "type": "youtube"
-                }
-            ],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-03-01"
+          "label": {
+            "fr": "Directrice de production",
+            "en": "Production Manager"
+          },
+          "value": "Laurence Vézina"
         },
         {
-            "slug": "ecarlate",
-            "title": {
-                "fr": "VIDÉOCLIP ÉCARLATE",
-                "en": "ECARLATE VIDEO CLIP"
-            },
-            "clientName": {
-                "fr": "Lisbon Lux Records (Visrei)",
-                "en": "Lisbon Lux Records (Visrei)"
-            },
-            "shortDescription": {
-                "fr": "Découvrez Visrei, un talentueux artiste représenté par Lisbon Lux Records. Le vidéoclip pour Écarlate est une collaboration entre l'agence Malinki et le duo réalisateurs Yang Shi et Jean-Guillaume Bastin. Plongez dans un voyage visuel où la culture chinoise s'entremêle harmonieusement avec une perspective occidentale.",
-                "en": "Discover Visrei, a talented artist represented by Lisbon Lux Records. The video clip for Écarlate is a collaboration between Malinki agency and the duo of directors Yang Shi and Jean-Guillaume Bastin. Dive into a visual journey where Chinese culture intertwines harmoniously with a western perspective."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ecarlate/ecarlate-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateurs",
-                        "en": "Directors"
-                    },
-                    "value": "JG & Yang shi"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Guillaume Shea Blais"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Assistant Caméra",
-                        "en": "Camera Assistant"
-                    },
-                    "value": "Ginga Takeshima"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur Cam B",
-                        "en": "Camera Operator Cam B"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Chef Éclairagiste",
-                        "en": "Gaffer"
-                    },
-                    "value": "Vincent McDonald"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur",
-                        "en": "Editor"
-                    },
-                    "value": "Thomas Fortier"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Simon Bøisx ( Arketype )"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "ecarlate-bts-portrait-01.png",
-                    "ecarlate-bts-portrait-02.png",
-                    "ecarlate-bts-portrait-03.png"
-                ],
-                "landscape": [
-                    "ecarlate-bts-landscape-01.png",
-                    "ecarlate-bts-landscape-02.png",
-                    "ecarlate-bts-landscape-03.png"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-06-01"
+          "label": {
+            "fr": "Chef Machiniste",
+            "en": "Key Grip"
+          },
+          "value": "Stéphane Klopp"
         },
         {
-            "slug": "pre-opera-25-26",
-            "clientName": {
-                "fr": "Opéra de Montréal",
-                "en": "Montreal Opera"
-            },
-            "title": {
-                "fr": "Pré-Opéra Saison 25-26",
-                "en": "Pré-Opéra Season 25-26"
-            },
-            "shortDescription": {
-                "fr": "Pour une 5e saison, Malinki signe la co-production des capsules Pré-Opéra Express de l'Opéra de Montréal. Avant chaque représentation, l'Opéra de Montréal propose a ses spectateurs un résumé de l'œuvre présentée, question de plonger dans l'histoire. Les 4 capsules ont pour but d'instruire sur l'histoire de la pièce ainsi que la musicologie des œuvres.",
-                "en": "For a fifth season, Malinki co-produced the Pré-Opéra Express capsules for the Opéra de Montréal. Before each performance, the Opéra de Montréal offers its audience a summary of the presented work, allowing them to dive into the story. The 4 capsules aim to educate about the story of the piece as well as the musicology of the works."
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/embed/SzPl_4MoFn0",
-                "type": "youtube"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Musicologue",
-                        "en": "Musicologist"
-                    },
-                    "value": "Pierre Vachon"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur de production",
-                        "en": "Production Director"
-                    },
-                    "value": "Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur de la photographie",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Guillaume Shea-Blais"
-                },
-                {
-                    "label": {
-                        "fr": "Opérateur caméra",
-                        "en": "Camera Operator"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Prise de son",
-                        "en": "Sound Recordist"
-                    },
-                    "value": "Charles Warren"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur",
-                        "en": "Editor"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Alexandre Normand"
-                },
-                {
-                    "label": {
-                        "fr": "Motion design",
-                        "en": "Motion Design"
-                    },
-                    "value": "Colegram"
-                },
-                {
-                    "label": {
-                        "fr": "Mixage sonore",
-                        "en": "Sound Mix"
-                    },
-                    "value": "Underground Studio"
-                }
-            ],
-            "additionalVideos": [
-                {
-                    "url": "https://www.youtube.com/watch?v=qwSfZTQzLiM",
-                    "type": "youtube"
-                },
-                {
-                    "url": "https://www.youtube.com/watch?v=f-g1-mvoey0",
-                    "type": "youtube"
-                }
-            ],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2025-09-01"
+          "label": {
+            "fr": "Chef Éclairagiste",
+            "en": "Gaffer"
+          },
+          "value": "Nico Tomassini"
         },
         {
-            "slug": "microsoft-cherylle-shyne",
-            "clientName": {
-                "fr": "Meat & Produce",
-                "en": "Meat & Produce"
-            },
-            "title": {
-                "fr": "MICROSOFT SURFACE x CHERYLLE SHYNE",
-                "en": "MICROSOFT SURFACE x CHERYLLE SHYNE"
-            },
-            "shortDescription": {
-                "fr": "Malinki est fier d'être le partenaire de production montréalais de Meat &Produce et Veritas Communications, l'agence derrière la dernière campagne decontenu web de Microsoft Canada en collaboration avec la danseuseprofessionnelle montréalaise et propriétaire du studio de danse A'Motion,Cherylle Shyne. Dans cette vidéo mêlant la flexibilité de la Surface Pro 9 deMicrosoft avec celle de Cherylle, le produit dévoile toute la variété depositions et de fonctions qu'il possède.",
-                "en": "Malinki is proud to be the Montreal production partner of Meat & Produce and Veritas Communications, the agency behind the latest Microsoft Canada web content campaign in collaboration with Montreal professional dancer and owner of the A'Motion dance studio, Cherylle Shyne. In this video blending the flexibility of Microsoft's Surface Pro 9 with that of Cherylle, the product showcases all the variety of features and functions it offers."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/microsoft-cherylle-shyne/microsoft-cherylle-shyne-main.mp4",
-                "type": "mp4",
-                "isPortrait": true
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Producteur.trice",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii (Malinki) & Jessica Romito (Meat & Produce)"
-                },
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Thomas Leblanc-Murray"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Technique",
-                        "en": "Technical Director"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Assistant Caméra",
-                        "en": "Camera Assistant"
-                    },
-                    "value": "Sébastien Molnar"
-                },
-                {
-                    "label": {
-                        "fr": "Key Grip",
-                        "en": "Key Grip"
-                    },
-                    "value": "Hugo Klopp"
-                },
-                {
-                    "label": {
-                        "fr": "Éclairagiste",
-                        "en": "Gaffer"
-                    },
-                    "value": "Tom Halley"
-                },
-                {
-                    "label": {
-                        "fr": "MUA",
-                        "en": "Makeup Artist"
-                    },
-                    "value": "Christelle Bois Soulas"
-                },
-                {
-                    "label": {
-                        "fr": "Montage offline",
-                        "en": "Offline Editor"
-                    },
-                    "value": "Marc-andré Cotton"
-                },
-                {
-                    "label": {
-                        "fr": "Montage online",
-                        "en": "Online Editor"
-                    },
-                    "value": "Matthew Donkner (M&P)"
-                },
-                {
-                    "label": {
-                        "fr": "Coordonnateur de production",
-                        "en": "Production Coordinator"
-                    },
-                    "value": "Jérémy LeBlond"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-03-01"
+          "label": {
+            "fr": "Monteur offline",
+            "en": "Offline Editor"
+          },
+          "value": "Marc André Côté & Simon Gilbert"
         },
         {
-            "slug": "ben-&-florentine",
-            "clientName": {
-                "fr": "Ben & Florentine",
-                "en": "Ben & Florentine"
-            },
-            "title": {
-                "fr": "Banque de contenus",
-                "en": "Content bank"
-            },
-            "shortDescription": {
-                "fr": "L'équipe de Malinki a été mandatée par Ben & Florentine afin de créer une banque de courtes vidéos ultra appétissantes mettant en valeur les plats du menu. L'objectif premier : impressionner par la beauté des assiettes et renforcer l'expertise de la marque en matière de déjeuner. À travers ces capsules, la production met également en lumière l'expérience en restaurant ; l'ambiance, le plaisir et le moment gourmand afin de positionner Ben & Florentine comme LE détour matinal incontournable.",
-                "en": "The Malinki team was commissioned by Ben & Florentine to create a bank of ultra-appetizing short videos showcasing the menu's dishes. The primary goal: to impress with the beauty of the plates and reinforce the brand's expertise in breakfast. Through these clips, the production also highlights the restaurant experience — the atmosphere, the pleasure, and the indulgent moment — to position Ben & Florentine as THE unmissable morning stop."
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/watch?v=hbUSagRFvPo",
-                "type": "youtube",
-                "isPortrait": true
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur de production",
-                        "en": "Production Director"
-                    },
-                    "value": "Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur de la photographie",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Éclairagiste",
-                        "en": "Gaffer"
-                    },
-                    "value": "Natan B. Foisy"
-                },
-                {
-                    "label": {
-                        "fr": "Styliste culinaire",
-                        "en": "Food Stylist"
-                    },
-                    "value": "Chloé Girard"
-                },
-                {
-                    "label": {
-                        "fr": "Montage offline",
-                        "en": "Offline Edit"
-                    },
-                    "value": "Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "Montage online",
-                        "en": "Online Edit"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Alexandre Normand"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "ben-&-florentine-bts-1.png",
-                    "ben-&-florentine-bts-2.png",
-                    "ben-&-florentine-bts-3.png"
-                ],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-09-01"
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Béatrice Tremblay (Outpost MTL)"
         },
         {
-            "slug": "grand-heron",
-            "clientName": {
-                "fr": "Grand Héron",
-                "en": "Grand Héron"
-            },
-            "title": {
-                "fr": "VIDÉOCLIP RAYMOND EST MORT II",
-                "en": "VIDEO CLIP RAYMOND IS DEAD II"
-            },
-            "shortDescription": {
-                "fr": "Raymond est Mort II est le vidéoclip captivant du groupe Grand Héron. Cechef-d'œuvre musical est un voyage auditif plein d'émotions, mêlant mélodiesenvoûtantes et paroles percutantes. L'esthétique visuelle et troublante ajouteune dimension supplémentaire à cette expérience immersive. Préparez-vous à êtretransporté dans l'univers artistique unique de Grand Héron.",
-                "en": "Raymond is Dead II is the captivating music video by Grand Héron. This musical masterpiece is an emotional auditory journey, blending mesmerizing melodies and impactful lyrics. The unsettling visual aesthetic adds an extra dimension to this immersive experience. Get ready to be transported into Grand Héron's unique artistic world."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-heron/grand-heron-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Philippe Lupien"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Thomas Leblanc Murray"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": [
-                    "grand-heron-bts-landscape-01.jpg",
-                    "grand-heron-bts-landscape-02.jpg",
-                    "grand-heron-bts-landscape-03.jpg"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-03-01"
-        },
-        {
-            "slug": "st-hubert",
-            "clientName": {
-                "fr": "St-Hubert",
-                "en": "St-Hubert"
-            },
-            "agencyName": {
-                "fr": "Qolab",
-                "en": "Qolab"
-            },
-            "title": {
-                "fr": "Contenu vertical",
-                "en": "Vertical content"
-            },
-            "shortDescription": {
-                "fr": "Création de contenu vertical pour les plateformes numériques de St-Hubert. Nousavons adapté la création de contenu aux codes des plateformes afin d'avoir lecôté ludique dans les vidéos. Les mettent en valeur l'équipe, les plats ainsique les nouveaux produits dans les restaurants St-Hubert. Les concepts ont étéimaginé en collaboration avec l'agence Qolab.",
-                "en": "Creation of vertical content for St-Hubert's digital platforms. We have adapted the content creation to the platforms' codes in order to have a playful side in the videos. They highlight the team, the dishes and the new products in St-Hubert restaurants. The concepts were imagined in collaboration with the Qolab agency."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/st-hubert/st-hubert-main.mp4",
-                "type": "mp4",
-                "isPortrait": true
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "st-hubert-bts-portrait-01.jpg",
-                    "st-hubert-bts-portrait-02.jpg",
-                    "st-hubert-bts-portrait-03.jpg"
-                ],
-                "landscape": []
-            },
-            "publishedAt": "2022-09-01"
-        },
-        {
-            "slug": "junes",
-            "clientName": {
-                "fr": "Kartel Musik (Junes)",
-                "en": "Kartel Musik (Junes)"
-            },
-            "title": {
-                "fr": "VIDÉOCLIP JAMAIS TROP",
-                "en": "VIDEOCLIP NEVER TOO MUCH"
-            },
-            "shortDescription": {
-                "fr": "Découvrez Junes, une talentueuse artiste représenté par Kartel Musik. Le vidéoclip pour Jamais Trop est une collaboration entre l'agence Malinki et SachaBourque à la réalisation et DOP. Vous êtes invités dans la chambre et l'univers dichotomique de Junes.",
-                "en": "Discover Junes, a talented artist represented by Kartel Musik. The music video for Jamais Trop is a collaboration between the Malinki agency and SachaBourque as director and DOP. You are invited into Junes' room and her dichotomous universe."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/junes/junes-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Sacha Bourque"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Sacha Bourque"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "D.A.",
-                        "en": "Creative Director"
-                    },
-                    "value": "Elyann Quessy et Éléonore Côté-Savard"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur",
-                        "en": "Camera Operator"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Grip",
-                        "en": "Grip"
-                    },
-                    "value": "François Haché"
-                },
-                {
-                    "label": {
-                        "fr": "Stylisme",
-                        "en": "Styling"
-                    },
-                    "value": "Éléonore Côté-Savard"
-                },
-                {
-                    "label": {
-                        "fr": "MUA",
-                        "en": "Makeup Artist"
-                    },
-                    "value": "Pancha Rojas Hevia"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "junes-bts-portrait-01.jpg",
-                    "junes-bts-portrait-02.jpg",
-                    "junes-bts-portrait-03.jpg"
-                ],
-                "landscape": [
-                    "junes-bts-landscape-01.jpg",
-                    "junes-bts-landscape-02.jpg",
-                    "junes-bts-landscape-03.jpg"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-06-01"
-        },
-        {
-            "slug": "videotron",
-            "clientName": {
-                "fr": "Vidéotron",
-                "en": "Vidéotron"
-            },
-            "agencyName": {
-                "fr": "Qolab",
-                "en": "Qolab"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "Publicité produite pour Qolab dans le cadre la campagne web et télé de VidéotronSportifs de salon professionnels. Elle présente la passion débordante des fansde sport qui vivent intensément chaque match depuis leur salon. L'annonce met enscène Pierre-Bruno Rivard et Andy Mailly-Pressoir qui ne s'entendent pas sur lerésultat du match.",
-                "en": "Advertising produced for Qolab as part of the VidéotronSportifs web and TV campaign for professional salons. It showcases the overflowing passion of sports fans who intensely experience every match from their living rooms. The commercial features Pierre-Bruno Rivard and Andy Mailly-Pressoir, who do not agree on the match outcome."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/videotron/videotron-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur & DOP",
-                        "en": "Director & DOP"
-                    },
-                    "value": "Thomas Fortier"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur délégué",
-                        "en": "Producer Delegate"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur",
-                        "en": "Cinematographer"
-                    },
-                    "value": "Miroslav Dufresne"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "videotron-bts-portrait-01.jpg",
-                    "videotron-bts-portrait-02.jpg",
-                    "videotron-bts-portrait-03.jpg"
-                ],
-                "landscape": []
-            },
-            "publishedAt": "2022-03-01"
-        },
-        {
-            "slug": "freddie-oliver",
-            "clientName": {
-                "fr": "Freddie Oliver",
-                "en": "Freddie Oliver"
-            },
-            "title": {
-                "fr": "VIDÉOCLIP TEN PAST TWO",
-                "en": "VIDEO CLIP TEN PAST TWO"
-            },
-            "shortDescription": {
-                "fr": "Découvrez Freddie Oliver, un artiste talentueux indépendant de la région demétropolitaine. Le vidéoclip pour Ten Past Two est une production de l'agenceMalinki avec Andrew Tchernilevskii à la réalisation. La direction dephotographie est assurée par Guillaume Shea-Blais.",
-                "en": "Discover Freddie Oliver, a talented independent artist from the de-metropolitan region. The music video for Ten Past Two is produced by agency Malinki with Andrew Tchernilevskii directing. The cinematography is handled by Guillaume Shea-Blais."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/freddie-oliver/freddie-oliver-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Artiste",
-                        "en": "Artist"
-                    },
-                    "value": "Freddie Oliver"
-                },
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Assistante réalisatrice",
-                        "en": "Assistant director"
-                    },
-                    "value": "Ariane Martineau"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Guillaume Shea-Blais"
-                },
-                {
-                    "label": {
-                        "fr": "Producteurs",
-                        "en": "Producers"
-                    },
-                    "value": "Andrew Tchernilevskii & Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "D.A.",
-                        "en": "Art Director"
-                    },
-                    "value": "Yang Shi"
-                },
-                {
-                    "label": {
-                        "fr": "Scénographe",
-                        "en": "Scenographer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "freddie-oliver-bts-portrait-01.png",
-                    "freddie-oliver-bts-portrait-02.png",
-                    "freddie-oliver-bts-portrait-03.png"
-                ],
-                "landscape": [
-                    "freddie-oliver-bts-landscape-01.png",
-                    "freddie-oliver-bts-landscape-02.png",
-                    "freddie-oliver-bts-landscape-03.png"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-09-01"
-        },
-        {
-            "slug": "pre-opera-24-25",
-            "clientName": {
-                "fr": "Opéra de Montréal",
-                "en": "Montreal Opera"
-            },
-            "title": {
-                "fr": "Pré-Opéra Saison 24-25",
-                "en": "Pre-Opera Season 24-25"
-            },
-            "shortDescription": {
-                "fr": "Pour une 4e saison, Malinki signe la production des capsules Pré-Opéra del'Opéra de Montréal. Avant chaque représentation, l'Opéra de Montréal propose ases spectateurs un résumé de l'œuvre présentée, question de plonger dansl'histoire. Les 5 capsules ont pour but d'instruire sur l'histoire de la pièceainsi que la musicologie des œuvres.",
-                "en": "For its fourth season, Malinki has signed the production of the Pre‑Opera capsules for the Montreal Opera. Before each performance, the Montreal Opera offers its audience a summary of the presented work, inviting them to dive into the story. The five capsules aim to educate on the play's history as well as the musicology of the works."
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/embed/woJT1C4So7Q?si=yWcvaQVnAOdmDAmI",
-                "type": "youtube"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Réalisation",
-                        "en": "Director"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Guillaume Shea-Blais"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur",
-                        "en": "Camera Operator"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur de production",
-                        "en": "Production Manager"
-                    },
-                    "value": "Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "Directrice Exécutive",
-                        "en": "Executive Director"
-                    },
-                    "value": "Marie-Andrée Lizotte (Colegram)"
-                },
-                {
-                    "label": {
-                        "fr": "Coordinatrice de post-production audio",
-                        "en": "Audio Post‑Production Coordinator"
-                    },
-                    "value": "Charlotte Lamoureux (Underground Studio)"
-                }
-            ],
-            "additionalVideos": [
-                {
-                    "url": "https://www.youtube.com/watch?v=RM4PsOy1otk",
-                    "type": "youtube"
-                },
-                {
-                    "url": "https://www.youtube.com/watch?v=4lKFZcTbk54",
-                    "type": "youtube"
-                }
-            ],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-09-01"
-        },
-        {
-            "slug": "amadoue-moi",
-            "clientName": {
-                "fr": "Rosemarie Records",
-                "en": "Rosemarie Records"
-            },
-            "title": {
-                "fr": "VIDÉOCLIP AMADOUE-MOI",
-                "en": "AMADOUE-MOI Music Video"
-            },
-            "shortDescription": {
-                "fr": "Découvrez Simon Lanchance, un talentueux artiste représenté par RosemarieRecords. Le vidéoclip pour Amadoue-moi est une collaboration entre l'agenceMalinki et le réalisateur Thomas Fortier. Immergez-vous dans l'univers coloré etrock de Simon Lachance avec la pièce Amadoue-moi.",
-                "en": "Discover Simon Lanchance, a talented artist represented by Rosemarie Records. The music video for Amadoue-moi is a collaboration between Malinki Agency and director Thomas Fortier. Immerse yourself in the colorful and rock world of Simon Lachance with the track Amadoue-moi."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/amadoue-moi/amadoue-moi-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Thomas Fortier"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Sacha Bourque"
-                },
-                {
-                    "label": {
-                        "fr": "Directrice Artistique",
-                        "en": "Creative Director"
-                    },
-                    "value": "Yang Shi"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur Dolly",
-                        "en": "Dolly"
-                    },
-                    "value": "Miroslav Dufresne"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "amadoue-moi-bts-portrait-01.jpg",
-                    "amadoue-moi-bts-portrait-02.jpg",
-                    "amadoue-moi-bts-portrait-03.jpg"
-                ],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-06-01"
-        },
-        {
-            "slug": "fizz-qolab",
-            "agencyName": {
-                "fr": "Qolab",
-                "en": "Qolab"
-            },
-            "title": {
-                "fr": "CONTENU VERTICAL",
-                "en": "VERTICAL CONTENT"
-            },
-            "shortDescription": {
-                "fr": "Création de contenu multiplateforme pour Fizz pour mettre de l'avant lepersonnage ⟪Green Person⟫ sur les réseaux sociaux. Les codes des plateformes ontété respectés en ajoutant la touche de folie de la marque Fizz. La création desconcepts a été faite par l'agence Qolab.",
-                "en": "Creation of multi-platform content for Fizz to showcase the character ⟪Green Person⟫ on social media. Platform guidelines were followed while adding Fizz brand's touch of madness. The concept creation was done by the Qolab agency."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/fizz-qolab/fizz-qolab-main.mp4",
-                "type": "mp4",
-                "isPortrait": true
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "publishedAt": "2023-06-01"
-        },
-        {
-            "slug": "king-melrose",
-            "clientName": {
-                "fr": "King Melrose",
-                "en": "King Melrose"
-            },
-            "title": {
-                "fr": "Session Tone Bender",
-                "en": "Session Tone Bender"
-            },
-            "shortDescription": {
-                "fr": "Malinki présente une série de vidéoclips de haute qualité pour l'artiste KingMelrose. Avec leur expertise en production audiovisuelle et leur créativité,Malinki a su créer des vidéoclips qui reflètent l'image de King Melrose etmettent en valeur son talent artistique.",
-                "en": "Malinki presents a series of high-quality music videos for the artist King Melrose. With their expertise in audiovisual production and creativity, Malinki was able to create music videos that reflect King Melrose's image and highlight his artistic talent."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/king-melrose/king-melrose-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Sasha Bourque"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur",
-                        "en": "Camera Operator"
-                    },
-                    "value": "Tom Halley"
-                },
-                {
-                    "label": {
-                        "fr": "Cadreur",
-                        "en": "Camera Operator"
-                    },
-                    "value": "François Haché"
-                },
-                {
-                    "label": {
-                        "fr": "Scénographe",
-                        "en": "Set Designer"
-                    },
-                    "value": "Daphné Roy"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Béatrice Tremblay ( Outpost MTL)"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-09-01"
-        },
-        {
-            "slug": "opera-de-montreal",
-            "clientName": {
-                "fr": "Opéra de Montréal",
-                "en": "Montreal Opera"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "L'Opéra de Montréal était à la recherche d'une manière efficace pour promouvoirles événements de la prochaine saison. Malinki est intervenu en aidant à laconception, la production et le montage de la publicité télévisée qui acontribué au succès de cette saison avec des ventes de billets record depuis 10ans. La créativité et l'expertise de Malinki en production audiovisuelle ontpermis de mettre en avant l'expérience de l'opéra de manière captivante.",
-                "en": "The Montreal Opera was looking for an effective way to promote the events of the upcoming season. Malinki intervened by helping with the design, production, and editing of the television advertisement, which contributed to the success of this season with record ticket sales for 10 years. Malinki's creativity and expertise in audiovisual production allowed the opera experience to be showcased in a captivating way."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/opera-de-montreal/opera-de-montreal-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateurs",
-                        "en": "Directors"
-                    },
-                    "value": "Andrew Tchernilevskii & Jonathan Beaudoin"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Axel Laramée"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Chef Machiniste",
-                        "en": "Grip"
-                    },
-                    "value": "Stéphane Klopp"
-                },
-                {
-                    "label": {
-                        "fr": "Assistant caméra",
-                        "en": "Camera Assistant"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur",
-                        "en": "Editor"
-                    },
-                    "value": "Jonathan Beaudoin"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Axel Laramée"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "opera-de-montreal-bts-portrait-01.jpg",
-                    "opera-de-montreal-bts-portrait-02.png",
-                    "opera-de-montreal-bts-portrait-03.jpg"
-                ],
-                "landscape": [
-                    "opera-de-montreal-bts-landscape-01.jpg",
-                    "opera-de-montreal-bts-landscape-02.jpg",
-                    "opera-de-montreal-bts-landscape-03.jpg"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2022-06-01"
-        },
-        {
-            "slug": "air-transat",
-            "clientName": {
-                "fr": "Air Transat",
-                "en": "Air Transat"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "Air Transat était à la recherche d'une manière efficace pour promouvoir ses services de transport aérien. Malinki est intervenu en aidant à la conception, la production et le montage de la publicité télévisée qui a contribué au succès de cette campagne avec des ventes de billets record depuis 10 ans. La créativité et l'expertise de Malinki en production audiovisuelle ont permis de mettre en avant l'expérience de l'air Transat de manière captivante.",
-                "en": "Air Transat was looking for an effective way to promote its air transport services. Malinki intervened by helping with the design, production, and editing of the television advertisement, which contributed to the success of this campaign with record ticket sales for 10 years. Malinki's creativity and expertise in audiovisual production allowed the Air Transat experience to be showcased in a captivating way."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/air-transat/air-transat-main.mp4",
-                "type": "mp4"
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-03-01"
-        },
-        {
-            "slug": "ville-de-laval",
-            "clientName": {
-                "fr": "Ville de Laval",
-                "en": "Laval City"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "Malinki a produit pour la ville de Laval une vidéo qui met de l’avant son engagement de verdissement de son territoire. Elle incite aussi la population, les organismes et les entreprises à suivre le pas avec des efforts collectifs. Le concept était de démontrer l’implication de la ville et d’encourager et promouvoir le verdissement dans une démarche rassembleuse.",
-                "en": "Malinki produced a video for the City of Laval that highlights its commitment to greening its territory. The video also encourages residents, organizations, and businesses to follow suit through collective efforts. The concept was to show the city’s involvement and to encourage and promote greening in a unifying way."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ville-de-laval/ville-de-laval-main.mp4",
-                "type": "mp4"
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-06-01"
-        },
-        {
-            "slug": "videotron-gamer",
-            "clientName": {
-                "fr": "Vidéotron",
-                "en": "Vidéotron"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "Vidéotron était à la recherche d'une manière efficace pour promouvoir ses services de téléphonie mobile. Malinki est intervenu en aidant à la conception, la production et le montage de la publicité télévisée qui a contribué au succès de cette campagne avec des ventes de billets record depuis 10 ans. La créativité et l'expertise de Malinki en production audiovisuelle ont permis de mettre en avant l'expérience de l'air Transat de manière captivante.",
-                "en": "Vidéotron was looking for an effective way to promote its mobile phone services. Malinki intervened by helping with the design, production, and editing of the television advertisement, which contributed to the success of this campaign with record ticket sales for 10 years. Malinki's creativity and expertise in audiovisual production allowed the Air Transat experience to be showcased in a captivating way."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ville-de-laval/ville-de-laval-main.mp4",
-                "type": "mp4"
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-03-01"
-        },
-        {
-            "slug": "cadwork",
-            "clientName": {
-                "fr": "Cadwork",
-                "en": "Cadwork"
-            },
-            "title": {
-                "fr": "Projet de construction",
-                "en": "Cadwork Projects"
-            },
-            "shortDescription": {
-                "fr": "",
-                "en": ""
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cadwork/cadwork-main.mp4",
-                "type": "mp4"
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-09-01"
-        },
-        {
-            "slug": "niche-ste-justine",
-            "clientName": {
-                "fr": "Niché x Fondation Chu Sainte-Justine",
-                "en": "Niché x Chu Sainte-Justine Foundation"
-            },
-            "title": {
-                "fr": "Contenu de marque",
-                "en": "Branded content"
-            },
-            "shortDescription": {
-                "fr": "Lors de la soirée du Grand Bal Sainte-Justine de la Fondation du CHU Sainte-Justine, l'agence Niché a chargé Malinki de réaliser une vidéo mettant en avant la formule distinctive de Niché. L'objectif était de présenter le savoir-faire et l'engagement personnalisé de l'agence envers ses clients. En capturant les coulisses de la préparation des salles, l'effort de l'équipe Niché et l'attention au déroulement de la soirée, Malinki a su mettre en lumière le souci du détail caractéristique de Niché. Découvrez l'essence de Niché dans la vidéo ci-dessous.",
-                "en": "During the evening of the Grand Bal Sainte-Justine organized by the CHU Sainte-Justine Foundation, the agency Niché commissioned Malinki to produce a video highlighting Niché's distinctive approach. The goal was to showcase the agency's expertise and its personalized commitment to its clients. By capturing behind-the-scenes footage of the room preparations, the effort of the Niché team, and the attention paid to the flow of the evening, Malinki was able to shine a light on the meticulous attention to detail that is characteristic of Niché. Discover the essence of Niché in the video below."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/niche-ste-justine/niche-ste-justine-main.mp4",
-                "type": "mp4"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Opérateur caméra 1",
-                        "en": "Camera Operator 1"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Opérateur caméra 2",
-                        "en": "Camera Operator 2"
-                    },
-                    "value": "Alexandre Normand"
-                },
-                {
-                    "label": {
-                        "fr": "Assistant Monteur",
-                        "en": "Assistant Editor"
-                    },
-                    "value": "Cédric Demers"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Alexandre Normand"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-03-01"
-        },
-        {
-            "slug": "tva-sports",
-            "clientName": {
-                "fr": "TVA Sports",
-                "en": "TVA Sports"
-            },
-            "agencyName": {
-                "fr": "Qolab",
-                "en": "Qolab"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "Publicité produite pour Qolab dans le cadre de la campagne web et télé de TVA Sports. La production met en valeur l'intensité et la passion du sport à travers un contenu captivant et dynamique.",
-                "en": "Advertisement produced for Qolab as part of TVA Sports' web and TV campaign. The production highlights the intensity and passion of sports through captivating and dynamic content."
-            },
-            "mainVideo": {
-                "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/tva-sports-grid.mov",
-                "type": "mp4",
-                "isPortrait": true
-            },
-            "details": [],
-            "additionalVideos": [
-                {
-                    "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Elaine_final_v06.mov",
-                    "type": "mp4",
-                    "isPortrait": true
-                },
-                {
-                    "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Marie-eve_final_v05.mov",
-                    "type": "mp4",
-                    "isPortrait": true
-                },
-                {
-                    "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Sofia_final_v05.mov",
-                    "type": "mp4",
-                    "isPortrait": true
-                }
-            ],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "publishedAt": "2022-03-01"
-        },
-        {
-            "slug": "red-scarf",
-            "clientName": {
-                "fr": "Alanna Sterling",
-                "en": "Alanna Sterling"
-            },
-            "title": {
-                "fr": "VIDÉOCLIP EVERYTHING'S GONNA BE JUST FINE",
-                "en": "VIDEOCLIP EVERYTHING'S GONNA BE JUST FINE"
-            },
-            "shortDescription": {
-                "fr": "Le vidéoclip de « Everything’s Gonna Be Just Fine » de Alanna Sterling met en images un parcours émotionnel entre vulnérabilité et résilience. À travers une esthétique épurée mêlant performance musicale et danse contemporaine, il traduit visuellement le message d’espoir de la chanson : malgré les moments difficiles, tout finit par s’apaiser.",
-                "en": "The video clip for \"Everything’s Gonna Be Just Fine\"  by Alanna Sterling captures a journey of emotional vulnerability and resilience. Through a clean aesthetic blending musical performance and contemporary dance, it visually传达s the message of hope in the song: despite difficult moments, everything will eventually settle."
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/watch?v=P5IhMjPFOZw",
-                "type": "youtube"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisation",
-                        "en": "Director"
-                    },
-                    "value": "Yang Shi"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur Photo",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Jonathan Brisebois"
-                },
-                {
-                    "label": {
-                        "fr": "Montage",
-                        "en": "Editor"
-                    },
-                    "value": "Thomas Fortier"
-                },
-                {
-                    "label": {
-                        "fr": "Producteur",
-                        "en": "Producer"
-                    },
-                    "value": "Andrew Tche"
-                },
-                {
-                    "label": {
-                        "fr": "Assistant Camera",
-                        "en": "Camera Assistant"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Béatrice Tremblay (Outpost)"
-                },
-                {
-                    "label": {
-                        "fr": "Grip",
-                        "en": "Grip"
-                    },
-                    "value": "François Haché"
-                },
-                {
-                    "label": {
-                        "fr": "Danseuses",
-                        "en": "Dancers"
-                    },
-                    "value": "Evelynn Yan & Louanne Rousseau"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                ],
-                "landscape": [
-                    "alanna-sterling-bts-1.png",
-                    "alanna-sterling-bts-2.png",
-                    "alanna-sterling-bts-3.png"
-                ]
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2023-06-01"
-        },
-        {
-            "slug": "petro-canada",
-            "clientName": {
-                "fr": "Petro Canada",
-                "en": "Petro Canada"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "",
-                "en": ""
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/shorts/CFWUxUzKtes",
-                "type": "youtube",
-                "isPortrait": true
-            },
-            "details": [],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "petro-canada-bts-2.jpg",
-                    "petro-canada-bts-3.jpg"
-                ],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2024-06-01"
-        },
-        {
-            "slug": "monsieur-le-maire",
-            "title": {
-                "fr": "MONSIEUR LE MAIRE - PRODUCTION PHOTO",
-                "en": "MONSIEUR LE MAIRE - PHOTO PRODUCTION"
-            },
-            "clientName": {
-                "fr": "Groupe Encore",
-                "en": "Groupe Encore"
-            },
-            "shortDescription": {
-                "fr": "L'équipe de Malinki a été mandatée par Groupe Encore afin d'assurer la production photo et la retouche des visuels promotionnels des comédiens et comédiennes de la pièce Monsieur le Maire, mettant en vedette Mario Jean. L'objectif : créer des portraits forts et expressifs reflétant le ton mordant et hilarant de la comédie.\n\nÀ travers cette production, Malinki met en valeur les personnages et l'univers de la pièce, marqués par la collusion, les rivalités de pouvoir et les ambitions démesurées, tout en soutenant l'image et le positionnement de la production.",
-                "en": "The Malinki team was commissioned by Groupe Encore to handle the photo production and retouching of the promotional visuals for the cast of the play Monsieur le Maire, starring Mario Jean. The goal: create powerful, expressive portraits reflecting the biting and hilarious tone of the comedy.\n\nThrough this production, Malinki highlights the characters and universe of the play — marked by collusion, power rivalries, and overblown ambitions — while supporting the image and positioning of the production."
-            },
-            "mainImageUrl": "le-maire-grid.jpg",
-            "galleryImages": [],
-            "details": [
-                {
-                    "label": {
-                        "fr": "Directeur de création",
-                        "en": "Creative Director"
-                    },
-                    "value": "Jocelyn Goyer"
-                },
-                {
-                    "label": {
-                        "fr": "Photographe",
-                        "en": "Photographer"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Retouches",
-                        "en": "Photo Retouching"
-                    },
-                    "value": "Mélanie Lapointe"
-                },
-                {
-                    "label": {
-                        "fr": "Design",
-                        "en": "Design"
-                    },
-                    "value": "Jocelyn Goyer"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [
-                    "le-maire-1.jpg",
-                    "le-maire-2.jpg",
-                    "le-maire-3.jpg"
-                ],
-                "landscape": []
-            },
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "publishedAt": "2025-03-01"
-        },
-        {
-            "slug": "laval-tourisme",
-            "agencyName": {
-                "fr": "Malinki",
-                "en": "Malinki"
-            },
-            "clientName": {
-                "fr": "Tourisme Laval & Ville de Laval",
-                "en": "Tourisme Laval & Ville de Laval"
-            },
-            "title": {
-                "fr": "PUBLICITÉ TÉLÉ & WEB",
-                "en": "TV & Web Advertising"
-            },
-            "shortDescription": {
-                "fr": "",
-                "en": ""
-            },
-            "mainVideo": {
-                "url": "https://www.youtube.com/watch?v=sU-lYbSmqQs",
-                "type": "youtube"
-            },
-            "details": [
-                {
-                    "label": {
-                        "fr": "Réalisateur",
-                        "en": "Director"
-                    },
-                    "value": "Andrew Tchernilevskii"
-                },
-                {
-                    "label": {
-                        "fr": "Directeur de la photographie",
-                        "en": "Director of Photography"
-                    },
-                    "value": "Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Gestion de projet",
-                        "en": "Project Manager"
-                    },
-                    "value": "Jérémy LeBlond"
-                },
-                {
-                    "label": {
-                        "fr": "Monteur",
-                        "en": "Editor"
-                    },
-                    "value": "Andrew Tchernilevskii & Miroslav Dufresne"
-                },
-                {
-                    "label": {
-                        "fr": "Coloriste",
-                        "en": "Colorist"
-                    },
-                    "value": "Alexandre Normand"
-                },
-                {
-                    "label": {
-                        "fr": "Postproduction sonore",
-                        "en": "Sound Post-Production"
-                    },
-                    "value": "Studio Underground"
-                },
-                {
-                    "label": {
-                        "fr": "Coordonnatrice de postproduction sonore",
-                        "en": "Sound Post-Production Coordinator"
-                    },
-                    "value": "Charlotte Lamoureux"
-                },
-                {
-                    "label": {
-                        "fr": "Mixage et conception sonore",
-                        "en": "Sound Mix & Design"
-                    },
-                    "value": "Steve Labbé"
-                }
-            ],
-            "additionalVideos": [],
-            "behindTheScenes": {
-                "portrait": [],
-                "landscape": []
-            },
-            "publishedAt": "2024-09-01"
+          "label": {
+            "fr": "Mixage sonore",
+            "en": "Sound Mixing"
+          },
+          "value": "François Del Fante (Reservoir Audio)"
         }
-    ]
+      ],
+      "additionalVideos": [
+        {
+          "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cook-it/cook-it-additional-1.mp4",
+          "type": "mp4",
+          "isPortrait": false
+        }
+      ],
+      "behindTheScenes": {
+        "portrait": [
+          "2_554x.webp",
+          "20220712_100752_554x.webp",
+          "20220712_182435_0_554x.webp"
+        ],
+        "landscape": [
+          "judith_2_554x.webp",
+          "5_57183ba7-9fa2-49af-84d2-e1aa64310a20_554x.webp",
+          "4_554x.webp"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "slug": "jouer-pour-gagner",
+      "title": {
+        "fr": "WEBSERIE JOUER POUR GAGNER",
+        "en": "WEB SERIES PLAY TO WIN"
+      },
+      "clientName": {
+        "fr": "Quebecor",
+        "en": "Quebecor"
+      },
+      "shortDescription": {
+        "fr": "Conscients de l'importance de stimuler la création d'entreprises au Québec, Quebecor offre aux étudiants de toutes les universités du Québec la possibilité de recevoir l'une des cinq bourses Pierre-Péladeau. Au fil de la websérie Jouer pour gagner, découvrez quelles équipes remporterons les différentes bourses.",
+        "en": "Aware of the importance of stimulating business creation in Quebec, Quebecor offers students from all Quebec universities the opportunity to receive one of five Pierre-Péladeau scholarships. Through the web series Play to Win, discover which teams will win the different scholarships."
+      },
+      "mainVideo": {
+        "url": "https://cdn.shopify.com/videos/c/o/v/example123.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Client",
+            "en": "Client"
+          },
+          "value": "asterX"
+        },
+        {
+          "label": {
+            "fr": "Agence",
+            "en": "Agency"
+          },
+          "value": "Qolab"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "slug": "labo-omy",
+      "title": {
+        "fr": "PUBLICITÉS WEB",
+        "en": "WEB ADVERTISEMENTS"
+      },
+      "clientName": {
+        "fr": "OMY Laboratoires",
+        "en": "OMY Laboratories"
+      },
+      "shortDescription": {
+        "fr": " Publicités produites pour OMY Laboratoires dans le cadre la campagne \"Back toroutine\" à l'automne 2024. Elle se décline en trois versions présentantdifférent types de peau. Leur but est de faire connaître au public la marque Omyen s’insérant dans des environnements et médias de leur routine. Le tournage aeu lieu dans le studio Malinki, à Montréal.",
+        "en": "Advertisements produced for OMY Laboratories as part of the 'Back to routine' campaign in fall 2024. They come in three versions featuring different skin types. Their goal is to introduce the OMYen brand to the public, integrating into routine environments and media. Filming took place at the Malinki studio in Montreal."
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/watch?v=GSTCE2YNgHE",
+        "type": "youtube"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "DOP",
+            "en": "Director of Photography"
+          },
+          "value": "Guillaume Shea-Blais"
+        },
+        {
+          "label": {
+            "fr": "Assistant caméra",
+            "en": "Assistant Camera"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Chef Grip",
+            "en": "Grip"
+          },
+          "value": "Bastien Meyer"
+        },
+        {
+          "label": {
+            "fr": "Chef Électro",
+            "en": "Electrician"
+          },
+          "value": "Vincent McDonald"
+        },
+        {
+          "label": {
+            "fr": "Assistante Direction artistique, casting, stylisme",
+            "en": "Assistant Artistic Direction, Casting, Styling"
+          },
+          "value": "Coralie Doucet-Côté"
+        },
+        {
+          "label": {
+            "fr": "Directrice Artistique",
+            "en": "Creative Director"
+          },
+          "value": "Meily Côté"
+        },
+        {
+          "label": {
+            "fr": "Coordonnateur de production",
+            "en": "Production Coordinator"
+          },
+          "value": "Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "MUA",
+            "en": "Makeup Artist"
+          },
+          "value": "Arielle Chartrand"
+        },
+        {
+          "label": {
+            "fr": "Monteur Offline",
+            "en": "Offline Editor"
+          },
+          "value": "Marc-André Cotton"
+        },
+        {
+          "label": {
+            "fr": "Monteur Online",
+            "en": "Online Editor"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Béatrice Tremblay (OUTPOST)"
+        },
+        {
+          "label": {
+            "fr": "Directrice Artistique",
+            "en": "Creative Director"
+          },
+          "value": "Meily Côté"
+        }
+      ],
+      "additionalVideos": [
+        {
+          "url": "https://www.youtube.com/watch?v=uycy7PJlpEM",
+          "type": "youtube"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=aWjV_FcTec4",
+          "type": "youtube"
+        }
+      ],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": [
+          "labo-omy-bts-landscape-01.jpg",
+          "labo-omy-bts-landscape-02.jpg",
+          "labo-omy-bts-landscape-03.jpg"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "slug": "brivia",
+      "title": {
+        "fr": "PUBLICITÉ WEB BRIVIA",
+        "en": "BRIVIA WEB ADVERTISEMENT"
+      },
+      "clientName": {
+        "fr": "Groupe Brivia",
+        "en": "Brivia Group"
+      },
+      "agencyName": {
+        "fr": "Wellington (Departement maison de création)",
+        "en": "Wellington (Creative House Department)"
+      },
+      "shortDescription": {
+        "fr": "Production publicitaire web pour l'agence Wellington (Departement maison decréation) mettant de l'avant les projets immobiliers du groupe Brivia.",
+        "en": "Web advertising production for Wellington Agency (Creative House Department) showcasing the real‑estate projects of the Brivia Group."
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/embed/qL2l1j6JreU",
+        "type": "youtube"
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "slug": "defi-28-jours",
+      "title": {
+        "fr": "Capsules Défi 28 Jours Sans Alcool",
+        "en": "28-Day Alcohol-Free Challenge Capsules"
+      },
+      "clientName": {
+        "fr": "Fondation Jean Lapointe",
+        "en": "Fondation Jean Lapointe"
+      },
+      "shortDescription": {
+        "fr": "L'équipe Malinki a été mandaté par l'agence Nucleus afin de produire les capsules web 2025 du Défi 28 jours Sans Alcool. À la demande de la Fondation Jean Lapointe, Malinki a produit deux mini-séries de capsules diffusées au fil du Défi 28 jours 2025. La boîte de production assure la réalisation et collabore avec l'agence pour la direction artistique des vidéos. Les séries présente les ambassadeur.rices du Défi, ainsi que des témoignages de personnes ayant eurecours à la Maison Jean Lapointe.",
+        "en": "The Malinki team was commissioned by Nucleus to produce the 2025 web capsules for the 28-Day Alcohol-Free Challenge. At the request of Fondation Jean Lapointe, Malinki produced two mini-series of capsules streamed throughout the 2025 28-Day Alcohol-Free Challenge. The production house handles the execution and collaborates with the agency on the artistic direction of the videos. The series showcases the Challenge ambassadors, as well as testimonials from individuals who have sought assistance at Maison Jean Lapointe."
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/embed/R6lNgvLdnB8?si=tUqGdmvP-ut1INqd",
+        "type": "youtube"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Réalisation",
+            "en": "Director"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Directeur de production",
+            "en": "Production Manager"
+          },
+          "value": "Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "Coordinatrice de post-production audio",
+            "en": "Audio Post-Production Coordinator"
+          },
+          "value": "Charlotte Lamoureux (Underground Studio)"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Guillaume Shea-Blais"
+        },
+        {
+          "label": {
+            "fr": "Cadreur",
+            "en": "Camera Operator"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Preneur de son",
+            "en": "Sound Recordist"
+          },
+          "value": "Yohann Boudreault"
+        },
+        {
+          "label": {
+            "fr": "MUA",
+            "en": "MUA"
+          },
+          "value": "Arielle Chartand-Gilbert"
+        },
+        {
+          "label": {
+            "fr": "Monteur",
+            "en": "Editor"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Béatrice Tremblay"
+        },
+        {
+          "label": {
+            "fr": "Ingénieurs son",
+            "en": "Sound Engineers"
+          },
+          "value": "Jean-Baptiste Montlibert & Steeve Labbé (Underground Studio)"
+        },
+        {
+          "label": {
+            "fr": "Coordinatrice de post-production audio",
+            "en": "Audio Post-Production Coordinator"
+          },
+          "value": "Charlotte Lamoureux (Underground Studio)"
+        }
+      ],
+      "additionalVideos": [
+        {
+          "url": "https://www.youtube.com/watch?v=KeDRaqRkqXQ",
+          "type": "youtube"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=yqUUw0mZZ5A",
+          "type": "youtube"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=KkbEHRYN1zA",
+          "type": "youtube"
+        }
+      ],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "slug": "ecarlate",
+      "title": {
+        "fr": "VIDÉOCLIP ÉCARLATE",
+        "en": "ECARLATE VIDEO CLIP"
+      },
+      "clientName": {
+        "fr": "Lisbon Lux Records (Visrei)",
+        "en": "Lisbon Lux Records (Visrei)"
+      },
+      "shortDescription": {
+        "fr": "Découvrez Visrei, un talentueux artiste représenté par Lisbon Lux Records. Le vidéoclip pour Écarlate est une collaboration entre l'agence Malinki et le duo réalisateurs Yang Shi et Jean-Guillaume Bastin. Plongez dans un voyage visuel où la culture chinoise s'entremêle harmonieusement avec une perspective occidentale.",
+        "en": "Discover Visrei, a talented artist represented by Lisbon Lux Records. The video clip for Écarlate is a collaboration between Malinki agency and the duo of directors Yang Shi and Jean-Guillaume Bastin. Dive into a visual journey where Chinese culture intertwines harmoniously with a western perspective."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ecarlate/ecarlate-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateurs",
+            "en": "Directors"
+          },
+          "value": "JG & Yang shi"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Guillaume Shea Blais"
+        },
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Assistant Caméra",
+            "en": "Camera Assistant"
+          },
+          "value": "Ginga Takeshima"
+        },
+        {
+          "label": {
+            "fr": "Cadreur Cam B",
+            "en": "Camera Operator Cam B"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Chef Éclairagiste",
+            "en": "Gaffer"
+          },
+          "value": "Vincent McDonald"
+        },
+        {
+          "label": {
+            "fr": "Monteur",
+            "en": "Editor"
+          },
+          "value": "Thomas Fortier"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Simon Bøisx ( Arketype )"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "ecarlate-bts-portrait-01.png",
+          "ecarlate-bts-portrait-02.png",
+          "ecarlate-bts-portrait-03.png"
+        ],
+        "landscape": [
+          "ecarlate-bts-landscape-01.png",
+          "ecarlate-bts-landscape-02.png",
+          "ecarlate-bts-landscape-03.png"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "slug": "pre-opera-25-26",
+      "clientName": {
+        "fr": "Opéra de Montréal",
+        "en": "Montreal Opera"
+      },
+      "title": {
+        "fr": "Pré-Opéra Saison 25-26",
+        "en": "Pré-Opéra Season 25-26"
+      },
+      "shortDescription": {
+        "fr": "Pour une 5e saison, Malinki signe la co-production des capsules Pré-Opéra Express de l'Opéra de Montréal. Avant chaque représentation, l'Opéra de Montréal propose a ses spectateurs un résumé de l'œuvre présentée, question de plonger dans l'histoire. Les 4 capsules ont pour but d'instruire sur l'histoire de la pièce ainsi que la musicologie des œuvres.",
+        "en": "For a fifth season, Malinki co-produced the Pré-Opéra Express capsules for the Opéra de Montréal. Before each performance, the Opéra de Montréal offers its audience a summary of the presented work, allowing them to dive into the story. The 4 capsules aim to educate about the story of the piece as well as the musicology of the works."
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/embed/SzPl_4MoFn0",
+        "type": "youtube"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Musicologue",
+            "en": "Musicologist"
+          },
+          "value": "Pierre Vachon"
+        },
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Directeur de production",
+            "en": "Production Director"
+          },
+          "value": "Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "Directeur de la photographie",
+            "en": "Director of Photography"
+          },
+          "value": "Guillaume Shea-Blais"
+        },
+        {
+          "label": {
+            "fr": "Opérateur caméra",
+            "en": "Camera Operator"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Prise de son",
+            "en": "Sound Recordist"
+          },
+          "value": "Charles Warren"
+        },
+        {
+          "label": {
+            "fr": "Monteur",
+            "en": "Editor"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Alexandre Normand"
+        },
+        {
+          "label": {
+            "fr": "Motion design",
+            "en": "Motion Design"
+          },
+          "value": "Colegram"
+        },
+        {
+          "label": {
+            "fr": "Mixage sonore",
+            "en": "Sound Mix"
+          },
+          "value": "Underground Studio"
+        }
+      ],
+      "additionalVideos": [
+        {
+          "url": "https://www.youtube.com/watch?v=qwSfZTQzLiM",
+          "type": "youtube"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=f-g1-mvoey0",
+          "type": "youtube"
+        }
+      ],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "slug": "microsoft-cherylle-shyne",
+      "clientName": {
+        "fr": "Meat & Produce | Veritas Communications",
+        "en": "Meat & Produce | Veritas Communications"
+      },
+      "title": {
+        "fr": "Microsoft Surface x Cherylle Shyne",
+        "en": "Microsoft Surface x Cherylle Shyne"
+      },
+      "shortDescription": {
+        "fr": "Malinki est fier d'être le partenaire de production montréalais de Meat & Produce et Veritas Communications, l'agence derrière la dernière campagne de contenu web de Microsoft Canada, en collaboration avec la danseuse professionnelle montréalaise et propriétaire du studio de danse A'Motion, Cherylle Shyne. Dans cette vidéo, mêlant la flexibilité de la Surface Pro 9 de Microsoft avec celle de Cherylle, le produit dévoile toute la variété de positions et de fonctions qu'il possède.",
+        "en": "Malinki is proud to be the Montreal production partner of Meat & Produce and Veritas Communications, the agency behind the latest Microsoft Canada web content campaign, in collaboration with Montreal professional dancer and owner of the A'Motion dance studio, Cherylle Shyne. In this video, blending the flexibility of Microsoft's Surface Pro 9 with that of Cherylle, the product showcases all the variety of positions and functions it offers."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/microsoft-cherylle-shyne/microsoft-cherylle-shyne-main.mp4",
+        "type": "mp4",
+        "isPortrait": true
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Producteur.trice",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii (Malinki) & Jessica Romito (Meat & Produce)"
+        },
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Thomas Leblanc-Murray"
+        },
+        {
+          "label": {
+            "fr": "Directeur Technique",
+            "en": "Technical Director"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Assistant Caméra",
+            "en": "Camera Assistant"
+          },
+          "value": "Sébastien Molnar"
+        },
+        {
+          "label": {
+            "fr": "Key Grip",
+            "en": "Key Grip"
+          },
+          "value": "Hugo Klopp"
+        },
+        {
+          "label": {
+            "fr": "Éclairagiste",
+            "en": "Gaffer"
+          },
+          "value": "Tom Halley"
+        },
+        {
+          "label": {
+            "fr": "MUA",
+            "en": "Makeup Artist"
+          },
+          "value": "Christelle Bois Soulas"
+        },
+        {
+          "label": {
+            "fr": "Montage offline",
+            "en": "Offline Editor"
+          },
+          "value": "Marc-andré Cotton"
+        },
+        {
+          "label": {
+            "fr": "Montage online",
+            "en": "Online Editor"
+          },
+          "value": "Matthew Donkner (M&P)"
+        },
+        {
+          "label": {
+            "fr": "Coordonnateur de production",
+            "en": "Production Coordinator"
+          },
+          "value": "Jérémy LeBlond"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "slug": "ben-&-florentine",
+      "clientName": {
+        "fr": "Ben & Florentine",
+        "en": "Ben & Florentine"
+      },
+      "title": {
+        "fr": "Banque de contenus",
+        "en": "Content bank"
+      },
+      "shortDescription": {
+        "fr": "L'équipe de Malinki a été mandatée par Ben & Florentine afin de créer une banque de courtes vidéos ultra appétissantes mettant en valeur les plats du menu. L'objectif premier : impressionner par la beauté des assiettes et renforcer l'expertise de la marque en matière de déjeuner. À travers ces capsules, la production met également en lumière l'expérience en restaurant ; l'ambiance, le plaisir et le moment gourmand afin de positionner Ben & Florentine comme LE détour matinal incontournable.",
+        "en": "The Malinki team was commissioned by Ben & Florentine to create a bank of ultra-appetizing short videos showcasing the menu's dishes. The primary goal: to impress with the beauty of the plates and reinforce the brand's expertise in breakfast. Through these clips, the production also highlights the restaurant experience — the atmosphere, the pleasure, and the indulgent moment — to position Ben & Florentine as THE unmissable morning stop."
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/watch?v=hbUSagRFvPo",
+        "type": "youtube",
+        "isPortrait": true
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Directeur de production",
+            "en": "Production Director"
+          },
+          "value": "Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "Directeur de la photographie",
+            "en": "Director of Photography"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Éclairagiste",
+            "en": "Gaffer"
+          },
+          "value": "Natan B. Foisy"
+        },
+        {
+          "label": {
+            "fr": "Styliste culinaire",
+            "en": "Food Stylist"
+          },
+          "value": "Chloé Girard"
+        },
+        {
+          "label": {
+            "fr": "Montage offline",
+            "en": "Offline Edit"
+          },
+          "value": "Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "Montage online",
+            "en": "Online Edit"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Alexandre Normand"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "ben-&-florentine-bts-1.png",
+          "ben-&-florentine-bts-2.png",
+          "ben-&-florentine-bts-3.png"
+        ],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "slug": "grand-heron",
+      "clientName": {
+        "fr": "Grand Héron",
+        "en": "Grand Héron"
+      },
+      "title": {
+        "fr": "VIDÉOCLIP RAYMOND EST MORT II",
+        "en": "VIDEO CLIP RAYMOND IS DEAD II"
+      },
+      "shortDescription": {
+        "fr": "Raymond est Mort II est le vidéoclip captivant du groupe Grand Héron. Cechef-d'œuvre musical est un voyage auditif plein d'émotions, mêlant mélodiesenvoûtantes et paroles percutantes. L'esthétique visuelle et troublante ajouteune dimension supplémentaire à cette expérience immersive. Préparez-vous à êtretransporté dans l'univers artistique unique de Grand Héron.",
+        "en": "Raymond is Dead II is the captivating music video by Grand Héron. This musical masterpiece is an emotional auditory journey, blending mesmerizing melodies and impactful lyrics. The unsettling visual aesthetic adds an extra dimension to this immersive experience. Get ready to be transported into Grand Héron's unique artistic world."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-heron/grand-heron-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Philippe Lupien"
+        },
+        {
+          "label": {
+            "fr": "Directeur photo",
+            "en": "Director of Photography"
+          },
+          "value": "Thomas Leblanc Murray"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": [
+          "grand-heron-bts-landscape-01.jpg",
+          "grand-heron-bts-landscape-02.jpg",
+          "grand-heron-bts-landscape-03.jpg"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "slug": "st-hubert",
+      "clientName": {
+        "fr": "St-Hubert",
+        "en": "St-Hubert"
+      },
+      "agencyName": {
+        "fr": "Qolab",
+        "en": "Qolab"
+      },
+      "title": {
+        "fr": "Contenu vertical",
+        "en": "Vertical content"
+      },
+      "shortDescription": {
+        "fr": "Création de contenu vertical pour les plateformes numériques de St-Hubert. Nousavons adapté la création de contenu aux codes des plateformes afin d'avoir lecôté ludique dans les vidéos. Les mettent en valeur l'équipe, les plats ainsique les nouveaux produits dans les restaurants St-Hubert. Les concepts ont étéimaginé en collaboration avec l'agence Qolab.",
+        "en": "Creation of vertical content for St-Hubert's digital platforms. We have adapted the content creation to the platforms' codes in order to have a playful side in the videos. They highlight the team, the dishes and the new products in St-Hubert restaurants. The concepts were imagined in collaboration with the Qolab agency."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/st-hubert/st-hubert-main.mp4",
+        "type": "mp4",
+        "isPortrait": true
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "st-hubert-bts-portrait-01.jpg",
+          "st-hubert-bts-portrait-02.jpg",
+          "st-hubert-bts-portrait-03.jpg"
+        ],
+        "landscape": []
+      },
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "slug": "junes",
+      "clientName": {
+        "fr": "Kartel Musik (Junes)",
+        "en": "Kartel Musik (Junes)"
+      },
+      "title": {
+        "fr": "VIDÉOCLIP JAMAIS TROP",
+        "en": "VIDEOCLIP NEVER TOO MUCH"
+      },
+      "shortDescription": {
+        "fr": "Découvrez Junes, une talentueuse artiste représenté par Kartel Musik. Le vidéoclip pour Jamais Trop est une collaboration entre l'agence Malinki et SachaBourque à la réalisation et DOP. Vous êtes invités dans la chambre et l'univers dichotomique de Junes.",
+        "en": "Discover Junes, a talented artist represented by Kartel Musik. The music video for Jamais Trop is a collaboration between the Malinki agency and SachaBourque as director and DOP. You are invited into Junes' room and her dichotomous universe."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/junes/junes-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Sacha Bourque"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Sacha Bourque"
+        },
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "D.A.",
+            "en": "Creative Director"
+          },
+          "value": "Elyann Quessy et Éléonore Côté-Savard"
+        },
+        {
+          "label": {
+            "fr": "Cadreur",
+            "en": "Camera Operator"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Grip",
+            "en": "Grip"
+          },
+          "value": "François Haché"
+        },
+        {
+          "label": {
+            "fr": "Stylisme",
+            "en": "Styling"
+          },
+          "value": "Éléonore Côté-Savard"
+        },
+        {
+          "label": {
+            "fr": "MUA",
+            "en": "Makeup Artist"
+          },
+          "value": "Pancha Rojas Hevia"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "junes-bts-portrait-01.jpg",
+          "junes-bts-portrait-02.jpg",
+          "junes-bts-portrait-03.jpg"
+        ],
+        "landscape": [
+          "junes-bts-landscape-01.jpg",
+          "junes-bts-landscape-02.jpg",
+          "junes-bts-landscape-03.jpg"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "slug": "videotron",
+      "clientName": {
+        "fr": "Vidéotron",
+        "en": "Vidéotron"
+      },
+      "agencyName": {
+        "fr": "Qolab",
+        "en": "Qolab"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "Publicité produite pour Qolab dans le cadre la campagne web et télé de VidéotronSportifs de salon professionnels. Elle présente la passion débordante des fansde sport qui vivent intensément chaque match depuis leur salon. L'annonce met enscène Pierre-Bruno Rivard et Andy Mailly-Pressoir qui ne s'entendent pas sur lerésultat du match.",
+        "en": "Advertising produced for Qolab as part of the VidéotronSportifs web and TV campaign for professional salons. It showcases the overflowing passion of sports fans who intensely experience every match from their living rooms. The commercial features Pierre-Bruno Rivard and Andy Mailly-Pressoir, who do not agree on the match outcome."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/videotron/videotron-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur & DOP",
+            "en": "Director & DOP"
+          },
+          "value": "Thomas Fortier"
+        },
+        {
+          "label": {
+            "fr": "Producteur délégué",
+            "en": "Producer Delegate"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Cadreur",
+            "en": "Cinematographer"
+          },
+          "value": "Miroslav Dufresne"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "videotron-bts-portrait-01.jpg",
+          "videotron-bts-portrait-02.jpg",
+          "videotron-bts-portrait-03.jpg"
+        ],
+        "landscape": []
+      },
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "slug": "freddie-oliver",
+      "clientName": {
+        "fr": "Freddie Oliver",
+        "en": "Freddie Oliver"
+      },
+      "title": {
+        "fr": "VIDÉOCLIP TEN PAST TWO",
+        "en": "VIDEO CLIP TEN PAST TWO"
+      },
+      "shortDescription": {
+        "fr": "Découvrez Freddie Oliver, un artiste talentueux indépendant de la région demétropolitaine. Le vidéoclip pour Ten Past Two est une production de l'agenceMalinki avec Andrew Tchernilevskii à la réalisation. La direction dephotographie est assurée par Guillaume Shea-Blais.",
+        "en": "Discover Freddie Oliver, a talented independent artist from the de-metropolitan region. The music video for Ten Past Two is produced by agency Malinki with Andrew Tchernilevskii directing. The cinematography is handled by Guillaume Shea-Blais."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/freddie-oliver/freddie-oliver-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Artiste",
+            "en": "Artist"
+          },
+          "value": "Freddie Oliver"
+        },
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Assistante réalisatrice",
+            "en": "Assistant director"
+          },
+          "value": "Ariane Martineau"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Guillaume Shea-Blais"
+        },
+        {
+          "label": {
+            "fr": "Producteurs",
+            "en": "Producers"
+          },
+          "value": "Andrew Tchernilevskii & Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "D.A.",
+            "en": "Art Director"
+          },
+          "value": "Yang Shi"
+        },
+        {
+          "label": {
+            "fr": "Scénographe",
+            "en": "Scenographer"
+          },
+          "value": "Andrew Tchernilevskii"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "freddie-oliver-bts-portrait-01.png",
+          "freddie-oliver-bts-portrait-02.png",
+          "freddie-oliver-bts-portrait-03.png"
+        ],
+        "landscape": [
+          "freddie-oliver-bts-landscape-01.png",
+          "freddie-oliver-bts-landscape-02.png",
+          "freddie-oliver-bts-landscape-03.png"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "slug": "pre-opera-24-25",
+      "clientName": {
+        "fr": "Opéra de Montréal",
+        "en": "Montreal Opera"
+      },
+      "title": {
+        "fr": "Pré-Opéra Saison 24-25",
+        "en": "Pre-Opera Season 24-25"
+      },
+      "shortDescription": {
+        "fr": "Pour une 4e saison, Malinki signe la production des capsules Pré-Opéra del'Opéra de Montréal. Avant chaque représentation, l'Opéra de Montréal propose ases spectateurs un résumé de l'œuvre présentée, question de plonger dansl'histoire. Les 5 capsules ont pour but d'instruire sur l'histoire de la pièceainsi que la musicologie des œuvres.",
+        "en": "For its fourth season, Malinki has signed the production of the Pre‑Opera capsules for the Montreal Opera. Before each performance, the Montreal Opera offers its audience a summary of the presented work, inviting them to dive into the story. The five capsules aim to educate on the play's history as well as the musicology of the works."
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/embed/woJT1C4So7Q?si=yWcvaQVnAOdmDAmI",
+        "type": "youtube"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Réalisation",
+            "en": "Director"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Guillaume Shea-Blais"
+        },
+        {
+          "label": {
+            "fr": "Cadreur",
+            "en": "Camera Operator"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Directeur de production",
+            "en": "Production Manager"
+          },
+          "value": "Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "Directrice Exécutive",
+            "en": "Executive Director"
+          },
+          "value": "Marie-Andrée Lizotte (Colegram)"
+        },
+        {
+          "label": {
+            "fr": "Coordinatrice de post-production audio",
+            "en": "Audio Post‑Production Coordinator"
+          },
+          "value": "Charlotte Lamoureux (Underground Studio)"
+        }
+      ],
+      "additionalVideos": [
+        {
+          "url": "https://www.youtube.com/watch?v=RM4PsOy1otk",
+          "type": "youtube"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=4lKFZcTbk54",
+          "type": "youtube"
+        }
+      ],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "slug": "amadoue-moi",
+      "clientName": {
+        "fr": "Rosemarie Records",
+        "en": "Rosemarie Records"
+      },
+      "title": {
+        "fr": "VIDÉOCLIP AMADOUE-MOI",
+        "en": "AMADOUE-MOI Music Video"
+      },
+      "shortDescription": {
+        "fr": "Découvrez Simon Lanchance, un talentueux artiste représenté par RosemarieRecords. Le vidéoclip pour Amadoue-moi est une collaboration entre l'agenceMalinki et le réalisateur Thomas Fortier. Immergez-vous dans l'univers coloré etrock de Simon Lachance avec la pièce Amadoue-moi.",
+        "en": "Discover Simon Lanchance, a talented artist represented by Rosemarie Records. The music video for Amadoue-moi is a collaboration between Malinki Agency and director Thomas Fortier. Immerse yourself in the colorful and rock world of Simon Lachance with the track Amadoue-moi."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/amadoue-moi/amadoue-moi-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Thomas Fortier"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Sacha Bourque"
+        },
+        {
+          "label": {
+            "fr": "Directrice Artistique",
+            "en": "Creative Director"
+          },
+          "value": "Yang Shi"
+        },
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Cadreur Dolly",
+            "en": "Dolly"
+          },
+          "value": "Miroslav Dufresne"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "amadoue-moi-bts-portrait-01.jpg",
+          "amadoue-moi-bts-portrait-02.jpg",
+          "amadoue-moi-bts-portrait-03.jpg"
+        ],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "slug": "fizz-qolab",
+      "agencyName": {
+        "fr": "Qolab",
+        "en": "Qolab"
+      },
+      "title": {
+        "fr": "CONTENU VERTICAL",
+        "en": "VERTICAL CONTENT"
+      },
+      "shortDescription": {
+        "fr": "Création de contenu multiplateforme pour Fizz pour mettre de l'avant lepersonnage ⟪Green Person⟫ sur les réseaux sociaux. Les codes des plateformes ontété respectés en ajoutant la touche de folie de la marque Fizz. La création desconcepts a été faite par l'agence Qolab.",
+        "en": "Creation of multi-platform content for Fizz to showcase the character ⟪Green Person⟫ on social media. Platform guidelines were followed while adding Fizz brand's touch of madness. The concept creation was done by the Qolab agency."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/fizz-qolab/fizz-qolab-main.mp4",
+        "type": "mp4",
+        "isPortrait": true
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "slug": "king-melrose",
+      "clientName": {
+        "fr": "King Melrose",
+        "en": "King Melrose"
+      },
+      "title": {
+        "fr": "Session Tone Bender",
+        "en": "Session Tone Bender"
+      },
+      "shortDescription": {
+        "fr": "Malinki présente une série de vidéoclips de haute qualité pour l'artiste KingMelrose. Avec leur expertise en production audiovisuelle et leur créativité,Malinki a su créer des vidéoclips qui reflètent l'image de King Melrose etmettent en valeur son talent artistique.",
+        "en": "Malinki presents a series of high-quality music videos for the artist King Melrose. With their expertise in audiovisual production and creativity, Malinki was able to create music videos that reflect King Melrose's image and highlight his artistic talent."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/king-melrose/king-melrose-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Sasha Bourque"
+        },
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Cadreur",
+            "en": "Camera Operator"
+          },
+          "value": "Tom Halley"
+        },
+        {
+          "label": {
+            "fr": "Cadreur",
+            "en": "Camera Operator"
+          },
+          "value": "François Haché"
+        },
+        {
+          "label": {
+            "fr": "Scénographe",
+            "en": "Set Designer"
+          },
+          "value": "Daphné Roy"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Béatrice Tremblay ( Outpost MTL)"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "slug": "opera-de-montreal",
+      "clientName": {
+        "fr": "Opéra de Montréal",
+        "en": "Montreal Opera"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "L'Opéra de Montréal était à la recherche d'une manière efficace pour promouvoirles événements de la prochaine saison. Malinki est intervenu en aidant à laconception, la production et le montage de la publicité télévisée qui acontribué au succès de cette saison avec des ventes de billets record depuis 10ans. La créativité et l'expertise de Malinki en production audiovisuelle ontpermis de mettre en avant l'expérience de l'opéra de manière captivante.",
+        "en": "The Montreal Opera was looking for an effective way to promote the events of the upcoming season. Malinki intervened by helping with the design, production, and editing of the television advertisement, which contributed to the success of this season with record ticket sales for 10 years. Malinki's creativity and expertise in audiovisual production allowed the opera experience to be showcased in a captivating way."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/opera-de-montreal/opera-de-montreal-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateurs",
+            "en": "Directors"
+          },
+          "value": "Andrew Tchernilevskii & Jonathan Beaudoin"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Axel Laramée"
+        },
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Chef Machiniste",
+            "en": "Grip"
+          },
+          "value": "Stéphane Klopp"
+        },
+        {
+          "label": {
+            "fr": "Assistant caméra",
+            "en": "Camera Assistant"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Monteur",
+            "en": "Editor"
+          },
+          "value": "Jonathan Beaudoin"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Axel Laramée"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [
+          "opera-de-montreal-bts-portrait-01.jpg",
+          "opera-de-montreal-bts-portrait-02.png",
+          "opera-de-montreal-bts-portrait-03.jpg"
+        ],
+        "landscape": [
+          "opera-de-montreal-bts-landscape-01.jpg",
+          "opera-de-montreal-bts-landscape-02.jpg",
+          "opera-de-montreal-bts-landscape-03.jpg"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "slug": "air-transat",
+      "clientName": {
+        "fr": "Air Transat",
+        "en": "Air Transat"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "Air Transat était à la recherche d'une manière efficace pour promouvoir ses services de transport aérien. Malinki est intervenu en aidant à la conception, la production et le montage de la publicité télévisée qui a contribué au succès de cette campagne avec des ventes de billets record depuis 10 ans. La créativité et l'expertise de Malinki en production audiovisuelle ont permis de mettre en avant l'expérience de l'air Transat de manière captivante.",
+        "en": "Air Transat was looking for an effective way to promote its air transport services. Malinki intervened by helping with the design, production, and editing of the television advertisement, which contributed to the success of this campaign with record ticket sales for 10 years. Malinki's creativity and expertise in audiovisual production allowed the Air Transat experience to be showcased in a captivating way."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/air-transat/air-transat-main.mp4",
+        "type": "mp4"
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "slug": "ville-de-laval",
+      "clientName": {
+        "fr": "Ville de Laval",
+        "en": "Laval City"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "Malinki a produit pour la ville de Laval une vidéo qui met de l’avant son engagement de verdissement de son territoire. Elle incite aussi la population, les organismes et les entreprises à suivre le pas avec des efforts collectifs. Le concept était de démontrer l’implication de la ville et d’encourager et promouvoir le verdissement dans une démarche rassembleuse.",
+        "en": "Malinki produced a video for the City of Laval that highlights its commitment to greening its territory. The video also encourages residents, organizations, and businesses to follow suit through collective efforts. The concept was to show the city’s involvement and to encourage and promote greening in a unifying way."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ville-de-laval/ville-de-laval-main.mp4",
+        "type": "mp4"
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "slug": "videotron-gamer",
+      "clientName": {
+        "fr": "Vidéotron",
+        "en": "Vidéotron"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "Vidéotron était à la recherche d'une manière efficace pour promouvoir ses services de téléphonie mobile. Malinki est intervenu en aidant à la conception, la production et le montage de la publicité télévisée qui a contribué au succès de cette campagne avec des ventes de billets record depuis 10 ans. La créativité et l'expertise de Malinki en production audiovisuelle ont permis de mettre en avant l'expérience de l'air Transat de manière captivante.",
+        "en": "Vidéotron was looking for an effective way to promote its mobile phone services. Malinki intervened by helping with the design, production, and editing of the television advertisement, which contributed to the success of this campaign with record ticket sales for 10 years. Malinki's creativity and expertise in audiovisual production allowed the Air Transat experience to be showcased in a captivating way."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ville-de-laval/ville-de-laval-main.mp4",
+        "type": "mp4"
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "slug": "cadwork",
+      "clientName": {
+        "fr": "Cadwork",
+        "en": "Cadwork"
+      },
+      "title": {
+        "fr": "Projet de construction",
+        "en": "Cadwork Projects"
+      },
+      "shortDescription": {
+        "fr": "",
+        "en": ""
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cadwork/cadwork-main.mp4",
+        "type": "mp4"
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "slug": "niche-ste-justine",
+      "clientName": {
+        "fr": "Niché x Fondation Chu Sainte-Justine",
+        "en": "Niché x Chu Sainte-Justine Foundation"
+      },
+      "title": {
+        "fr": "Contenu de marque",
+        "en": "Branded content"
+      },
+      "shortDescription": {
+        "fr": "Lors de la soirée du Grand Bal Sainte-Justine de la Fondation du CHU Sainte-Justine, l'agence Niché a chargé Malinki de réaliser une vidéo mettant en avant la formule distinctive de Niché. L'objectif était de présenter le savoir-faire et l'engagement personnalisé de l'agence envers ses clients. En capturant les coulisses de la préparation des salles, l'effort de l'équipe Niché et l'attention au déroulement de la soirée, Malinki a su mettre en lumière le souci du détail caractéristique de Niché. Découvrez l'essence de Niché dans la vidéo ci-dessous.",
+        "en": "During the evening of the Grand Bal Sainte-Justine organized by the CHU Sainte-Justine Foundation, the agency Niché commissioned Malinki to produce a video highlighting Niché's distinctive approach. The goal was to showcase the agency's expertise and its personalized commitment to its clients. By capturing behind-the-scenes footage of the room preparations, the effort of the Niché team, and the attention paid to the flow of the evening, Malinki was able to shine a light on the meticulous attention to detail that is characteristic of Niché. Discover the essence of Niché in the video below."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/niche-ste-justine/niche-ste-justine-main.mp4",
+        "type": "mp4"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Opérateur caméra 1",
+            "en": "Camera Operator 1"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Opérateur caméra 2",
+            "en": "Camera Operator 2"
+          },
+          "value": "Alexandre Normand"
+        },
+        {
+          "label": {
+            "fr": "Assistant Monteur",
+            "en": "Assistant Editor"
+          },
+          "value": "Cédric Demers"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Alexandre Normand"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "slug": "tva-sports",
+      "clientName": {
+        "fr": "TVA Sports",
+        "en": "TVA Sports"
+      },
+      "agencyName": {
+        "fr": "Qolab",
+        "en": "Qolab"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "Publicité produite pour Qolab dans le cadre de la campagne web et télé de TVA Sports. La production met en valeur l'intensité et la passion du sport à travers un contenu captivant et dynamique.",
+        "en": "Advertisement produced for Qolab as part of TVA Sports' web and TV campaign. The production highlights the intensity and passion of sports through captivating and dynamic content."
+      },
+      "mainVideo": {
+        "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/tva-sports-grid.mov",
+        "type": "mp4",
+        "isPortrait": true
+      },
+      "details": [],
+      "additionalVideos": [
+        {
+          "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Elaine_final_v06.mov",
+          "type": "mp4",
+          "isPortrait": true
+        },
+        {
+          "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Marie-eve_final_v05.mov",
+          "type": "mp4",
+          "isPortrait": true
+        },
+        {
+          "url": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/Sofia_final_v05.mov",
+          "type": "mp4",
+          "isPortrait": true
+        }
+      ],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "slug": "red-scarf",
+      "clientName": {
+        "fr": "Alanna Sterling",
+        "en": "Alanna Sterling"
+      },
+      "title": {
+        "fr": "VIDÉOCLIP EVERYTHING'S GONNA BE JUST FINE",
+        "en": "VIDEOCLIP EVERYTHING'S GONNA BE JUST FINE"
+      },
+      "shortDescription": {
+        "fr": "Le vidéoclip de « Everything’s Gonna Be Just Fine » de Alanna Sterling met en images un parcours émotionnel entre vulnérabilité et résilience. À travers une esthétique épurée mêlant performance musicale et danse contemporaine, il traduit visuellement le message d’espoir de la chanson : malgré les moments difficiles, tout finit par s’apaiser.",
+        "en": "The video clip for \"Everything’s Gonna Be Just Fine\"  by Alanna Sterling captures a journey of emotional vulnerability and resilience. Through a clean aesthetic blending musical performance and contemporary dance, it visually传达s the message of hope in the song: despite difficult moments, everything will eventually settle."
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/watch?v=P5IhMjPFOZw",
+        "type": "youtube"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisation",
+            "en": "Director"
+          },
+          "value": "Yang Shi"
+        },
+        {
+          "label": {
+            "fr": "Directeur Photo",
+            "en": "Director of Photography"
+          },
+          "value": "Jonathan Brisebois"
+        },
+        {
+          "label": {
+            "fr": "Montage",
+            "en": "Editor"
+          },
+          "value": "Thomas Fortier"
+        },
+        {
+          "label": {
+            "fr": "Producteur",
+            "en": "Producer"
+          },
+          "value": "Andrew Tche"
+        },
+        {
+          "label": {
+            "fr": "Assistant Camera",
+            "en": "Camera Assistant"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Béatrice Tremblay (Outpost)"
+        },
+        {
+          "label": {
+            "fr": "Grip",
+            "en": "Grip"
+          },
+          "value": "François Haché"
+        },
+        {
+          "label": {
+            "fr": "Danseuses",
+            "en": "Dancers"
+          },
+          "value": "Evelynn Yan & Louanne Rousseau"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": [
+          "alanna-sterling-bts-1.png",
+          "alanna-sterling-bts-2.png",
+          "alanna-sterling-bts-3.png"
+        ]
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "slug": "petro-canada",
+      "clientName": {
+        "fr": "Petro Canada",
+        "en": "Petro Canada"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "",
+        "en": ""
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/shorts/CFWUxUzKtes",
+        "type": "youtube",
+        "isPortrait": true
+      },
+      "details": [],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": ["petro-canada-bts-2.jpg", "petro-canada-bts-3.jpg"],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "slug": "monsieur-le-maire",
+      "title": {
+        "fr": "MONSIEUR LE MAIRE - PRODUCTION PHOTO",
+        "en": "MONSIEUR LE MAIRE - PHOTO PRODUCTION"
+      },
+      "clientName": {
+        "fr": "Groupe Encore",
+        "en": "Groupe Encore"
+      },
+      "shortDescription": {
+        "fr": "L'équipe de Malinki a été mandatée par Groupe Encore afin d'assurer la production photo et la retouche des visuels promotionnels des comédiens et comédiennes de la pièce Monsieur le Maire, mettant en vedette Mario Jean. L'objectif : créer des portraits forts et expressifs reflétant le ton mordant et hilarant de la comédie.\n\nÀ travers cette production, Malinki met en valeur les personnages et l'univers de la pièce, marqués par la collusion, les rivalités de pouvoir et les ambitions démesurées, tout en soutenant l'image et le positionnement de la production.",
+        "en": "The Malinki team was commissioned by Groupe Encore to handle the photo production and retouching of the promotional visuals for the cast of the play Monsieur le Maire, starring Mario Jean. The goal: create powerful, expressive portraits reflecting the biting and hilarious tone of the comedy.\n\nThrough this production, Malinki highlights the characters and universe of the play — marked by collusion, power rivalries, and overblown ambitions — while supporting the image and positioning of the production."
+      },
+      "mainImageUrl": "le-maire-grid.jpg",
+      "galleryImages": [],
+      "details": [
+        {
+          "label": {
+            "fr": "Directeur de création",
+            "en": "Creative Director"
+          },
+          "value": "Jocelyn Goyer"
+        },
+        {
+          "label": {
+            "fr": "Photographe",
+            "en": "Photographer"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Retouches",
+            "en": "Photo Retouching"
+          },
+          "value": "Mélanie Lapointe"
+        },
+        {
+          "label": {
+            "fr": "Design",
+            "en": "Design"
+          },
+          "value": "Jocelyn Goyer"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": ["le-maire-1.jpg", "le-maire-2.jpg", "le-maire-3.jpg"],
+        "landscape": []
+      },
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "slug": "laval-tourisme",
+      "agencyName": {
+        "fr": "Malinki",
+        "en": "Malinki"
+      },
+      "clientName": {
+        "fr": "Tourisme Laval & Ville de Laval",
+        "en": "Tourisme Laval & Ville de Laval"
+      },
+      "title": {
+        "fr": "PUBLICITÉ TÉLÉ & WEB",
+        "en": "TV & Web Advertising"
+      },
+      "shortDescription": {
+        "fr": "",
+        "en": ""
+      },
+      "mainVideo": {
+        "url": "https://www.youtube.com/watch?v=sU-lYbSmqQs",
+        "type": "youtube"
+      },
+      "details": [
+        {
+          "label": {
+            "fr": "Réalisateur",
+            "en": "Director"
+          },
+          "value": "Andrew Tchernilevskii"
+        },
+        {
+          "label": {
+            "fr": "Directeur de la photographie",
+            "en": "Director of Photography"
+          },
+          "value": "Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Gestion de projet",
+            "en": "Project Manager"
+          },
+          "value": "Jérémy LeBlond"
+        },
+        {
+          "label": {
+            "fr": "Monteur",
+            "en": "Editor"
+          },
+          "value": "Andrew Tchernilevskii & Miroslav Dufresne"
+        },
+        {
+          "label": {
+            "fr": "Coloriste",
+            "en": "Colorist"
+          },
+          "value": "Alexandre Normand"
+        },
+        {
+          "label": {
+            "fr": "Postproduction sonore",
+            "en": "Sound Post-Production"
+          },
+          "value": "Studio Underground"
+        },
+        {
+          "label": {
+            "fr": "Coordonnatrice de postproduction sonore",
+            "en": "Sound Post-Production Coordinator"
+          },
+          "value": "Charlotte Lamoureux"
+        },
+        {
+          "label": {
+            "fr": "Mixage et conception sonore",
+            "en": "Sound Mix & Design"
+          },
+          "value": "Steve Labbé"
+        }
+      ],
+      "additionalVideos": [],
+      "behindTheScenes": {
+        "portrait": [],
+        "landscape": []
+      },
+      "publishedAt": "2024-09-01"
+    }
+  ]
 }
