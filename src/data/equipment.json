@@ -184,7 +184,7 @@
     "DESCRIPTION": "1x 15mm rode Rail Mount | BaseCamp"
   },
   {
-    "NOM": "MATTE BOX POLAR PRO 2 STAGE (mirko) - 114mm clip on",
+    "NOM": "MATTE BOX POLAR PRO 2 STAGE - 114mm clip on",
     "QTÉ": 1,
     "DPT": "Cameras",
     "PRIX": "-",
@@ -195,7 +195,7 @@
     "QTÉ": 2,
     "DPT": "Cameras",
     "PRIX": "-",
-    "DESCRIPTION": "1 des filtres est a mirko"
+    "DESCRIPTION": ""
   },
   {
     "NOM": "POLAR PRO FILTER ND MIST 2-5",
@@ -209,14 +209,14 @@
     "QTÉ": 2,
     "DPT": "Cameras",
     "PRIX": "-",
-    "DESCRIPTION": "1 des filtres est a mirko"
+    "DESCRIPTION": ""
   },
   {
     "NOM": "POLAR PRO FILTER ND VARIABLE 5-9",
     "QTÉ": 2,
     "DPT": "Cameras",
     "PRIX": "-",
-    "DESCRIPTION": "1 des filtres est a mirko"
+    "DESCRIPTION": ""
   },
   {
     "NOM": "Mattebox RedRockMicro 2 tray up to 138mm",
@@ -238,13 +238,6 @@
     "DPT": "Accessoires Cam",
     "PRIX": "150$",
     "DESCRIPTION": "Pelican Caisse TERADEK\n1x Teradek TX\n2x Teradek RX\n2x Antennes\n2x LEMO to AC power\n1x SDI coil\n1x LEMO to Canon BP\n2x 2-Pin LEMO to P-Tap Cable"
-  },
-  {
-    "NOM": "SMALLHD Focus Pro RED KOMODO™ Kit",
-    "QTÉ": 1,
-    "DPT": "",
-    "PRIX": "-",
-    "DESCRIPTION": "PROBLEME NPF socket derrière non fonctionnel\ndoit être brancher en LEMO to d-tap\nPAS de cable de connection avec la komodo"
   },
   {
     "NOM": "Portkeys pour Komodo",
@@ -503,14 +496,14 @@
     "NOM": "750 baby base plate",
     "QTÉ": 2,
     "DPT": "Grip",
-    "PRIX": "-",
+    "PRIX": "5$",
     "DESCRIPTION": ""
   },
   {
     "NOM": "2k baby base plate",
     "QTÉ": 2,
     "DPT": "Grip",
-    "PRIX": "-",
+    "PRIX": "5$",
     "DESCRIPTION": ""
   },
 
@@ -689,13 +682,6 @@
     "DPT": "Lumières",
     "PRIX": "80$",
     "DESCRIPTION": ""
-  },
-  {
-    "NOM": "Amaran F22c (RGB) (ENDOMMAGÉ, JUSTE LE HAUT FONCTIONNE)",
-    "QTÉ": 1,
-    "DPT": "Lumières",
-    "PRIX": "-",
-    "DESCRIPTION": "La partie du bas ne fonctionne plus."
   },
   {
     "NOM": "Amaran 300C (RGBWW)",

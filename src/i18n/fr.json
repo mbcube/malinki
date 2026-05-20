@@ -276,7 +276,7 @@
       "col_dept": "Dépt",
       "col_price": "Prix",
       "col_description": "Description",
-      "price_tbd": "ÀD",
+      "price_tbd": "S.D",
       "price_note": "Prix affichés à la journée. Tarifs hebdomadaires disponibles sur demande."
     },
     "pricing": {
