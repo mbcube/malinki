@@ -22,7 +22,7 @@ collections:
     format: frontmatter
     i18n: true
     identifier_field: slug
-    summary: "{{title}}"
+    summary: "{{slug}}"
     fields:
       - { name: slug, label: Slug, widget: string, i18n: duplicate }
       - { name: title, label: Title, widget: string, i18n: true }
