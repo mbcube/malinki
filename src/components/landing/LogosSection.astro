@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 // SVG imports (raw path)
 import operaDeMontreal from "@/images/logos/odm.svg?raw";
 // PNG imports (for Image component)
@@ -26,7 +26,7 @@ import rtl from "@/images/logos/rtl.svg?raw";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: s } = await getEntry("sections", currentLang);
 
 type Logo = {
   alt: string;
@@ -66,7 +66,7 @@ const logos: Logo[] = [
     <h2
       class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] text-center mb-12 md:mb-16 lg:mb-16"
     >
-      {t("sections.logos.heading")}
+      {s.logos_heading}
     </h2>
 
     <!-- Logos Grid -->

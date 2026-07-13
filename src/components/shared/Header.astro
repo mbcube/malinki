@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import malinkiLogo from "@/images/malinki-logo-c.png";
 import LanguageSwitcher from "@/components/shared/islands/LanguageSwitcher";
 import LanguageSwitcherDropdown from "@/components/shared/islands/LanguageSwitcherDropdown";
@@ -13,25 +13,18 @@ const { lang } = Astro.props;
 const currentLang = (lang || "fr") as "fr" | "en";
 const currentPath = Astro.url.pathname;
 
-const t = useTranslations(currentLang);
+const { data: h } = await getEntry("header", currentLang);
 
-// Inline settings as requested
 const settings = {
   logo: malinkiLogo,
-  main_menu: "main-menu",
 };
 
-// Mock menu data (replacing linklists[item.main_menu].links)
-// Links navigate to home page sections with anchors
 const homeUrl = lang === "en" ? "/en" : "/";
 const menuLinks = [
-  { title: t("header.menu_projects"), url: `${homeUrl}#projects` },
-  { title: t("header.menu_services"), url: `${homeUrl}#services` },
-  { title: t("header.menu_team"), url: `${homeUrl}#equipe` },
-  {
-    title: t("header.menu_studio"),
-    url: lang === "en" ? `/en/studio` : `/studio`,
-  },
+  { title: h.menu_projects, url: `${homeUrl}#projects` },
+  { title: h.menu_services, url: `${homeUrl}#services` },
+  { title: h.menu_team, url: `${homeUrl}#equipe` },
+  { title: h.menu_studio, url: lang === "en" ? `/en/studio` : `/studio` },
 ];
 
 const contactUrl = lang === "en" ? "/en/contact" : "/contact";
@@ -109,7 +102,7 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
           href={contactUrl}
           class="bg-white flex gap-2 items-center justify-center px-6 md:px-4 lg:px-6 py-2 md:py-1 lg:py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
         >
-          {t("header.contact_button")}
+          {h.contact_button}
         </a>
       </div>
 
@@ -170,7 +163,7 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
         class="bg-white text-[#083d45]! font-semibold text-base px-6 py-3 rounded-lg hover:bg-[#E6F5F7]! transition-all whitespace-nowrap inline-flex items-center justify-center gap-2"
         style="font-family: 'Montserrat', sans-serif;"
       >
-        {t("header.contact_button")}
+        {h.contact_button}
       </a>
     </div>
   </div>

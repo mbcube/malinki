@@ -1,28 +1,26 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry, getCollection } from "astro:content";
 import EquipmentDrawer from "@/components/studio/islands/EquipmentDrawer";
 import type { EquipmentItem } from "@/components/studio/islands/EquipmentDrawer";
-import rawEquipment from "@/data/equipment.json";
 
 interface Props {
   lang: "fr" | "en";
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
+const rawEquipment = await getCollection("equipment");
 
-const equipmentData: EquipmentItem[] = rawEquipment.map(
-  (row: Record<string, string | number | null>) => ({
-    name: String(row["NOM"] ?? ""),
-    qty: String(row["QTÉ"] ?? ""),
-    dept: String(row["DPT"] ?? ""),
-    price: String(row["PRIX"] ?? ""),
-    description: String(row["DESCRIPTION"] ?? ""),
-  }),
-);
+const equipmentData: EquipmentItem[] = rawEquipment.map((item) => ({
+  name: String(item.data.name ?? ""),
+  qty: String(item.data.qty ?? ""),
+  dept: String(item.data.dept ?? ""),
+  price: String(item.data.price ?? ""),
+  description: String(item.data.description ?? ""),
+}));
 
-const available = t("studio.equipment.available") as unknown as string[];
-const rental = t("studio.equipment.rental") as unknown as string[];
+const available = st.equipment_available;
+const rental = st.equipment_rental;
 ---
 
 <section id="nos-equipements" class="w-full px-6 md:px-8 py-16 md:py-24">
@@ -33,8 +31,8 @@ const rental = t("studio.equipment.rental") as unknown as string[];
         <h2
           class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white mb-6"
         >
-          {t("studio.equipment.available_title_line1")}<br />
-          {t("studio.equipment.available_title_line2")}
+          {st.equipment_available_title_line1}<br />
+          {st.equipment_available_title_line2}
         </h2>
         <div class="border-t border-white/40">
           {
@@ -54,8 +52,8 @@ const rental = t("studio.equipment.rental") as unknown as string[];
         <h2
           class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white mb-6"
         >
-          {t("studio.equipment.rental_title_line1")}<br />
-          {t("studio.equipment.rental_title_line2")}
+          {st.equipment_rental_title_line1}<br />
+          {st.equipment_rental_title_line2}
         </h2>
         <div class="border-t border-white/40">
           {
@@ -70,16 +68,16 @@ const rental = t("studio.equipment.rental") as unknown as string[];
           <div class="border-b border-white/40 py-4">
             <EquipmentDrawer
               client:load
-              label={t("studio.equipment.view_full_list") as string}
-              title={t("studio.equipment.drawer_title") as string}
-              colName={t("studio.equipment.col_name") as string}
-              colQty={t("studio.equipment.col_qty") as string}
-              colDept={t("studio.equipment.col_dept") as string}
-              colPrice={t("studio.equipment.col_price") as string}
-              colDescription={t("studio.equipment.col_description") as string}
-              priceTbd={t("studio.equipment.price_tbd") as string}
-              priceNote={t("studio.equipment.price_note") as string}
-              filterLabel={t("studio.equipment.filter_dept") as string}
+              label={st.equipment_view_full_list}
+              title={st.equipment_drawer_title}
+              colName={st.equipment_col_name}
+              colQty={st.equipment_col_qty}
+              colDept={st.equipment_col_dept}
+              colPrice={st.equipment_col_price}
+              colDescription={st.equipment_col_description}
+              priceTbd={st.equipment_price_tbd}
+              priceNote={st.equipment_price_note}
+              filterLabel={st.equipment_filter_dept}
               data={equipmentData}
             />
           </div>

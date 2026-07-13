@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import ContactForm from "@/components/shared/islands/ContactForm";
 import agenceLogo from "@/images/agence-malinki.jpg";
 import studioLogo from "@/images/studio-malinki.jpg";
@@ -14,30 +14,29 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
-
-const pageTitle = t("contact.title");
+const { data: c } = await getEntry("contact", currentLang);
+const { data: seo } = await getEntry("seo", currentLang);
 
 // Props for ContactForm
 const formLabels = {
-  name: t("contact.name_label"),
-  email: t("contact.email_label"),
-  phone: t("contact.phone_label"),
-  message: t("contact.message_label"),
-  submit: t("contact.submit_button"),
-  submitting: t("contact.submitting_button"),
+  name: c.name_label,
+  email: c.email_label,
+  phone: c.phone_label,
+  message: c.message_label,
+  submit: c.submit_button,
+  submitting: c.submitting_button,
 };
 
 const formPlaceholders = {
-  name: t("contact.name_placeholder"),
-  email: t("contact.email_placeholder"),
-  phone: t("contact.phone_placeholder"),
-  message: t("contact.message_placeholder"),
+  name: c.name_placeholder,
+  email: c.email_placeholder,
+  phone: c.phone_placeholder,
+  message: c.message_placeholder,
 };
 
 const formMessages = {
-  success: t("contact.success_message"),
-  error: t("contact.error_message"),
+  success: c.success_message,
+  error: c.error_message,
 };
 
 import "@/styles/global.css";
@@ -50,8 +49,8 @@ import Metadata from "@/components/shared/Metadata.astro";
   <head>
     <Metadata
       lang={currentLang}
-      title={t("seo.contact.title")}
-      description={t("seo.contact.description")}
+      title={seo.contact_title}
+      description={seo.contact_description}
       canonicalPath="/contact"
     />
   </head>
@@ -70,12 +69,12 @@ import Metadata from "@/components/shared/Metadata.astro";
           <h1
             class="text-5xl md:text-6xl lg:text-7xl font-bold text-[#083e44] mb-6 leading-tight"
           >
-            {t("contact.heading")}
+            {c.heading}
           </h1>
           <p
             class="text-lg md:text-xl lg:text-2xl text-[#083e44] font-medium max-w-2xl mx-auto"
           >
-            {t("contact.subheading")}
+            {c.subheading}
           </p>
         </div>
 
@@ -88,7 +87,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             class="bg-white rounded-2xl shadow-xl p-8 md:p-10 animate__animated animate__fadeInLeft"
           >
             <h2 class="text-2xl md:text-3xl font-bold text-[#083e44] mb-6">
-              {t("contact.form_title")}
+              {c.form_title}
             </h2>
 
             <ContactForm
@@ -189,7 +188,7 @@ import Metadata from "@/components/shared/Metadata.astro";
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-[#083e44] mb-2">
-                    {t("contact.agence_title")}
+                    {c.agence_title}
                   </h3>
                   <a
                     href="https://www.instagram.com/malinki.agence/"
@@ -217,7 +216,7 @@ import Metadata from "@/components/shared/Metadata.astro";
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-[#083e44] mb-2">
-                    {t("contact.studio_title")}
+                    {c.studio_title}
                   </h3>
                   <a
                     href="https://www.instagram.com/studio.malinki/"
@@ -236,10 +235,10 @@ import Metadata from "@/components/shared/Metadata.astro";
               class="bg-linear-to-br from-[#083e44] to-[#0a4d56] rounded-2xl shadow-xl p-8 text-white"
             >
               <h3 class="text-2xl font-bold mb-3">
-                {t("contact.cta_title")}
+                {c.cta_title}
               </h3>
               <p class="text-lg opacity-90">
-                {t("contact.cta_text")}
+                {c.cta_text}
               </p>
             </div>
           </div>

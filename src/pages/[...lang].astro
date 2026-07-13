@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 
 export function getStaticPaths() {
   return [{ params: { lang: undefined } }, { params: { lang: "en" } }];
@@ -7,7 +7,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: seo } = await getEntry("seo", currentLang);
 
 import "@/styles/global.css";
 import Header from "@/components/shared/Header.astro";
@@ -27,8 +27,8 @@ import Metadata from "@/components/shared/Metadata.astro";
   <head>
     <Metadata
       lang={currentLang}
-      title={t("seo.home.title")}
-      description={t("seo.home.description")}
+      title={seo.home_title}
+      description={seo.home_description}
       canonicalPath="/"
     />
   </head>

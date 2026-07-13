@@ -1,12 +1,12 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 
 interface Props {
   lang: "fr" | "en";
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
 ---
 
 <section class="w-full px-8 py-12">
@@ -18,17 +18,17 @@ const t = useTranslations(lang);
       allowfullscreen
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      title={t("studio.map.title") as string}
+      title={st.map_title}
     ></iframe>
 
     <div class="relative z-10 p-4 lg:p-8 flex items-end lg:items-stretch lg:justify-end min-h-[37.5rem]">
       <div class="bg-[#083D45] rounded-[1.5rem] lg:rounded-[2rem] p-8 flex flex-col gap-8 lg:gap-0 lg:justify-between w-full lg:w-[26.25rem]">
         <div class="flex flex-col gap-4">
           <h2 class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white">
-            {t("studio.map.title")}
+            {st.map_title}
           </h2>
           <p class="text-[1rem] font-medium leading-[1.2] text-white">
-            {t("studio.map.address")}
+            {st.map_address}
           </p>
         </div>
 
@@ -36,7 +36,7 @@ const t = useTranslations(lang);
           href="/contact"
           class="text-[1rem] font-semibold leading-none text-[#083D45] bg-white rounded-lg px-8 py-5 text-center hover:bg-white/90 transition-colors"
         >
-          {t("studio.map.cta")}
+          {st.map_cta}
         </a>
       </div>
     </div>

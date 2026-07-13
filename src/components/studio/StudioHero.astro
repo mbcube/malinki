@@ -1,12 +1,12 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 
 interface Props {
   lang: "fr" | "en";
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
 
 const settings = {
   video_url_desktop:
@@ -43,10 +43,10 @@ const settings = {
       <!-- Title overlay — tablet (md) and above only -->
       <div class="hidden md:flex absolute bottom-0 left-0 right-0 justify-between items-end px-6 pb-6 bg-gradient-to-t from-black/60 via-black/20 to-transparent pt-24">
         <h1 class="text-[4rem] lg:text-[4.5rem] xl:text-[6rem] font-bold leading-none uppercase text-white">
-          {t("studio.hero.title_line1")}
+          {st.hero_title_line1}
         </h1>
         <h1 class="text-[4rem] lg:text-[4.5rem] xl:text-[6rem] font-bold leading-none uppercase text-white">
-          {t("studio.hero.title_line2")}
+          {st.hero_title_line2}
         </h1>
       </div>
     </div>
@@ -54,10 +54,10 @@ const settings = {
     <!-- Title Section — mobile only, below the video -->
     <div class="md:hidden mt-2">
       <h1 class="text-[3rem] font-bold leading-none uppercase text-white">
-        {t("studio.hero.title_line1")}
+        {st.hero_title_line1}
       </h1>
       <h1 class="text-[3rem] font-bold leading-none uppercase text-white text-right">
-        {t("studio.hero.title_line2")}
+        {st.hero_title_line2}
       </h1>
     </div>
   </div>

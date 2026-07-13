@@ -25,7 +25,8 @@ export default defineConfig({
     defaultLocale: "fr",
     locales: ["fr", "en"],
     routing: {
-      prefixDefaultLocale: false
+      prefixDefaultLocale: false,
+      excludeRoutes: ["/admin"]
     }
   }
 });

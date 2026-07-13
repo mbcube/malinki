@@ -1,13 +1,14 @@
 ---
 import ProjectCard from "@/components/landing/ProjectCard.astro";
-import projectsGrid from "@/data/projects-grid.json";
+import { getCollection } from "astro:content";
 
 interface Props {
   lang?: "fr" | "en";
 }
 
 const { lang = "fr" } = Astro.props;
-const { grids } = projectsGrid;
+const allGridEntries = await getCollection("projects-grid");
+const grids = allGridEntries.map((e) => e.data);
 ---
 
 <!-- Projects Grid Section -->

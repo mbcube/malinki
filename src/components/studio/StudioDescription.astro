@@ -1,18 +1,18 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 
 interface Props {
   lang: "fr" | "en";
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
 ---
 
 <section id="le-studio" class="w-full py-16 md:py-24">
   <div class="w-full max-w-[71.5rem] mx-auto px-4">
     <p class="text-[1.125rem] md:text-[1.25rem] font-medium leading-[1.2] text-white">
-      {t("studio.hero.intro_text")}
+      {st.hero_intro_text}
     </p>
   </div>
 </section>

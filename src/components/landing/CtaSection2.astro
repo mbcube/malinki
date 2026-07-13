@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import cta2Red from "@/images/cta-2-red.jpg";
 import cta2Fizz from "@/images/cta-2-fizz.jpg";
 import cta2Lazy from "@/images/cta-2-lazy.jpg";
@@ -8,7 +8,7 @@ import cta2Interview from "@/images/cta-2-interview.jpg";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: s } = await getEntry("sections", currentLang)!;
 ---
 
 <!-- CTA Section 2 -->
@@ -68,14 +68,14 @@ const t = useTranslations(currentLang);
     <h2
       class="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] font-medium leading-none text-center uppercase text-[#083D45] m-0 p-0 w-full"
     >
-      {t("sections.cta2.heading")}
+      {s.cta2_heading}
     </h2>
 
     <a
       href={`/${currentLang === "fr" ? "" : "en/"}contact`}
       class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
     >
-      {t("sections.cta2.button_text")}
+      {s.cta2_button_text}
     </a>
   </div>
 </section>

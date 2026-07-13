@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import planSvg from "@/images/studio/plan.svg";
 import Cal from "@/components/studio/islands/cal";
 
@@ -8,10 +8,10 @@ interface Props {
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
 
-const specs = t("studio.plan.specs") as unknown as string[];
-const inclusions = t("studio.plan.inclusions") as unknown as string[];
+const specs = st.plan_specs;
+const inclusions = st.plan_inclusions;
 ---
 
 <section class="w-full px-8 py-12">
@@ -24,17 +24,17 @@ const inclusions = t("studio.plan.inclusions") as unknown as string[];
         <p
           class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-[#083D45]"
         >
-          {t("studio.plan.access_line1")}
+          {st.plan_access_line1}
         </p>
         <p
           class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-[#083D45]"
         >
-          {t("studio.plan.access_line2")}
+          {st.plan_access_line2}
         </p>
         <p
           class="text-[3rem] md:text-[4rem] lg:text-[5rem] font-bold leading-none uppercase text-[#083D45] mt-1"
         >
-          {t("studio.plan.access_size")}
+          {st.plan_access_size}
         </p>
       </div>
       <div class="w-full">
@@ -47,7 +47,7 @@ const inclusions = t("studio.plan.inclusions") as unknown as string[];
       <h2
         class="text-[1.5rem] md:text-[2rem] font-bold leading-none uppercase text-[#083D45] text-center mb-[1.5rem] md:mb-[2.5rem]"
       >
-        {t("studio.plan.specs_title")}
+        {st.plan_specs_title}
       </h2>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 items-center"
@@ -69,7 +69,7 @@ const inclusions = t("studio.plan.inclusions") as unknown as string[];
       <h2
         class="text-[1.5rem] md:text-[2rem] font-bold leading-none uppercase text-[#083D45] text-center mb-[1.5rem] md:mb-[2.5rem]"
       >
-        {t("studio.plan.inclusions_title")}
+        {st.plan_inclusions_title}
       </h2>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 items-center"
@@ -93,14 +93,14 @@ const inclusions = t("studio.plan.inclusions") as unknown as string[];
       <h2
         class="text-[1.75rem] md:text-[2.75rem] font-medium lg:text-[3.5rem] leading-[1.1] uppercase text-[#083D45] text-center"
       >
-        {t("studio.plan.cta_line1")}<br />
-        <em class="not-italic font-semibold">{t("studio.plan.cta_line2")}</em>
+        {st.plan_cta_line1}<br />
+        <em class="not-italic font-semibold">{st.plan_cta_line2}</em>
       </h2>
       <Cal
         client:load
         className="text-[1rem] font-semibold leading-none text-white bg-[#083D45] px-8 py-4 rounded-sm hover:bg-[#083D45]/80 transition-colors"
       >
-        {t("studio.plan.cta_button")}
+        {st.plan_cta_button}
       </Cal>
     </div>
   </div>

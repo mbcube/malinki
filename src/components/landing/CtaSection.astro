@@ -1,9 +1,9 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: s } = await getEntry("sections", currentLang);
 ---
 
 <!-- CTA Section -->
@@ -22,10 +22,10 @@ const t = useTranslations(currentLang);
                     class="font-['Montserrat'] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-none text-center uppercase text-white m-0 p-0 w-full"
                 >
                     <span class="font-normal not-italic"
-                        >{t("sections.cta.heading_line1")}
+                        >{s.cta_heading_line1}
                     </span>
                     <span class="font-semibold italic"
-                        >{t("sections.cta.heading_line2")}</span
+                        >{s.cta_heading_line2}</span
                     >
                 </h2>
 
@@ -33,7 +33,7 @@ const t = useTranslations(currentLang);
                     href={`/${currentLang === "fr" ? "" : "en/"}contact`}
                     class="inline-flex items-center justify-center px-6 py-[14px] sm:px-7 sm:py-4 md:px-8 md:py-5 font-['Montserrat'] text-sm md:text-base font-semibold leading-normal no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-white text-[#083D45] rounded-[8px] hover:bg-[#E6F5F7]"
                 >
-                    {t("sections.cta.button_text")}
+                    {s.cta_button_text}
                 </a>
             </div>
         </div>

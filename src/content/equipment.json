@@ -1,0 +1,882 @@
+[
+  {
+    "id": "equip-0",
+    "name": "KIT SON NTG 3 + H6",
+    "qty": 1,
+    "dept": "Audio",
+    "price": "70$",
+    "description": "NTG 3 + H6 + fil XLR"
+  },
+  {
+    "id": "equip-1",
+    "name": "Lavalier AVX-MKE2 SET-4 Digital Camera-Mount Wireless Omni Lavalier Microphone System (1.9 GHz)",
+    "qty": 1,
+    "dept": "Audio",
+    "price": "50$",
+    "description": "1x AVX receiver (XLR)\n1x AVX transmitter\n2x female XLR to 3.5mm (jack 1/8)"
+  },
+  {
+    "id": "equip-2",
+    "name": "Lavalier Tentacle Sync TRACK E",
+    "qty": 1,
+    "dept": "Audio",
+    "price": "25$",
+    "description": "https://tentaclesync.com/track-e"
+  },
+  {
+    "id": "equip-3",
+    "name": "Lavalier Tentacle Sync Mk II Time code generator",
+    "qty": 1,
+    "dept": "Audio",
+    "price": "25$",
+    "description": ""
+  },
+  {
+    "id": "equip-4",
+    "name": "DATA Wrangling station ( Laptop + SSD)",
+    "qty": 1,
+    "dept": "Autre",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-5",
+    "name": "LEE Filters Master Location Filter Pack - 36 Sheets (10 x 12\")",
+    "qty": 1,
+    "dept": "Autre",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-6",
+    "name": "Manfrotto Collapsible Reversible Background (6 x 7', White/Mid Gray)",
+    "qty": 1,
+    "dept": "Autre",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-7",
+    "name": "RED DSMC2 Motion Mount Adaptor",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "MOTION MOUNT integrates a global shutter, temporal anti-aliasing soft shutter, and variable neutral density (ND) system"
+  },
+  {
+    "id": "equip-8",
+    "name": "Kit Nucleus-M",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "100$",
+    "description": "https://tilta.com/shop/nucleus-m-wireless-follow-focus/?srsltid=AfmBOooBHsznJWCJM2aXZ8fK-eKWprcjOcHxEsCKY4dQCh6uq921sJ16"
+  },
+  {
+    "id": "equip-9",
+    "name": "DJI Ronin Rs2",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "90$",
+    "description": "Tilta Battery Plate for DJI RS 2 Ring Grip (V-Mount)\nTilta Nucleus-M Handgrip Universal Gimbal Adapters with Rosettes (L/R)\nTilta Extended Quick Release Baseplate for DJI RS 2\nTilta Advanced Ring Grip for DJI RS 2 Gimbal\nTilta Power Supply Module for Ring Grip"
+  },
+  {
+    "id": "equip-10",
+    "name": "OSEE Moniteur 15 ''",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "PROBLEME avec les boutons flèche de gauche et flèche due droite\npeut quand même changer de INPUT (SDI1 - SDI2 - HDMI)"
+  },
+  {
+    "id": "equip-11",
+    "name": "OSEE Moniteur 21''",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "100$",
+    "description": ""
+  },
+  {
+    "id": "equip-12",
+    "name": "Blackmagic Design New ATEM Television Studio HD",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "https://www.blackmagicdesign.com/media/release/20170206-01"
+  },
+  {
+    "id": "equip-13",
+    "name": "OSEE G7 7'' 3000 cd/m² SDI/HDMI On-Camera Monitor",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "50$",
+    "description": ""
+  },
+  {
+    "id": "equip-14",
+    "name": "VISTEK BM7 II DS 7\" High Bright",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "75$",
+    "description": ""
+  },
+  {
+    "id": "equip-15",
+    "name": "Konovision / IKAN KVM-2350W 23po",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "150$",
+    "description": "Moniteur pouvant être pivoté rapidement à 90 degrés, en format vertical ou horizontal."
+  },
+  {
+    "id": "equip-16",
+    "name": "Kit KOMODO 6K -DSCM3 - SUR DEMANDE",
+    "qty": 2,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "1x Komodo 6K\n1x Speedbooster 0.71x RF to EF - 2x Metabone RF to EF\n2x 512G ProGrade\n1x 512G Anglebird\n1x lecteur CFast2.0 + cable USB-C\nFull Cage 8Sinn: Top handle, rode expender, base plate\nFull Cage Tilta - top cold shoe"
+  },
+  {
+    "id": "equip-17",
+    "name": "KIT RED MONSTRO 8K - SUR DEMANDE",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "Nanuk case 950\nFull Cage TILTA with Top Handle\n1x RedSide handle\n2x 960G RegMag\n1x 480G RedMag\n1x RedMag reader + USB-C cable\n1x 5\" Red touch screen (DSMC2)\n2x 5\" cardon fiber robe\n1x Wooden Camera flat botton plate\n1x SDI cable (cage link)\n1x Simple Canon EF mount\n1x Motion Canon EF (ND+Global shutter) mount\n1x Simple PL Mount\n1x Power Supply\n1x RedTool burger"
+  },
+  {
+    "id": "equip-18",
+    "name": "CANON R5",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "150$",
+    "description": "Cage SmallRIG\nTop handle\n1x coil Full HDMI cable to mini HDMI\n4x generique Canon LP-E6\n4x Canon Canon LP-E6N\n1x Canon Canon LP-E6Nh"
+  },
+  {
+    "id": "equip-19",
+    "name": "O'Connor 1030d fluid head",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "125$",
+    "description": "sur Trépid OConnor 30L Two-Stage Carbon Fiber Tripod Legs (100mm Bowl, Standard)"
+  },
+  {
+    "id": "equip-20",
+    "name": "Hihat 100m O'Connor",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "20$",
+    "description": "Sur base plate (highhat 100mm)"
+  },
+  {
+    "id": "equip-21",
+    "name": "Sachtler ACE XL Tripod System with FT 75 Legs & Mid-Level Spreader (75mm Bowl)",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "70$",
+    "description": ""
+  },
+  {
+    "id": "equip-22",
+    "name": "Tripod Manfrotto 501 HDV",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "50$",
+    "description": ""
+  },
+  {
+    "id": "equip-23",
+    "name": "Elvid 7-Section Acrylic Production Slate with Soft Case Kit",
+    "qty": "",
+    "dept": "Accessoires Cam",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-24",
+    "name": "Matebox RØDE Railmount",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "https://www.polarpro.com/products/basecamp-15mm-lws-rail-mount"
+  },
+  {
+    "id": "equip-25",
+    "name": "MATTE BOX POLAR PRO 1 STAGE - 114mm clip on",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "1x 15mm rode Rail Mount | BaseCamp"
+  },
+  {
+    "id": "equip-26",
+    "name": "MATTE BOX POLAR PRO 2 STAGE - 114mm clip on",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-27",
+    "name": "POLAR PRO FILTER POLARISANT",
+    "qty": 2,
+    "dept": "Cameras",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-28",
+    "name": "POLAR PRO FILTER ND MIST 2-5",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-29",
+    "name": "POLAR PRO FILTER ND VARIABLE 2-5",
+    "qty": 2,
+    "dept": "Cameras",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-30",
+    "name": "POLAR PRO FILTER ND VARIABLE 5-9",
+    "qty": 2,
+    "dept": "Cameras",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-31",
+    "name": "Mattebox RedRockMicro 2 tray up to 138mm",
+    "qty": "",
+    "dept": "",
+    "price": "-",
+    "description": "ACHETER DONUT - https://www.bhphotovideo.com/c/product/1159414-REG/wooden_camera_wc_204900_umb_1_universal_mattebox_cloth.html\nsupporte 4x4 - 4x5.65"
+  },
+  {
+    "id": "equip-32",
+    "name": "SmallHD FOCUS 7 Bolt 500 RX (NPF battery)",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "50$",
+    "description": "Monitor Handles + Neck Strap\n3x antennes"
+  },
+  {
+    "id": "equip-33",
+    "name": "Teradek Bold 500 (1080p)\n 3G-SDI/HDMI Wireless Transmitter And Receiver",
+    "qty": 1,
+    "dept": "Accessoires Cam",
+    "price": "150$",
+    "description": "Pelican Caisse TERADEK\n1x Teradek TX\n2x Teradek RX\n2x Antennes\n2x LEMO to AC power\n1x SDI coil\n1x LEMO to Canon BP\n2x 2-Pin LEMO to P-Tap Cable"
+  },
+  {
+    "id": "equip-34",
+    "name": "Portkeys pour Komodo",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-35",
+    "name": "SMALL HD 502 Canon LP-E6",
+    "qty": 1,
+    "dept": "Cameras",
+    "price": "-",
+    "description": "dans le kit DJI RS2"
+  },
+  {
+    "id": "equip-36",
+    "name": "Impact Baby Drop Down Pin",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-37",
+    "name": "Matthews Matthellini Clamp with 3\" Center Jaw",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-38",
+    "name": "Impact 20\" Grip Arm with Big Handle",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "3$",
+    "description": ""
+  },
+  {
+    "id": "equip-39",
+    "name": "Impact Boom Arm (Chrome-plated, 86\")",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "10$",
+    "description": "https://www.impactstudiolighting.com/product/5059/Impact-LSA_BAS-Boom-Arm-(Chrome_plated,-86'')"
+  },
+  {
+    "id": "equip-40",
+    "name": "Grip Head",
+    "qty": 10,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-41",
+    "name": "Mafer Clamp (noire)",
+    "qty": 4,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-42",
+    "name": "Mafer Clamp (grises)",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-43",
+    "name": "Sacs de sable",
+    "qty": 15,
+    "dept": "Grip",
+    "price": "3$",
+    "description": ""
+  },
+  {
+    "id": "equip-44",
+    "name": "Couvertes de son",
+    "qty": 8,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-45",
+    "name": "Matellini 2po",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "5$",
+    "description": "https://www.msegrip.com/products/matthellini-clamps"
+  },
+  {
+    "id": "equip-46",
+    "name": "Matelinni 6po",
+    "qty": 4,
+    "dept": "Grip",
+    "price": "5$",
+    "description": "https://www.msegrip.com/products/matthellini-clamps?variant=14940454977602"
+  },
+  {
+    "id": "equip-47",
+    "name": "Rallonges 50'",
+    "qty": 4,
+    "dept": "Grip/Gaffer",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-48",
+    "name": "Impact PortaFrame Scrim Flag Kit (24 x 36\")",
+    "qty": 1,
+    "dept": "Grip/Diff",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-49",
+    "name": "Westcott Scrim Jim Cine Clamp with 5/8\" Stud x 4",
+    "qty": 2,
+    "dept": "Grip/Diff",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-50",
+    "name": "Westcott Scrim Jim Cine Frame Set (8 x 8')",
+    "qty": 1,
+    "dept": "Grip/Diff",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-51",
+    "name": "Westcott Scrim Jim Cine Kit (6' x 6')",
+    "qty": 1,
+    "dept": "Grip/Diff",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-52",
+    "name": "Westcott Scrim Jim Cine Solid Black Block Fabric (6 x 6')",
+    "qty": 1,
+    "dept": "Grip/Diff",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-53",
+    "name": "Scrim Jim Cine 3/4-Stop Diffusion Fabric (6' x 6')",
+    "qty": 1,
+    "dept": "Grip/Gaffer",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-54",
+    "name": "Scrim Jim Cine 2-in-1 Silver/White Bounce Fabric (6' x 6')",
+    "qty": 1,
+    "dept": "Grip/Gaffer",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-55",
+    "name": "Westcott Scrim Jim Cine Seamless Full-Stop Diffusion Fabric (8 x 8')",
+    "qty": 1,
+    "dept": "Grip/Gaffer",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-56",
+    "name": "Westcott Scrim Jim Cine Seamless Full-Stop Diffusion Fabric (6 x 6')",
+    "qty": 1,
+    "dept": "Grip/Gaffer",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-57",
+    "name": "Matthews 40x40\" Floppy ULTRABOUNCE - bottom Hinge",
+    "qty": 2,
+    "dept": "Grip/Gaffer",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-58",
+    "name": "Matthews 40x40\" Floppy Cutter - Bottom Hinge",
+    "qty": 2,
+    "dept": "Grip/Gaffer",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-59",
+    "name": "Rosco E-Colour #210 .6 Neutral Density (48\" x 25' Roll)",
+    "qty": "",
+    "dept": "Grip/Gaffer",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-60",
+    "name": "Matthews - 4.5\" Hollywood Grip Head",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "15$",
+    "description": ""
+  },
+  {
+    "id": "equip-61",
+    "name": "Matthews - Hollywood Combo Double Riser Stand (11.3')",
+    "qty": 1,
+    "dept": "Grip",
+    "price": "15$",
+    "description": ""
+  },
+  {
+    "id": "equip-62",
+    "name": "Matthews Hollywood Combo Triple Riser Stand (Silver, 14.8' - 4.5m)",
+    "qty": 1,
+    "dept": "Grip",
+    "price": "15$",
+    "description": ""
+  },
+  {
+    "id": "equip-63",
+    "name": "Matthews Hollywood Baby Jr. Triple Riser Stand",
+    "qty": 1,
+    "dept": "Grip",
+    "price": "15$",
+    "description": ""
+  },
+  {
+    "id": "equip-64",
+    "name": "Impact Folding Wheeled Base Stand (Black/Chrome-plated, 8.5')",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "10$",
+    "description": "https://www.impactstudiolighting.com/product/5117/Impact-LSP_SFB8-Folding-Base-Stand-with-Locking-Wheels-(Chrome,-8.5')"
+  },
+  {
+    "id": "equip-65",
+    "name": "C-Stands",
+    "qty": 8,
+    "dept": "Grip",
+    "price": "15$",
+    "description": ""
+  },
+  {
+    "id": "equip-66",
+    "name": "Manfrotto Light stands",
+    "qty": 4,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-67",
+    "name": "AC Cable 12/3 - 50'",
+    "qty": 4,
+    "dept": "Grip/Gaffer",
+    "price": "15$",
+    "description": ""
+  },
+  {
+    "id": "equip-68",
+    "name": "Aluminium Pipe, API 6061 1-1/4 NPS x Sched40 x 9' (1.5OD)",
+    "qty": 2,
+    "dept": "Grip/Gaffer",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-69",
+    "name": "TETHER TOO PRO TETHERING KIT - AERO MA (support for connected photoshoot camera)",
+    "qty": 1,
+    "dept": "Grip/Gaffer",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-70",
+    "name": "750 baby base plate",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-71",
+    "name": "2k baby base plate",
+    "qty": 2,
+    "dept": "Grip",
+    "price": "5$",
+    "description": ""
+  },
+  {
+    "id": "equip-72",
+    "name": "Module 8 Tuner L1 - Super Baltar (RF)",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "25$",
+    "description": "MODIFIER adapter RF to EF - https://www.shopmoment.com/pages/module-8-tuners"
+  },
+  {
+    "id": "equip-73",
+    "name": "Module 8 Tuner L2 - K35 (RF)",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "25$",
+    "description": "MODIFIER adapter RF to EF - https://www.shopmoment.com/pages/module-8-tuners"
+  },
+  {
+    "id": "equip-74",
+    "name": "Canon 28-70 f.2 RF",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "50$",
+    "description": ""
+  },
+  {
+    "id": "equip-75",
+    "name": "Sigma 35mm ART 1.8",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "25$",
+    "description": ""
+  },
+  {
+    "id": "equip-76",
+    "name": "Sigma 18mm ART",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "25$",
+    "description": ""
+  },
+  {
+    "id": "equip-77",
+    "name": "Rokinon 14mm T 3.1",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "20$",
+    "description": ""
+  },
+  {
+    "id": "equip-78",
+    "name": "Leica Lens kit 28-35-50-60macro,80,90mm",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-79",
+    "name": "Leica R 28mm 2.8 Elmarit - CineMod - Canon EF",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": "Cinemod - Canon EF"
+  },
+  {
+    "id": "equip-80",
+    "name": "Leica R 35mm 2.8 Elmarit - CineMod - Canon EF",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-81",
+    "name": "Leica R 50mm 1.4 Summilux - CineMod - Canon EF",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-82",
+    "name": "Leica R 60mm MACRO 2.8 Elmarit - CineMod - Canon EF",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-83",
+    "name": "Leica R 80mm 1.4 Summilux - Rehoused - Canon EF",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-84",
+    "name": "Leica R 90mm 2 Summicron - CineMod - Canon EF",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": ""
+  },
+  {
+    "id": "equip-85",
+    "name": "ISCO 2x anamorphic lens (adapteur)",
+    "qty": 1,
+    "dept": "Lentilles",
+    "price": "-",
+    "description": "Modded avec tripod mount ring pour ride/avec Single Focus V4"
+  },
+  {
+    "id": "equip-86",
+    "name": "Aputure XT26",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "600$",
+    "description": ""
+  },
+  {
+    "id": "equip-87",
+    "name": "Aputure Motorized F14 Fresnel Pour XT26",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "200$",
+    "description": ""
+  },
+  {
+    "id": "equip-88",
+    "name": "Aputure Spotlight Max Kit 36 degrés",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "150$",
+    "description": ""
+  },
+  {
+    "id": "equip-89",
+    "name": "Aputure Spotlight 19 degrés",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "50$",
+    "description": ""
+  },
+  {
+    "id": "equip-90",
+    "name": "Aputure 1200D",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "300$",
+    "description": ""
+  },
+  {
+    "id": "equip-91",
+    "name": "Aputure Nova p300C",
+    "qty": 2,
+    "dept": "Lumières",
+    "price": "250$",
+    "description": ""
+  },
+  {
+    "id": "equip-92",
+    "name": "Aputure 600D Pro",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "200$",
+    "description": ""
+  },
+  {
+    "id": "equip-93",
+    "name": "Aputure 300D Mk II",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "100$",
+    "description": ""
+  },
+  {
+    "id": "equip-94",
+    "name": "Amaran T4C (RGB)",
+    "qty": 2,
+    "dept": "Lumières",
+    "price": "40$",
+    "description": ""
+  },
+  {
+    "id": "equip-95",
+    "name": "Amaran T2C ( RGB)",
+    "qty": 2,
+    "dept": "Lumières",
+    "price": "30$",
+    "description": ""
+  },
+  {
+    "id": "equip-96",
+    "name": "Amaran F22c (RGB)",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "80$",
+    "description": ""
+  },
+  {
+    "id": "equip-97",
+    "name": "Amaran 300C (RGBWW)",
+    "qty": 2,
+    "dept": "Lumières",
+    "price": "50$",
+    "description": ""
+  },
+  {
+    "id": "equip-98",
+    "name": "Aputure ampoules B7C",
+    "qty": 4,
+    "dept": "Lumières",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-99",
+    "name": "Aputure MC kit+ soft + egg crate",
+    "qty": 5,
+    "dept": "Lumières",
+    "price": "40$",
+    "description": ""
+  },
+  {
+    "id": "equip-100",
+    "name": "Aputure Light Dome 150 Softbox (5ft)",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "40$",
+    "description": ""
+  },
+  {
+    "id": "equip-101",
+    "name": "Aputure Lanterne  90",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "25$",
+    "description": ""
+  },
+  {
+    "id": "equip-102",
+    "name": "Aputure Lightdome + egg crate",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "25$",
+    "description": ""
+  },
+  {
+    "id": "equip-103",
+    "name": "Aputure lightbox 30120 12x48''",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "25$",
+    "description": ""
+  },
+  {
+    "id": "equip-104",
+    "name": "Aputure Space soft",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-105",
+    "name": "Aputure F10 Barndoors for LS 600d Fresnel Attachment",
+    "qty": 2,
+    "dept": "Lumières",
+    "price": "20$",
+    "description": ""
+  },
+  {
+    "id": "equip-106",
+    "name": "Aputure Fresnel Attachment LS 600d",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-107",
+    "name": "Aputure Softbox for P300c LED Panel x 2",
+    "qty": 2,
+    "dept": "Lumières",
+    "price": "10$",
+    "description": ""
+  },
+  {
+    "id": "equip-108",
+    "name": "Aputure Fresnel 2X Attachment x 2",
+    "qty": 2,
+    "dept": "Lumières",
+    "price": "15$",
+    "description": ""
+  },
+  {
+    "id": "equip-109",
+    "name": "Aputure Barndoors for Nova P300c LED Panel",
+    "qty": 1,
+    "dept": "Lumières",
+    "price": "10$",
+    "description": ""
+  }
+]

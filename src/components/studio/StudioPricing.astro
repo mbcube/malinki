@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import StudioPricingCards from "@/components/studio/islands/StudioPricingCards";
 
 interface Props {
@@ -7,26 +7,25 @@ interface Props {
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
 
 const contactHref = `/${lang === "en" ? "en/" : ""}contact`;
 
 const cards = [
   {
-    title: t("studio.pricing.plan_4h_title") as string,
-    price: t("studio.pricing.plan_4h_price") as string,
-    ctaLabel: t("studio.pricing.book_now") as string,
-    
+    title: st.pricing_plan_4h_title,
+    price: st.pricing_plan_4h_price,
+    ctaLabel: st.pricing_book_now,
   },
   {
-    title: t("studio.pricing.plan_8h_title") as string,
-    price: t("studio.pricing.plan_8h_price") as string,
-    ctaLabel: t("studio.pricing.book_now") as string,
+    title: st.pricing_plan_8h_title,
+    price: st.pricing_plan_8h_price,
+    ctaLabel: st.pricing_book_now,
   },
   {
-    title: t("studio.pricing.plan_creative_title") as string,
-    description: t("studio.pricing.plan_creative_desc") as string,
-    ctaLabel: t("studio.pricing.contact_us") as string,
+    title: st.pricing_plan_creative_title,
+    description: st.pricing_plan_creative_desc,
+    ctaLabel: st.pricing_contact_us,
     ctaHref: contactHref,
   },
 ];
@@ -38,10 +37,10 @@ const cards = [
     <!-- Heading -->
     <div class="flex flex-col gap-4 md:gap-6 items-center text-center">
       <h2 class="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white">
-        {t("studio.pricing.title")}
+        {st.pricing_title}
       </h2>
       <p class="text-[1rem] font-medium leading-[1.2] text-white/80">
-        {t("studio.pricing.subtitle")}
+        {st.pricing_subtitle}
       </p>
     </div>
 

@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import asterxPlayToWin from "@/images/asterx-play-to-win-02-malinki-pierre-peladeau-scholarship-2023_compressed.webp";
 import operaPreOpera from "@/images/opera-de-montreal-pre-opera-web-malinki-2024_compressed.webp";
 import erikaGagne from "@/images/erika-gagne-ddmg_compressed.webp";
@@ -24,15 +24,14 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
-
-const pageTitle = t("contenu_de_marque.title");
+const { data: m } = await getEntry("contenu-de-marque", currentLang);
+const { data: seo } = await getEntry("seo", currentLang);
 
 const serviceLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: t("seo.contenu_de_marque.title"),
-  description: t("seo.contenu_de_marque.description"),
+  name: seo.contenu_de_marque_title,
+  description: seo.contenu_de_marque_description,
   provider: {
     "@type": "Organization",
     name: "Malinki",
@@ -85,8 +84,8 @@ import Metadata from "@/components/shared/Metadata.astro";
   <head>
     <Metadata
       lang={currentLang}
-      title={t("seo.contenu_de_marque.title")}
-      description={t("seo.contenu_de_marque.description")}
+      title={seo.contenu_de_marque_title}
+      description={seo.contenu_de_marque_description}
       canonicalPath="/contenu-de-marque"
       jsonLd={serviceLd}
     />
@@ -107,7 +106,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             <p
               class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#083e44] mb-8 leading-tight"
             >
-              {t("contenu_de_marque.title")}
+              {m.title}
             </p>
           </div>
           <div
@@ -116,7 +115,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             <div class="w-full">
               <Image
                 src={pageConfig.images.sidebar}
-                alt={t("contenu_de_marque.sidebar_image_alt")}
+                alt={m.sidebar_image_alt}
                 width={2400}
                 height={1800}
                 class="rounded-lg mb-8 w-full object-cover"
@@ -127,19 +126,19 @@ import Metadata from "@/components/shared/Metadata.astro";
               <div
                 class="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-medium mb-8"
               >
-                {t("contenu_de_marque.description_1")}
+                {m.description_1}
               </div>
               <div
                 class="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-medium mb-8"
               >
-                {t("contenu_de_marque.description_2")}
+                {m.description_2}
               </div>
               <a
                 href={pageConfig.links.cta}
                 class="inline-block text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
                 style="background-color: #083e44;"
               >
-                {t("contenu_de_marque.cta_text")}
+                {m.cta_text}
               </a>
             </div>
           </div>
@@ -152,7 +151,7 @@ import Metadata from "@/components/shared/Metadata.astro";
           <div class="w-full lg:hidden">
             <Image
               src={pageConfig.images.main}
-              alt={t("contenu_de_marque.main_image_alt")}
+                alt={m.main_image_alt}
               width={2400}
               height={1800}
               class="w-full rounded-lg mt-6 object-cover"
@@ -166,7 +165,7 @@ import Metadata from "@/components/shared/Metadata.astro";
               <p
                 class="text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl font-medium mb-6 mt-0"
               >
-                {t("contenu_de_marque.testimonial_text")}
+                {m.testimonial_text}
               </p>
             </div>
             <div
@@ -174,7 +173,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             >
               <Image
                 src={pageConfig.images.testimonial1}
-                alt={t("contenu_de_marque.testimonial_image_alt")}
+                alt={m.testimonial_image_alt}
                 width={1800}
                 height={1800}
                 class="w-20 h-20 2xl:w-40 2xl:h-40 object-cover rounded-full md:ml-10"
@@ -184,9 +183,9 @@ import Metadata from "@/components/shared/Metadata.astro";
                 class="mt-2 md:mt-0 text-lg md:text-xl xl:text-xl 2xl:text-2xl text-[#083e44] flex flex-col justify-center"
               >
                 <p class="m-0">
-                  <strong>{t("contenu_de_marque.testimonial_author")}</strong>
+                  <strong>{m.testimonial_author}</strong>
                   <br />
-                  {t("contenu_de_marque.testimonial_role")}
+                  {m.testimonial_role}
                 </p>
               </div>
             </div>
@@ -194,7 +193,7 @@ import Metadata from "@/components/shared/Metadata.astro";
           <div class="w-1/2 hidden lg:block">
             <Image
               src={pageConfig.images.main}
-              alt={t("contenu_de_marque.main_image_alt")}
+              alt={m.main_image_alt}
               width={2400}
               height={1800}
               class="w-full rounded-lg mt-6 object-cover"
@@ -210,7 +209,7 @@ import Metadata from "@/components/shared/Metadata.astro";
           <p
             class="pt-5 text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase mb-6 col-span-2 text-[#083e44]"
           >
-            {t("contenu_de_marque.prods_title")}
+            {m.prods_title}
           </p>
           <div
             class="w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 mb-8 mt-8"
@@ -219,48 +218,48 @@ import Metadata from "@/components/shared/Metadata.astro";
               <p
                 class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl font-extrabold mb-1 uppercase text-[#083e44]"
               >
-                {t("contenu_de_marque.prods_subtitle_1")}
+                {m.prods_subtitle_1}
               </p>
               <p
                 class="text-base md:text-lg xl:text-xl 2xl:text-2xl font-medium"
               >
-                {t("contenu_de_marque.prods_text_1")}
+                {m.prods_text_1}
               </p>
             </div>
             <div>
               <p
                 class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl font-extrabold mb-1 uppercase text-[#083e44]"
               >
-                {t("contenu_de_marque.prods_subtitle_2")}
+                {m.prods_subtitle_2}
               </p>
               <p
                 class="text-base md:text-lg xl:text-xl 2xl:text-2xl font-medium"
               >
-                {t("contenu_de_marque.prods_text_2")}
+                {m.prods_text_2}
               </p>
             </div>
             <div>
               <p
                 class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl font-extrabold mb-1 uppercase text-[#083e44]"
               >
-                {t("contenu_de_marque.prods_subtitle_3")}
+                {m.prods_subtitle_3}
               </p>
               <p
                 class="text-base md:text-lg xl:text-xl 2xl:text-2xl font-medium"
               >
-                {t("contenu_de_marque.prods_text_3")}
+                {m.prods_text_3}
               </p>
             </div>
             <div>
               <p
                 class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl font-extrabold mb-1 uppercase text-[#083e44]"
               >
-                {t("contenu_de_marque.prods_subtitle_4")}
+                {m.prods_subtitle_4}
               </p>
               <p
                 class="text-base md:text-lg xl:text-xl 2xl:text-2xl font-medium"
               >
-                {t("contenu_de_marque.prods_text_4")}
+                {m.prods_text_4}
               </p>
             </div>
           </div>
@@ -269,7 +268,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             class="inline-block text-white font-extrabold text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 md:px-8 py-3 md:py-6 rounded-lg shadow transition-colors duration-200 uppercase tracking-wide"
             style="background-color: #083e44;"
           >
-            {t("contenu_de_marque.prods_button_text")}
+            {m.prods_button_text}
           </a>
         </div>
 
@@ -279,7 +278,7 @@ import Metadata from "@/components/shared/Metadata.astro";
         >
           <Image
             src={pageConfig.images.clientsDesktop}
-            alt={t("production_publicitaire.clients_image_alt")}
+            alt={m.clients_image_alt}
             width={2400}
             height={2400}
             class="w-full hidden lg:block h-full rounded-sm"
@@ -287,7 +286,7 @@ import Metadata from "@/components/shared/Metadata.astro";
           />
           <Image
             src={pageConfig.images.clientsMobile}
-            alt={t("production_publicitaire.clients_image_alt")}
+            alt={m.clients_image_alt}
             width={2400}
             height={2400}
             class="w-full block lg:hidden h-full rounded-sm"
@@ -302,7 +301,7 @@ import Metadata from "@/components/shared/Metadata.astro";
           <p
             class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44] mb-6"
           >
-            {t("contenu_de_marque.productions_title")}
+            {m.productions_title}
           </p>
           <div
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
@@ -334,7 +333,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             >
               <Image
                 src={pageConfig.images.testimonial2}
-                alt={t("contenu_de_marque.testimonial_image_alt_2")}
+                alt={m.testimonial_image_alt_2}
                 width={960}
                 height={960}
                 class="w-40 h-40 2xl:w-60 2xl:h-60 object-cover rounded-full md:ml-10"
@@ -345,17 +344,17 @@ import Metadata from "@/components/shared/Metadata.astro";
               <p
                 class="text-3xl md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold mb-6 mt-0 text-[#083e44]"
               >
-                {t("contenu_de_marque.testimonial_text_2")}
+                {m.testimonial_text_2}
               </p>
               <div
                 class="mt-2 md:mt-0 text-xl md:text-lg xl:text-xl 2xl:text-2xl text-[#083e44] font-bold"
               >
-                {t("contenu_de_marque.testimonial_author_2")}
+                {m.testimonial_author_2}
               </div>
               <div
                 class="mt-2 md:mt-0 text-lg md:text-base xl:text-lg 2xl:text-xl"
               >
-                {t("contenu_de_marque.testimonial_role_2")}
+                {m.testimonial_role_2}
               </div>
             </div>
           </div>
@@ -368,12 +367,12 @@ import Metadata from "@/components/shared/Metadata.astro";
           <p
             class="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold uppercase text-[#083e44]"
           >
-            {t("contenu_de_marque.bts_title")}
+            {m.bts_title}
           </p>
           <p
             class="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-medium mb-8 w-3/4"
           >
-            {t("contenu_de_marque.bts_description")}
+            {m.bts_description}
           </p>
           <a
             href={pageConfig.links.demoReel}
@@ -381,7 +380,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             class="mt-4 inline-block text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 md:px-8 py-3 md:py-4 rounded-lg shadow transition-colors duration-200 uppercase tracking-wide"
             style="background-color: #083e44;"
           >
-            {t("contenu_de_marque.bts_button_text")}
+            {m.bts_button_text}
           </a>
         </div>
 
@@ -396,7 +395,7 @@ import Metadata from "@/components/shared/Metadata.astro";
                 .map((image, index) => (
                   <Image
                     src={image}
-                    alt={t(`contenu_de_marque.row_image_${index + 1}_alt`)}
+                    alt={[m.row_image_1_alt, m.row_image_2_alt, m.row_image_3_alt, m.row_image_4_alt][index]}
                     width={1800}
                     height={1800}
                     class="aspect-square rounded-lg object-cover"
@@ -412,7 +411,7 @@ import Metadata from "@/components/shared/Metadata.astro";
                 .map((image, index) => (
                   <Image
                     src={image}
-                    alt={t(`contenu_de_marque.row_image_${index + 5}_alt`)}
+                    alt={[m.row_image_5_alt, m.row_image_6_alt, m.row_image_7_alt][index]}
                     width={1800}
                     height={1200}
                     class="aspect-video rounded-lg object-cover mx-auto"
@@ -431,7 +430,7 @@ import Metadata from "@/components/shared/Metadata.astro";
             <p
               class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl mt-6 font-extrabold"
             >
-              {t("contenu_de_marque.contact_cta_text")}
+              {m.contact_cta_text}
             </p>
             <div class="mt-10">
               <a
@@ -439,7 +438,7 @@ import Metadata from "@/components/shared/Metadata.astro";
                 class="text-lg md:text-xl xl:text-2xl 2xl:text-3xl inline-block text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-sm transition-colors duration-200 uppercase tracking-wide"
                 style="background-color: #083e44;"
               >
-                {t("contenu_de_marque.contact_cta_button_text")}
+                {m.contact_cta_button_text}
               </a>
             </div>
           </div>
