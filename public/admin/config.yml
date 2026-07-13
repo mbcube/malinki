@@ -7,7 +7,7 @@ media_folder: src/images
 public_folder: /src/images
 
 i18n:
-  structure: multiple_files
+  structure: multiple_folders
   locales: [fr, en]
   default_locale: fr
 
@@ -21,7 +21,6 @@ collections:
     extension: md
     format: frontmatter
     i18n: true
-    path: "{{slug}}/{{locale}}"
     identifier_field: slug
     summary: "{{title}}"
     fields:

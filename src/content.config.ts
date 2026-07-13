@@ -375,11 +375,12 @@ const projectDetailSchema = z.object({
 
 const projectsCollection = defineCollection({
   loader: glob({
+    // Files live at src/content/projects/<locale>/<slug>.md
     pattern: "*/*.md",
     base: "./src/content/projects",
     // Prevent the `slug` frontmatter field from overriding the file-path-based ID.
-    // Without this, both fr.md and en.md for a project get the same ID (the slug value),
-    // causing one to overwrite the other in the content store.
+    // Without this, both fr/<slug>.md and en/<slug>.md for a project get the same ID
+    // (the slug value), causing one to overwrite the other in the content store.
     generateId: ({ entry }) => entry.replace(/\.md$/, ""),
   }),
   schema: z.object({

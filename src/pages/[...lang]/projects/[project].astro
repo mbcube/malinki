@@ -12,8 +12,8 @@ export async function getStaticPaths() {
   // Collect unique slugs from the "fr" locale entries only to generate one path per slug per language
   const slugs = [...new Set(
     allEntries
-      .filter((e) => e.id.endsWith("/fr"))
-      .map((e) => e.id.replace(/\/fr$/, ""))
+      .filter((e) => e.id.startsWith("fr/"))
+      .map((e) => e.id.replace(/^fr\//, ""))
       .filter(Boolean)
   )];
 
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 const { lang, project: projectSlug } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
 
-const projectEntry = await getEntry("projects", `${projectSlug}/${currentLang}`);
+const projectEntry = await getEntry("projects", `${currentLang}/${projectSlug}`);
 const { data: labels } = await getEntry("project-labels", currentLang)!;
 const { data: seo } = await getEntry("seo", currentLang)!;
 
@@ -233,8 +233,8 @@ function getProjectImage(filename: string) {
 
       <!-- Behind the Scenes Photos -->
       {
-        project.behindTheScenes &&  project.behindTheScenes.portrait?.length && project.behindTheScenes.landscape?.length &&
-        (project.behindTheScenes.portrait?.length > 0 || project.behindTheScenes.landscape?.length > 0) && (
+        project.behindTheScenes && 
+        (project.behindTheScenes.portrait?.length! > 0 || project.behindTheScenes.landscape?.length! > 0) && (
           <div class="mb-12 md:mb-16">
             <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
               {labels.behind_the_scenes}
