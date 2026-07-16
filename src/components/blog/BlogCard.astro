@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import { formatPublishedAt } from "@/lib/blog";
+
+interface Props {
+  slug: string;
+  title: string;
+  excerpt: string;
+  coverImage?: string;
+  publishedAt?: string;
+  lang: "fr" | "en";
+}
+
+const { slug, title, excerpt, coverImage, publishedAt, lang } = Astro.props;
+
+const postUrl = lang === "en" ? `/en/blog/${slug}` : `/blog/${slug}`;
+
+const imageSrc = coverImage ?? "/images/blog/default.jpg";
+
+const formattedDate = formatPublishedAt(publishedAt, lang);
+---
+
+<a
+  href={postUrl}
+  class="group flex flex-col rounded-[24px] overflow-hidden bg-white hover:shadow-lg transition-shadow duration-200"
+>
+  <div class="relative w-full aspect-[3/2] overflow-hidden">
+    {
+      imageSrc ? (
+        <Image
+          src={imageSrc}
+          alt={title}
+          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          width={1200}
+          height={800}
+          loading="lazy"
+        />
+      ) : (
+        <div class="w-full h-full bg-[#083D45]/10" />
+      )
+    }
+  </div>
+  <div class="flex flex-col gap-2 p-6">
+    {
+      formattedDate && (
+        <p class="font-['Montserrat'] text-[12px] font-medium leading-[1.2] text-[#083D45]/60 uppercase">
+          {formattedDate}
+        </p>
+      )
+    }
+    <h3
+      class="font-['Montserrat'] text-[20px] md:text-[24px] font-bold leading-none uppercase text-[#083D45]"
+    >
+      {title}
+    </h3>
+    <p
+      class="font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]/80"
+    >
+      {excerpt}
+    </p>
+  </div>
+</a>

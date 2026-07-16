@@ -1,0 +1,25 @@
+---
+import { getEntry } from "astro:content";
+
+interface Props {
+  lang: "fr" | "en";
+}
+
+const { lang } = Astro.props;
+const { data: bp } = await getEntry("blog-page", lang);
+---
+
+<section class="w-full pt-20 lg:pt-32 pb-8 px-6 lg:px-10">
+  <div class="max-w-[1000px]">
+    <h1
+      class="font-['Montserrat'] text-[3rem] md:text-[4.5rem] xl:text-[6rem] font-bold leading-none uppercase text-[#083D45]"
+    >
+      {bp.hero_title}
+    </h1>
+    <p
+      class="font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45]/80 mt-6 max-w-[640px]"
+    >
+      {bp.hero_subtitle}
+    </p>
+  </div>
+</section>

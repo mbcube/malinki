@@ -32,6 +32,7 @@ const headerCollection = defineCollection({
     menu_services: z.string(),
     menu_team: z.string(),
     menu_studio: z.string(),
+    menu_blog: z.string(),
   }),
 });
 
@@ -200,6 +201,19 @@ const contenuVerticalCollection = defineCollection({
   }),
 });
 
+const blogPageCollection = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/content/blog-page" }),
+  schema: z.object({
+    hero_title: z.string(),
+    hero_subtitle: z.string(),
+    empty_state_title: z.string(),
+    empty_state_text: z.string(),
+    cta_text: z.string(),
+    back_to_blog: z.string(),
+    not_found: z.string(),
+  }),
+});
+
 const videoClipsCollection = defineCollection({
   loader: glob({ pattern: "*.md", base: "./src/content/video-clips" }),
   schema: z.object({
@@ -357,6 +371,8 @@ const seoCollection = defineCollection({
     contact_title: z.string(),
     contact_description: z.string(),
     project_title_suffix: z.string(),
+    blog_title: z.string(),
+    blog_description: z.string(),
   }),
 });
 
@@ -400,6 +416,26 @@ const projectsCollection = defineCollection({
       })
       .optional(),
     galleryImages: z.array(z.string()).optional(),
+    publishedAt: z.union([z.string(), z.date()]).transform(v => typeof v === 'string' ? v : v.toISOString().split('T')[0]).optional(),
+  }),
+});
+
+// ─── Blog (folder collection: src/content/blog/<locale>/<slug>.md) ──────────
+
+const blogCollection = defineCollection({
+  loader: glob({
+    // Files live at src/content/blog/<locale>/<slug>.md
+    pattern: "*/*.md",
+    base: "./src/content/blog",
+    // Prevent the `slug` frontmatter field from overriding the file-path-based ID.
+    generateId: ({ entry }) => entry.replace(/\.md$/, ""),
+  }),
+  schema: z.object({
+    slug: z.string(),
+    title: z.string(),
+    excerpt: z.string(),
+    coverImage: z.string().optional(),
+    author: z.string().optional(),
     publishedAt: z.union([z.string(), z.date()]).transform(v => typeof v === 'string' ? v : v.toISOString().split('T')[0]).optional(),
   }),
 });
@@ -458,4 +494,6 @@ export const collections = {
   projects: projectsCollection,
   "projects-grid": projectsGridCollection,
   equipment: equipmentCollection,
+  "blog-page": blogPageCollection,
+  blog: blogCollection,
 };

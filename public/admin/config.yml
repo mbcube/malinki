@@ -131,6 +131,44 @@ collections:
           i18n: duplicate,
         }
 
+  # ─── Blog ─────────────────────────────────────────────────────────────────
+  - name: blog
+    label: Blog Posts
+    icon: article
+    folder: src/content/blog
+    create: true
+    extension: md
+    format: frontmatter
+    i18n: true
+    identifier_field: slug
+    summary: "{{slug}}"
+    fields:
+      - { name: slug, label: Slug, widget: string, i18n: duplicate }
+      - { name: title, label: Title, widget: string, i18n: true }
+      - { name: excerpt, label: Excerpt, widget: text, i18n: true }
+      - {
+          name: coverImage,
+          label: Cover Image Filename,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          name: author,
+          label: Author,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          name: publishedAt,
+          label: Published At,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+        }
+      - { name: body, label: Body, widget: markdown, i18n: true }
+
 singletons:
   # ─── Pages ────────────────────────────────────────────────────────────────
   - name: general
@@ -204,6 +242,7 @@ singletons:
         }
       - { name: menu_team, label: Team Link, widget: string, i18n: true }
       - { name: menu_studio, label: Studio Link, widget: string, i18n: true }
+      - { name: menu_blog, label: Blog Link, widget: string, i18n: true }
 
   - name: seo
     label: SEO
@@ -282,6 +321,13 @@ singletons:
           name: project_title_suffix,
           label: Project Title Suffix,
           widget: string,
+          i18n: true,
+        }
+      - { name: blog_title, label: Blog Title, widget: string, i18n: true }
+      - {
+          name: blog_description,
+          label: Blog Description,
+          widget: text,
           i18n: true,
         }
 
@@ -1001,6 +1047,40 @@ singletons:
           widget: string,
           i18n: true,
         }
+
+  - name: blog-page
+    label: Blog Page
+    icon: article
+    file: src/content/blog-page/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: hero_title, label: Hero Title, widget: string, i18n: true }
+      - {
+          name: hero_subtitle,
+          label: Hero Subtitle,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: empty_state_title,
+          label: Empty State Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: empty_state_text,
+          label: Empty State Text,
+          widget: text,
+          i18n: true,
+        }
+      - { name: cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: back_to_blog,
+          label: Back to Blog Link,
+          widget: string,
+          i18n: true,
+        }
+      - { name: not_found, label: Not Found Message, widget: string, i18n: true }
 
   - name: studio
     label: Studio Page

@@ -12,4 +12,6 @@ video_clips_description: Malinki produit des vidéoclips pour artistes de divers
 contact_title: "Contactez-nous | Malinki — Production vidéo à Montréal"
 contact_description: "Parlons de votre projet vidéo. Contactez Malinki pour discuter de votre prochaine production publicitaire, contenu de marque ou vidéoclip."
 project_title_suffix: " | Malinki"
+blog_title: "Blogue | Malinki — Production vidéo à Montréal"
+blog_description: "Coulisses, inspirations et réflexions sur la production vidéo, la création de contenu et notre métier au quotidien, par l'équipe Malinki."
 ---

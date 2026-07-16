@@ -12,4 +12,6 @@ video_clips_description: Malinki produces music videos for artists across variou
 contact_title: "Contact Us | Malinki — Video Production in Montreal"
 contact_description: "Let's talk about your video project. Contact Malinki to discuss your next advertising production, brand content or music video."
 project_title_suffix: " | Malinki"
+blog_title: "Blog | Malinki — Video Production in Montreal"
+blog_description: "Behind the scenes, inspiration and thoughts on video production, content creation and our craft, from the Malinki team."
 ---

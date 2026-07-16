@@ -1,0 +1,152 @@
+---
+import "@/styles/global.css";
+import Header from "@/components/shared/Header.astro";
+import Footer from "@/components/shared/Footer.astro";
+import Metadata from "@/components/shared/Metadata.astro";
+import { Image } from "astro:assets";
+import { getCollection, getEntry, render } from "astro:content";
+import { formatPublishedAt } from "@/lib/blog";
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection("blog");
+  // Collect unique slugs from the "fr" locale entries only to generate one path per slug per language
+  const slugs = [
+    ...new Set(
+      allEntries
+        .filter((e) => e.id.startsWith("fr/"))
+        .map((e) => e.id.replace(/^fr\//, ""))
+        .filter(Boolean),
+    ),
+  ];
+
+  const paths = [];
+  for (const slug of slugs) {
+    paths.push({ params: { lang: undefined, post: slug } });
+    paths.push({ params: { lang: "en", post: slug } });
+  }
+  return paths;
+}
+
+const { lang, post: postSlug } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+
+const postEntry = await getEntry("blog", `${currentLang}/${postSlug}`);
+const { data: bp } = await getEntry("blog-page", currentLang)!;
+const { data: seo } = await getEntry("seo", currentLang)!;
+
+if (!postEntry) {
+  console.log("Blog post not found", postSlug, currentLang);
+  return Astro.redirect("/404");
+}
+
+const post = postEntry.data;
+const { Content } = await render(postEntry);
+const seoTitle = `${post.title}${seo.project_title_suffix}`;
+
+const coverImage = post.coverImage ?? "/images/blog/default.jpg";
+
+const formattedDate = formatPublishedAt(post.publishedAt, currentLang);
+
+const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
+---
+
+<html lang={currentLang} class="h-full">
+  <head>
+    <Metadata
+      lang={currentLang}
+      title={seoTitle}
+      description={post.excerpt}
+      canonicalPath={`/blog/${postSlug}`}
+    />
+  </head>
+  <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
+    <Header lang={currentLang} />
+
+    <main
+      class="w-full flex flex-col 2xl:max-w-[1600px] mx-auto px-6 py-24 md:py-20"
+    >
+      <article class="w-full md:w-4/5 lg:w-3/5 mx-auto">
+        <!-- Post Header -->
+        <div class="mb-8 md:mb-12">
+          {
+            formattedDate && (
+              <p class="font-['Montserrat'] text-[14px] font-medium leading-[1.2] text-[#083D45]/60 uppercase mb-4">
+                {formattedDate}
+                {post.author && ` — ${post.author}`}
+              </p>
+            )
+          }
+          <h1
+            class="font-['Montserrat'] text-[32px] md:text-[44px] lg:text-[52px] font-bold leading-none uppercase text-[#083D45] mb-6"
+          >
+            {post.title}
+          </h1>
+          <p
+            class="font-['Montserrat'] text-[16px] md:text-[18px] font-regular text-[#083D45]"
+          >
+            {post.excerpt}
+          </p>
+        </div>
+
+        <!-- Cover Image -->
+        {
+          coverImage && (
+            <div class="w-full rounded-lg overflow-hidden mb-8 md:mb-12">
+              <Image
+                src={coverImage}
+                alt={post.title}
+                class="w-full h-auto object-cover"
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 800px"
+                loading="eager"
+              />
+            </div>
+          )
+        }
+
+        <!-- Post Body -->
+        <div
+          class="prose-blog font-['Montserrat'] text-[16px] md:text-[18px] leading-[1.5] text-[#083D45]"
+        >
+          <Content />
+        </div>
+      </article>
+
+      <!-- Back to Blog Button -->
+      <div class="mt-12 md:mt-16 text-center">
+        <a
+          href={backUrl}
+          class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
+        >
+          {bp.back_to_blog}
+        </a>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .prose-blog :global(p) {
+    margin-bottom: 1.25em;
+    white-space: pre-line;
+  }
+  .prose-blog :global(a) {
+    color: #083d45;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .prose-blog :global(strong) {
+    font-weight: 700;
+  }
+  .prose-blog :global(iframe) {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.25em;
+  }
+</style>
