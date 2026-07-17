@@ -5,7 +5,7 @@ import Footer from "@/components/shared/Footer.astro";
 import Metadata from "@/components/shared/Metadata.astro";
 import { Image } from "astro:assets";
 import { getCollection, getEntry, render } from "astro:content";
-import { formatPublishedAt } from "@/lib/blog";
+import { formatPublishedAt, getCategoryLabel } from "@/lib/blog";
 
 export async function getStaticPaths() {
   const allEntries = await getCollection("blog");
@@ -47,6 +47,9 @@ const coverImage = post.coverImage ?? "/images/blog/default.jpg";
 
 const formattedDate = formatPublishedAt(post.publishedAt, currentLang);
 
+const categories = (await getCollection("blog-categories")).map((c) => c.data);
+const categoryLabel = getCategoryLabel(categories, post.category, currentLang);
+
 const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
 ---
 
@@ -68,6 +71,13 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
       <article class="w-full md:w-4/5 lg:w-3/5 mx-auto">
         <!-- Post Header -->
         <div class="mb-8 md:mb-12">
+          {
+            categoryLabel && (
+              <p class="font-['Montserrat'] text-[14px] font-semibold leading-[1.2] text-[#083D45]/70 uppercase mb-2">
+                {categoryLabel}
+              </p>
+            )
+          }
           {
             formattedDate && (
               <p class="font-['Montserrat'] text-[14px] font-medium leading-[1.2] text-[#083D45]/60 uppercase mb-4">

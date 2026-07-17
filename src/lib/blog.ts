@@ -1,6 +1,12 @@
 import { parseISO, isValid, parse, format } from "date-fns";
 import { fr, enCA } from "date-fns/locale";
 
+export interface BlogCategory {
+  slug: string;
+  fr: string;
+  en: string;
+}
+
 /**
  * Parses a `publishedAt` value that may be an ISO date string (e.g. "2026-06-15")
  * or a French long-form date (e.g. "11 février 2026"). Returns `null` if the
@@ -30,4 +36,19 @@ export function formatPublishedAt(
   return lang === "fr"
     ? format(date, "d MMMM yyyy", { locale: fr })
     : format(date, "MMMM d, yyyy", { locale: enCA });
+}
+
+/**
+ * Looks up the translated label for a category slug. Returns `null` if the
+ * slug doesn't match any known category (e.g. the post has no category yet).
+ */
+export function getCategoryLabel(
+  categories: BlogCategory[],
+  slug: string | undefined | null,
+  lang: "fr" | "en"
+): string | null {
+  if (!slug) return null;
+  const category = categories.find((c) => c.slug === slug);
+  if (!category) return null;
+  return lang === "fr" ? category.fr : category.en;
 }

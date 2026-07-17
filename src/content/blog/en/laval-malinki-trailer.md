@@ -3,6 +3,7 @@ slug: "laval-malinki-trailer"
 title: "Laval and Malinki sign an announcement trailer to attract international productions"
 excerpt: "The City of Laval, in partnership with Tourisme Laval, unveils a promotional trailer aimed at positioning the region as a top choice for filming TV series and international films"
 coverImage: "https://assets.grenier.qc.ca/uploads/images/undefined-50-434720.png"
+category: "commercial-brands"
 author: "null"
 publishedAt: "11 février 2026"
 ---

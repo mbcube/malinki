@@ -437,7 +437,23 @@ const blogCollection = defineCollection({
     coverImage: z.string().optional(),
     author: z.string().optional(),
     publishedAt: z.union([z.string(), z.date()]).transform(v => typeof v === 'string' ? v : v.toISOString().split('T')[0]).optional(),
+    // References a `slug` from the `blog-categories` collection (src/content/blog-categories.json).
+    // Kept as a plain string (not a z.enum) so new categories can be added there without a code change.
+    category: z.string().optional(),
   }),
+});
+
+// ─── Blog Categories (single JSON file, translated at render time) ──────────
+
+const blogCategorySchema = z.object({
+  slug: z.string(),
+  fr: z.string(),
+  en: z.string(),
+});
+
+const blogCategoriesCollection = defineCollection({
+  loader: file("src/content/blog-categories.json"),
+  schema: blogCategorySchema,
 });
 
 // ─── Projects Grid (single JSON file, tagText kept as {fr,en} object) ─────────
@@ -496,4 +512,5 @@ export const collections = {
   equipment: equipmentCollection,
   "blog-page": blogPageCollection,
   blog: blogCollection,
+  "blog-categories": blogCategoriesCollection,
 };

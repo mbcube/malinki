@@ -3,6 +3,7 @@ slug: "naissance-malinki"
 title: "Birth of Malinki, a video production agency"
 excerpt: "Andrew Tchernilevskii and Miroslav Dufresne joined their talents to give birth to Malinki. "
 coverImage: "https://assets.grenier.qc.ca/uploads/images/Logo-Malinki-2024-329531.jpg"
+category: "agency-news"
 author: "null"
 publishedAt: "16 février 2024"
 ---

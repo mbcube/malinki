@@ -3,6 +3,7 @@ slug: "malinki-defi-alcool"
 title: "Malinki brings life to the 28 Days Without Alcohol Challenge in video"
 excerpt: "Malinki signs off on the production of the 28 Days Without Alcohol Challenge video capsules."
 coverImage: "https://assets.grenier.qc.ca/uploads/images/Screengrab-defi28jours-laurence-2025-385625.png"
+category: "social-impact"
 author: "null"
 publishedAt: "21 février 2025"
 ---

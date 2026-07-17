@@ -1,0 +1,91 @@
+---
+import type { BlogCategory } from "@/lib/blog";
+
+interface Props {
+  categories: BlogCategory[];
+  lang: "fr" | "en";
+  allLabel: string;
+}
+
+const { categories, lang, allLabel } = Astro.props;
+---
+
+<div
+  class="flex flex-wrap gap-3 mb-8 md:mb-10"
+  data-blog-filter-bar
+  role="group"
+  aria-label={allLabel}
+>
+  <button
+    type="button"
+    data-filter-value="all"
+    aria-pressed="true"
+    class="filter-pill font-['Montserrat'] text-[14px] font-semibold leading-none px-5 py-3 rounded-full border border-[#083D45] text-[#083D45] transition-colors duration-200 cursor-pointer whitespace-nowrap"
+  >
+    {allLabel}
+  </button>
+  {
+    categories.map((category) => (
+      <button
+        type="button"
+        data-filter-value={category.slug}
+        aria-pressed="false"
+        class="filter-pill font-['Montserrat'] text-[14px] font-semibold leading-none px-5 py-3 rounded-full border border-[#083D45] text-[#083D45] transition-colors duration-200 cursor-pointer whitespace-nowrap"
+      >
+        {lang === "fr" ? category.fr : category.en}
+      </button>
+    ))
+  }
+</div>
+
+<style>
+  .filter-pill[aria-pressed="true"] {
+    background-color: #083d45;
+    color: #fff;
+  }
+
+  .filter-pill[aria-pressed="false"]:hover {
+    background-color: rgba(8, 61, 69, 0.08);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const bar = document.querySelector("[data-blog-filter-bar]");
+    const cards = document.querySelectorAll<HTMLElement>("[data-blog-card]");
+    const emptyState = document.querySelector<HTMLElement>(
+      "[data-blog-empty-state]",
+    );
+    if (!bar) return;
+
+    const buttons = bar.querySelectorAll<HTMLButtonElement>(
+      "[data-filter-value]",
+    );
+
+    function applyFilter(value: string) {
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const matches = value === "all" || card.dataset.category === value;
+        card.classList.toggle("hidden", !matches);
+        if (matches) visibleCount += 1;
+      });
+
+      if (emptyState) {
+        emptyState.style.display = visibleCount === 0 ? "flex" : "none";
+      }
+
+      buttons.forEach((btn) => {
+        btn.setAttribute(
+          "aria-pressed",
+          String(btn.dataset.filterValue === value),
+        );
+      });
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        applyFilter(btn.dataset.filterValue || "all");
+      });
+    });
+  });
+</script>

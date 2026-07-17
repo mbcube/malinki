@@ -3,6 +3,7 @@ slug: "malinki-defi-alcool"
 title: "Malinki donne vie au Défi 28 jours sans alcool en vidéo"
 excerpt: "Malinki signe la réalisation des capsules vidéo du Défi 28 jours sans alcool."
 coverImage: "https://assets.grenier.qc.ca/uploads/images/Screengrab-defi28jours-laurence-2025-385625.png"
+category: "social-impact"
 author: "null"
 publishedAt: "21 février 2025"
 ---

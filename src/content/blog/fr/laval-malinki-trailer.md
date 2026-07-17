@@ -3,6 +3,7 @@ slug: "laval-malinki-trailer"
 title: "Laval et Malinki signent une bande-annonce pour attirer les productions internationales"
 excerpt: "La Ville de Laval, en partenariat avec Tourisme Laval, dévoile une bande-annonce promotionnelle visant à positionner la région comme un territoire de choix pour les tournages de séries télé et de film"
 coverImage: "https://assets.grenier.qc.ca/uploads/images/undefined-50-434720.png"
+category: "commercial-brands"
 author: "null"
 publishedAt: "11 février 2026"
 ---

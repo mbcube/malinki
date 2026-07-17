@@ -153,6 +153,20 @@ collections:
           required: false,
           i18n: duplicate,
         }
+      - name: category
+        label: Category
+        widget: select
+        required: false
+        i18n: duplicate
+        hint: "Manage the list of categories under Blog Categories. New slugs added there must also be added to these options."
+        options:
+          - { label: "Agency News / Nouvelles de l'agence", value: agency-news }
+          - {
+              label: "Commercial & Brands / Commercial et Marques",
+              value: commercial-brands,
+            }
+          - { label: "Arts & Culture / Arts et Culture", value: arts-culture }
+          - { label: "Social Impact / Impact social", value: social-impact }
       - {
           name: author,
           label: Author,
@@ -1683,6 +1697,25 @@ singletons:
                   widget: string,
                   required: false,
                 }
+
+  - name: blog-categories
+    label: Blog Categories
+    icon: category
+    file: src/content/blog-categories.json
+    fields:
+      - name: root
+        label: Categories
+        widget: list
+        summary: "{{fields.slug}}"
+        fields:
+          - {
+              name: slug,
+              label: Slug,
+              widget: string,
+              hint: "Unique, URL-safe identifier (e.g. arts-culture). Also add it to the Category options on the Blog Posts collection.",
+            }
+          - { name: fr, label: French Label, widget: string }
+          - { name: en, label: English Label, widget: string }
 
   - name: equipment
     label: Equipment List

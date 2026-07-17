@@ -3,6 +3,7 @@ slug: "opera-montreal-malinki"
 title: "The Opéra de Montréal and Malinki extend their collaboration"
 excerpt: "The Opéra de Montréal renews its collaboration with Malinki for a fifth consecutive season."
 coverImage: "https://assets.grenier.qc.ca/uploads/images/ODM-Malinki-PreOperaExpress2526-413083.png"
+category: "arts-culture"
 author: "null"
 publishedAt: "11 septembre 2025"
 ---
