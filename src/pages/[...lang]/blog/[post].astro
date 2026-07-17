@@ -70,7 +70,7 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
     >
       <article class="w-full md:w-4/5 lg:w-3/5 mx-auto">
         <!-- Post Header -->
-        <div class="mb-8 md:mb-12">
+        <div class="mb-8 md:mb-12" data-post-reveal>
           {
             categoryLabel && (
               <p class="font-['Montserrat'] text-[14px] font-semibold leading-[1.2] text-[#083D45]/70 uppercase mb-2">
@@ -101,7 +101,10 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
         <!-- Cover Image -->
         {
           coverImage && (
-            <div class="w-full rounded-lg overflow-hidden mb-8 md:mb-12">
+            <div
+              class="w-full rounded-lg overflow-hidden mb-8 md:mb-12"
+              data-post-reveal
+            >
               <Image
                 src={coverImage}
                 alt={post.title}
@@ -118,13 +121,14 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
         <!-- Post Body -->
         <div
           class="prose-blog font-['Montserrat'] text-[16px] md:text-[18px] leading-[1.5] text-[#083D45]"
+          data-post-reveal
         >
           <Content />
         </div>
       </article>
 
       <!-- Back to Blog Button -->
-      <div class="mt-12 md:mt-16 text-center">
+      <div class="mt-12 md:mt-16 text-center" data-post-reveal>
         <a
           href={backUrl}
           class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
@@ -137,6 +141,38 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
     <Footer />
   </body>
 </html>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll<HTMLElement>(
+      "[data-post-reveal]",
+    );
+    if (elements.length === 0) return;
+
+    gsap.set(elements, { opacity: 0, y: 24 });
+
+    elements.forEach((el) => {
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top 90%",
+        once: true,
+        onEnter: () => {
+          gsap.to(el, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+        },
+      });
+    });
+  });
+</script>
 
 <style>
   .prose-blog :global(p) {

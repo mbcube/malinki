@@ -63,7 +63,7 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
     </div>
 
     <!-- Center Section - Desktop Navigation Links -->
-    <div class="hidden md:flex gap-4 md:gap-2 lg:gap-4 items-center justify-center">
+    <div class="hidden lg:flex gap-4 lg:gap-4 items-center justify-center">
       {
         menuLinks.map((link) => (
           <div class="flex items-center justify-center p-1">
@@ -82,13 +82,13 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
     <div class="flex-1 flex items-center justify-end gap-4">
       <div data-lang-switcher>
         <LanguageSwitcher
-          className="flex md:hidden lg:flex"
+          className="flex lg:hidden xl:flex"
           client:load
           currentLang={currentLang}
           currentPath={currentPath}
         />
       </div>
-      <div data-lang-switcher-dropdown class="hidden md:block lg:hidden">
+      <div data-lang-switcher-dropdown class="hidden lg:block xl:hidden">
         <LanguageSwitcherDropdown
           
           client:load
@@ -98,10 +98,10 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
       </div>
 
       <!-- Contact Button (Desktop) -->
-      <div class="hidden md:block">
+      <div class="hidden lg:block">
         <a
           href={contactUrl}
-          class="bg-white flex gap-2 items-center justify-center px-6 md:px-4 lg:px-6 py-2 md:py-1 lg:py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
+          class="bg-white flex gap-2 items-center justify-center px-6 lg:px-6 py-2 lg:py-2 rounded-lg text-[#083D45]! font-semibold text-base hover:bg-[#E6F5F7]! transition-all whitespace-nowrap"
         >
           {h.contact_button}
         </a>
@@ -110,7 +110,7 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
       <!-- Mobile/Tablet Menu Toggle -->
       <button
         type="button"
-        class="md:hidden text-white p-2"
+        class="lg:hidden text-white p-2"
         aria-label="Open menu"
         data-mobile-menu-toggle
       >
@@ -304,8 +304,8 @@ const contactUrl = lang === "en" ? "/en/contact" : "/contact";
     transform: scale(0.8);
   }
 
-  /* Mobile adjustments for scrolled state */
-  @media (max-width: 768px) {
+  /* Mobile/tablet adjustments for scrolled state */
+  @media (max-width: 1023px) {
     .header-template-6.scrolled [data-header-nav] {
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;

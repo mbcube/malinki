@@ -32,23 +32,27 @@ const allLabel = lang === "fr" ? "Tous" : "All";
     posts.length > 0 ? (
       <>
         <BlogFilterBar categories={categories} lang={lang} allLabel={allLabel} />
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          data-blog-grid
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10"
+        >
           {posts.map((post) => (
-            <BlogCard
-              slug={post.slug}
-              title={post.title}
-              excerpt={post.excerpt}
-              coverImage={post.coverImage}
-              publishedAt={post.publishedAt}
-              category={post.category}
-              categoryLabel={getCategoryLabel(categories, post.category, lang)}
-              lang={lang}
-            />
+            <div data-blog-card data-category={post.category} class="h-full">
+              <BlogCard
+                slug={post.slug}
+                title={post.title}
+                excerpt={post.excerpt}
+                coverImage={post.coverImage}
+                publishedAt={post.publishedAt}
+                categoryLabel={getCategoryLabel(categories, post.category, lang)}
+                lang={lang}
+              />
+            </div>
           ))}
         </div>
         <div
           data-blog-empty-state
-          class="flex-col items-center justify-center gap-6 w-full py-20 lg:py-28 border border-[#083D45]/15 rounded-[24px] text-center mt-6"
+          class="flex-col items-center justify-center gap-6 w-full py-20 lg:py-28 border border-[#083D45]/15 rounded-[24px] text-center mt-8"
           style="display: none;"
         >
           <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] font-bold leading-none uppercase text-[#083D45]">
@@ -77,3 +81,39 @@ const allLabel = lang === "fr" ? "Tous" : "All";
     )
   }
 </section>
+
+{
+  posts.length > 0 && (
+    <script>
+      import gsap from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.querySelector("[data-blog-grid]");
+        const cards = document.querySelectorAll<HTMLElement>(
+          "[data-blog-card]",
+        );
+        if (!grid || cards.length === 0) return;
+
+        gsap.set(cards, { opacity: 0, y: 24 });
+
+        ScrollTrigger.create({
+          trigger: grid,
+          start: "top 85%",
+          once: true,
+          onEnter: () => {
+            gsap.to(cards, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              ease: "power2.out",
+              stagger: 0.08,
+            });
+          },
+        });
+      });
+    </script>
+  )
+}

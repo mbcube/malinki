@@ -50,6 +50,8 @@ const { categories, lang, allLabel } = Astro.props;
 </style>
 
 <script>
+  import gsap from "gsap";
+
   document.addEventListener("DOMContentLoaded", () => {
     const bar = document.querySelector("[data-blog-filter-bar]");
     const cards = document.querySelectorAll<HTMLElement>("[data-blog-card]");
@@ -62,16 +64,65 @@ const { categories, lang, allLabel } = Astro.props;
       "[data-filter-value]",
     );
 
-    function applyFilter(value: string) {
-      let visibleCount = 0;
-      cards.forEach((card) => {
-        const matches = value === "all" || card.dataset.category === value;
-        card.classList.toggle("hidden", !matches);
-        if (matches) visibleCount += 1;
-      });
+    let isAnimating = false;
 
-      if (emptyState) {
-        emptyState.style.display = visibleCount === 0 ? "flex" : "none";
+    function applyFilter(value: string) {
+      if (isAnimating) return;
+
+      const visible = Array.from(cards).filter(
+        (card) => !card.classList.contains("hidden"),
+      );
+
+      isAnimating = true;
+
+      function showMatching() {
+        const matching: HTMLElement[] = [];
+
+        cards.forEach((card) => {
+          const matches = value === "all" || card.dataset.category === value;
+          if (matches) {
+            card.classList.remove("hidden");
+            matching.push(card);
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+
+        if (emptyState) {
+          emptyState.style.display = matching.length === 0 ? "flex" : "none";
+        }
+
+        if (matching.length > 0) {
+          gsap.fromTo(
+            matching,
+            { opacity: 0, y: 16 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.45,
+              ease: "power2.out",
+              stagger: 0.06,
+              onComplete: () => {
+                isAnimating = false;
+              },
+            },
+          );
+        } else {
+          isAnimating = false;
+        }
+      }
+
+      if (visible.length > 0) {
+        gsap.to(visible, {
+          opacity: 0,
+          y: -12,
+          duration: 0.25,
+          ease: "power1.in",
+          stagger: 0.03,
+          onComplete: showMatching,
+        });
+      } else {
+        showMatching();
       }
 
       buttons.forEach((btn) => {
