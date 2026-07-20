@@ -1,11 +1,12 @@
 ---
-slug: "naissance-malinki"
-title: "Birth of Malinki, a video production agency"
-excerpt: "Andrew Tchernilevskii and Miroslav Dufresne joined their talents to give birth to Malinki. "
-coverImage: "https://assets.grenier.qc.ca/uploads/images/Logo-Malinki-2024-329531.jpg"
-category: "agency-news"
-author: "null"
-publishedAt: "16 février 2021"
+slug: naissance-malinki
+title: Birth of Malinki, a video production agency
+excerpt: Andrew Tchernilevskii and Miroslav Dufresne joined their talents to give birth to Malinki.
+coverImage: https://assets.grenier.qc.ca/uploads/images/Logo-Malinki-2024-329531.jpg
+category: agency-news
+author: 'null'
+publishedAt: 16 février 2021
+seoOgImage: ''
 ---
 
 Together, with more than 25 years of experience in the audiovisual field, **Andrew Tchernilevskii** and **Miroslav Dufresne** joined their talents to give birth to **[Malinki](https://malinki.ca/)**, an innovative video production agency. Since its launch in 2021, it has produced a wide range of visual projects. Today, Malinki officially unveils its [demo reel](https://vimeo.com/912326021?share=copy), showcasing several of its flagship projects.

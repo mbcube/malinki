@@ -1,14 +1,18 @@
 ---
-slug: "naissance-malinki"
-title: "Naissance de Malinki, une agence de production vidéo"
-excerpt: "Andrew Tchernilevskii et Miroslav Dufresne ont uni leurs talents pour donner naissance à Malinki. "
-coverImage: "https://assets.grenier.qc.ca/uploads/images/Logo-Malinki-2024-329531.jpg"
-category: "agency-news"
-author: "null"
-publishedAt: "16 février 2021"
+slug: naissance-malinki
+title: Le nouveau studio Malinki
+excerpt: Andrew Tchernilevskii et Miroslav Dufresne ont uni leurs talents pour donner naissance à Malinki.
+coverImage: https://assets.grenier.qc.ca/uploads/images/Logo-Malinki-2024-329531.jpg
+coverImageAlt: ''
+category: agency-news
+author: 'null'
+publishedAt: 16 février 2021
+seoTitle: ''
+seoDescription: ''
+seoOgImage: ''
 ---
 
-Cumulant à deux plus de 25 ans d’expérience dans le domaine audiovisuel, **Andrew Tchernilevskii** et **Miroslav Dufresne** ont uni leurs talents pour donner naissance à **[Malinki](https://malinki.ca/)**, une agence de production vidéo innovante. Depuis son inauguration en 2021, elle a réalisé une gamme variée de productions visuelles. Aujourd’hui, Malinki dévoile officiellement son [demo reel](https://vimeo.com/912326021?share=copy), mettant en lumière plusieurs de ses projets emblématiques.
+Cumulant à deux plus de 25 ans d’expérience dans le domaine audiovisuel, **Andrew Tchernilevskii** et **Miroslav Dufresne** ont uni leurs talents pour donner naissance à [**Malinki**](https://malinki.ca/), une agence de production vidéo innovante. Depuis son inauguration en 2021, elle a réalisé une gamme variée de productions visuelles. Aujourd’hui, Malinki dévoile officiellement son [demo reel](https://vimeo.com/912326021?share=copy), mettant en lumière plusieurs de ses projets emblématiques.
 
 ![Malinki](https://assets.grenier.qc.ca/uploads/images/Logo_Malinki_2024-329522.jpg)
 
