@@ -21,7 +21,6 @@ Grâce à ce travail collectif, le public vit une expérience enrichissante, acc
 <iframe src="//www.youtube.com/embed/SzPl_4MoFn0?wmode=transparent" type="text/html" width="480" height="295" frameborder="0" allowfullscreen=""></iframe>
 
 **Crédits :**
-
 _Opéra de Montréal_
 Directrice, marketing & communications : Stéphanie Laichi
 Gestionnaire marketing : Marie-Pier Perron
