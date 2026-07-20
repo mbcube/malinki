@@ -451,8 +451,11 @@ const blogCategorySchema = z.object({
   en: z.string(),
 });
 
+// Decap CMS list widgets serialize as `{ "root": [...] }` — unwrap for the file loader.
+const parseDecapRoot = (text: string) => JSON.parse(text).root;
+
 const blogCategoriesCollection = defineCollection({
-  loader: file("src/content/blog-categories.json"),
+  loader: file("src/content/blog-categories.json", { parser: parseDecapRoot }),
   schema: blogCategorySchema,
 });
 
@@ -472,7 +475,7 @@ const gridItemSchema = z.object({
 });
 
 const projectsGridCollection = defineCollection({
-  loader: file("src/content/projects-grid.json"),
+  loader: file("src/content/projects-grid.json", { parser: parseDecapRoot }),
   schema: z.object({
     id: z.string(),
     projects: z.array(gridItemSchema),
@@ -482,7 +485,7 @@ const projectsGridCollection = defineCollection({
 // ─── Equipment (single JSON file, no i18n — column headers come from studio collection) ──
 
 const equipmentCollection = defineCollection({
-  loader: file("src/content/equipment.json"),
+  loader: file("src/content/equipment.json", { parser: parseDecapRoot }),
   schema: z.object({
     id: z.string(),
     name: z.string(),
