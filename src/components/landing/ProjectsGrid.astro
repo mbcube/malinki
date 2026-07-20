@@ -43,6 +43,41 @@ const grids = allGridEntries.map((e) => e.data);
 </section>
 
 <script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const revealRows = document.querySelectorAll<HTMLElement>(
+      '[data-section-type="projects-grid"] > div > div',
+    );
+
+    revealRows.forEach((row) => {
+      const cards = row.querySelectorAll<HTMLElement>("[data-project-card]");
+      if (cards.length === 0) return;
+
+      gsap.set(cards, { opacity: 0, y: 24 });
+
+      ScrollTrigger.create({
+        trigger: row,
+        start: "top 85%",
+        once: true,
+        onEnter: () => {
+          gsap.to(cards, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.1,
+          });
+        },
+      });
+    });
+  });
+</script>
+
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const projectCards = document.querySelectorAll("[data-project-card]");
 

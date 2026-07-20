@@ -13,6 +13,7 @@ const { data: s } = await getEntry("sections", currentLang);
 >
     <div class="flex items-center justify-center">
         <div
+            data-reveal
             class="flex flex-col items-center justify-center w-full px-2 py-16 sm:px-4 md:px-8 md:py-14 lg:py-16 xl:py-16 bg-[#083D45] rounded-[48px]"
         >
             <div
@@ -39,3 +40,33 @@ const { data: s } = await getEntry("sections", currentLang);
         </div>
     </div>
 </section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.querySelector<HTMLElement>(
+      '[data-section-type="cta-section"] [data-reveal]',
+    );
+    if (!el) return;
+
+    gsap.set(el, { opacity: 0, y: 24 });
+
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 85%",
+      once: true,
+      onEnter: () => {
+        gsap.to(el, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+        });
+      },
+    });
+  });
+</script>

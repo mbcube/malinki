@@ -20,6 +20,7 @@ const { data: s } = await getEntry("sections", currentLang)!;
   <div class="w-full px-0 md:px-6 lg:px-8">
     <!-- Heading -->
     <div
+      data-reveal
       class="flex flex-col gap-6 items-center text-center mb-12 md:mb-16 lg:mb-20"
     >
       <h2
@@ -35,6 +36,7 @@ const { data: s } = await getEntry("sections", currentLang)!;
     >
       <a
         href={`/${currentLang === "fr" ? "" : "en/"}production-publicitaire`}
+        data-reveal-item
         class="group flex flex-col tablet:flex-row items-center justify-center tablet:justify-start gap-4 md:gap-6 tablet:gap-8 lg:gap-12"
       >
         <Image
@@ -54,6 +56,7 @@ const { data: s } = await getEntry("sections", currentLang)!;
 
       <a
         href={`/${currentLang === "fr" ? "" : "en/"}video-clips`}
+        data-reveal-item
         class="group flex flex-col tablet:flex-row items-center justify-center tablet:justify-start gap-4 md:gap-6 tablet:gap-8 lg:gap-12"
       >
         <Image
@@ -73,6 +76,7 @@ const { data: s } = await getEntry("sections", currentLang)!;
 
       <a
         href={`/${currentLang === "fr" ? "" : "en/"}contenu-vertical`}
+        data-reveal-item
         class="group flex flex-col tablet:flex-row items-center justify-center tablet:justify-start gap-4 md:gap-6 tablet:gap-8 lg:gap-12"
       >
         <Image
@@ -92,6 +96,7 @@ const { data: s } = await getEntry("sections", currentLang)!;
 
       <a
         href={`/${currentLang === "fr" ? "" : "en/"}contenu-de-marque`}
+        data-reveal-item
         class="group flex flex-col tablet:flex-row items-center justify-center tablet:justify-start gap-4 md:gap-6 tablet:gap-8 lg:gap-12"
       >
         <Image
@@ -111,3 +116,42 @@ const { data: s } = await getEntry("sections", currentLang)!;
     </div>
   </div>
 </section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(
+      '[data-section-type="services-section"]',
+    );
+    if (!section) return;
+
+    const heading = section.querySelector<HTMLElement>("[data-reveal]");
+    const items = section.querySelectorAll<HTMLElement>("[data-reveal-item]");
+
+    const elements = [heading, ...Array.from(items)].filter(
+      (el): el is HTMLElement => !!el,
+    );
+    if (elements.length === 0) return;
+
+    gsap.set(elements, { opacity: 0, y: 24 });
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 80%",
+      once: true,
+      onEnter: () => {
+        gsap.to(elements, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.08,
+        });
+      },
+    });
+  });
+</script>

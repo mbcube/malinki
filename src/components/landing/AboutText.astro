@@ -17,11 +17,13 @@ const { data: s } = await getEntry("sections", currentLang)!;
       class="font-['Montserrat'] text-[#083D45] w-full max-w-[343px] sm:max-w-[500px] md:max-w-[802px] lg:max-w-[1144px] text-left"
     >
       <p
+        data-reveal
         class="text-[22px] leading-[1.3] md:text-[32px] md:leading-[1.26] lg:text-[36px] font-bold mb-4 md:mb-6"
       >
         {s.about_text_heading}
       </p>
       <p
+        data-reveal
         class="text-[22px] leading-[1.3] md:text-[32px] md:leading-[1.26] lg:text-[36px] font-medium"
       >
         {s.about_text_body}
@@ -29,3 +31,35 @@ const { data: s } = await getEntry("sections", currentLang)!;
     </div>
   </div>
 </section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(
+      '[data-section-type="about-text"]',
+    );
+    const elements = section?.querySelectorAll<HTMLElement>("[data-reveal]");
+    if (!section || !elements || elements.length === 0) return;
+
+    gsap.set(elements, { opacity: 0, y: 24 });
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 85%",
+      once: true,
+      onEnter: () => {
+        gsap.to(elements, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.12,
+        });
+      },
+    });
+  });
+</script>
