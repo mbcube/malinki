@@ -1,25 +1,33 @@
 ---
 import { Image } from "astro:assets";
-import { formatPublishedAt } from "@/lib/blog";
+import { formatPublishedAt, toIsoDate } from "@/lib/blog";
 
 interface Props {
   slug: string;
   title: string;
   excerpt: string;
   coverImage?: string;
+  coverImageAlt?: string;
   publishedAt?: string;
   categoryLabel?: string | null;
   lang: "fr" | "en";
 }
 
-const { slug, title, excerpt, coverImage, publishedAt, categoryLabel, lang } =
-  Astro.props;
+const {
+  slug,
+  title,
+  excerpt,
+  coverImage,
+  coverImageAlt,
+  publishedAt,
+  categoryLabel,
+  lang,
+} = Astro.props;
 
 const postUrl = lang === "en" ? `/en/blog/${slug}` : `/blog/${slug}`;
-
-const imageSrc = coverImage ?? "/images/blog/default.jpg";
-
 const formattedDate = formatPublishedAt(publishedAt, lang);
+const isoDate = toIsoDate(publishedAt);
+const imageAlt = coverImageAlt?.trim() || title;
 ---
 
 <a
@@ -28,10 +36,10 @@ const formattedDate = formatPublishedAt(publishedAt, lang);
 >
   <div class="relative w-full aspect-[3/2] overflow-hidden">
     {
-      imageSrc ? (
+      coverImage ? (
         <Image
-          src={imageSrc}
-          alt={title}
+          src={coverImage}
+          alt={imageAlt}
           class="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
           width={1200}
           height={800}
@@ -56,18 +64,18 @@ const formattedDate = formatPublishedAt(publishedAt, lang);
     {
       formattedDate && (
         <p class="font-['Montserrat'] text-[12px] font-medium leading-[1.2] text-[#083D45]/60 uppercase">
-          {formattedDate}
+          <time datetime={isoDate || undefined}>{formattedDate}</time>
         </p>
       )
     }
-    <h3
+    <h2
       class="font-['Montserrat'] text-[20px] md:text-[24px] font-bold leading-none uppercase text-[#083D45] transition-colors duration-300 ease-out group-hover:text-[#0a4d57] line-clamp-2"
     >
       {title}
       <span
         class="mt-2 block h-[2px] w-0 bg-[#083D45] transition-all duration-300 ease-out group-hover:w-10"
       />
-    </h3>
+    </h2>
     <p
       class="font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]/80 line-clamp-3"
     >

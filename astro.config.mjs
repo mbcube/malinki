@@ -18,6 +18,11 @@ export default defineConfig({
       },
     }),
   ],
+  image: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'assets.grenier.qc.ca' },
+    ],
+  },
   vite: {
     plugins: [tailwind()],
   },

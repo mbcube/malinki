@@ -5,25 +5,30 @@ import Footer from "@/components/shared/Footer.astro";
 import Metadata from "@/components/shared/Metadata.astro";
 import { Image } from "astro:assets";
 import { getCollection, getEntry, render } from "astro:content";
-import { formatPublishedAt, getCategoryLabel } from "@/lib/blog";
+import {
+  formatPublishedAt,
+  getBlogAuthor,
+  getCategoryLabel,
+  resolveCoverImageUrl,
+  toIsoDate,
+} from "@/lib/blog";
 
 export async function getStaticPaths() {
   const allEntries = await getCollection("blog");
-  // Collect unique slugs from the "fr" locale entries only to generate one path per slug per language
-  const slugs = [
-    ...new Set(
-      allEntries
-        .filter((e) => e.id.startsWith("fr/"))
-        .map((e) => e.id.replace(/^fr\//, ""))
-        .filter(Boolean),
-    ),
-  ];
-
   const paths = [];
-  for (const slug of slugs) {
-    paths.push({ params: { lang: undefined, post: slug } });
-    paths.push({ params: { lang: "en", post: slug } });
+
+  for (const entry of allEntries) {
+    const match = entry.id.match(/^(fr|en)\/(.+)$/);
+    if (!match) continue;
+    const [, locale, slug] = match;
+    paths.push({
+      params: {
+        lang: locale === "fr" ? undefined : "en",
+        post: slug,
+      },
+    });
   }
+
   return paths;
 }
 
@@ -35,22 +40,92 @@ const { data: bp } = await getEntry("blog-page", currentLang)!;
 const { data: seo } = await getEntry("seo", currentLang)!;
 
 if (!postEntry) {
-  console.log("Blog post not found", postSlug, currentLang);
-  return Astro.redirect("/404");
+  return new Response(null, { status: 404, statusText: "Not Found" });
 }
 
 const post = postEntry.data;
 const { Content } = await render(postEntry);
-const seoTitle = `${post.title}${seo.project_title_suffix}`;
 
-const coverImage = post.coverImage ?? "/images/blog/default.jpg";
+const seoTitle =
+  post.seoTitle?.trim() || `${post.title}${seo.project_title_suffix}`;
+const seoDescription = post.seoDescription?.trim() || post.excerpt;
 
+const siteUrl = (Astro.site?.href || "https://malinki.ca").replace(/\/$/, "");
+const ogImage =
+  resolveCoverImageUrl(post.seoOgImage, siteUrl) ||
+  resolveCoverImageUrl(post.coverImage, siteUrl);
+const coverImage = post.coverImage;
+const coverAlt = post.coverImageAlt?.trim() || post.title;
+
+const isoDate = toIsoDate(post.publishedAt);
 const formattedDate = formatPublishedAt(post.publishedAt, currentLang);
+const author = getBlogAuthor(post.author);
 
 const categories = (await getCollection("blog-categories")).map((c) => c.data);
 const categoryLabel = getCategoryLabel(categories, post.category, currentLang);
 
+const frEntry = await getEntry("blog", `fr/${postSlug}`);
+const enEntry = await getEntry("blog", `en/${postSlug}`);
+const availableLangs = [
+  ...(frEntry ? (["fr"] as const) : []),
+  ...(enEntry ? (["en"] as const) : []),
+] as ("fr" | "en")[];
+
 const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
+const blogListUrl = `${siteUrl}${backUrl === "/blog" ? "/blog" : "/en/blog"}`;
+const canonicalPath = `/blog/${postSlug}`;
+const localePath =
+  currentLang === "fr" ? canonicalPath : `/en${canonicalPath}`;
+const pageUrl = `${siteUrl}${localePath}`;
+const rssUrl =
+  currentLang === "en" ? `${siteUrl}/en/rss.xml` : `${siteUrl}/rss.xml`;
+
+const blogPostingLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.title,
+  description: seoDescription,
+  ...(ogImage ? { image: [ogImage] } : {}),
+  ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
+  author: author
+    ? { "@type": "Person", name: author }
+    : { "@type": "Organization", name: "Malinki", url: siteUrl },
+  publisher: {
+    "@type": "Organization",
+    name: "Malinki",
+    url: siteUrl,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
+  inLanguage: currentLang === "en" ? "en-CA" : "fr-CA",
+  ...(categoryLabel ? { articleSection: categoryLabel } : {}),
+  isPartOf: {
+    "@type": "Blog",
+    name: seo.blog_title,
+    url: blogListUrl,
+  },
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: currentLang === "en" ? "Blog" : "Blogue",
+      item: blogListUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: post.title,
+      item: pageUrl,
+    },
+  ],
+};
 ---
 
 <html lang={currentLang} class="h-full">
@@ -58,8 +133,20 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
     <Metadata
       lang={currentLang}
       title={seoTitle}
-      description={post.excerpt}
-      canonicalPath={`/blog/${postSlug}`}
+      description={seoDescription}
+      canonicalPath={canonicalPath}
+      type="article"
+      ogImage={ogImage}
+      availableLangs={availableLangs}
+      robots={post.noIndex ? "noindex, follow" : "index, follow"}
+      rssUrl={rssUrl}
+      article={{
+        publishedTime: isoDate,
+        modifiedTime: isoDate,
+        author: author || "Malinki",
+        section: categoryLabel || undefined,
+      }}
+      jsonLd={[blogPostingLd, breadcrumbLd]}
     />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
@@ -81,10 +168,8 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
           {
             formattedDate && (
               <p class="font-['Montserrat'] text-[14px] font-medium leading-[1.2] text-[#083D45]/60 uppercase mb-4">
-                {formattedDate}
-                {post.author && post.author.toLowerCase() !== "null"
-                  ? ` — ${post.author}`
-                  : ""}
+                <time datetime={isoDate || undefined}>{formattedDate}</time>
+                {author ? ` — ${author}` : ""}
               </p>
             )
           }
@@ -109,7 +194,7 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
             >
               <Image
                 src={coverImage}
-                alt={post.title}
+                alt={coverAlt}
                 class="w-full h-auto object-cover"
                 width={1200}
                 height={800}
@@ -187,6 +272,12 @@ const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
   }
   .prose-blog :global(strong) {
     font-weight: 700;
+  }
+  .prose-blog :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.25em;
   }
   .prose-blog :global(iframe) {
     width: 100%;

@@ -9,6 +9,7 @@ interface BlogPost {
   title: string;
   excerpt: string;
   coverImage?: string;
+  coverImageAlt?: string;
   publishedAt?: string;
   category?: string;
 }
@@ -43,6 +44,7 @@ const allLabel = lang === "fr" ? "Tous" : "All";
                 title={post.title}
                 excerpt={post.excerpt}
                 coverImage={post.coverImage}
+                coverImageAlt={post.coverImageAlt}
                 publishedAt={post.publishedAt}
                 categoryLabel={getCategoryLabel(categories, post.category, lang)}
                 lang={lang}

@@ -148,10 +148,19 @@ collections:
       - { name: excerpt, label: Excerpt, widget: text, i18n: true }
       - {
           name: coverImage,
-          label: Cover Image Filename,
+          label: Cover Image URL,
           widget: string,
           required: false,
           i18n: duplicate,
+          hint: "Full HTTPS URL (e.g. https://assets.grenier.qc.ca/...)",
+        }
+      - {
+          name: coverImageAlt,
+          label: Cover Image Alt Text,
+          widget: string,
+          required: false,
+          i18n: true,
+          hint: "Accessible description of the cover image. Falls back to the post title.",
         }
       - name: category
         label: Category
@@ -180,6 +189,40 @@ collections:
           widget: string,
           required: false,
           i18n: duplicate,
+          hint: "ISO date (2026-06-15) or French long form (11 février 2026)",
+        }
+      - {
+          name: seoTitle,
+          label: SEO Title,
+          widget: string,
+          required: false,
+          i18n: true,
+          hint: "Optional. Overrides the page <title> and social title. Defaults to Title + site suffix.",
+        }
+      - {
+          name: seoDescription,
+          label: SEO Description,
+          widget: text,
+          required: false,
+          i18n: true,
+          hint: "Optional. Overrides meta description. Defaults to Excerpt.",
+        }
+      - {
+          name: seoOgImage,
+          label: SEO / Social Image URL,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+          hint: "Optional. Overrides Open Graph / Twitter image. Defaults to Cover Image.",
+        }
+      - {
+          name: noIndex,
+          label: Hide from search engines,
+          widget: boolean,
+          required: false,
+          default: false,
+          i18n: duplicate,
+          hint: "When enabled, adds noindex and excludes the post from the RSS feed and blog listing schema.",
         }
       - { name: body, label: Body, widget: markdown, i18n: true }
 

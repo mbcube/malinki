@@ -2,14 +2,29 @@
 import { getImage } from "astro:assets";
 import malinkiLogoBg from "@/images/malinki-logo-bg.png";
 
+interface ArticleMeta {
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
 interface Props {
   lang: string;
   title: string;
   description: string;
   canonicalPath: string;
-  ogImage?: ImageMetadata;
+  /** Local ImageMetadata import, absolute URL, or site-relative path */
+  ogImage?: ImageMetadata | string;
   type?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  article?: ArticleMeta;
+  /** Locales that have a real page — defaults to both */
+  availableLangs?: ("fr" | "en")[];
+  robots?: string;
+  /** Absolute RSS feed URL for this page/locale */
+  rssUrl?: string;
 }
 
 const {
@@ -20,6 +35,10 @@ const {
   ogImage: ogImageProp,
   type = "website",
   jsonLd,
+  article,
+  availableLangs = ["fr", "en"],
+  robots = "index, follow",
+  rssUrl,
 } = Astro.props;
 
 const currentLang = lang || "fr";
@@ -33,13 +52,36 @@ const enPath = `/en${canonicalPath === "/" ? "" : canonicalPath}`;
 const frUrl = `${siteUrl}${frPath}`;
 const enUrl = `${siteUrl}${enPath}`;
 
-const ogImageSource = ogImageProp || malinkiLogoBg;
-const processedOgImage = await getImage({
-  src: ogImageSource,
-  width: 1200,
-  height: 630,
-});
-const ogImageUrl = new URL(processedOgImage.src, siteUrl).href;
+const hasFr = availableLangs.includes("fr");
+const hasEn = availableLangs.includes("en");
+
+async function resolveOgImageUrl(
+  source: ImageMetadata | string | undefined,
+): Promise<string> {
+  if (!source) {
+    const processed = await getImage({
+      src: malinkiLogoBg,
+      width: 1200,
+      height: 630,
+    });
+    return new URL(processed.src, siteUrl).href;
+  }
+
+  if (typeof source === "string") {
+    if (/^https?:\/\//i.test(source)) return source;
+    return new URL(source.startsWith("/") ? source : `/${source}`, siteUrl)
+      .href;
+  }
+
+  const processed = await getImage({
+    src: source,
+    width: 1200,
+    height: 630,
+  });
+  return new URL(processed.src, siteUrl).href;
+}
+
+const ogImageUrl = await resolveOgImageUrl(ogImageProp);
 
 const organizationLd = {
   "@context": "https://schema.org",
@@ -48,7 +90,7 @@ const organizationLd = {
   url: siteUrl,
   logo: new URL(
     (await getImage({ src: malinkiLogoBg, width: 600 })).src,
-    siteUrl
+    siteUrl,
   ).href,
   address: {
     "@type": "PostalAddress",
@@ -77,12 +119,17 @@ const allJsonLd = jsonLd
 ---
 
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L066CRHY8F" is:inline></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-L066CRHY8F"
+  is:inline></script>
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L066CRHY8F');
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-L066CRHY8F");
 </script>
 
 <meta charset="utf-8" />
@@ -113,14 +160,31 @@ const allJsonLd = jsonLd
 />
 
 <meta name="generator" content={Astro.generator} />
+<meta name="robots" content={robots} />
 <title>{title}</title>
 <meta name="description" content={description} />
 
 <!-- Canonical & Hreflang -->
 <link rel="canonical" href={canonicalUrl} />
-<link rel="alternate" hreflang="fr" href={frUrl} />
-<link rel="alternate" hreflang="en" href={enUrl} />
-<link rel="alternate" hreflang="x-default" href={frUrl} />
+{hasFr && <link rel="alternate" hreflang="fr" href={frUrl} />}
+{hasEn && <link rel="alternate" hreflang="en" href={enUrl} />}
+{hasFr && <link rel="alternate" hreflang="x-default" href={frUrl} />}
+{
+  !hasFr && hasEn && (
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+  )
+}
+
+{
+  rssUrl && (
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={title}
+      href={rssUrl}
+    />
+  )
+}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
@@ -132,11 +196,44 @@ const allJsonLd = jsonLd
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={title} />
 <meta property="og:locale" content={currentLang === "en" ? "en_CA" : "fr_CA"} />
-<meta
-  property="og:locale:alternate"
-  content={currentLang === "en" ? "fr_CA" : "en_CA"}
-/>
+{
+  ((currentLang === "en" && hasFr) || (currentLang === "fr" && hasEn)) && (
+    <meta
+      property="og:locale:alternate"
+      content={currentLang === "en" ? "fr_CA" : "en_CA"}
+    />
+  )
+}
 <meta property="og:site_name" content="Malinki" />
+
+{
+  article?.publishedTime && (
+    <meta
+      property="article:published_time"
+      content={article.publishedTime}
+    />
+  )
+}
+{
+  article?.modifiedTime && (
+    <meta property="article:modified_time" content={article.modifiedTime} />
+  )
+}
+{
+  article?.author && (
+    <meta property="article:author" content={article.author} />
+  )
+}
+{
+  article?.section && (
+    <meta property="article:section" content={article.section} />
+  )
+}
+{
+  article?.tags?.map((tag) => (
+    <meta property="article:tag" content={tag} />
+  ))
+}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -148,10 +245,7 @@ const allJsonLd = jsonLd
 <!-- JSON-LD Structured Data -->
 {
   allJsonLd.map((ld) => (
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(ld)}
-    />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
   ))
 }
 

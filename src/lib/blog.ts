@@ -29,13 +29,20 @@ export function parsePublishedAt(value?: string | null): Date | null {
 
 export function formatPublishedAt(
   value: string | undefined | null,
-  lang: "fr" | "en"
+  lang: "fr" | "en",
 ): string | null {
   const date = parsePublishedAt(value);
   if (!date) return null;
   return lang === "fr"
     ? format(date, "d MMMM yyyy", { locale: fr })
     : format(date, "MMMM d, yyyy", { locale: enCA });
+}
+
+/** ISO-8601 date (YYYY-MM-DD) for schema.org / Open Graph article dates. */
+export function toIsoDate(value?: string | null): string | undefined {
+  const date = parsePublishedAt(value);
+  if (!date) return undefined;
+  return format(date, "yyyy-MM-dd");
 }
 
 /**
@@ -45,10 +52,33 @@ export function formatPublishedAt(
 export function getCategoryLabel(
   categories: BlogCategory[],
   slug: string | undefined | null,
-  lang: "fr" | "en"
+  lang: "fr" | "en",
 ): string | null {
   if (!slug) return null;
   const category = categories.find((c) => c.slug === slug);
   if (!category) return null;
   return lang === "fr" ? category.fr : category.en;
+}
+
+/** Treat CMS placeholder `"null"` as missing. */
+export function getBlogAuthor(author?: string | null): string | undefined {
+  if (!author) return undefined;
+  const trimmed = author.trim();
+  if (!trimmed || trimmed.toLowerCase() === "null") return undefined;
+  return trimmed;
+}
+
+/**
+ * Absolute cover URL for OG / JSON-LD. Returns `undefined` when missing so
+ * callers can fall back to the site logo.
+ */
+export function resolveCoverImageUrl(
+  coverImage: string | undefined | null,
+  siteUrl = "https://malinki.ca",
+): string | undefined {
+  if (!coverImage?.trim()) return undefined;
+  const src = coverImage.trim();
+  if (/^https?:\/\//i.test(src)) return src;
+  const base = siteUrl.replace(/\/$/, "");
+  return `${base}${src.startsWith("/") ? src : `/${src}`}`;
 }

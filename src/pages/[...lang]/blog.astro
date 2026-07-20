@@ -1,6 +1,6 @@
 ---
 import { getEntry, getCollection } from "astro:content";
-import { parsePublishedAt } from "@/lib/blog";
+import { parsePublishedAt, resolveCoverImageUrl } from "@/lib/blog";
 
 export function getStaticPaths() {
   return [
@@ -11,11 +11,17 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const { data: seo } = await getEntry("seo", currentLang);
+const { data: seo } = (await getEntry("seo", currentLang))!;
+
+const siteUrl = (Astro.site?.href || "https://malinki.ca").replace(/\/$/, "");
+const blogPath = currentLang === "en" ? "/en/blog" : "/blog";
+const blogUrl = `${siteUrl}${blogPath}`;
+const rssUrl =
+  currentLang === "en" ? `${siteUrl}/en/rss.xml` : `${siteUrl}/rss.xml`;
 
 const allPosts = await getCollection("blog");
 const posts = allPosts
-  .filter((p) => p.id.startsWith(`${currentLang}/`))
+  .filter((p) => p.id.startsWith(`${currentLang}/`) && !p.data.noIndex)
   .map((p) => p.data)
   .sort((a, b) => {
     const dateA = parsePublishedAt(a.publishedAt);
@@ -23,6 +29,52 @@ const posts = allPosts
     if (!dateA || !dateB) return 0;
     return dateB.getTime() - dateA.getTime();
   });
+
+const collectionLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: seo.blog_title,
+  description: seo.blog_description,
+  url: blogUrl,
+  inLanguage: currentLang === "en" ? "en-CA" : "fr-CA",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Malinki",
+    url: siteUrl,
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: posts.length,
+    itemListElement: posts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${siteUrl}${currentLang === "en" ? "/en" : ""}/blog/${post.slug}`,
+      name: post.title,
+      ...(resolveCoverImageUrl(post.coverImage, siteUrl)
+        ? { image: resolveCoverImageUrl(post.coverImage, siteUrl) }
+        : {}),
+    })),
+  },
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Malinki",
+      item: currentLang === "en" ? `${siteUrl}/en` : siteUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: currentLang === "en" ? "Blog" : "Blogue",
+      item: blogUrl,
+    },
+  ],
+};
 
 import "@/styles/global.css";
 import Header from "@/components/shared/Header.astro";
@@ -39,6 +91,8 @@ import BlogGrid from "@/components/blog/BlogGrid.astro";
       title={seo.blog_title}
       description={seo.blog_description}
       canonicalPath="/blog"
+      rssUrl={rssUrl}
+      jsonLd={[collectionLd, breadcrumbLd]}
     />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">

@@ -435,11 +435,18 @@ const blogCollection = defineCollection({
     title: z.string(),
     excerpt: z.string(),
     coverImage: z.string().optional(),
+    coverImageAlt: z.string().optional(),
     author: z.string().optional(),
     publishedAt: z.union([z.string(), z.date()]).transform(v => typeof v === 'string' ? v : v.toISOString().split('T')[0]).optional(),
     // References a `slug` from the `blog-categories` collection (src/content/blog-categories.json).
     // Kept as a plain string (not a z.enum) so new categories can be added there without a code change.
     category: z.string().optional(),
+    /** Optional SEO overrides — fall back to title / excerpt when omitted */
+    seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
+    /** Optional dedicated social share image (falls back to coverImage) */
+    seoOgImage: z.string().optional(),
+    noIndex: z.boolean().optional(),
   }),
 });
 
