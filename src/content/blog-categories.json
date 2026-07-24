@@ -1,0 +1,24 @@
+{
+  "root": [
+    {
+      "slug": "agency-news",
+      "fr": "Nouvelles de l'agence",
+      "en": "Agency News"
+    },
+    {
+      "slug": "commercial-brands",
+      "fr": "Commercial et Marques",
+      "en": "Commercial & Brands"
+    },
+    {
+      "slug": "arts-culture",
+      "fr": "Arts et Culture",
+      "en": "Arts & Culture"
+    },
+    {
+      "slug": "social-impact",
+      "fr": "Impact social",
+      "en": "Social Impact"
+    }
+  ]
+}

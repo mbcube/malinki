@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import StudioFaqAccordion from "@/components/studio/islands/StudioFaqAccordion";
 
 interface Props {
@@ -7,57 +7,20 @@ interface Props {
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
 
 const faqItems = [
-  {
-    categoryLabel: t("studio.faq.cat_studio") as string,
-    question: t("studio.faq.q1_question") as string,
-    answer: t("studio.faq.q1_answer"),
-  },
-  {
-    question: t("studio.faq.q2_question") as string,
-    answer: t("studio.faq.q2_answer"),
-  },
-  {
-    categoryLabel: t("studio.faq.cat_reservations") as string,
-    question: t("studio.faq.q3_question") as string,
-    answer: t("studio.faq.q3_answer"),
-  },
-  {
-    question: t("studio.faq.q4_question") as string,
-    answer: t("studio.faq.q4_answer"),
-  },
-  {
-    question: t("studio.faq.q5_question") as string,
-    answer: t("studio.faq.q5_answer"),
-  },
-  {
-    question: t("studio.faq.q6_question") as string,
-    answer: t("studio.faq.q6_answer"),
-  },
-  {
-    categoryLabel: t("studio.faq.cat_installations") as string,
-    question: t("studio.faq.q7_question") as string,
-    answer: t("studio.faq.q7_answer"),
-  },
-  {
-    question: t("studio.faq.q8_question") as string,
-    answer: t("studio.faq.q8_answer"),
-  },
-  {
-    question: t("studio.faq.q9_question") as string,
-    answer: t("studio.faq.q9_answer"),
-  },
-  {
-    categoryLabel: t("studio.faq.cat_services") as string,
-    question: t("studio.faq.q10_question") as string,
-    answer: t("studio.faq.q10_answer"),
-  },
-  {
-    question: t("studio.faq.q11_question") as string,
-    answer: t("studio.faq.q11_answer"),
-  },
+  { categoryLabel: st.faq_cat_studio, question: st.faq_q1_question, answer: st.faq_q1_answer },
+  { question: st.faq_q2_question, answer: st.faq_q2_answer },
+  { categoryLabel: st.faq_cat_reservations, question: st.faq_q3_question, answer: st.faq_q3_answer },
+  { question: st.faq_q4_question, answer: st.faq_q4_answer },
+  { question: st.faq_q5_question, answer: st.faq_q5_answer },
+  { question: st.faq_q6_question, answer: st.faq_q6_answer },
+  { categoryLabel: st.faq_cat_installations, question: st.faq_q7_question, answer: st.faq_q7_answer },
+  { question: st.faq_q8_question, answer: st.faq_q8_answer },
+  { question: st.faq_q9_question, answer: st.faq_q9_answer },
+  { categoryLabel: st.faq_cat_services, question: st.faq_q10_question, answer: st.faq_q10_answer },
+  { question: st.faq_q11_question, answer: st.faq_q11_answer },
 ];
 ---
 
@@ -67,7 +30,7 @@ const faqItems = [
 
       <!-- Title: stacked on mobile, fixed-width column on desktop -->
       <h2 class="mt-[1.5rem] text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-bold leading-none uppercase text-white shrink-0 md:w-[18.75rem] lg:w-[28rem]">
-        {t("studio.faq.title")}
+        {st.faq_title}
       </h2>
 
       <!-- Accordion -->

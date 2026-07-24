@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import { TeamMemberAccordion } from "@/components/landing/islands/TeamMemberAccordion";
 import andrewTchernilevskii from "@/images/team/Andrew-Tchernilevskii.png";
 import miroslavDufresne from "@/images/team/Miroslav-Dufresne_compressed.webp";
@@ -9,61 +9,72 @@ import alexandreNormand from "@/images/team/alex-normand.png";
 import cedricDemers from "@/images/team/cedric.png";
 import justine from "@/images/team/justine.webp";
 
-
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: s } = await getEntry("sections", currentLang);
 
-const teamMembers = [
+const teamMembersRaw = [
   {
-    id: "member_1",
+    id: "1",
     image: andrewTchernilevskii,
     hasSplitName: true,
-    url: "https://www.linkedin.com/in/andrew-tchernilevskii-102496113/"
+    url: "https://www.linkedin.com/in/andrew-tchernilevskii-102496113/",
+    nameLine1: s.team_member_1_name_line_1,
+    nameLine2: s.team_member_1_name_line_2,
+    name: "",
+    role: s.team_member_1_role,
   },
   {
-    id: "member_2",
+    id: "2",
     image: miroslavDufresne,
     hasSplitName: false,
-    url: "https://www.linkedin.com/in/miroslav-dufresne-a5359863/"
+    url: "https://www.linkedin.com/in/miroslav-dufresne-a5359863/",
+    name: s.team_member_2_name,
+    role: s.team_member_2_role,
   },
   {
-    id: "member_3",
+    id: "3",
     image: jeremyLeblond,
     hasSplitName: false,
-    url: "https://www.linkedin.com/in/j%C3%A9r%C3%A9my-leblond-0ab6a7153/"
+    url: "https://www.linkedin.com/in/j%C3%A9r%C3%A9my-leblond-0ab6a7153/",
+    name: s.team_member_3_name,
+    role: s.team_member_3_role,
   },
   {
-    id: "member_6",
+    id: "6",
     image: justine,
     hasSplitName: false,
-    url: "https://www.linkedin.com/in/justinegagnon/"
+    url: "https://www.linkedin.com/in/justinegagnon/",
+    name: s.team_member_6_name,
+    role: s.team_member_6_role,
   },
   {
-    id: "member_4",
+    id: "4",
     image: alexandreNormand,
     hasSplitName: false,
-    url: "https://www.instagram.com/le.normand_alexandre/"
+    url: "https://www.instagram.com/le.normand_alexandre/",
+    name: s.team_member_4_name,
+    role: s.team_member_4_role,
   },
   {
-    id: "member_5",
+    id: "5",
     image: cedricDemers,
     hasSplitName: false,
-    url: "https://www.linkedin.com/in/c%C3%A9dric-demers-891576250/"
+    url: "https://www.linkedin.com/in/c%C3%A9dric-demers-891576250/",
+    name: s.team_member_5_name,
+    role: s.team_member_5_role,
   },
-
 ];
 
-// Prepare data for React component
-const teamMembersForReact = teamMembers.map((member) => ({
-  id: member.id,
-  name: member.hasSplitName ? "" : t(`sections.team.${member.id}.name`),
-  nameLine1: member.hasSplitName ? t(`sections.team.${member.id}.name_line_1`) : undefined,
-  nameLine2: member.hasSplitName ? t(`sections.team.${member.id}.name_line_2`) : undefined,
-  role: t(`sections.team.${member.id}.role`),
-  imageUrl: member.image.src,
-  linkedinUrl: member.url,
-  hasSplitName: member.hasSplitName,
+const teamMembersForReact = teamMembersRaw.map((m) => ({
+  id: `member_${m.id}`,
+  name: m.hasSplitName ? "" : m.name ?? "",
+  nameLine1: m.hasSplitName ? m.nameLine1 : undefined,
+  nameLine2: m.hasSplitName ? m.nameLine2 : undefined,
+  role: m.role,
+  imageUrl: m.image.src,
+  linkedinUrl: m.url,
+  hasSplitName: m.hasSplitName,
 }));
 ---
 
@@ -76,35 +87,37 @@ const teamMembersForReact = teamMembers.map((member) => ({
   <div class="w-full px-4 md:px-6 lg:px-8">
     <!-- Heading -->
     <div
+      data-reveal
       class="border-[#083D45] border-[0px_0px_1px] border-solid flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-0 pb-8 lg:pb-8 mb-0"
     >
       <div class="flex flex-col gap-4">
         <h2
           class="p-0 font-['Montserrat'] text-[2.75rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[5rem] font-bold leading-none uppercase text-[#083D45]"
         >
-          {t("sections.team.mobile_heading")}
+          {s.team_mobile_heading}
         </h2>
         <p
           class="m-0 font-['Montserrat'] text-[18px] md:text-[20px] font-medium leading-[1.2] text-[#083D45] max-w-[291px] lg:max-w-[304px]"
         >
-          {t("sections.team.tagline")}
+          {s.team_tagline}
         </p>
       </div>
     </div>
 
     <!-- Mobile: Accordion with LinkedIn Icons -->
-    <div class="lg:hidden">
+    <div class="lg:hidden" data-reveal>
       <TeamMemberAccordion client:load members={teamMembersForReact} />
     </div>
 
     <!-- Desktop: Hover Effect with LinkedIn Links -->
     <div class="hidden lg:flex lg:flex-col w-full group">
       {
-        teamMembers.map((member) => (
+        teamMembersRaw.map((member) => (
           <a 
             href={member.url}
             target="_blank"
             rel="noopener noreferrer"
+            data-reveal-item
             class="team-member group/member border-[#083D45] border-[0px_0px_1px] border-solid py-8 transition-opacity duration-200 ease-in-out relative group-hover:opacity-50 hover:opacity-100! block no-underline"
           >
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
@@ -112,16 +125,16 @@ const teamMembersForReact = teamMembers.map((member) => ({
                 <h3 class="p-0 font-['Montserrat'] text-[24px] md:text-[32px] font-bold leading-none uppercase text-[#083D45]">
                   {member.hasSplitName ? (
                     <>
-                      {t(`sections.team.${member.id}.name_line_1`)}
+                      {member.nameLine1}
                       <br />
-                      {t(`sections.team.${member.id}.name_line_2`)}
+                      {member.nameLine2}
                     </>
                   ) : (
-                    t(`sections.team.${member.id}.name`)
+                    member.name
                   )}
                 </h3>
                 <p class="m-0 font-['Montserrat'] text-[16px] font-medium leading-[1.2] text-[#083D45]">
-                  {t(`sections.team.${member.id}.role`)}
+                  {member.role}
                 </p>
               </div>
 
@@ -131,8 +144,8 @@ const teamMembersForReact = teamMembers.map((member) => ({
                   src={member.image}
                   alt={
                     member.hasSplitName
-                      ? `${t(`sections.team.${member.id}.name_line_1`)} ${t(`sections.team.${member.id}.name_line_2`)}`
-                      : t(`sections.team.${member.id}.name`)
+                      ? `${member.nameLine1} ${member.nameLine2}`
+                      : member.name ?? ""
                   }
                   class="rounded-[32px] object-cover w-[384px] h-[480px] scale-0 group-hover/member:scale-100 transition-transform duration-200 ease-in-out origin-center"
                   loading="lazy"
@@ -147,4 +160,55 @@ const teamMembersForReact = teamMembers.map((member) => ({
     </div>
   </div>
 </section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(
+      '[data-section-type="team-section"]',
+    );
+    if (!section) return;
+
+    const heading = section.querySelector<HTMLElement>("[data-reveal]");
+    if (heading) {
+      gsap.set(heading, { opacity: 0, y: 24 });
+      ScrollTrigger.create({
+        trigger: heading,
+        start: "top 85%",
+        once: true,
+        onEnter: () => {
+          gsap.to(heading, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+        },
+      });
+    }
+
+    const items = section.querySelectorAll<HTMLElement>("[data-reveal-item]");
+    if (items.length > 0) {
+      gsap.set(items, { opacity: 0, y: 24 });
+      ScrollTrigger.create({
+        trigger: items[0].closest(".group") || section,
+        start: "top 80%",
+        once: true,
+        onEnter: () => {
+          gsap.to(items, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.08,
+          });
+        },
+      });
+    }
+  });
+</script>
 

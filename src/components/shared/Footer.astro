@@ -1,14 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import malinkiLogo from "@/images/malinki-logo-c.png";
 import studioLogo from "@/images/studio-malinki.jpg";
 import LanguageSwitcher from "@/components/shared/islands/LanguageSwitcher";
 
-// Get current language from Astro params
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: s } = await getEntry("sections", currentLang);
 const currentPath = Astro.url.pathname;
 
 // Inline settings (migrated from Shopify schema)
@@ -65,7 +64,7 @@ const settings = {
                 />
               </a>
               <span class="font-['Montserrat'] text-[10px] font-medium text-white/60 uppercase tracking-wide">
-                @{t("sections.footer.ig_agency")}
+                @{s.footer_ig_agency}
               </span>
             </div>
           )
@@ -88,7 +87,7 @@ const settings = {
                 />
               </a>
               <span class="font-['Montserrat'] text-[10px] font-medium text-white/60 uppercase tracking-wide">
-                @{t("sections.footer.ig_studio")}
+                @{s.footer_ig_studio}
               </span>
             </div>
           )
@@ -110,7 +109,7 @@ const settings = {
       <p
         class="font-['Montserrat'] font-medium text-[16px] leading-[1.2] text-white text-center lg:text-right m-0 whitespace-pre"
       >
-        {t("sections.footer.copyright")}
+        {s.footer_copyright}
       </p>
     </div>
   </div>

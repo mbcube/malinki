@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 import cta2Red from "@/images/cta-2-red.jpg";
 import cta2Fizz from "@/images/cta-2-fizz.jpg";
 import cta2Lazy from "@/images/cta-2-lazy.jpg";
@@ -8,7 +8,7 @@ import cta2Interview from "@/images/cta-2-interview.jpg";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: s } = await getEntry("sections", currentLang)!;
 ---
 
 <!-- CTA Section 2 -->
@@ -18,6 +18,7 @@ const t = useTranslations(currentLang);
 >
   <!-- Images Row -->
   <div
+    data-cta2-images
     class="grid grid-cols-2 md:grid-cols-4 w-[90%] mx-auto mb-10 md:mb-5 lg:mb-0"
   >
     <!-- Left image (desktop only) -->
@@ -27,6 +28,7 @@ const t = useTranslations(currentLang);
       width={1200}
       height={800}
       loading="lazy"
+      data-reveal-item
       class="hidden md:block object-cover rounded-[24px] md:rounded-[32px] shadow-lg -rotate-12 mt-25 scale-110"
     />
 
@@ -37,6 +39,7 @@ const t = useTranslations(currentLang);
       width={1200}
       height={800}
       loading="lazy"
+      data-reveal-item
       class="object-cover rounded-[24px] md:rounded-[32px] shadow-lg -rotate-[4deg] scale-110"
     />
 
@@ -47,6 +50,7 @@ const t = useTranslations(currentLang);
       width={1200}
       height={800}
       loading="lazy"
+      data-reveal-item
       class="object-cover rounded-[24px] md:rounded-[32px] shadow-lg rotate-[4deg] scale-110"
     />
 
@@ -57,25 +61,79 @@ const t = useTranslations(currentLang);
       width={1200}
       height={800}
       loading="lazy"
+      data-reveal-item
       class="hidden md:block object-cover rounded-[24px] md:rounded-[32px] shadow-lg rotate-12 mt-25 scale-110"
     />
   </div>
 
   <!-- CTA Content -->
   <div
+    data-reveal
     class="flex flex-col items-center justify-center gap-[24px] md:gap-[32px] w-full max-w-[686px] mx-auto px-4"
   >
     <h2
       class="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] font-medium leading-none text-center uppercase text-[#083D45] m-0 p-0 w-full"
     >
-      {t("sections.cta2.heading")}
+      {s.cta2_heading}
     </h2>
 
     <a
       href={`/${currentLang === "fr" ? "" : "en/"}contact`}
       class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
     >
-      {t("sections.cta2.button_text")}
+      {s.cta2_button_text}
     </a>
   </div>
 </section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(
+      '[data-section-type="cta-section-2"]',
+    );
+    if (!section) return;
+
+    const imagesRow = section.querySelector<HTMLElement>("[data-cta2-images]");
+    const images = section.querySelectorAll<HTMLElement>("[data-reveal-item]");
+    if (imagesRow && images.length > 0) {
+      gsap.set(images, { opacity: 0, y: 24 });
+      ScrollTrigger.create({
+        trigger: imagesRow,
+        start: "top 85%",
+        once: true,
+        onEnter: () => {
+          gsap.to(images, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.08,
+          });
+        },
+      });
+    }
+
+    const content = section.querySelector<HTMLElement>("[data-reveal]");
+    if (content) {
+      gsap.set(content, { opacity: 0, y: 24 });
+      ScrollTrigger.create({
+        trigger: content,
+        start: "top 85%",
+        once: true,
+        onEnter: () => {
+          gsap.to(content, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+        },
+      });
+    }
+  });
+</script>

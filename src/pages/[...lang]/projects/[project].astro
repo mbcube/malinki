@@ -1,45 +1,46 @@
 ---
-import { useTranslations } from "@/i18n/utils";
 import "@/styles/global.css";
 import Header from "@/components/shared/Header.astro";
 import Footer from "@/components/shared/Footer.astro";
 import VideoPlayer from "@/components/shared/VideoPlayer.astro";
-import projectsData from "@/data/projects.json";
 import Metadata from "@/components/shared/Metadata.astro";
 import { Image } from "astro:assets";
+import { getCollection, getEntry } from "astro:content";
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
+  const allEntries = await getCollection("projects");
+  // Collect unique slugs from the "fr" locale entries only to generate one path per slug per language
+  const slugs = [...new Set(
+    allEntries
+      .filter((e) => e.id.startsWith("fr/"))
+      .map((e) => e.id.replace(/^fr\//, ""))
+      .filter(Boolean)
+  )];
+
   const paths = [];
-
-  // Generate paths for all projects in both languages
-  for (const project of projectsData.projects) {
-    // French (default)
-    paths.push({
-      params: { lang: undefined, project: project.slug },
-    });
-    // English
-    paths.push({
-      params: { lang: "en", project: project.slug },
-    });
+  for (const slug of slugs) {
+    paths.push({ params: { lang: undefined, project: slug } });
+    paths.push({ params: { lang: "en", project: slug } });
   }
-
   return paths;
 }
 
 const { lang, project: projectSlug } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
 
-// Find the project in data
-const project = projectsData.projects.find((p) => p.slug === projectSlug);
+const projectEntry = await getEntry("projects", `${currentLang}/${projectSlug}`);
+const { data: labels } = await getEntry("project-labels", currentLang)!;
+const { data: seo } = await getEntry("seo", currentLang)!;
 
-if (!project) {
+if (!projectEntry) {
+  console.log("Project not found", projectSlug, currentLang);
   return Astro.redirect("/404");
 }
 
-const title = project.title[currentLang];
-const description = project.shortDescription[currentLang];
-const seoTitle = `${title}${t("seo.project.title_suffix")}`;
+const project = projectEntry.data;
+const title = project.title;
+const description = project.shortDescription;
+const seoTitle = `${title}${seo.project_title_suffix}`;
 
 const videoObjectLd = project.mainVideo
   ? {
@@ -75,7 +76,7 @@ function getProjectImage(filename: string) {
       lang={currentLang}
       title={seoTitle}
       description={description}
-      canonicalPath={`/projects/${project.slug}`}
+      canonicalPath={`/projects/${projectSlug}`}
       {...(videoObjectLd ? { jsonLd: videoObjectLd } : {})}
     />
   </head>
@@ -97,7 +98,7 @@ function getProjectImage(filename: string) {
             <h2
               class="font-['Montserrat'] text-[20px] md:text-[24px] lg:text-[28px] font-semibold leading-none uppercase text-[#083D45] mb-4"
             >
-              {t("project.client")}: {project.clientName[currentLang]}
+              {labels.client}: {project.clientName}
             </h2>
           )
         }
@@ -106,7 +107,7 @@ function getProjectImage(filename: string) {
             <h2
               class="font-['Montserrat'] text-[20px] md:text-[24px] lg:text-[28px] font-semibold leading-none uppercase text-[#083D45] mb-4"
             >
-              {t("project.agency")}: {project.agencyName[currentLang]}
+              {labels.agency}: {project.agencyName}
             </h2>
           )
         }
@@ -151,7 +152,7 @@ function getProjectImage(filename: string) {
                 {project.details.map((detail) => (
                   <div class="space-y-2">
                     <h3 class="font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none uppercase text-[#083D45]">
-                      {detail.label[currentLang]}
+                      {detail.label}
                     </h3>
                     <p class="font-['Montserrat'] text-[13px] md:text-[14px] lg:text-[15px] font-medium leading-[1.3] text-[#083D45] whitespace-pre-line">
                       {detail.value}
@@ -169,7 +170,7 @@ function getProjectImage(filename: string) {
         project.additionalVideos && project.additionalVideos.length > 0 && (
           <div class="mb-12 md:mb-16">
             <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
-              {t("project.additional_videos")}
+              {labels.additional_videos}
             </h2>
             {/* Check if videos are portrait or landscape (all will be same orientation) */}
             {(project.additionalVideos[0] as any)?.isPortrait ? (
@@ -191,7 +192,7 @@ function getProjectImage(filename: string) {
                   <VideoPlayer
                     url={video.url}
                     type={video.type as "youtube" | "vimeo" | "mp4"}
-                    className={`${project.additionalVideos.length === 1 ? 'md:col-span-2 md:w-4/5 md:mx-auto' : ''}`}
+                    className={`${project.additionalVideos?.length === 1 ? 'md:col-span-2 md:w-4/5 md:mx-auto' : ''}`}
                   />
                 ))}
                 {project.additionalVideos.slice(2).map((video) => (
@@ -212,7 +213,7 @@ function getProjectImage(filename: string) {
         (project as any).galleryImages && (project as any).galleryImages.length > 0 && (
           <div class="mb-12 md:mb-16">
             <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
-              {t("project.photo_gallery")}
+              {labels.photo_gallery}
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {(project as any).galleryImages.map((url: string, index: number) => (
@@ -233,10 +234,10 @@ function getProjectImage(filename: string) {
       <!-- Behind the Scenes Photos -->
       {
         project.behindTheScenes && 
-        (project.behindTheScenes.portrait?.length > 0 || project.behindTheScenes.landscape?.length > 0) && (
+        (project.behindTheScenes.portrait?.length! > 0 || project.behindTheScenes.landscape?.length! > 0) && (
           <div class="mb-12 md:mb-16">
             <h2 class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] mb-8">
-              {t("project.behind_the_scenes")}
+              {labels.behind_the_scenes}
             </h2>
             
             <!-- Portrait Photos -->
@@ -290,7 +291,7 @@ function getProjectImage(filename: string) {
           href={currentLang === "en" ? "/en#projects" : "/#projects"}
           class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
         >
-          {t("project.back_to_projects")}
+          {labels.back_to_projects}
         </a>
       </div>
     </main>

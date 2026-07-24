@@ -1,18 +1,18 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 
 interface Props {
   lang: "fr" | "en";
 }
 
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { data: st } = await getEntry("studio", lang);
 
 const navItems = [
-  { label: t("studio.nav.le_studio"), href: "#le-studio" },
-  { label: t("studio.nav.galerie_photo"), href: "#galerie-photo" },
-  { label: t("studio.nav.nos_equipements"), href: "#nos-equipements" },
-  { label: t("studio.nav.les_tarifs"), href: "#les-tarifs" },
+  { label: st.nav_le_studio, href: "#le-studio" },
+  { label: st.nav_galerie_photo, href: "#galerie-photo" },
+  { label: st.nav_nos_equipements, href: "#nos-equipements" },
+  { label: st.nav_les_tarifs, href: "#les-tarifs" },
 ];
 ---
 

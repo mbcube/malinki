@@ -18,6 +18,11 @@ export default defineConfig({
       },
     }),
   ],
+  image: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'assets.grenier.qc.ca' },
+    ],
+  },
   vite: {
     plugins: [tailwind()],
   },
@@ -25,7 +30,8 @@ export default defineConfig({
     defaultLocale: "fr",
     locales: ["fr", "en"],
     routing: {
-      prefixDefaultLocale: false
+      prefixDefaultLocale: false,
+      excludeRoutes: ["/admin"]
     }
   }
 });

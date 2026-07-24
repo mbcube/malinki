@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 // SVG imports (raw path)
 import operaDeMontreal from "@/images/logos/odm.svg?raw";
 // PNG imports (for Image component)
@@ -26,7 +26,7 @@ import rtl from "@/images/logos/rtl.svg?raw";
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
+const { data: s } = await getEntry("sections", currentLang);
 
 type Logo = {
   alt: string;
@@ -64,16 +64,23 @@ const logos: Logo[] = [
   <div class="w-full">
     <!-- Heading -->
     <h2
+      data-reveal
       class="font-['Montserrat'] text-[28px] md:text-[36px] lg:text-[44px] font-bold leading-none uppercase text-[#083D45] text-center mb-12 md:mb-16 lg:mb-16"
     >
-      {t("sections.logos.heading")}
+      {s.logos_heading}
     </h2>
 
     <!-- Logos Grid -->
-    <div class="flex flex-wrap gap-[16px] w-full justify-center">
+    <div
+      data-logos-grid
+      class="flex flex-wrap gap-[16px] w-full justify-center"
+    >
       {
         logos.map((logo) => (
-          <div class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-64px)/5)]">
+          <div
+            data-reveal-item
+            class="bg-white rounded-[32px] flex items-center justify-center h-[96px] md:h-[136px] p-4 w-[calc((100%-16px)/2)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-64px)/5)]"
+          >
             {logo.svg ? (
               <div
                 class="w-full h-full flex items-center justify-center [&>svg]:max-w-full [&>svg]:max-h-full [&>svg]:w-auto [&>svg]:h-auto"
@@ -93,3 +100,55 @@ const logos: Logo[] = [
     </div>
   </div>
 </section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(
+      '[data-section-type="logos-section"]',
+    );
+    if (!section) return;
+
+    const heading = section.querySelector<HTMLElement>("[data-reveal]");
+    if (heading) {
+      gsap.set(heading, { opacity: 0, y: 24 });
+      ScrollTrigger.create({
+        trigger: heading,
+        start: "top 85%",
+        once: true,
+        onEnter: () => {
+          gsap.to(heading, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+        },
+      });
+    }
+
+    const grid = section.querySelector<HTMLElement>("[data-logos-grid]");
+    const items = section.querySelectorAll<HTMLElement>("[data-reveal-item]");
+    if (grid && items.length > 0) {
+      gsap.set(items, { opacity: 0, y: 24 });
+      ScrollTrigger.create({
+        trigger: grid,
+        start: "top 85%",
+        once: true,
+        onEnter: () => {
+          gsap.to(items, {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.03,
+          });
+        },
+      });
+    }
+  });
+</script>

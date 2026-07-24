@@ -1,0 +1,290 @@
+---
+import "@/styles/global.css";
+import Header from "@/components/shared/Header.astro";
+import Footer from "@/components/shared/Footer.astro";
+import Metadata from "@/components/shared/Metadata.astro";
+import { Image } from "astro:assets";
+import { getCollection, getEntry, render } from "astro:content";
+import {
+  formatPublishedAt,
+  getBlogAuthor,
+  getCategoryLabel,
+  resolveCoverImageUrl,
+  toIsoDate,
+} from "@/lib/blog";
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection("blog");
+  const paths = [];
+
+  for (const entry of allEntries) {
+    const match = entry.id.match(/^(fr|en)\/(.+)$/);
+    if (!match) continue;
+    const [, locale, slug] = match;
+    paths.push({
+      params: {
+        lang: locale === "fr" ? undefined : "en",
+        post: slug,
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { lang, post: postSlug } = Astro.params;
+const currentLang = (lang || "fr") as "fr" | "en";
+
+const postEntry = await getEntry("blog", `${currentLang}/${postSlug}`);
+const { data: bp } = await getEntry("blog-page", currentLang)!;
+const { data: seo } = await getEntry("seo", currentLang)!;
+
+if (!postEntry) {
+  return new Response(null, { status: 404, statusText: "Not Found" });
+}
+
+const post = postEntry.data;
+const { Content } = await render(postEntry);
+
+const seoTitle =
+  post.seoTitle?.trim() || `${post.title}${seo.project_title_suffix}`;
+const seoDescription = post.seoDescription?.trim() || post.excerpt;
+
+const siteUrl = (Astro.site?.href || "https://malinki.ca").replace(/\/$/, "");
+const ogImage =
+  resolveCoverImageUrl(post.seoOgImage, siteUrl) ||
+  resolveCoverImageUrl(post.coverImage, siteUrl);
+const coverImage = post.coverImage;
+const coverAlt = post.coverImageAlt?.trim() || post.title;
+
+const isoDate = toIsoDate(post.publishedAt);
+const formattedDate = formatPublishedAt(post.publishedAt, currentLang);
+const author = getBlogAuthor(post.author);
+
+const categories = (await getCollection("blog-categories")).map((c) => c.data);
+const categoryLabel = getCategoryLabel(categories, post.category, currentLang);
+
+const frEntry = await getEntry("blog", `fr/${postSlug}`);
+const enEntry = await getEntry("blog", `en/${postSlug}`);
+const availableLangs = [
+  ...(frEntry ? (["fr"] as const) : []),
+  ...(enEntry ? (["en"] as const) : []),
+] as ("fr" | "en")[];
+
+const backUrl = currentLang === "en" ? "/en/blog" : "/blog";
+const blogListUrl = `${siteUrl}${backUrl === "/blog" ? "/blog" : "/en/blog"}`;
+const canonicalPath = `/blog/${postSlug}`;
+const localePath =
+  currentLang === "fr" ? canonicalPath : `/en${canonicalPath}`;
+const pageUrl = `${siteUrl}${localePath}`;
+const rssUrl =
+  currentLang === "en" ? `${siteUrl}/en/rss.xml` : `${siteUrl}/rss.xml`;
+
+const blogPostingLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.title,
+  description: seoDescription,
+  ...(ogImage ? { image: [ogImage] } : {}),
+  ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
+  author: author
+    ? { "@type": "Person", name: author }
+    : { "@type": "Organization", name: "Malinki", url: siteUrl },
+  publisher: {
+    "@type": "Organization",
+    name: "Malinki",
+    url: siteUrl,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
+  inLanguage: currentLang === "en" ? "en-CA" : "fr-CA",
+  ...(categoryLabel ? { articleSection: categoryLabel } : {}),
+  isPartOf: {
+    "@type": "Blog",
+    name: seo.blog_title,
+    url: blogListUrl,
+  },
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: currentLang === "en" ? "Blog" : "Blogue",
+      item: blogListUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: post.title,
+      item: pageUrl,
+    },
+  ],
+};
+---
+
+<html lang={currentLang} class="h-full">
+  <head>
+    <Metadata
+      lang={currentLang}
+      title={seoTitle}
+      description={seoDescription}
+      canonicalPath={canonicalPath}
+      type="article"
+      ogImage={ogImage}
+      availableLangs={availableLangs}
+      robots={post.noIndex ? "noindex, follow" : "index, follow"}
+      rssUrl={rssUrl}
+      article={{
+        publishedTime: isoDate,
+        modifiedTime: isoDate,
+        author: author || "Malinki",
+        section: categoryLabel || undefined,
+      }}
+      jsonLd={[blogPostingLd, breadcrumbLd]}
+    />
+  </head>
+  <body class="min-h-full w-full font-['Montserrat'] bg-[#E6F5F7]">
+    <Header lang={currentLang} />
+
+    <main
+      class="w-full flex flex-col 2xl:max-w-[1600px] mx-auto px-6 py-24 md:py-20"
+    >
+      <article class="w-full md:w-4/5 lg:w-3/5 mx-auto">
+        <!-- Post Header -->
+        <div class="mb-8 md:mb-12" data-post-reveal>
+          {
+            categoryLabel && (
+              <p class="font-['Montserrat'] text-[24px] font-semibold leading-[1.2] text-[#083D45]/70 uppercase mb-2">
+                {categoryLabel}
+              </p>
+            )
+          }
+          {
+            formattedDate && (
+              <p class="font-['Montserrat'] text-[14px] font-medium leading-[1.2] text-[#083D45]/60 uppercase mb-4">
+                <time datetime={isoDate || undefined}>{formattedDate}</time>
+                {author ? ` — ${author}` : ""}
+              </p>
+            )
+          }
+          <h1
+            class="font-['Montserrat'] text-[32px] md:text-[44px] lg:text-[52px] font-bold leading-none uppercase text-[#083D45] mb-6"
+          >
+            {post.title}
+          </h1>
+          <p
+            class="font-['Montserrat'] text-[16px] md:text-[18px] font-regular text-[#083D45]"
+          >
+            {post.excerpt}
+          </p>
+        </div>
+
+        <!-- Cover Image -->
+        {
+          coverImage && (
+            <div
+              class="w-full rounded-lg overflow-hidden mb-8 md:mb-12"
+              data-post-reveal
+            >
+              <Image
+                src={coverImage}
+                alt={coverAlt}
+                class="w-full h-auto object-cover"
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 800px"
+                loading="eager"
+              />
+            </div>
+          )
+        }
+
+        <!-- Post Body -->
+        <div
+          class="prose-blog font-['Montserrat'] text-[16px] md:text-[18px] leading-[1.5] text-[#083D45]"
+          data-post-reveal
+        >
+          <Content />
+        </div>
+      </article>
+
+      <!-- Back to Blog Button -->
+      <div class="mt-12 md:mt-16 text-center" data-post-reveal>
+        <a
+          href={backUrl}
+          class="inline-flex items-center justify-center px-[32px] py-[20px] font-['Montserrat'] text-[16px] font-semibold leading-none no-underline whitespace-nowrap cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg bg-[#083D45] text-white rounded-[8px] hover:bg-[#0a4a54]"
+        >
+          {bp.back_to_blog}
+        </a>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements =
+      document.querySelectorAll<HTMLElement>("[data-post-reveal]");
+    if (elements.length === 0) return;
+
+    gsap.set(elements, { opacity: 0, y: 24 });
+
+    elements.forEach((el) => {
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top 90%",
+        once: true,
+        onEnter: () => {
+          gsap.to(el, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+        },
+      });
+    });
+  });
+</script>
+
+<style>
+  .prose-blog :global(p) {
+    margin-bottom: 1.25em;
+    white-space: pre-line;
+  }
+  .prose-blog :global(a) {
+    color: #083d45;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .prose-blog :global(strong) {
+    font-weight: 700;
+  }
+  .prose-blog :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.25em;
+  }
+  .prose-blog :global(iframe) {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.25em;
+  }
+</style>

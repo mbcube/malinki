@@ -1,0 +1,417 @@
+{
+  "root": [
+    {
+      "id": "grid-0",
+      "projects": [
+        {
+          "tagText": {
+            "fr": "Publicité Photo",
+            "en": "Advertising photo"
+          },
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/videotron/videotron-grid.mov",
+          "imageFile": "Videotron_Gamer_Remastered_compressed.webp",
+          "altText": "Videotron Rivard Mailly Pressoir",
+          "clientName": "Vidéotron",
+          "agencyName": "Malinki x Qolab",
+          "width": 500,
+          "height": 800,
+          "containerClasses": "row-span-2 min-h-[356px]"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "VDL-2.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ville-de-laval/ville-de-laval-main.mp4",
+          "altText": "Ville de laval",
+          "clientName": "Ville de Laval",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+          "projectSlug": "ville-de-laval"
+        }
+      ]
+    },
+    {
+      "id": "grid-1",
+      "projects": [
+        {
+          "tagText": {
+            "fr": "Contenu de marque",
+            "en": "Branded content"
+          },
+          "imageFile": "Malinki-Defi-28-jours-Fondation-Jean-Lapointe_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/defi-28-jours/defi-28-jours-grid.mp4",
+          "altText": "Defi 28 Jours Fondation Jean Lapointe",
+          "clientName": "Défi 28 Jours",
+          "agencyName": "Fondation Jean Lapointe",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "defi-28-jours"
+        },
+        {
+          "tagText": {
+            "fr": "Vidéoclip",
+            "en": "Video clip"
+          },
+          "imageFile": "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ecarlate/ecarlate-grid.mp4#t=112",
+          "altText": "Visrei Lison Lux Records",
+          "clientName": "Visrei",
+          "agencyName": "Lux Records",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "ecarlate"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "le-maire-grid.jpg",
+          "altText": "Monsieur Le Maire",
+          "clientName": "Groupe Encore",
+          "agencyName": "Malinki",
+          "width": 500,
+          "height": 800,
+          "containerClasses": "row-span-2 min-h-[356px]",
+          "projectSlug": "monsieur-le-maire"
+        },
+        {
+          "tagText": {
+            "fr": "Contenu de marque",
+            "en": "Branded content"
+          },
+          "imageFile": "don-giovanni-pre-opera.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/pre-opera-23-24/pre-opera-23-24-grid.mp4",
+          "altText": "Pré-Opéra saison 23-24",
+          "clientName": "Opéra de Montréal",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "pre-opera-25-26"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "Malinki-Cooki-it-pret-a-cuisiner_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cook-it/cook-it-main.mp4",
+          "altText": "Cook it Pret a Cuisiner",
+          "clientName": "Cook It",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "cook-it"
+        }
+      ]
+    },
+    {
+      "id": "grid-2",
+      "projects": [
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "Malinki-Omy-produits-beaute_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/labo-omy/labo-omy-grid.mp4",
+          "altText": "Omy Produits Beaute",
+          "clientName": "OMY",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+          "projectSlug": "labo-omy"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "Malinki-Brivia-immobilier_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/brivia/brivia-grid.mp4#t=23",
+          "altText": "Brivia Immobilier",
+          "clientName": "Brivia",
+          "agencyName": "Wellington",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "brivia"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "pancakes.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ben-and-florentine/ben-and-florentine-main.mp4",
+          "altText": "Ben & Florentine",
+          "clientName": "Ben & Florentine",
+          "agencyName": "Malinki",
+          "width": 600,
+          "height": 810,
+          "containerClasses": "row-span-2 min-h-[356px]",
+          "projectSlug": "ben-&-florentine"
+        },
+        {
+          "tagText": {
+            "fr": "Vidéoclip",
+            "en": "Videoclip"
+          },
+          "imageFile": "Malinki-Grand-Heron-musique_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-heron/grand-heron-grid.mp4#t=95",
+          "altText": "Grand Heron",
+          "clientName": "Grand Héron",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "grand-heron"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "Malinki-Microsoft-Cherylle-Shyne_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/microsoft-cherylle-shyne/microsoft-cherylle-shyne-grid.mp4",
+          "altText": "Microsoft Surface x Cherylle Shyne",
+          "clientName": "Microsoft Canada",
+          "agencyName": "Meat & Produce | Veritas Communications",
+          "width": 500,
+          "height": 800,
+          "containerClasses": "row-span-2 min-h-[356px]",
+          "projectSlug": "microsoft-cherylle-shyne"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "Malinki-Opera-de-Montreal_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/opera-de-montreal/opera-de-montreal-grid.mp4",
+          "altText": "Opera de Montreal",
+          "clientName": "Opéra de Montréal",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "opera-de-montreal"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "video-capture-t0030.05seg-6446.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/air-transat/air-transat-main.mp4",
+          "altText": "Air Transat",
+          "clientName": "Air Transat",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "air-transat"
+        }
+      ]
+    },
+    {
+      "id": "grid-3",
+      "projects": [
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "laval-bande-annonce.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ville-de-laval/tourisme-laval-bande-annonce.mp4#t=36",
+          "altText": "Tourisme Laval",
+          "clientName": "Tourisme Laval",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+          "projectSlug": "laval-tourisme"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "petro-canada-grid.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/petro-canada/petro-canada-grid.mp4",
+          "altText": "Petro Canada",
+          "clientName": "Petro Canada",
+          "agencyName": "Malinki x Meat and Produce",
+          "width": 500,
+          "height": 800,
+          "containerClasses": "row-span-2 min-h-[356px]",
+          "projectSlug": "petro-canada"
+        },
+        {
+          "tagText": {
+            "fr": "Vidéoclip",
+            "en": "Videoclip"
+          },
+          "imageFile": "Malinki-Simon-Lachance-Rosemarie-Records_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/amadoue-moi/amadoue-moi-grid.mp4#t=10",
+          "altText": "Simon Lachance Rosemarie Records",
+          "clientName": "Simon Lachance",
+          "agencyName": "Rosemarie Records",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "amadoue-moi"
+        },
+        {
+          "tagText": {
+            "fr": "Contenu de marque",
+            "en": "Branded content"
+          },
+          "imageFile": "video-capture-t0000.00seg-5766.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cadwork/cadwork-main.mp4#t=20",
+          "altText": "Cadwork Projects",
+          "clientName": "Cadwork",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "cadwork"
+        },
+        {
+          "tagText": {
+            "fr": "Contenu de marque",
+            "en": "Branded content"
+          },
+          "imageFile": "video-capture-t0141.86seg-4212.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/niche-ste-justine/niche-ste-justine-main.mp4",
+          "altText": "Niche x Ste Justine",
+          "clientName": "Niche x Ste Justine",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "niche-ste-justine"
+        }
+      ]
+    },
+    {
+      "id": "grid-4",
+      "projects": [
+        {
+          "tagText": {
+            "fr": "Contenu vertical",
+            "en": "Vertical content"
+          },
+          "imageFile": "Malinki-Fizz-telecommunication-2_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/fizz-qolab/fizz-qolab-grid.mp4",
+          "altText": "Fizz Telecommunication",
+          "clientName": "Fizz",
+          "agencyName": "Malinki x Qolab",
+          "width": 500,
+          "height": 800,
+          "containerClasses": "row-span-2 min-h-[356px]",
+          "projectSlug": "fizz-qolab"
+        },
+        {
+          "tagText": {
+            "fr": "Vidéoclip",
+            "en": "Videoclip"
+          },
+          "imageFile": "red-scarf-grid.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/red-scarf/red-scarf-grid.mp4#t=216",
+          "altText": "Alanna Sterling Everything's Gonna Be Just Fine",
+          "clientName": "Alanna Sterling ",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+          "projectSlug": "red-scarf"
+        },
+        {
+          "tagText": {
+            "fr": "Publicité",
+            "en": "Advertising"
+          },
+          "imageFile": "Malinki-Videotron-Rivard-Mailly-Pressoir_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/videotron/videotron-main.mp4",
+          "altText": "Videotron Rivard Mailly Pressoir",
+          "clientName": "Vidéotron",
+          "agencyName": "Malinki x Qolab",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+          "projectSlug": "videotron"
+        },
+        {
+          "tagText": {
+            "fr": "Vidéoclip",
+            "en": "Videoclip"
+          },
+          "imageFile": "Malinki-Freddie-Oliver-musique_694x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/freddie-oliver/freddie-oliver-grid.mp4#t=23",
+          "altText": "Freddie Oliver",
+          "clientName": "Freddie Oliver",
+          "agencyName": "Malinki",
+          "width": 694,
+          "height": 390,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "freddie-oliver"
+        },
+        {
+          "tagText": {
+            "fr": "Contenu de marque",
+            "en": "Branded content"
+          },
+          "imageFile": "3300_NICHE_portrait_4x5_compressed.webp",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/tva-sports/tva-sports-grid.mov",
+          "altText": "Niche",
+          "clientName": "Niche",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "row-span-2 min-h-[356px]",
+          "projectSlug": "tva-sports"
+        },
+        {
+          "tagText": {
+            "fr": "Vidéoclip",
+            "en": "Videoclip"
+          },
+          "imageFile": "Malinki-Junes-Kartel-Musik-musique_694x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/junes/junes-grid.mp4#t=2",
+          "altText": "Junes Kartel Musik",
+          "clientName": "Junes",
+          "agencyName": "Kartel Musik",
+          "width": 694,
+          "height": 390,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "junes"
+        },
+        {
+          "tagText": {
+            "fr": "Contenu de marque",
+            "en": "Branded content"
+          },
+          "imageFile": "Malinki-Opera-de-Montreal-3_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/pre-opera-24-25/pre-opera-24-25-grid.mp4",
+          "altText": "Opera de Montreal",
+          "clientName": "Opéra de Montréal",
+          "agencyName": "Malinki",
+          "width": 820,
+          "height": 461,
+          "containerClasses": "min-h-[178px]",
+          "projectSlug": "pre-opera-24-25"
+        }
+      ]
+    }
+  ]
+}

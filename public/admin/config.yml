@@ -1,0 +1,1782 @@
+backend:
+  name: github
+  repo: mbcube/malinki
+  branch: blog
+
+media_folder: src/images
+public_folder: /src/images
+
+i18n:
+  structure: multiple_folders
+  locales: [fr, en]
+  default_locale: fr
+
+collections:
+  # ─── Projects ─────────────────────────────────────────────────────────────
+  - name: projects
+    label: Projects
+    icon: movie
+    folder: src/content/projects
+    create: true
+    extension: md
+    format: frontmatter
+    i18n: true
+    identifier_field: slug
+    summary: "{{slug}}"
+    fields:
+      - { name: slug, label: Slug, widget: string, i18n: duplicate }
+      - { name: title, label: Title, widget: string, i18n: true }
+      - {
+          name: clientName,
+          label: Client Name,
+          widget: string,
+          required: false,
+          i18n: true,
+        }
+      - {
+          name: agencyName,
+          label: Agency Name,
+          widget: string,
+          required: false,
+          i18n: true,
+        }
+      - {
+          name: shortDescription,
+          label: Short Description,
+          widget: text,
+          i18n: true,
+        }
+      - name: mainVideo
+        label: Main Video
+        widget: object
+        required: false
+        i18n: duplicate
+        fields:
+          - { name: url, label: URL, widget: string }
+          - name: type
+            label: Type
+            widget: select
+            options:
+              - { label: MP4, value: mp4 }
+              - { label: YouTube, value: youtube }
+              - { label: Vimeo, value: vimeo }
+          - {
+              name: isPortrait,
+              label: Portrait Format,
+              widget: boolean,
+              required: false,
+              default: false,
+            }
+      - {
+          name: mainImageUrl,
+          label: Main Image Filename,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+        }
+      - name: details
+        label: Credits
+        widget: list
+        required: false
+        i18n: true
+        fields:
+          - { name: label, label: Role, widget: string, i18n: true }
+          - { name: value, label: Name, widget: string, i18n: duplicate }
+      - name: additionalVideos
+        label: Additional Videos
+        widget: list
+        required: false
+        i18n: duplicate
+        fields:
+          - { name: url, label: URL, widget: string }
+          - name: type
+            label: Type
+            widget: select
+            options:
+              - { label: MP4, value: mp4 }
+              - { label: YouTube, value: youtube }
+              - { label: Vimeo, value: vimeo }
+          - {
+              name: isPortrait,
+              label: Portrait Format,
+              widget: boolean,
+              required: false,
+              default: false,
+            }
+      - name: behindTheScenes
+        label: Behind the Scenes
+        widget: object
+        required: false
+        i18n: duplicate
+        fields:
+          - name: portrait
+            label: Portrait Photos
+            widget: list
+            field: { name: filename, label: Filename, widget: string }
+          - name: landscape
+            label: Landscape Photos
+            widget: list
+            field: { name: filename, label: Filename, widget: string }
+      - name: galleryImages
+        label: Gallery Images
+        widget: list
+        required: false
+        i18n: duplicate
+        field: { name: filename, label: Filename, widget: string }
+      - {
+          name: publishedAt,
+          label: Published At,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+        }
+
+  # ─── Blog ─────────────────────────────────────────────────────────────────
+  - name: blog
+    label: Blog Posts
+    icon: article
+    folder: src/content/blog
+    create: true
+    extension: md
+    format: frontmatter
+    i18n: true
+    identifier_field: slug
+    summary: "{{slug}}"
+    fields:
+      - { name: slug, label: Slug, widget: string, i18n: duplicate }
+      - { name: title, label: Title, widget: string, i18n: true }
+      - { name: excerpt, label: Excerpt, widget: text, i18n: true }
+      - {
+          name: coverImage,
+          label: Cover Image URL,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+          hint: "Full HTTPS URL (e.g. https://assets.grenier.qc.ca/...)",
+        }
+      - {
+          name: coverImageAlt,
+          label: Cover Image Alt Text,
+          widget: string,
+          required: false,
+          i18n: true,
+          hint: "Accessible description of the cover image. Falls back to the post title.",
+        }
+      - name: category
+        label: Category
+        widget: select
+        required: false
+        i18n: duplicate
+        hint: "Manage the list of categories under Blog Categories. New slugs added there must also be added to these options."
+        options:
+          - { label: "Agency News / Nouvelles de l'agence", value: agency-news }
+          - {
+              label: "Commercial & Brands / Commercial et Marques",
+              value: commercial-brands,
+            }
+          - { label: "Arts & Culture / Arts et Culture", value: arts-culture }
+          - { label: "Social Impact / Impact social", value: social-impact }
+      - {
+          name: author,
+          label: Author,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          name: publishedAt,
+          label: Published At,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+          hint: "ISO date (2026-06-15) or French long form (11 février 2026)",
+        }
+      - {
+          name: seoTitle,
+          label: SEO Title,
+          widget: string,
+          required: false,
+          i18n: true,
+          hint: "Optional. Overrides the page <title> and social title. Defaults to Title + site suffix.",
+        }
+      - {
+          name: seoDescription,
+          label: SEO Description,
+          widget: text,
+          required: false,
+          i18n: true,
+          hint: "Optional. Overrides meta description. Defaults to Excerpt.",
+        }
+      - {
+          name: seoOgImage,
+          label: SEO / Social Image URL,
+          widget: string,
+          required: false,
+          i18n: duplicate,
+          hint: "Optional. Overrides Open Graph / Twitter image. Defaults to Cover Image.",
+        }
+      - {
+          name: noIndex,
+          label: Hide from search engines,
+          widget: boolean,
+          required: false,
+          default: false,
+          i18n: duplicate,
+          hint: "When enabled, adds noindex and excludes the post from the RSS feed and blog listing schema.",
+        }
+      - { name: body, label: Body, widget: markdown, i18n: true }
+
+singletons:
+  # ─── Pages ────────────────────────────────────────────────────────────────
+  - name: general
+    label: General / 404
+    icon: info
+    file: src/content/general/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: page_title, label: Page Title, widget: string, i18n: true }
+      - { name: not_found_title, label: 404 Title, widget: string, i18n: true }
+      - {
+          name: not_found_button,
+          label: 404 Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: not_found_subtext,
+          label: 404 Subtext,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: hero_video_view_reel,
+          label: View Reel Label,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: hero_video_heading,
+          label: Hero Heading,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: hero_video_subtitle,
+          label: Hero Subtitle,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: hero_video_scroll_indicator_text,
+          label: Scroll Indicator,
+          widget: string,
+          i18n: true,
+        }
+
+  - name: header
+    label: Header / Navigation
+    icon: menu
+    file: src/content/header/{{locale}}.md
+    i18n: true
+    fields:
+      - {
+          name: contact_button,
+          label: Contact Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: menu_projects,
+          label: Projects Link,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: menu_services,
+          label: Services Link,
+          widget: string,
+          i18n: true,
+        }
+      - { name: menu_team, label: Team Link, widget: string, i18n: true }
+      - { name: menu_studio, label: Studio Link, widget: string, i18n: true }
+      - { name: menu_blog, label: Blog Link, widget: string, i18n: true }
+
+  - name: seo
+    label: SEO
+    icon: search
+    file: src/content/seo/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: home_title, label: Home Title, widget: string, i18n: true }
+      - {
+          name: home_description,
+          label: Home Description,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: production_publicitaire_title,
+          label: Advertising Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: production_publicitaire_description,
+          label: Advertising Description,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: contenu_de_marque_title,
+          label: Brand Content Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: contenu_de_marque_description,
+          label: Brand Content Description,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: contenu_vertical_title,
+          label: Vertical Content Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: contenu_vertical_description,
+          label: Vertical Content Description,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: video_clips_title,
+          label: Music Videos Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: video_clips_description,
+          label: Music Videos Description,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: contact_title,
+          label: Contact Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: contact_description,
+          label: Contact Description,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: project_title_suffix,
+          label: Project Title Suffix,
+          widget: string,
+          i18n: true,
+        }
+      - { name: blog_title, label: Blog Title, widget: string, i18n: true }
+      - {
+          name: blog_description,
+          label: Blog Description,
+          widget: text,
+          i18n: true,
+        }
+
+  # ─── Page Content ──────────────────────────────────────────────────────────
+  - divider: true
+
+  - name: sections
+    label: Home Sections
+    icon: home
+    file: src/content/sections/{{locale}}.md
+    i18n: true
+    fields:
+      - {
+          name: about_text_heading,
+          label: About Heading,
+          widget: string,
+          i18n: true,
+        }
+      - { name: about_text_body, label: About Body, widget: text, i18n: true }
+      - {
+          name: cta_heading_line1,
+          label: CTA Heading Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: cta_heading_line2,
+          label: CTA Heading Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - { name: cta_button_text, label: CTA Button, widget: string, i18n: true }
+      - { name: cta2_heading, label: CTA2 Heading, widget: string, i18n: true }
+      - {
+          name: cta2_button_text,
+          label: CTA2 Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: services_heading,
+          label: Services Heading,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: services_description,
+          label: Services Description,
+          widget: string,
+          i18n: true,
+        }
+      - { name: service_1, label: Service 1, widget: string, i18n: true }
+      - { name: service_2, label: Service 2, widget: string, i18n: true }
+      - { name: service_3, label: Service 3, widget: string, i18n: true }
+      - { name: service_4, label: Service 4, widget: string, i18n: true }
+      - {
+          name: team_heading_left,
+          label: Team Heading Left,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_heading_right,
+          label: Team Heading Right,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_mobile_heading,
+          label: Team Mobile Heading,
+          widget: string,
+          i18n: true,
+        }
+      - { name: team_tagline, label: Team Tagline, widget: string, i18n: true }
+      - {
+          name: team_member_1_name_line_1,
+          label: Member 1 Name Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_member_1_name_line_2,
+          label: Member 1 Name Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_member_1_role,
+          label: Member 1 Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_member_2_name,
+          label: Member 2 Name,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: team_member_2_role,
+          label: Member 2 Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_member_3_name,
+          label: Member 3 Name,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: team_member_3_role,
+          label: Member 3 Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_member_4_name,
+          label: Member 4 Name,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: team_member_4_role,
+          label: Member 4 Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_member_5_name,
+          label: Member 5 Name,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: team_member_5_role,
+          label: Member 5 Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: team_member_6_name,
+          label: Member 6 Name,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: team_member_6_role,
+          label: Member 6 Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: logos_heading,
+          label: Logos Heading,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: footer_copyright,
+          label: Footer Copyright,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: footer_ig_agency,
+          label: IG Agency Label,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: footer_ig_studio,
+          label: IG Studio Label,
+          widget: string,
+          i18n: true,
+        }
+
+  - name: production-publicitaire
+    label: Advertising Page
+    icon: campaign
+    file: src/content/production-publicitaire/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: title, label: Page Title, widget: string, i18n: true }
+      - { name: description, label: Description, widget: text, i18n: true }
+      - { name: cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: testimonial_text,
+          label: Testimonial Text,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: testimonial_author,
+          label: Testimonial Author,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: testimonial_role,
+          label: Testimonial Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: headline_line1,
+          label: Headline Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: headline_line2,
+          label: Headline Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - { name: paragraph1, label: Paragraph 1, widget: text, i18n: true }
+      - { name: paragraph2, label: Paragraph 2, widget: text, i18n: true }
+      - { name: button_text, label: Button Text, widget: string, i18n: true }
+      - {
+          name: productions_title,
+          label: Productions Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: behind_scenes_title,
+          label: Behind Scenes Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: clients_title,
+          label: Clients Title,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_title, label: Prods Title, widget: string, i18n: true }
+      - {
+          name: prods_subtitle_1,
+          label: Prods Subtitle 1,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_text_1, label: Prods Text 1, widget: text, i18n: true }
+      - {
+          name: prods_subtitle_2,
+          label: Prods Subtitle 2,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_text_2, label: Prods Text 2, widget: text, i18n: true }
+      - {
+          name: prods_subtitle_3,
+          label: Prods Subtitle 3,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_text_3, label: Prods Text 3, widget: text, i18n: true }
+      - {
+          name: prods_button_text,
+          label: Prods Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: contact_cta_title,
+          label: CTA Title,
+          widget: string,
+          i18n: true,
+        }
+      - { name: contact_cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: contact_cta_button_text,
+          label: CTA Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: main_image_alt,
+          label: Main Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: sidebar_image_alt,
+          label: Sidebar Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: testimonial_image_alt,
+          label: Testimonial Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_1_alt,
+          label: Row Image 1 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_2_alt,
+          label: Row Image 2 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_3_alt,
+          label: Row Image 3 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: feature_image_alt,
+          label: Feature Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_1_alt,
+          label: BTS Image 1 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_2_alt,
+          label: BTS Image 2 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_3_alt,
+          label: BTS Image 3 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_4_alt,
+          label: BTS Image 4 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: clients_image_alt,
+          label: Clients Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: prods_image_alt,
+          label: Prods Image Alt,
+          widget: string,
+          i18n: true,
+        }
+
+  - name: contenu-de-marque
+    label: Brand Content Page
+    icon: style
+    file: src/content/contenu-de-marque/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: title, label: Page Title, widget: string, i18n: true }
+      - { name: description_1, label: Description 1, widget: text, i18n: true }
+      - { name: description_2, label: Description 2, widget: text, i18n: true }
+      - { name: cta_text, label: CTA Text, widget: string, i18n: true }
+      - { name: bts_title, label: BTS Title, widget: string, i18n: true }
+      - {
+          name: bts_description,
+          label: BTS Description,
+          widget: text,
+          i18n: true,
+        }
+      - { name: bts_button_text, label: BTS Button, widget: string, i18n: true }
+      - {
+          name: testimonial_text,
+          label: Testimonial Text,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: testimonial_author,
+          label: Testimonial Author,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: testimonial_role,
+          label: Testimonial Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: testimonial_text_2,
+          label: Testimonial 2 Text,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: testimonial_author_2,
+          label: Testimonial 2 Author,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: testimonial_role_2,
+          label: Testimonial 2 Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: productions_title,
+          label: Productions Title,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_title, label: Prods Title, widget: string, i18n: true }
+      - {
+          name: prods_subtitle_1,
+          label: Prods Subtitle 1,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_text_1, label: Prods Text 1, widget: text, i18n: true }
+      - {
+          name: prods_subtitle_2,
+          label: Prods Subtitle 2,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_text_2, label: Prods Text 2, widget: text, i18n: true }
+      - {
+          name: prods_subtitle_3,
+          label: Prods Subtitle 3,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_text_3, label: Prods Text 3, widget: text, i18n: true }
+      - {
+          name: prods_subtitle_4,
+          label: Prods Subtitle 4,
+          widget: string,
+          i18n: true,
+        }
+      - { name: prods_text_4, label: Prods Text 4, widget: text, i18n: true }
+      - {
+          name: prods_button_text,
+          label: Prods Button,
+          widget: string,
+          i18n: true,
+        }
+      - { name: contact_cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: contact_cta_button_text,
+          label: CTA Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: main_image_alt,
+          label: Main Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: sidebar_image_alt,
+          label: Sidebar Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: testimonial_image_alt,
+          label: Testimonial 1 Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: testimonial_image_alt_2,
+          label: Testimonial 2 Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_1_alt,
+          label: Row Image 1 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_2_alt,
+          label: Row Image 2 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_3_alt,
+          label: Row Image 3 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_4_alt,
+          label: Row Image 4 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_5_alt,
+          label: Row Image 5 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_6_alt,
+          label: Row Image 6 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: row_image_7_alt,
+          label: Row Image 7 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: feature_image_alt,
+          label: Feature Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: clients_image_alt,
+          label: Clients Image Alt,
+          widget: string,
+          i18n: true,
+        }
+
+  - name: contenu-vertical
+    label: Vertical Content Page
+    icon: smartphone
+    file: src/content/contenu-vertical/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: title, label: Page Title, widget: string, i18n: true }
+      - { name: description, label: Description, widget: text, i18n: true }
+      - { name: gifs_alt_1, label: GIF 1 Alt, widget: string, i18n: true }
+      - { name: gifs_alt_2, label: GIF 2 Alt, widget: string, i18n: true }
+      - { name: gifs_alt_3, label: GIF 3 Alt, widget: string, i18n: true }
+      - { name: gifs_alt_4, label: GIF 4 Alt, widget: string, i18n: true }
+      - { name: cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: testimonial_text,
+          label: Testimonial Text,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: testimonial_author,
+          label: Testimonial Author,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: testimonial_role,
+          label: Testimonial Role,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: testimonial_image_alt,
+          label: Testimonial Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: main_image_alt,
+          label: Main Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: vertical_image_alt,
+          label: Vertical Image Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: tiktoks_title,
+          label: TikToks Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: tiktoks_description,
+          label: TikToks Description,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: tiktoks_button_text,
+          label: TikToks Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: productions_title,
+          label: Productions Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: behind_scenes_title,
+          label: BTS Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_1_alt,
+          label: BTS Image 1 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_2_alt,
+          label: BTS Image 2 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_3_alt,
+          label: BTS Image 3 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_4_alt,
+          label: BTS Image 4 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_5_alt,
+          label: BTS Image 5 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_6_alt,
+          label: BTS Image 6 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_7_alt,
+          label: BTS Image 7 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: bts_image_8_alt,
+          label: BTS Image 8 Alt,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: contact_cta_title,
+          label: CTA Title,
+          widget: string,
+          i18n: true,
+        }
+      - { name: contact_cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: contact_cta_button_text,
+          label: CTA Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: clients_image_alt,
+          label: Clients Image Alt,
+          widget: string,
+          i18n: true,
+        }
+
+  - name: video-clips
+    label: Music Videos Page
+    icon: music_note
+    file: src/content/video-clips/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: title, label: Page Title, widget: string, i18n: true }
+      - { name: description, label: Description, widget: text, i18n: true }
+      - { name: cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: gallery_title,
+          label: Gallery Title,
+          widget: string,
+          i18n: true,
+        }
+      - { name: gif_1_alt, label: GIF 1 Alt, widget: string, i18n: true }
+      - { name: gif_2_alt, label: GIF 2 Alt, widget: string, i18n: true }
+      - { name: gif_3_alt, label: GIF 3 Alt, widget: string, i18n: true }
+      - { name: gif_4_alt, label: GIF 4 Alt, widget: string, i18n: true }
+      - { name: gif_5_alt, label: GIF 5 Alt, widget: string, i18n: true }
+      - { name: gif_6_alt, label: GIF 6 Alt, widget: string, i18n: true }
+      - { name: gif_7_alt, label: GIF 7 Alt, widget: string, i18n: true }
+      - {
+          name: contact_cta_text,
+          label: Contact CTA Text,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: contact_cta_button_text,
+          label: Contact CTA Button,
+          widget: string,
+          i18n: true,
+        }
+
+  - name: blog-page
+    label: Blog Page
+    icon: article
+    file: src/content/blog-page/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: hero_title, label: Hero Title, widget: string, i18n: true }
+      - {
+          name: hero_subtitle,
+          label: Hero Subtitle,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: empty_state_title,
+          label: Empty State Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: empty_state_text,
+          label: Empty State Text,
+          widget: text,
+          i18n: true,
+        }
+      - { name: cta_text, label: CTA Text, widget: string, i18n: true }
+      - {
+          name: back_to_blog,
+          label: Back to Blog Link,
+          widget: string,
+          i18n: true,
+        }
+      - { name: not_found, label: Not Found Message, widget: string, i18n: true }
+
+  - name: studio
+    label: Studio Page
+    icon: photo_camera
+    file: src/content/studio/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: title, label: Studio Title, widget: string, i18n: true }
+      - {
+          name: hero_title_line1,
+          label: Hero Title Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: hero_title_line2,
+          label: Hero Title Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: hero_intro_text,
+          label: Hero Intro Text,
+          widget: text,
+          i18n: true,
+        }
+      - {
+          name: nav_le_studio,
+          label: Nav - Le Studio,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: nav_galerie_photo,
+          label: Nav - Photo Gallery,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: nav_nos_equipements,
+          label: Nav - Equipment,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: nav_les_tarifs,
+          label: Nav - Pricing,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: plan_access_line1,
+          label: Plan Access Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: plan_access_line2,
+          label: Plan Access Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: plan_access_size,
+          label: Plan Access Size,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: plan_specs_title,
+          label: Specs Title,
+          widget: string,
+          i18n: true,
+        }
+      - name: plan_specs
+        label: Specifications
+        widget: list
+        i18n: true
+        field: { name: item, label: Item, widget: string }
+      - {
+          name: plan_inclusions_title,
+          label: Inclusions Title,
+          widget: string,
+          i18n: true,
+        }
+      - name: plan_inclusions
+        label: Inclusions
+        widget: list
+        i18n: true
+        field: { name: item, label: Item, widget: string }
+      - {
+          name: plan_cta_line1,
+          label: Plan CTA Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: plan_cta_line2,
+          label: Plan CTA Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: plan_cta_button,
+          label: Plan CTA Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_available_title_line1,
+          label: Available Equipment Title Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_available_title_line2,
+          label: Available Equipment Title Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_rental_title_line1,
+          label: Rental Equipment Title Line 1,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_rental_title_line2,
+          label: Rental Equipment Title Line 2,
+          widget: string,
+          i18n: true,
+        }
+      - name: equipment_available
+        label: Available Equipment List
+        widget: list
+        i18n: true
+        field: { name: item, label: Item, widget: string }
+      - name: equipment_rental
+        label: Rental Equipment List
+        widget: list
+        i18n: true
+        field: { name: item, label: Item, widget: string }
+      - {
+          name: equipment_view_full_list,
+          label: View Full List Label,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_filter_dept,
+          label: Filter Dept Label,
+          widget: string,
+          required: false,
+          i18n: true,
+        }
+      - {
+          name: equipment_drawer_title,
+          label: Equipment Drawer Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_col_name,
+          label: Column - Name,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_col_qty,
+          label: Column - Qty,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_col_dept,
+          label: Column - Dept,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_col_price,
+          label: Column - Price,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_col_description,
+          label: Column - Description,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_price_tbd,
+          label: Price TBD Label,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: equipment_price_note,
+          label: Price Note,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_title,
+          label: Pricing Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_subtitle,
+          label: Pricing Subtitle,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_plan_4h_title,
+          label: 4h Plan Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_plan_4h_price,
+          label: 4h Plan Price,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: pricing_plan_8h_title,
+          label: 8h Plan Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_plan_8h_price,
+          label: 8h Plan Price,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          name: pricing_plan_creative_title,
+          label: Creative Plan Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_plan_creative_desc,
+          label: Creative Plan Desc,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_book_now,
+          label: Book Now Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: pricing_contact_us,
+          label: Contact Us Button,
+          widget: string,
+          i18n: true,
+        }
+      - { name: faq_title, label: FAQ Title, widget: string, i18n: true }
+      - {
+          name: faq_cat_studio,
+          label: FAQ Category - Studio,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_cat_reservations,
+          label: FAQ Category - Reservations,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_cat_installations,
+          label: FAQ Category - Installations,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_cat_services,
+          label: FAQ Category - Services,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q1_question,
+          label: Q1 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q1_answer,
+          label: Q1 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q2_question,
+          label: Q2 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q2_answer,
+          label: Q2 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q3_question,
+          label: Q3 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q3_answer,
+          label: Q3 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q4_question,
+          label: Q4 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q4_answer,
+          label: Q4 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q5_question,
+          label: Q5 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q5_answer,
+          label: Q5 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q6_question,
+          label: Q6 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q6_answer,
+          label: Q6 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q7_question,
+          label: Q7 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q7_answer,
+          label: Q7 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q8_question,
+          label: Q8 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q8_answer,
+          label: Q8 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q9_question,
+          label: Q9 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q9_answer,
+          label: Q9 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q10_question,
+          label: Q10 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q10_answer,
+          label: Q10 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - {
+          name: faq_q11_question,
+          label: Q11 Question,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: faq_q11_answer,
+          label: Q11 Answer,
+          widget: list,
+          i18n: true,
+          field: { name: paragraph, label: Paragraph, widget: text },
+        }
+      - { name: map_title, label: Map Title, widget: string, i18n: true }
+      - {
+          name: map_address,
+          label: Map Address,
+          widget: string,
+          i18n: duplicate,
+        }
+      - { name: map_cta, label: Map CTA Button, widget: string, i18n: true }
+
+  - name: contact
+    label: Contact Page
+    icon: mail
+    file: src/content/contact/{{locale}}.md
+    i18n: true
+    fields:
+      - { name: title, label: SEO Title, widget: string, i18n: true }
+      - { name: heading, label: Page Heading, widget: string, i18n: true }
+      - { name: subheading, label: Subheading, widget: string, i18n: true }
+      - { name: form_title, label: Form Title, widget: string, i18n: true }
+      - { name: name_label, label: Name Label, widget: string, i18n: true }
+      - {
+          name: name_placeholder,
+          label: Name Placeholder,
+          widget: string,
+          i18n: true,
+        }
+      - { name: email_label, label: Email Label, widget: string, i18n: true }
+      - {
+          name: email_placeholder,
+          label: Email Placeholder,
+          widget: string,
+          i18n: true,
+        }
+      - { name: phone_label, label: Phone Label, widget: string, i18n: true }
+      - {
+          name: phone_placeholder,
+          label: Phone Placeholder,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: message_label,
+          label: Message Label,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: message_placeholder,
+          label: Message Placeholder,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: submit_button,
+          label: Submit Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: submitting_button,
+          label: Submitting Button,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: success_message,
+          label: Success Message,
+          widget: text,
+          i18n: true,
+        }
+      - { name: error_message, label: Error Message, widget: text, i18n: true }
+      - {
+          name: email_title,
+          label: Email Info Title,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: phone_title,
+          label: Phone Info Title,
+          widget: string,
+          i18n: true,
+        }
+      - { name: agence_title, label: Agency Title, widget: string, i18n: true }
+      - { name: studio_title, label: Studio Title, widget: string, i18n: true }
+      - { name: cta_title, label: CTA Title, widget: string, i18n: true }
+      - { name: cta_text, label: CTA Text, widget: string, i18n: true }
+
+  - name: project-labels
+    label: Project Labels
+    icon: label
+    file: src/content/project-labels/{{locale}}.md
+    i18n: true
+    fields:
+      - {
+          name: behind_the_scenes,
+          label: Behind the Scenes,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: additional_videos,
+          label: Additional Videos,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: photo_gallery,
+          label: Photo Gallery,
+          widget: string,
+          i18n: true,
+        }
+      - {
+          name: back_to_projects,
+          label: Back to Projects,
+          widget: string,
+          i18n: true,
+        }
+      - { name: not_found, label: Not Found, widget: string, i18n: true }
+      - { name: main_video, label: Main Video, widget: string, i18n: true }
+      - { name: client, label: Client Label, widget: string, i18n: true }
+      - { name: agency, label: Agency Label, widget: string, i18n: true }
+
+  # ─── Data ──────────────────────────────────────────────────────────────────
+  - divider: true
+
+  - name: projects-grid
+    label: Homepage Projects Grid
+    icon: grid_view
+    file: src/content/projects-grid.json
+    fields:
+      - name: root
+        label: Grids
+        widget: list
+        summary: "{{fields.id}}"
+        fields:
+          - { name: id, label: Grid ID, widget: string }
+          - name: projects
+            label: Project Cards
+            widget: list
+            fields:
+              - name: tagText
+                label: Tag Text
+                widget: object
+                fields:
+                  - { name: fr, label: French, widget: string }
+                  - { name: en, label: English, widget: string }
+              - { name: imageFile, label: Image Filename, widget: string }
+              - {
+                  name: videoUrl,
+                  label: Video URL,
+                  widget: string,
+                  required: false,
+                }
+              - { name: altText, label: Alt Text, widget: string }
+              - { name: clientName, label: Client Name, widget: string }
+              - { name: agencyName, label: Agency Name, widget: string }
+              - { name: width, label: Width, widget: number }
+              - { name: height, label: Height, widget: number }
+              - {
+                  name: containerClasses,
+                  label: Container Classes,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  name: projectSlug,
+                  label: Project Slug,
+                  widget: string,
+                  required: false,
+                }
+
+  - name: blog-categories
+    label: Blog Categories
+    icon: category
+    file: src/content/blog-categories.json
+    fields:
+      - name: root
+        label: Categories
+        widget: list
+        summary: "{{fields.slug}}"
+        fields:
+          - {
+              name: slug,
+              label: Slug,
+              widget: string,
+              hint: "Unique, URL-safe identifier (e.g. arts-culture). Also add it to the Category options on the Blog Posts collection.",
+            }
+          - { name: fr, label: French Label, widget: string }
+          - { name: en, label: English Label, widget: string }
+
+  - name: equipment
+    label: Equipment List
+    icon: build
+    file: src/content/equipment.json
+    fields:
+      - name: root
+        label: Equipment
+        widget: list
+        summary: "{{fields.name}}"
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: qty, label: Quantity, widget: string }
+          - { name: dept, label: Department, widget: string }
+          - { name: price, label: Price, widget: string }
+          - {
+              name: description,
+              label: Description,
+              widget: text,
+              required: false,
+            }

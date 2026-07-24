@@ -1,5 +1,5 @@
 ---
-import { useTranslations } from "@/i18n/utils";
+import { getEntry } from "astro:content";
 
 export function getStaticPaths() {
   return [
@@ -10,9 +10,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = (lang || "fr") as "fr" | "en";
-const t = useTranslations(currentLang);
-
-const pageTitle = t("studio.title");
+const { data: st } = await getEntry("studio", currentLang);
 
 import "@/styles/global.css";
 import Header from "@/components/shared/Header.astro";
@@ -31,7 +29,7 @@ import StudioMap from "@/components/studio/StudioMap.astro";
 
 <html lang={currentLang} class="h-full">
   <head>
-    <Metadata lang={currentLang} title={pageTitle} description={pageTitle} canonicalPath="/studio" />
+    <Metadata lang={currentLang} title={st.title} description={st.hero_intro_text} canonicalPath="/studio" />
   </head>
   <body class="min-h-full w-full font-['Montserrat'] bg-[#083D45]">
     <Header lang={currentLang} />
