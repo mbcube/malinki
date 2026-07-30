@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: mbcube/malinki
-  branch: blog
+  branch: __CMS_BRANCH__
 
 media_folder: src/images
 public_folder: /src/images
@@ -1112,12 +1112,7 @@ singletons:
     i18n: true
     fields:
       - { name: hero_title, label: Hero Title, widget: string, i18n: true }
-      - {
-          name: hero_subtitle,
-          label: Hero Subtitle,
-          widget: text,
-          i18n: true,
-        }
+      - { name: hero_subtitle, label: Hero Subtitle, widget: text, i18n: true }
       - {
           name: empty_state_title,
           label: Empty State Title,
@@ -1137,7 +1132,12 @@ singletons:
           widget: string,
           i18n: true,
         }
-      - { name: not_found, label: Not Found Message, widget: string, i18n: true }
+      - {
+          name: not_found,
+          label: Not Found Message,
+          widget: string,
+          i18n: true,
+        }
 
   - name: studio
     label: Studio Page
