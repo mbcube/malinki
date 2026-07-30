@@ -24,4 +24,3 @@ pnpm-debug.log*
 .idea/
 
 public/videos_tmp/*
-scripts/*
