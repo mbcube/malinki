@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
 const branch = process.env.CF_PAGES_BRANCH || 'blog'; // local dev fallback
-const template = readFileSync('src/admin/config.template.yml', 'utf-8');
+const template = readFileSync('config.template.yml', 'utf-8');
 const output = template.replace('__CMS_BRANCH__', branch);
 
 mkdirSync('public/admin', { recursive: true });
