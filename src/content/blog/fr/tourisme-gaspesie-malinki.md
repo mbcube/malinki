@@ -12,7 +12,7 @@ seoDescription: ''
 seoOgImage: ''
 ---
 
-À la suite d’un appel d’offre,[**Tourisme Gaspésie**](https://www.tourisme-gaspesie.com/fr/) a confié à l’agence de production montréalaise [**Malinki**](http://malinki.ca) la création de sa prochaine campagne publicitaire touristique.  
+À la suite d’un appel d’offre, [**Tourisme Gaspésie**](https://www.tourisme-gaspesie.com/fr/) a confié à l’agence de production montréalaise [**Malinki**](http://malinki.ca) la création de sa prochaine campagne publicitaire touristique.  
 
 Le mandat vise à faire évoluer le slogan _L’Extraordinaire. Simplement._ à travers une campagne touristique humaine, immersive et ancrée dans les expériences vécues sur le territoire. 
 
