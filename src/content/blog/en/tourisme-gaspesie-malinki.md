@@ -1,12 +1,14 @@
 ---
-slug: "tourisme-gaspesie-malinki"
-title: "Gaspésie Tourism and the production agency Malinki join forces"
-excerpt: "Gaspésie Tourism entrusted the creation of its next tourism advertising campaign to the Montreal production agency Malinki."
-coverImage: "https://assets.grenier.qc.ca/uploads/images/TourismeGaspesie-x-Malinki-credit-456663.jpg"
-category: "agency-news"
-author: "null"
-publishedAt: "27 juillet 2026"
+slug: tourisme-gaspesie-malinki
+title: Gaspésie Tourism and the production agency Malinki join forces
+excerpt: Gaspésie Tourism entrusted the creation of its next tourism advertising campaign to the Montreal production agency Malinki.
+coverImage: https://assets.grenier.qc.ca/uploads/images/TourismeGaspesie-x-Malinki-credit-456663.jpg
+category: agency-news
+author: 'null'
+publishedAt: 27 juillet 2026
+seoOgImage: ''
 ---
+
 Following a call for tenders, [**Gaspésie Tourism**](https://www.tourisme-gaspesie.com/fr/) entrusted the creation of its next tourism advertising campaign to the Montreal production agency [**Malinki**](http://malinki.ca).  
   
 The mandate aims to evolve the slogan L’Extraordinaire. Simply. through a human, immersive tourism campaign rooted in the experiences lived on the territory.  
