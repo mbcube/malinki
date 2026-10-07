@@ -207,10 +207,7 @@ const breadcrumbLd = {
 
         <!-- Post Body -->
         <div
-          class:list={[
-            "prose-blog font-['Montserrat'] text-[16px] md:text-[18px] leading-[1.5] text-[#083D45]",
-            post.slug === "les-grands-ballets-malinki" && "prose-blog--les-grands-ballets",
-          ]}
+          class="prose-blog font-['Montserrat'] text-[16px] md:text-[18px] leading-[1.5] text-[#083D45]"
           data-post-reveal
         >
           <Content />
@@ -267,9 +264,6 @@ const breadcrumbLd = {
   .prose-blog :global(p) {
     margin-bottom: 1.25em;
     white-space: pre-line;
-  }
-  .prose-blog--les-grands-ballets :global(p:last-of-type) {
-    line-height: 1.2;
   }
   .prose-blog :global(a) {
     color: #083d45;
