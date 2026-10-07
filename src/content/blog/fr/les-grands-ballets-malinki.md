@@ -16,19 +16,19 @@ La publicité met en lumière la danseuse **Maude Sabourin**, accompagnée de **
 
   
   
-**Crédits :**  
-Client : Les Grands Ballets Canadiens  
-Production : Malinki  
-Directeur photo : Jonathan Brisebois  
-Producteur Exécutif : Andrew Tchernilevskii  
-Producteur : Jérémy Leblond  
-Chorégraphie : Guillaume Côté  
-Interprètes : Maude Sabourin, Kiara DeNae Felder, Tuesday Rain Leduc, Sofia González, Catherine Toupin, Maude Fleury, Carrigan MacDonald, Ana-Sofia Natera Marquez.  
-Décors : Sauterelle Design  
-Conception des costumes : Rémi Van Bochove  
-1er assistant caméra : Andrew Lee  
-Opératrice steady cam : Marie-Ève Gosselin  
-Éclairagiste : Mathieu Samson  
-Musique : Tommy Lunaire  
-Montage : Lukas Drouin (ABCDF)  
-Coloriste : Alexandre Normand
+<p style="line-height: 1.2;"><strong>Crédits :</strong><br>
+Client : Les Grands Ballets Canadiens<br>
+Production : Malinki<br>
+Directeur photo : Jonathan Brisebois<br>
+Producteur Exécutif : Andrew Tchernilevskii<br>
+Producteur : Jérémy Leblond<br>
+Chorégraphie : Guillaume Côté<br>
+Interprètes : Maude Sabourin, Kiara DeNae Felder, Tuesday Rain Leduc, Sofia González, Catherine Toupin, Maude Fleury, Carrigan MacDonald, Ana-Sofia Natera Marquez.<br>
+Décors : Sauterelle Design<br>
+Conception des costumes : Rémi Van Bochove<br>
+1er assistant caméra : Andrew Lee<br>
+Opératrice steady cam : Marie-Ève Gosselin<br>
+Éclairagiste : Mathieu Samson<br>
+Musique : Tommy Lunaire<br>
+Montage : Lukas Drouin (ABCDF)<br>
+Coloriste : Alexandre Normand</p>
