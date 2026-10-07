@@ -10,6 +10,7 @@ publishedAt: 27 juillet 2026
 seoTitle: ''
 seoDescription: ''
 seoOgImage: ''
+noIndex: false
 ---
 
 À la suite d’un appel d’offre, [**Tourisme Gaspésie**](https://www.tourisme-gaspesie.com/fr/) a confié à l’agence de production montréalaise [**Malinki**](http://malinki.ca) la création de sa prochaine campagne publicitaire touristique.  
@@ -22,22 +23,14 @@ L’équipe de Malinki s’associe à la réalisatrice Alexa Fay, pour présente
 
 Avec ce mandat, Tourisme Gaspésie continue à mettre en valeur une Gaspésie humaine, accessible et authentique, tout en créant une campagne distinctive capable de marquer l'imaginaire des voyageurs d'ici et d'ailleurs.
 
-Clients
-
+##### Clients:
 Directrice marketing et communications : Stéphanie Thibaud
-
 Coordonnatrice Communications : Judith Kilgour
-
 Agence & Production : Malinki
-
 Producteur Exécutif : Andrew Tchernievskii
-
 Service conseil : Jérémy LeBlond & Justine Gagnon
-
 Directeur photo : Simon Dufour 
-
 Photographes : Miroslav Dufresne, Justin Bison Beck
-
 Créateur de contenu : Pierre Babin
-
+&nbsp;
 ![im](https://assets.grenier.qc.ca/uploads/images/TourismeGaspesie-x-Malinki-credit-456654.jpg)
