@@ -16,19 +16,19 @@ The advertisement highlights the dancer **Maude Sabourin**, accompanied by **Kia
 
   
   
-**Credits :**  
-Client : The Canadian Grand Ballets  
-Production : Malinki  
-Director of photography : Jonathan Brisebois  
-Executive Producer : Andrew Tchernilevskii  
-Producer : Jérémy Leblond  
-Choreography : Guillaume Côté  
-Performers : Maude Sabourin, Kiara DeNae Felder, Tuesday Rain Leduc, Sofia González, Catherine Toupin, Maude Fleury, Carrigan MacDonald, Ana-Sofia Natera Marquez.  
-Sets : Sauterelle Design  
-Costume design : Rémi Van Bochove  
-1st assistant camera : Andrew Lee  
-Steady cam operator : Marie-Ève Gosselin  
-Lighting : Mathieu Samson  
-Music : Tommy Lunaire  
-Editing : Lukas Drouin (ABCDF)  
-Colorist : Alexandre Normand
+<p style="line-height: 1.2;"><strong>Credits :</strong><br>
+Client : The Canadian Grand Ballets<br>
+Production : Malinki<br>
+Director of photography : Jonathan Brisebois<br>
+Executive Producer : Andrew Tchernilevskii<br>
+Producer : Jérémy Leblond<br>
+Choreography : Guillaume Côté<br>
+Performers : Maude Sabourin, Kiara DeNae Felder, Tuesday Rain Leduc, Sofia González, Catherine Toupin, Maude Fleury, Carrigan MacDonald, Ana-Sofia Natera Marquez.<br>
+Sets : Sauterelle Design<br>
+Costume design : Rémi Van Bochove<br>
+1st assistant camera : Andrew Lee<br>
+Steady cam operator : Marie-Ève Gosselin<br>
+Lighting : Mathieu Samson<br>
+Music : Tommy Lunaire<br>
+Editing : Lukas Drouin (ABCDF)<br>
+Colorist : Alexandre Normand</p>
