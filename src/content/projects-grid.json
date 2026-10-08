@@ -121,14 +121,14 @@
             "fr": "Publicité",
             "en": "Advertising"
           },
-          "imageFile": "",
-          "altText": "Grands Ballets",
-          "clientName": "Grands Ballets",
+          "imageFile": "grands-ballets-songes-bts-0230-cropped.jpg",
+          "altText": "Les Grands Ballets Canadiens - Songes d’une nuit d’été",
+          "clientName": "Les Grands Ballets Canadiens",
           "agencyName": "Malinki",
           "width": 820,
           "height": 461,
           "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
-          "projectSlug": "grands-ballets-songes-nuit-ete"
+          "projectSlug": "grands-ballets-songes-ete"
         },
         {
           "tagText": {
