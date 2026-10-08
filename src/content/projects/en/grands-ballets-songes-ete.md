@@ -38,4 +38,8 @@ details:
     value: Alexandre Normand
   - label: Photography
     value: Sasha Onyshchenko
+galleryImages:
+  - "https://k.assets-edge.com/previews/ws_9ddc451e04e179e8b1585f3d/6ac7a68f40a87-2026-09-14-gb-songe-video-bts-0230-476.png"
+  - "https://k.assets-edge.com/previews/ws_9ddc451e04e179e8b1585f3d/6ac7a68ead8ff-dsc5022-476.png"
+  - "https://k.assets-edge.com/previews/ws_9ddc451e04e179e8b1585f3d/6ac7a68e6f2ed-dsc4094-476.png"
 ---
