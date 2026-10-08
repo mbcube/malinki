@@ -39,7 +39,7 @@ details:
   - label: Photos
     value: Sasha Onyshchenko
 galleryImages:
-  - "https://k.assets-edge.com/u/ws_9ddc451e04e179e8b1585f3d/6ac7a68702e2c-2026-09-14-gb-songe-video-bts-0230.jpg"
+  - "https://k.assets-edge.com/u/ws_9ddc451e04e179e8b1585f3d/6ac7b19f7b99c-2026-09-14-gb-songe-video-bts-0230-cropped.jpg"
   - "https://k.assets-edge.com/u/ws_9ddc451e04e179e8b1585f3d/6ac7a68702e4b-dsc5022.jpg"
   - "https://k.assets-edge.com/u/ws_9ddc451e04e179e8b1585f3d/6ac7a686ef65f-dsc4094.jpg"
 ---
