@@ -64,7 +64,7 @@
           "agencyName": "Malinki",
           "width": 820,
           "height": 461,
-          "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
+          "containerClasses": "min-h-[178px]",
           "projectSlug": "labo-omy"
         },
         {
@@ -128,7 +128,8 @@
           "width": 820,
           "height": 461,
           "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
-          "projectSlug": "grands-ballets-songes-ete"
+          "projectSlug": "grands-ballets-songes-ete",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-ballets/grand-ballets.mp4#t=5"
         },
         {
           "tagText": {
