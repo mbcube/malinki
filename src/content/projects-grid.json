@@ -54,18 +54,18 @@
         },
         {
           "tagText": {
-            "fr": "Vidéoclip",
-            "en": "Video clip"
+            "fr": "Publicité",
+            "en": "Advertising"
           },
-          "imageFile": "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg",
-          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ecarlate/ecarlate-grid.mp4#t=112",
-          "altText": "Visrei Lison Lux Records",
-          "clientName": "Visrei",
-          "agencyName": "Lux Records",
+          "imageFile": "Malinki-Omy-produits-beaute_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/labo-omy/labo-omy-grid.mp4",
+          "altText": "Omy Produits Beaute",
+          "clientName": "OMY",
+          "agencyName": "Malinki",
           "width": 820,
           "height": 461,
           "containerClasses": "min-h-[178px]",
-          "projectSlug": "ecarlate"
+          "projectSlug": "labo-omy"
         },
         {
           "tagText": {
@@ -121,15 +121,15 @@
             "fr": "Publicité",
             "en": "Advertising"
           },
-          "imageFile": "Malinki-Omy-produits-beaute_820x.jpg",
-          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/labo-omy/labo-omy-grid.mp4",
-          "altText": "Omy Produits Beaute",
-          "clientName": "OMY",
+          "imageFile": "grands-ballets-songes-bts-0230-cropped.webp",
+          "altText": "Les Grands Ballets Canadiens - Songes d’une nuit d’été",
+          "clientName": "Les Grands Ballets Canadiens",
           "agencyName": "Malinki",
           "width": 820,
           "height": 461,
           "containerClasses": "sm:row-span-2 sm:col-span-2 min-h-[356px]",
-          "projectSlug": "labo-omy"
+          "projectSlug": "grands-ballets-songes-ete",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/grand-ballets/grand-ballets.mp4"
         },
         {
           "tagText": {
@@ -273,18 +273,18 @@
         },
         {
           "tagText": {
-            "fr": "Contenu de marque",
-            "en": "Branded content"
+            "fr": "Vidéoclip",
+            "en": "Video clip"
           },
-          "imageFile": "video-capture-t0000.00seg-5766.png",
-          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cadwork/cadwork-main.mp4#t=20",
-          "altText": "Cadwork Projects",
-          "clientName": "Cadwork",
-          "agencyName": "Malinki",
+          "imageFile": "Malinki-Visrei-Lison-Lux-Records-musique_820x.jpg",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/ecarlate/ecarlate-grid.mp4#t=112",
+          "altText": "Visrei Lison Lux Records",
+          "clientName": "Visrei",
+          "agencyName": "Lux Records",
           "width": 820,
           "height": 461,
           "containerClasses": "min-h-[178px]",
-          "projectSlug": "cadwork"
+          "projectSlug": "ecarlate"
         },
         {
           "tagText": {
@@ -401,15 +401,15 @@
             "fr": "Contenu de marque",
             "en": "Branded content"
           },
-          "imageFile": "Malinki-Opera-de-Montreal-3_820x.jpg",
-          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/pre-opera-24-25/pre-opera-24-25-grid.mp4",
-          "altText": "Opera de Montreal",
-          "clientName": "Opéra de Montréal",
+          "imageFile": "video-capture-t0000.00seg-5766.png",
+          "videoUrl": "https://pub-a83e9e4a4dae446fa7c1797c5d49e07f.r2.dev/projects/cadwork/cadwork-main.mp4#t=20",
+          "altText": "Cadwork Projects",
+          "clientName": "Cadwork",
           "agencyName": "Malinki",
           "width": 820,
           "height": 461,
           "containerClasses": "min-h-[178px]",
-          "projectSlug": "pre-opera-24-25"
+          "projectSlug": "cadwork"
         }
       ]
     }
