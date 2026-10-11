@@ -1,6 +1,7 @@
 ---
-import { getEntry } from "astro:content";
 import logo from "@/images/agence-malinki.jpg";
+import fr from "@/content/links/fr.json";
+import en from "@/content/links/en.json";
 import "@/styles/global.css";
 import Metadata from "@/components/shared/Metadata.astro";
 
@@ -9,7 +10,7 @@ export function getStaticPaths() {
 }
 
 const lang = (Astro.params.lang || "fr") as "fr" | "en";
-const { data } = await getEntry("links", lang);
+const data = lang === "en" ? en : fr;
 const isEnglish = lang === "en";
 ---
 <html lang={lang}>
@@ -31,7 +32,6 @@ const isEnglish = lang === "en";
           <a href="/en/links" lang="en" aria-label="English" class:list={{ 'underline underline-offset-4': lang === 'en' }}>EN</a>
         </div>
       </header>
-
       <div class="space-y-4">
         {data.links.map((item) => (
           <a href={item.url} target={item.url.startsWith('/') ? undefined : '_blank'} rel={item.url.startsWith('/') ? undefined : 'noopener noreferrer'} class:list={["link-card", item.featured && "link-card--featured"]}>
@@ -42,7 +42,6 @@ const isEnglish = lang === "en";
           </a>
         ))}
       </div>
-
       <div class="mt-8 flex justify-center">
         <button id="share-links" type="button" class="share-button" aria-label={isEnglish ? "Share this page" : "Partager cette page"}>
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4m-6.8 9 6.8 4"></path></svg>
