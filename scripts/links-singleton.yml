@@ -1,0 +1,19 @@
+  - name: links
+    label: Bio Links
+    icon: link
+    file: src/content/links/{{locale}}.json
+    i18n: true
+    fields:
+      - { name: title, label: Page Title, widget: string, i18n: true }
+      - { name: description, label: Description, widget: string, i18n: true }
+      - { name: profile, label: Profile Name, widget: string, i18n: true }
+      - name: links
+        label: Links
+        widget: list
+        i18n: true
+        fields:
+          - { name: title, label: Link Title, widget: string, i18n: true }
+          - { name: url, label: URL, widget: string, i18n: true }
+          - { name: image, label: Image URL, widget: string, required: false, i18n: duplicate }
+          - { name: imageAlt, label: Image Alt Text, widget: string, required: false, i18n: true }
+          - { name: featured, label: Featured Image Card, widget: boolean, required: false, default: false, i18n: duplicate }

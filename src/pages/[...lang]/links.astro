@@ -1,0 +1,90 @@
+---
+import logo from "@/images/agence-malinki.jpg";
+import fr from "@/content/links/fr.json";
+import en from "@/content/links/en.json";
+import "@/styles/global.css";
+import Metadata from "@/components/shared/Metadata.astro";
+
+export function getStaticPaths() {
+  return [{ params: { lang: undefined } }, { params: { lang: "en" } }];
+}
+
+const lang = (Astro.params.lang || "fr") as "fr" | "en";
+const data = lang === "en" ? en : fr;
+const isEnglish = lang === "en";
+---
+<html lang={lang}>
+  <head>
+    <Metadata lang={lang} title={data.title} description={data.description} canonicalPath="/links" />
+    <meta name="theme-color" content="#135560" />
+  </head>
+  <body class="min-h-screen bg-[#083e44] text-[#083e44] font-['Montserrat']">
+    <main class="links-page mx-auto min-h-screen w-full max-w-[680px] px-5 py-10 sm:px-8 sm:py-14">
+      <header class="mb-8 text-center text-white">
+        <a href={isEnglish ? "/en" : "/"} aria-label="Malinki home" class="inline-block">
+          <img src={logo.src} alt="Malinki" class="mx-auto mb-5 h-16 w-16 rounded-full object-cover" />
+        </a>
+        <h1 class="font-['Rotunda_Black'] text-3xl font-bold tracking-tight sm:text-4xl">{data.profile}</h1>
+        <p class="mt-3 text-lg sm:text-xl">{data.description}</p>
+        <div class="mt-5 flex justify-center gap-4 text-sm font-semibold">
+          <a href="/links" lang="fr" aria-label="Français" class:list={{ 'underline underline-offset-4': lang === 'fr' }}>FR</a>
+          <span aria-hidden="true">·</span>
+          <a href="/en/links" lang="en" aria-label="English" class:list={{ 'underline underline-offset-4': lang === 'en' }}>EN</a>
+        </div>
+      </header>
+      <div class="space-y-4">
+        {data.links.map((item) => (
+          <a href={item.url} target={item.url.startsWith('/') ? undefined : '_blank'} rel={item.url.startsWith('/') ? undefined : 'noopener noreferrer'} class:list={["link-card", item.featured && "link-card--featured"]}>
+            {item.featured && item.image && <img src={item.image} alt={item.imageAlt || item.title} class="link-feature-image" fetchpriority="high" />}
+            {!item.featured && item.image && <img src={item.image} alt={item.imageAlt || ""} class="link-thumbnail" loading="lazy" />}
+            <span class="link-card-title">{item.title}</span>
+            <span class="link-card-arrow" aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 flex justify-center">
+        <button id="share-links" type="button" class="share-button" aria-label={isEnglish ? "Share this page" : "Partager cette page"}>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4m-6.8 9 6.8 4"></path></svg>
+          <span>{isEnglish ? "Share" : "Partager"}</span>
+        </button>
+      </div>
+      <p id="share-status" class="sr-only" aria-live="polite"></p>
+      <footer class="mt-10 text-center text-xs text-white/70">© {new Date().getFullYear()} Malinki</footer>
+    </main>
+    <script>
+      const shareButton = document.querySelector<HTMLButtonElement>("#share-links");
+      const shareStatus = document.querySelector<HTMLElement>("#share-status");
+      shareButton?.addEventListener("click", async () => {
+        const english = document.documentElement.lang === "en";
+        try {
+          if (navigator.share) await navigator.share({ title: document.title, url: window.location.href });
+          else {
+            await navigator.clipboard.writeText(window.location.href);
+            if (shareStatus) shareStatus.textContent = english ? "Link copied" : "Lien copié";
+            shareButton?.setAttribute("data-copied", "true");
+            window.setTimeout(() => shareButton?.removeAttribute("data-copied"), 1800);
+          }
+        } catch (error) {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+          if (shareStatus) shareStatus.textContent = english ? "Unable to share this link" : "Impossible de partager ce lien";
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .links-page { background: linear-gradient(160deg, #2f715f 0%, #135560 48%, #083e44 100%); }
+  .link-card { position: relative; display: flex; min-height: 76px; align-items: center; justify-content: center; gap: 14px; border: 2px solid transparent; border-radius: 999px; background: #fff; padding: 12px 46px 12px 16px; color: #135560; text-align: center; font-weight: 600; text-decoration: none; box-shadow: 0 8px 22px rgb(0 0 0 / 10%); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .link-card:hover, .link-card:focus-visible { transform: translateY(-2px); border-color: #f6e500; box-shadow: 0 12px 28px rgb(0 0 0 / 18%); outline: none; }
+  .link-card-title { line-height: 1.35; }
+  .link-card-arrow { position: absolute; right: 20px; opacity: .55; font-size: 1.2rem; }
+  .link-thumbnail { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+  .link-card--featured { display: block; border-radius: 30px; padding: 12px 12px 18px; }
+  .link-feature-image { display: block; width: 100%; height: clamp(190px, 54vw, 330px); border-radius: 22px; object-fit: cover; }
+  .link-card--featured .link-card-title { display: block; padding: 16px 26px 0; }
+  .link-card--featured .link-card-arrow { right: 22px; bottom: 19px; }
+  .share-button { display: inline-flex; min-height: 48px; align-items: center; gap: 10px; border: 1px solid rgb(255 255 255 / 55%); border-radius: 999px; background: transparent; padding: 10px 22px; color: white; font: inherit; font-weight: 600; cursor: pointer; transition: background .18s ease, color .18s ease; }
+  .share-button:hover, .share-button:focus-visible, .share-button[data-copied="true"] { background: white; color: #083e44; outline: none; }
+  @media (prefers-reduced-motion: reduce) { .link-card, .share-button { transition: none; } }
+</style>
